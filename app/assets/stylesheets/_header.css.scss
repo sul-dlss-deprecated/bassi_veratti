@@ -1,0 +1,85 @@
+/* TODO: Refactor to use mix-ins, etc. */
+
+#brandbar {
+  min-height: 35px;
+}
+
+#header-navbar-static-top {
+  border-bottom: 1px solid #dddddd;
+  &.navbar {
+    .logo {
+      text-align: center;
+      img {
+				max-height: 175px;
+        display: block;
+        margin: auto;
+      }
+    }
+    .nav {
+      border-bottom: 1px solid #dddddd;
+      border-top: 1px solid #dddddd;
+      clear: left;
+      margin-top: 6px;
+      padding-bottom: 3px;
+      > li {
+        &.active > a {color: #990000;}
+        > a {
+          background-color: white;
+          box-shadow: none;
+          color: #000000;
+          font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
+        	font-weight: 700;
+        	text-transform: uppercase;
+        	font-size: 0.965em;
+        	-webkit-font-smoothing: antialiased;
+          padding: 8px 25px 5px 3px;
+          &:hover, &:focus {color: #990000;}
+        }
+      }
+      > li:last-child > a {padding-right: 0}
+    }
+  }
+  h1 {
+    border-bottom: none;
+    font-size: 2.5em;
+    font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
+    margin: 10px 0 5px;
+  	line-height: 1.5em;
+    padding-bottom: 0;
+  }  
+  .navbar-inner {
+    background-color: white;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+}
+
+/* Phones: reduce logo size and center site title and nav elements */
+@media (max-width: 767px) {
+  #header-navbar-static-top {
+    .logo img {
+      float: left;
+      max-width: 80px;
+    }
+    &.navbar {
+      .site-header-content {text-align: center;}
+      h1 {float: none;}
+    }
+  }
+}
+/* Tablets: reduce logo size and add some extra space between logo
+   and site title and nav elements */
+@media (min-width: 768px) and (max-width: 979px) {
+  #header-navbar-static-top {
+    .logo img {
+      float: right;
+      max-width: 100px;
+    }
+    &.navbar {
+      .site-header-content {margin-left: 30px;}
+    }
+  }
+}

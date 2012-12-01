@@ -1,0 +1,33 @@
+.blacklight-about {
+  p {
+  	font-family: "chaparral-pro","Georgia","Times New Roman",serif;
+  	font-weight: 400;
+  	font-size: 1.125em;
+  	line-height: 1.5em;
+  	color: #666666;
+  	margin: 0 0 20px 0;
+  	width: 90%;
+  }
+  #content img {
+    float: left;
+    padding: 5px 20px 5px 0;
+  }
+  span.slug {
+    display: block;
+    width: 10px;
+    height: 10px;
+    text-indent: -9999px;
+    background: #000000;
+  }
+
+  // Make textarea wide as reasonable given viewport size
+  @media (min-width: 980px) {
+    textarea#message {width: 500px;}
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    textarea#message {width: 320px;}
+  }
+  @media (max-width: 767px) {
+    textarea#message {}
+  }
+}

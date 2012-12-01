@@ -1,0 +1,48 @@
+<% all_collections=SolrDocument.new.all_collections%>
+<div class="row slideshow">
+  <div class="span6">
+    <div id="all_collections_carousel" class="carousel slide">
+      <div class="carousel-inner">
+        <%- all_collections.each_with_index do |collection, index| -%>
+          <div class="item<%= " active" if index == 0 %>" data-collection-title="<%= collection[blacklight_config.show.heading] %>" data-collection-href="<%= collection_path(collection) %>" data-collection-description="<%= collection[blacklight_config.collection_description_field].try(:first) %>">
+            <a id="collection-image-link" href="<%=collection_path(collection)%>"><canvas height="300px" width="400px" class="image-stitch" id="image-stitch-<%= index %>" data-image-urls="<%= collection.collection_members.map{|c| c.images.first }.join(', ') %>"></canvas></a>
+          </div>
+        <%- end -%>
+      </div>
+    </div>
+  </div>
+  <div id="featured-collection-nav" class="span3">
+		<div class="row">
+			<div class="span3">
+		    <div class="all_collections carousel-controls">
+		      <a class="carousel-control left" href="#all_collections_carousel" data-slide="prev">&lsaquo;</a>
+		      <a class="carousel-control right" href="#all_collections_carousel" data-slide="next">&rsaquo;</a>
+		    </div>
+			</div>
+		</div>
+		<div class="row">
+	    <div id="featured-description" class="span3">
+	      <span class="content-type collection">Featured Collection</span>
+	      <h3><%= link_to all_collections.first[blacklight_config.show.heading], collection_path(all_collections.first), :id => "collection-title-link" %></h3>
+	      <p>
+	        <span id="collection-description"><%= all_collections.first[blacklight_config.collection_description_field].try(:first) %></span>
+	        <%= link_to "More", collection_path(all_collections.first), :id => "collection-link" %>
+	      </p>
+	    </div>
+		</div>
+  </div>
+</div>
+
+
+<div class="row">
+	<div class="span9 about-dl">
+		<h3 class="section-heading">About the Digital Library</h3>
+		<p>
+			<%= link_to image_tag('revs-about-project-scanning.png', :width => '120'), about_project_path %>
+			The Revs Digital Library is being built on top of the Stanford Digital Repository to provide a web based platform for discovery of automotive research and images. The Digital Library is developed in <a href="http://www.rubyonrails.org">Ruby on Rails</a> using open source technologies, including <a href="http://projectblacklight.org/">Blacklight</a>, <a href="http://projecthydra.org/">Hydra</a>, and <a href="http://fedora-commons.org/">Fedora Commons</a> and will allow for metadata editing, provide community features, and tools for researchers to further utilize the data.
+		</p>
+		<p>
+			<%= link_to 'More', about_project_path %>
+		</p>
+	</div>
+</div>
