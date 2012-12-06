@@ -37,10 +37,16 @@
               <li class="<%="active" if on_about_pages%>"><%= link_to t('bassi.nav.about').upcase, about_project_path %></li>
             </ul>
 						<% if I18n.locale == :en %>
-					  	<%= link_to "Italiano", :locale=>'it'%>
+							English
 						<% else %>
-						  <%= link_to "English", :locale=>'en'%>
-						<%end%>
+							<%= link_to "English", :locale=>'en'%>
+						<% end %>
+						|
+						<% if I18n.locale == :it %>
+							Italiano
+						<% else %>
+							<%= link_to "Italiano", :locale=>'it'%>
+						<% end %>
           </div>
         </div>
       </div>

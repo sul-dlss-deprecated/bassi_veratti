@@ -33,7 +33,10 @@ module BassiVeratti
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
     config.allowed_locales = [:en,:it]
-
+    config.i18n.fallbacks = true
+    # rails will fallback to en, no matter what is set as config.i18n.default_locale
+    config.i18n.fallbacks = [:en]
+    
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
