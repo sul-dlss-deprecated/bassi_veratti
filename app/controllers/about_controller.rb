@@ -26,4 +26,8 @@ class AboutController < ApplicationController
     render :show
   end
     
+  def background
+    
+  end
+  
 end

@@ -5,14 +5,21 @@ class ApplicationController < ActionController::Base
   # these methods in order to perform user specific actions. 
 
   rescue_from Exception, :with=>:exception_on_website
-  helper_method :application_name
   layout "bassi"
-  
 
-  def application_name
-    "Bassi Veratti Digital Library"
+  before_filter :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+#    I18n.locale = (BassiVeratti::Application.config.allowed_locales.include?(params[:locale]) ? params[:locale] : I18n.default_locale)
   end
-    
+  
+  def default_url_options(options={})
+    logger.debug "default_url_options is passed options: #{options.inspect}\n"
+#    { :locale => ((I18n.locale == I18n.default_locale) ? nil : I18n.locale) }
+    { :locale => I18n.locale }
+  end
+      
   def exception_on_website(exception)
     @exception=exception
 

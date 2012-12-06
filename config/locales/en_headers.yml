@@ -1,9 +1,12 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  application_name: 'Bassi Veratti Digital Library'
   bassi:
+    nav:
+      about: 'About'
+      home: 'Home'
+      collections: 'Collection Highlights'
+      background: 'Background'
+      content_inventory: 'Content Inventory'
     about:
       project_title: 'About the Bassi Veratti Digital Library'
       contact_title: 'Contact Us'

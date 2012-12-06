@@ -1,16 +1,16 @@
-== Revs Digital Library
+== Bassi Veratti Digital Library
 
-This is a Blacklight Application for the Revs Digital Library at Stanford.
+This is a Blacklight Application for the Bassi Verati Digital Library at Stanford.
 
 == Getting Started
 
 1. Checkout the code
 
-git clone https://github.com/sul-dlss/revs.git
+git clone git://afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git
 
 2a. Copy the .yml example files
 
-cd revs
+cd bassi_veratti
 cp config/database.yml.example config/database.yml
 cp config/solr.yml.example config/solr.yml
 
@@ -34,7 +34,7 @@ rake db:migrate RAILS_ENV=test
 5. Get your test fixtures loaded
 
 rake jetty:start RAILS_ENV=test
-rake revs:index_fixtures RAILS_ENV=test
+rake bassi_veratti:index_fixtures RAILS_ENV=test
 rake jetty:stop RAILS_ENV=test
 
 5. Start the development solr (you should first stop any other jetty processes if you have multiple jetty related projects)
@@ -43,7 +43,7 @@ rake jetty:start
 
 6. To index the records into an environment's core (with jetty running)
 
-rake revs:index_fixtures
+rake bassi_veratti:index_fixtures
 
 7. Start rails
 

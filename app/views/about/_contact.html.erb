@@ -16,7 +16,7 @@
 	<div class="control-group">
 	  <label class="control-label" for="subject">Subject</label>
 	  <div class="controls">
-	    <%= select_tag 'subject',options_from_collection_for_select(Revs::Application.config.contact_us_topics, :first, :last, @subject) %>
+	    <%= select_tag 'subject',options_from_collection_for_select(BassiVeratti::Application.config.contact_us_topics, :first, :last, @subject) %>
 	  </div>
 	</div>
 

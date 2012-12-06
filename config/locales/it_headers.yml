@@ -1,0 +1,46 @@
+it:
+  application_name: 'Bassi Veratti Libraria Digitale'
+  blacklight:
+    search:
+      form:
+        q: 'Cerca...'  
+  bassi:
+    nav:
+      about: 'About'
+      home: 'Torna'
+      collections: 'Collection Highlights'
+      background: 'Background'
+      content_inventory: 'Content Inventory'
+    about:
+      project_title: 'About the Bassi Veratti Digital Library'
+      contact_title: 'Contact Us'
+      contact_message_sent: 'Thanks - your message has been sent.'
+      contact_error: 'You need to enter some message text.'
+      terms_of_use_title: 'Terms of Use'
+      acknowledgements_title: 'Acknowledgements'
+      team_title: 'Project Team'
+    collection:
+      collection_detail: 'Collection Detail'
+      member_detail: 'Item Detail'
+    collection_members:
+      items_name: 'image'
+    collection_members_grid:
+      members_link: 'View All Collection Items'
+      collection_link: 'View this collection'
+      collection_text: 'Collection Items'
+      sibling_text: "Other items in the %{collection} collection"
+    search:
+      search_results: 'Results'
+      gallery_toggle:
+        gallery: 'Images'
+        list: 'Text'
+      search_label: 'Search'
+      facets:
+        title: 'Browse'
+    sidebar:
+      navigation:
+        title: 'Navigation'
+        all_collections: 'All Collections'
+      history:
+        title: 'History'
+        search_history: 'Search History'

@@ -1,0 +1,6 @@
+en:
+  bassi:
+    background: |
+      This is some background about text in English.
+      <br />
+      It includes a return.
