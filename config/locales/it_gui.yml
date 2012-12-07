@@ -1,9 +1,6 @@
 it:
-  application_name: 'Bassi Veratti Libraria Digitale'
   blacklight:
-    search:
-      form:
-        q: 'Cerca...'  
+    application_name: 'Inventario Laura Bassi'
   bassi:
     nav:
       about: 'About'

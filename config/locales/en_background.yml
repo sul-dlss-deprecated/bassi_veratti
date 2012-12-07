@@ -1,15 +1,40 @@
 en:
   bassi:
     background:
+      respository: 'Repository'
+      repository_text: "Biblioteca dell'Archginnasio"
+      title: 'Title'
+      title_text: 'Invetario Laura Bassi'
+      Date: 'Date'
+      date_text: '1591 (in copia) - 1836'
+      extent: 'Extent'
+      extent_text: '12.0 boxes (~6,000 digital objects)'
+      language: 'Language'      
+      language_text: 'Italian'
       title: Background
       extent_description_title: 'Extent Description'      
       extent_description_text_html: |
-        Some extent text
+        Some extent text222
       abbreviations_title: 'Abbreviations'
       abbreviations_text_html: |
         Some abbreviations text
       notes_title: 'Methodological Notes'
       notes_text_html: |
-        This is some background about text in English.
-        <br />
-        It includes a return.
+        <p>When the rearrangement began, there were nine boxes:</p>
+        <p>- Two referring to Laura Bassi, already arranged and described</p>
+        <p>- Three referring to the Veratti family members, especially to Paolo Veratti, Laura's son;</p>
+        <p>- Four containing deeds, in no apparent order, pertaining to the Bassi and the Veratti.</p>
+        <p>According to the documents of the donation [14], the papers were apparently in this state when they arrived at the Archiginnasio. An initial study was carried out, and it found that there was no original order and that the material was a simple collection rather than a personal archive; therefore, the creation of an organizational system was undertaken so that a logical order would facilitate access to the documents.</p>
+        <p>The arrangement and description of the Laura Bassi boxes were retained, since they were already in place and had been used by scholars in the past; only a few changes were made to make the description similar to the one used for the other documents of the collection.</p>
+        <p>The four boxes containing the deeds were organized and the material divided between the Bassi and the Veratti, in chronological order. The deeds were found to be reference-signed by book and number; no finding aid was associated with them but, by analogy, it was possible to assign the documents to the appropriate family and make sure that they were chronologically arranged such that the Bassi deeds come first and the Veratti deeds later. One further handwritten note, "Gamberini notaio", can be found on several deeds, but it did not provide any useful information, other than that the lawyer was able to utilize the documents he signed for purposes that cannot be determined.</p>
+        <p>All the remaining documents were then arranged, assigning them to the person or persons who wrote them, in their chronological order. Some documents were difficult to read given their poor state of preservation and so, prior to undertaking this project, they were restored in 2000 [15].</p>
+        <p>The documents were placed in 12 boxes and then described (as either files, registers, or single documents) and ordered chronologically by family, as far as possible:</p>
+        <p>Boxes 1-2: deeds referring to the Bassi (the oldest ones ordered chronologically);</p>
+        <p>Boxes 3-4: deeds referring to the Veratti;</p>
+        <p>Box 5: documents referring to the Veratti (before Laura married into the family);</p>
+        <p>Boxes 6-7 : Laura Bassi’s documents;</p>
+        <p>Boxes 8-12: documents referring to Laura Bassi’s children and descendants;</p>
+        <p>Each group is introduced by a short explanatory note.</p>
+        <p>Each archival item (file, register, single document) was titled, dated and given a description of its physical extent. The title is in inverted commas if it was found in and transcribed from the same item; when there was no original title or if it can only be partially inferred, a title referring to the content was given, without commas. The date of each item, whenever possible and meaningful, is expressed as year, month and day. When dates are reconstructed or inferred, square brackets are used. The physical extent of files is given according to the documents or papers they are made of, while for registers the leaves were counted. Notes, if necessary, are after each item.</p>
+        <p>Thanks to its restoration, the collection is in good shape; when necessary, however, the particular state of an item's preservation is described in a note.</p>
+

@@ -1,5 +1,6 @@
 en:
-  application_name: 'Bassi Veratti Digital Library'
+  blacklight:
+    application_name: 'Bassi Veratti Digital Library'
   bassi:
     nav:
       about: 'About'

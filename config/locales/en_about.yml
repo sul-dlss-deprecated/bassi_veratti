@@ -1,7 +1,7 @@
 en:
   bassi:
     about_text_html: |
-      About the project
+      About the project<br /> <b>yo</b>
     terms_of_use_text_html: |
       Terms of Use
     project_history_text_html: |

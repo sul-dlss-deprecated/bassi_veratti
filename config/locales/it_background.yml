@@ -1,6 +1,25 @@
 it:
   bassi:
-    background: |
-      This is some complicated about text in English.
-      <br />
-      It includes a return.
+    background:
+      respository: 'Repository'
+      repository_text: "Biblioteca dell'Archginnasio"
+      title: 'Title'
+      title_text: 'Invetario Laura Bassi'
+      Date: 'Date'
+      date_text: '1591 (in copia) - 1836'
+      extent: 'Extent'
+      extent_text: '12.0 boxes (~6,000 digital objects)'
+      language: 'Language'      
+      language_text: 'Italian'
+      title: Background
+      extent_description_title: 'Extent Description'      
+      extent_description_text_html: |
+        Some extent text
+      abbreviations_title: 'Abbreviations'
+      abbreviations_text_html: |
+        Some abbreviations text
+      notes_title: 'Methodological Notes'
+      notes_text_html: |
+        This is some background about text in English.
+        <br />
+        It includes asdsadsaa return.
