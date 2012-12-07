@@ -27,7 +27,7 @@ class AboutController < ApplicationController
   end
     
   def background
-    
+    @page_title=t("bassi.background.title") # set the page title
   end
   
 end

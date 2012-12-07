@@ -1,14 +1,19 @@
 <div id="sidebar" class="span3">
 	<div id="sidebar-nav">
 	  <ul class="nav nav-list">
-	    <li class="nav-header">About</li>
-			<li><%= link_to 'About', :controller => "about",  :action => "show", :id => "project" %></li>
+	    <li class="nav-header"><%=t('bassi.nav.about')%></li>
+			<li><%= link_to t('bassi.nav.project_overview'), :controller => "about",  :action => "show", :id => "project" %></li>
+			<li><%= link_to t('bassi.nav.project_history'), :controller => "about",  :action => "show", :id => "history" %></li>
+			<li><%= link_to t('bassi.nav.project_team_stanford'), :controller => "about",  :action => "show", :id => "stanford_team" %></li>
+			<li><%= link_to t('bassi.nav.project_team_archiginassio'), :controller => "about",  :action => "show", :id => "arch_team" %></li>
+			<li><%= link_to t('bassi.nav.acknowledgements'), :controller => "about",  :action => "show", :id => "acknowledgements" %></li>
 	  </ul>
 
 	  <ul class="nav nav-list">
-	    <li class="nav-header">Contact</li>
-			<li><%= link_to 'Contact Us', :controller => "about", :action => "contact" %></li>
-			<li><%= link_to 'Use Policy', :controller => "about", :action => "show", :id=> "terms_of_use" %></li>
+	    <li class="nav-header"><%=t('bassi.nav.contact')%></li>
+			<li><%= link_to t('bassi.nav.contact_us'), :controller => "about", :action => "contact" %></li>
+			<li><%= link_to t('bassi.nav.report_problem'), :controller => "about", :action => "contact" %></li>			
+			<li><%= link_to t('bassi.nav.use_policy'), :controller => "about", :action => "show", :id=> "terms_of_use" %></li>
 	  </ul>
 
 	</div>

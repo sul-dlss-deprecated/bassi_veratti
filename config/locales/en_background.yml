@@ -1,6 +1,15 @@
 en:
   bassi:
-    background: |
-      This is some background about text in English.
-      <br />
-      It includes a return.
+    background:
+      title: Background
+      extent_description_title: 'Extent Description'      
+      extent_description_text_html: |
+        Some extent text
+      abbreviations_title: 'Abbreviations'
+      abbreviations_text_html: |
+        Some abbreviations text
+      notes_title: 'Methodological Notes'
+      notes_text_html: |
+        This is some background about text in English.
+        <br />
+        It includes a return.

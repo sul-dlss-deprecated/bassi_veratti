@@ -3,7 +3,16 @@ en:
   bassi:
     nav:
       about: 'About'
+      contact: 'Contact'
+      contact_us: 'Contact Us'
+      use_policy: 'Use Policy'
       home: 'Home'
+      report_problem: 'Report a Problem'
+      project_history: 'Project History'
+      project_overview: 'Project Overview'
+      project_team_stanford: 'Project Team: Stanford'
+      project_team_archiginnasio: 'Project Team: Archiginnasio'
+      acknowledgments: 'Acknowledgments'      
       collections: 'Collection Highlights'
       background: 'Background'
       content_inventory: 'Content Inventory'
@@ -14,7 +23,9 @@ en:
       contact_error: 'You need to enter some message text.'
       terms_of_use_title: 'Terms of Use'
       acknowledgements_title: 'Acknowledgements'
-      team_title: 'Project Team'
+      stanford_team_title: 'Project Team: Stanford'
+      arch_team_title: 'Project Team: Archiginassio'
+      history_title: 'Project History'      
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'
