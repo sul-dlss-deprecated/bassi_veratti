@@ -10,7 +10,7 @@
     .logo {
       text-align: center;
       img {
-				max-height: 175px;
+        max-height: 125px;
         display: block;
         margin: auto;
       }
@@ -54,6 +54,11 @@
     box-shadow: none;
     padding-bottom: 15px;
     padding-top: 15px;
+    .language-toggle {
+      color: #999;
+      font-size: 13px;
+      text-align: right;
+    }
   }
 }
 
@@ -62,11 +67,13 @@
   #header-navbar-static-top {
     .logo img {
       float: left;
-      max-width: 80px;
+      max-width: 60px;
     }
     &.navbar {
       .site-header-content {text-align: center;}
       h1 {float: none;}
+      .language-toggle {text-align: center;}
+      .nav > li:last-child > a {padding-right: 25px}
     }
   }
 }
@@ -76,10 +83,11 @@
   #header-navbar-static-top {
     .logo img {
       float: right;
-      max-width: 100px;
+      max-width: 60px;
     }
     &.navbar {
       .site-header-content {margin-left: 30px;}
+      .language-toggle {text-align: left;}
     }
   }
 }

@@ -18,7 +18,21 @@
         <div class="span3">
           <%= link_to(image_tag("BVP.jpg", :alt => t('blacklight.application_name')), root_path, :class => "logo") %>
         </div>
+
         <div class="span8 site-header-content">
+          <div class="language-toggle">
+            <% if I18n.locale == :en %>
+              English
+            <% else %>
+              <%= link_to "English", :locale=>'en'%>
+            <% end %>
+              |
+            <% if I18n.locale == :it %>
+              Italiano
+            <% else %>
+              <%= link_to "Italiano", :locale=>'it'%>
+            <% end %>
+          </div>
           <h1><%= t('blacklight.application_name') %></h1>
           <div class="nav-collapse">
             <ul class="nav">
@@ -36,17 +50,6 @@
               </li>
               <li class="<%="active" if on_about_pages%>"><%= link_to t('bassi.nav.about').upcase, about_project_path %></li>
             </ul>
-						<% if I18n.locale == :en %>
-							English
-						<% else %>
-							<%= link_to "English", :locale=>'en'%>
-						<% end %>
-						|
-						<% if I18n.locale == :it %>
-							Italiano
-						<% else %>
-							<%= link_to "Italiano", :locale=>'it'%>
-						<% end %>
           </div>
         </div>
       </div>
