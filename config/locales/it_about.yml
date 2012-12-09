@@ -2,13 +2,38 @@ it:
   bassi:
     about_text_html: |
       About the project
+    laura_bassi_text_html: |
+      <img src="/assets/BVP.jpg" width="200"/>
+      <p>
+        Laura Bassi (1711-1778) was one of the most important and visible
+        scientific women in eighteenth-century Europe. In 1732 she was the
+        second woman to receive a university degree in Europe and the first
+        to be offered an official university teaching position, both at the
+        University of Bologna. She was the first female member of the
+        Bologna Academy of Sciences, one of Italy’s leading academies, and
+        played a significant role in the spread of Newtonian experimental
+        physics through her teaching, research, and correspondence. While
+        little documentary evidence of her own scientific work survives, she
+        nonetheless had an active program of research and experimentation
+        for many decades and was widely reputed to be an outstanding teacher
+        of experimental physics. Bassi carried on extensive correspondence
+        with other natural philosophers of her time, including Alessandro
+        Volta, Lazzaro Spallanzani, Giovanni Battista Beccaria,
+        Jean-François Nollet, Voltaire, and Francesco Algarotti.
+      </p>
+      <p>
+        Encouraged in her studies by her family and by the intellectual...
+      </p>
+      <p>
+        [NEEDS TRANSLATION]
+      </p>
     terms_of_use_text_html: |
       Terms of Use
     project_history_text_html: |
       Project History
     project_team_stanford_text_html: |
       Project Team Stanford   
-    project_team_arch_text_html: |
+    project_team_italy_text_html: |
       Project Team Italy        
     acknowledgements_text_html: |
       Acknowledgements

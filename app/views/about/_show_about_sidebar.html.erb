@@ -2,10 +2,11 @@
 	<div id="sidebar-nav">
 	  <ul class="nav nav-list">
 	    <li class="nav-header"><%=t('bassi.nav.about')%></li>
+	    <li><%= link_to t('bassi.nav.laura_bassi'), :controller => "about",  :action => "show", :id => "laura_bassi" %></li>
 			<li><%= link_to t('bassi.nav.project_overview'), :controller => "about",  :action => "show", :id => "project" %></li>
 			<li><%= link_to t('bassi.nav.project_history'), :controller => "about",  :action => "show", :id => "history" %></li>
 			<li><%= link_to t('bassi.nav.project_team_stanford'), :controller => "about",  :action => "show", :id => "stanford_team" %></li>
-			<li><%= link_to t('bassi.nav.project_team_archiginnasio'), :controller => "about",  :action => "show", :id => "arch_team" %></li>
+			<li><%= link_to t('bassi.nav.project_team_italy'), :controller => "about",  :action => "show", :id => "italy_team" %></li>
 			<li><%= link_to t('bassi.nav.acknowledgements'), :controller => "about",  :action => "show", :id => "acknowledgements" %></li>
 	  </ul>
 

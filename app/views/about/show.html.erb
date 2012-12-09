@@ -8,6 +8,9 @@
 	<div class="row">
 	  <div class="span9">
 			<%= render :partial => @page_name %>
+			<% unless controller.action_name == 'contact' %>
+			  <p><span class="slug">End</span></p>
+			<% end %>
 		</div>
 	</div>
 
