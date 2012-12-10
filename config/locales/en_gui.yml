@@ -53,3 +53,9 @@ en:
       history:
         title: 'History'
         search_history: 'Search History'
+      finding_aid:
+        title: 'Finding Aid'
+        download_pdf: 'Download PDF'
+        download_ead: 'Download EAD XML'
+      background:
+        title: 'Background Information'
