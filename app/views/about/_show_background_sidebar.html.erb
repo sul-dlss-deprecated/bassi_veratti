@@ -1,12 +1,12 @@
 <div id="sidebar" class="span3">
-	<div id="sidebar-nav">
-		<%= render :partial => 'shared/finding_aid_download_links' %>
-	
-	  <ul class="nav nav-list">
-	    <li class="nav-header"><%=t('bassi.sidebar.background.title')%></li>
-      <li>Notes</li>
-      <li>Extent Description</li>
-      <li>More...</li>
-	  </ul>
+  <div id="sidebar-nav">
+    <%= render :partial => 'shared/finding_aid_download_links' %>
+
+    <ul class="nav nav-list background-toc affix">
+      <li class="nav-header"><%=t('bassi.sidebar.background.title')%></li>
+      <li><a href="#notes"><i class="icon-chevron-right"></i> Methodological Notes</a></li>
+      <li><a href="#extent"><i class="icon-chevron-right"></i> Extent Description</a></li>
+      <li><a href="#custodial_note"><i class="icon-chevron-right"></i> Custodial History Note</a></li>
+    </ul>
 	</div>
 </div>

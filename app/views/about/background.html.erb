@@ -1,6 +1,6 @@
 <%= render :partial => 'show_background_sidebar' %>
 
-<div id="content" class="span9 background">
+<div id="content" class="span9 background" data-spy="scroll" data-target=".background-toc">
 	<div class="row">
 	  <div class="span9">
 	    <h2><%= @page_title %></h2>
@@ -16,21 +16,21 @@
 	
 	<div class="row">
 	  <div class="span9">
-			<h3><%=t('bassi.background.notes_title') %></h3>
+			<h3 id="notes"><%=t('bassi.background.notes_title') %></h3>
 			<%= t('bassi.background.notes_text_html') %>
 		</div>
 	</div>
 
 	<div class="row">
 	  <div class="span9">
-			<h3><%=t('bassi.background.extent_description_title') %></h3>
+			<h3 id="extent"><%=t('bassi.background.extent_description_title') %></h3>
 			<%= t('bassi.background.extent_description_text_html') %>
 		</div>
 	</div>
 
 	<div class="row">
 	  <div class="span9">
-			<h3><%=t('bassi.background.custodial_note_title') %></h3>
+			<h3 id="custodial_note"><%=t('bassi.background.custodial_note_title') %></h3>
 			<%= t('bassi.background.custodial_note_text_html') %>
 		</div>
 	</div>

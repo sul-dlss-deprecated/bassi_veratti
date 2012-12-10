@@ -35,5 +35,7 @@
   }
   @media (max-width: 767px) {
     textarea#message {}
+    // don't fix position toc nav (since no sidebar) on phones
+    .background-toc.affix {position: relative;}
   }
 }
