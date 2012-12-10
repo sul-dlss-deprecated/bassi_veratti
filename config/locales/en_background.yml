@@ -3,8 +3,8 @@ en:
     background:
       respository: 'Repository'
       repository_text: "Biblioteca dell'Archginnasio"
-      title: 'Title'
-      title_text: 'Invetario Laura Bassi'
+      summary_title: 'Title'
+      summary_title_text: 'Inventario Laura Bassi'
       Date: 'Date'
       date_text: '1591 (in copia) - 1836'
       extent: 'Extent'
@@ -15,18 +15,20 @@ en:
       extent_description_title: 'Extent Description'      
       extent_description_text_html: |
         <p>Each series is described here by indicating the dates and the numbering of the boxes that contain the series.</p>
-        <p>1. Deeds referring to Bassi family, 1591-1776, boxes 1, 2</p>
-        <p>2. Deeds referring to Veratti family, 1691-1830, boxes 3, 4</p>
-        <p>3. Documents referring to Francesco Veratti, 1684-1708, box 5</p>
-        <p>4. Documents referring to Ferdinando Veratti, 1721-1788, box 5</p>
-        <p>5. Documents referring to Giuseppe Veratti, 1734-1742, box 5</p>
-        <p>6. Documents referring to Laura Bassi, 1732-1836, boxes 6, 7</p>
-        <p>7. Documents referring to Giovanni Veratti, 1761-1800, box 8</p>
-        <p>8. Documents referring to Giacomo Veratti, 1772-1818, box 8</p>
-        <p>9. Documents referring to Paolo Veratti, 1765-1832, boxes 9-11</p>
-        <p>10. Documents referring to Gaetano Veratti, 1806-1825, box 12</p>
-        <p>11. Documents referring to Francesco Veratti, 1830, box 12</p>
-        <p>12. Various materials, 1712-18th century, box 12</p>
+        <ol>
+          <li>Deeds referring to Bassi family, 1591-1776, boxes 1, 2</li>
+          <li>Deeds referring to Veratti family, 1691-1830, boxes 3, 4</li>
+          <li>Documents referring to Francesco Veratti, 1684-1708, box 5</li>
+          <li>Documents referring to Ferdinando Veratti, 1721-1788, box 5</li>
+          <li>Documents referring to Giuseppe Veratti, 1734-1742, box 5</li>
+          <li>Documents referring to Laura Bassi, 1732-1836, boxes 6, 7</li>
+          <li>Documents referring to Giovanni Veratti, 1761-1800, box 8</li>
+          <li>Documents referring to Giacomo Veratti, 1772-1818, box 8</li>
+          <li>Documents referring to Paolo Veratti, 1765-1832, boxes 9-11</li>
+          <li>Documents referring to Gaetano Veratti, 1806-1825, box 12</li>
+          <li>Documents referring to Francesco Veratti, 1830, box 12</li>
+          <li>Various materials, 1712-18th century, box 12</li>
+        </ol>
       custodial_note_title: 'Custodial History Note'
       custodial_note_text_html: |
         <p>The documents of Laura Maria Caterina Bassi Veratti [1], of her son Paolo and, more generally, of the Bassi and Veratti families, were bequeathed to the Archiginnasio Library between 1922 and 1924. The donation, which also included a large number of printed scientific works, was made according to the will of Laura's direct descendant Giovanni Veratti, by his daughter Emma and her husband, Giulio Mazzoni [2].</p>
@@ -48,20 +50,30 @@ en:
         <p>Thanks to a list of materials included in the Gozzi donation, the identification of some of the documents that were added is possible. When the collection was arranged, that documentation was included, both because it was a consolidation and because the list is so cursory, it does not allow for the certain identification of all the material [13]. Whenever possible, the provenance is indicated in a note.</p>
       notes_title: 'Methodological Notes'
       notes_text_html: |
-        <p>When the rearrangement began, there were nine boxes:</p>
-        <p>- Two referring to Laura Bassi, already arranged and described</p>
-        <p>- Three referring to the Veratti family members, especially to Paolo Veratti, Laura's son;</p>
-        <p>- Four containing deeds, in no apparent order, pertaining to the Bassi and the Veratti.</p>
+        <p>When the rearrangement began, there were nine boxes:
+        <ul>
+          <li>Two referring to Laura Bassi, already arranged and described</li>
+          <li>Three referring to the Veratti family members, especially to Paolo Veratti, Laura's son;</li>
+          <li>Four containing deeds, in no apparent order, pertaining to the Bassi and the Veratti.</li>
+        </ul>
+        </p>
         <p>According to the documents of the donation [14], the papers were apparently in this state when they arrived at the Archiginnasio. An initial study was carried out, and it found that there was no original order and that the material was a simple collection rather than a personal archive; therefore, the creation of an organizational system was undertaken so that a logical order would facilitate access to the documents.</p>
         <p>The arrangement and description of the Laura Bassi boxes were retained, since they were already in place and had been used by scholars in the past; only a few changes were made to make the description similar to the one used for the other documents of the collection.</p>
         <p>The four boxes containing the deeds were organized and the material divided between the Bassi and the Veratti, in chronological order. The deeds were found to be reference-signed by book and number; no finding aid was associated with them but, by analogy, it was possible to assign the documents to the appropriate family and make sure that they were chronologically arranged such that the Bassi deeds come first and the Veratti deeds later. One further handwritten note, "Gamberini notaio", can be found on several deeds, but it did not provide any useful information, other than that the lawyer was able to utilize the documents he signed for purposes that cannot be determined.</p>
         <p>All the remaining documents were then arranged, assigning them to the person or persons who wrote them, in their chronological order. Some documents were difficult to read given their poor state of preservation and so, prior to undertaking this project, they were restored in 2000 [15].</p>
         <p>The documents were placed in 12 boxes and then described (as either files, registers, or single documents) and ordered chronologically by family, as far as possible:</p>
-        <p>Boxes 1-2: deeds referring to the Bassi (the oldest ones ordered chronologically);</p>
-        <p>Boxes 3-4: deeds referring to the Veratti;</p>
-        <p>Box 5: documents referring to the Veratti (before Laura married into the family);</p>
-        <p>Boxes 6-7 : Laura Bassi’s documents;</p>
-        <p>Boxes 8-12: documents referring to Laura Bassi’s children and descendants;</p>
+        <dl class="dl-horizontal">
+          <dt>Boxes 1-2:</dt>
+          <dd>deeds referring to the Bassi (the oldest ones ordered chronologically);</dd>
+          <dt>Boxes 3-4:</dt>
+          <dd>deeds referring to the Veratti;</dd>
+          <dt>Box 5:</dt>
+          <dd>documents referring to the Veratti (before Laura married into the family);</dd>
+          <dt>Boxes 6-7:</dt>
+          <dd>Laura Bassi’s documents;</dd>
+          <dt>Boxes 8-12:</dt>
+          <dd>documents referring to Laura Bassi’s children and descendants;</dd>
+        </dl>
         <p>Each group is introduced by a short explanatory note.</p>
         <p>Each archival item (file, register, single document) was titled, dated and given a description of its physical extent. The title is in inverted commas if it was found in and transcribed from the same item; when there was no original title or if it can only be partially inferred, a title referring to the content was given, without commas. The date of each item, whenever possible and meaningful, is expressed as year, month and day. When dates are reconstructed or inferred, square brackets are used. The physical extent of files is given according to the documents or papers they are made of, while for registers the leaves were counted. Notes, if necessary, are after each item.</p>
         <p>Thanks to its restoration, the collection is in good shape; when necessary, however, the particular state of an item's preservation is described in a note.</p>
