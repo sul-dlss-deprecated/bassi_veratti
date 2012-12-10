@@ -6,5 +6,6 @@ $(document).ready(function(){
 	  return false;
 	});
 		
-	$('.background-toc').scrollspy()
+	$('.background-toc').scrollspy();
+	$('.inventory-toc').scrollspy();
 });

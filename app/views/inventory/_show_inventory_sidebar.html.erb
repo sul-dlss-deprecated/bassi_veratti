@@ -1,9 +1,12 @@
 <div id="sidebar" class="span3">
-	<div id="sidebar-nav">
-		<%= render :partial => 'shared/finding_aid_download_links' %>
-		
-		<ul class="nav nav-list">
-	    <li class="nav-header"><%=t('bassi.sidebar.inventory.title')%></li>
-	  </ul>
-	</div>
+  <div id="sidebar-nav">
+    <%= render :partial => 'shared/finding_aid_download_links' %>
+
+    <ul class="nav nav-list inventory-toc affix">
+      <li class="nav-header"><%=t('bassi.sidebar.inventory.title')%></li>
+      <li><a href="#series1"><i class="icon-chevron-right"></i> Series 1</a></li>
+      <li><a href="#series2"><i class="icon-chevron-right"></i> Series 2</a></li>
+      <li><a href="#series3"><i class="icon-chevron-right"></i> Series 3</a></li>
+    </ul>
+  </div>
 </div>
