@@ -38,6 +38,8 @@ it:
       collection_link: 'View this collection'
       collection_text: 'Collection Items'
       sibling_text: "Other items in the %{collection} collection"
+    inventory:
+      title: 'Content Inventory'
     search:
       search_results: 'Results'
       gallery_toggle:
@@ -57,5 +59,7 @@ it:
         title: 'Finding Aid'
         download_pdf: 'Download PDF'
         download_ead: 'Download EAD XML'
+      inventory:
+        title: 'Inventory Contents'
       background:
         title: 'Background Information'
