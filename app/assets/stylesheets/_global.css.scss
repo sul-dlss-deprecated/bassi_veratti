@@ -143,6 +143,12 @@ span.content-type {
 .slideshow {
   margin-bottom: 20px;
 }
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  background-color: #eee;
+  color: #222;
+  > [class^="icon-"] {background-image: none; }
+}
 
 // Override Blacklight theme pagination styling
 .pagination {
