@@ -1,8 +1,7 @@
 module ApplicationHelper
   
   def on_scrollspy_page?
-    (request_path[:controller] == 'about' && request_path[:action] == 'background') ||
-      request_path[:controller] == 'inventory'
+    on_background_page || on_inventory_pages
   end
 
 end
