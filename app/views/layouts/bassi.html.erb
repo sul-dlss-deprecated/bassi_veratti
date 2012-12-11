@@ -33,8 +33,15 @@
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
+<<<<<<< HEAD
   <body onload="<%= onload_text %>"
         class="<%= render_body_class %> <%= "scrollspy-content" if on_scrollspy_page? %> ">
+
+		<% show_terms=show_terms_dialog?%>
+	  <%= render(:partial => 'shared/terms_dialog') if show_terms%>
+		<noscript>
+			<% if show_terms %><meta http-equiv="refresh" content="0; URL=/about/terms_dialog?return_to=<%=request.path%>"><% end %>
+		</noscript>
 
     <div id="su-wrap"> <!-- #su-wrap start -->
       <div id="su-content"> <!-- #su-content start -->

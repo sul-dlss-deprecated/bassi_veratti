@@ -5,6 +5,6 @@ $(document).ready(function(){
 		$($(this).attr("data-modal-selector")).modal('show');
 	  return false;
 	});
-		
+
   $('.scrollspy-content').scrollspy({offset: 30});
 });
