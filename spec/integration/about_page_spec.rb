@@ -4,7 +4,7 @@ describe("About Pages",:type=>:request,:integration=>true) do
   
   before(:each) do
     @about_page_title=I18n.t("bassi.about.project_title")
-    @project_team_title=I18n.t("bassi.about.team_title")
+    @project_team_title=I18n.t("bassi.about.stanford_team_title")
     @acknowledgements_title=I18n.t("bassi.about.acknowledgements_title")
     @contact_us_title=I18n.t("bassi.about.contact_title")
     @terms_of_use_title=I18n.t("bassi.about.terms_of_use_title")
@@ -43,7 +43,7 @@ describe("About Pages",:type=>:request,:integration=>true) do
   end
 
   it "should show the project team page" do
-    visit '/about/team'
+    visit '/about/stanford_team'
     page.should have_content(@project_team_title)
   end
     

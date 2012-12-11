@@ -26,6 +26,28 @@ end
 
 
 namespace :bassi do
+
+  desc "restore jetty to initial state"
+  task :jetty_nuke do
+    puts "Nuking jetty"
+    # Restore jetty submodule to initial state.
+    Rake::Task['jetty:stop'].invoke
+    Dir.chdir('jetty') {
+      system('git reset --hard HEAD') or exit
+      system('git clean -dfx')        or exit
+    }
+    Rake::Task['bassi:jetty_config'].invoke
+    Rake::Task['jetty:start'].invoke
+  end
+  
+  desc "Setup the bassi jetty instance by coping solr config files into the right place"
+  task :jetty_config do
+    app_root=File.expand_path('../../../', __FILE__)
+    FileUtils.cp File.join(app_root,'solr_conf','solr.xml'),File.join(app_root,'jetty','solr')
+    FileUtils.cp File.join(app_root,'solr_conf','conf','schema.xml'),File.join(app_root,'jetty','solr','blacklight-core','conf')
+    FileUtils.cp File.join(app_root,'solr_conf','conf','solrconfig.xml'),File.join(app_root,'jetty','solr','blacklight-core','conf')
+  end
+  
   desc "Delete and index all fixtures in solr"
   task :refresh_fixtures do
     Rake::Task["bassi:delete_records_in_solr"].invoke

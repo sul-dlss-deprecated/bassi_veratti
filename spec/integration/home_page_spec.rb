@@ -4,8 +4,7 @@ describe("Home Page",:type=>:request,:integration=>true) do
   
     it "should render the home page with some text" do
         visit root_path
-        page.should have_content("Collection 1")
-        page.should have_content("The Bassi Veratti Digital Library is being built on top of the Stanford Digital Repository to provide a web based platform for discovery of automotive research and images.")
-      end
+        page.should have_content("The online Bassi-Veratti Collection is a multi-year collaboration of the Stanford University Libraries, the Biblioteca Comunale dell'Archiginnasio, Bologna, Italy, and the Istituto per i Beni Artistici, Culturali e Naturali della Regione Emilia-Romagna, to produce a digital version of the archive of the influential woman scientist, Laura Bassi.")
+    end
   
 end

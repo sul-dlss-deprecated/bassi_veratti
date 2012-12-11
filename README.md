@@ -26,25 +26,22 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
         bundle install
         cd ..
 
+1. Set up local jetty
+
+				git submodule init
+				git submodule update
+				rake bassi:jetty:config
+				
 1. Migrate the database:
 
         rake db:migrate
         rake db:migrate RAILS_ENV=test
 
-1. Load the test fixtures:
+1. Start solr and load the fixtures: (you should first stop any other jetty processes if you have multiple jetty-related projects):
 
-        rake jetty:start RAILS_ENV=test
-        rake bassi_veratti:index_fixtures RAILS_ENV=test
-        rake jetty:stop RAILS_ENV=test
+        rake jetty:start 
+        rake bassi_veratti:index_fixtures 
 
-1. Start the development solr (you should first stop any other jetty processes if you have 
-   multiple jetty-related projects):
-
-        rake jetty:start
-
-1. To index the records into an environment's core, ensure jetty is running, then:
-
-        rake bassi_veratti:index_fixtures
 
 1. Start Rails:
 
@@ -71,3 +68,10 @@ You can run the test suite locally by running:
 This will stop development jetty, force you into the test environment, start jetty, start solr, 
 delete all the records in the test solr core, index all fixtures in `spec/fixtures`, run `db:migrate` in test,
 then run the tests, and then restart development jetty
+
+
+## Utils
+
+To reset jetty and solr back to their initial state:
+
+	  rake bassi:jetty_nuke

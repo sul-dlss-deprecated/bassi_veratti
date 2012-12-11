@@ -22,12 +22,6 @@
 		</div>
 		<div class="row">
 	    <div id="featured-description" class="span3">
-	      <span class="content-type collection">Featured Collection</span>
-	      <h3><%= link_to all_collections.first[blacklight_config.show.heading], collection_path(all_collections.first), :id => "collection-title-link" %></h3>
-	      <p>
-	        <span id="collection-description"><%= all_collections.first[blacklight_config.collection_description_field].try(:first) %></span>
-	        <%= link_to "More", collection_path(all_collections.first), :id => "collection-link" %>
-	      </p>
 	    </div>
 		</div>
   </div>
