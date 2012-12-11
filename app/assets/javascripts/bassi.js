@@ -6,6 +6,6 @@ $(document).ready(function(){
 	  return false;
 	});
 		
-	$('.background-toc').scrollspy();
-	$('.inventory-toc').scrollspy();
-});
+		// $('.background-toc').scrollspy();
+		// $('.inventory-toc').scrollspy();
+	});
