@@ -21,7 +21,4 @@ tmp
 # Ignore rvm files
 .rvmrc
 
-# Ignore jetty changes
-jetty
-
 nohup.out
