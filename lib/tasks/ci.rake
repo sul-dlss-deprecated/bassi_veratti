@@ -7,7 +7,8 @@ task :ci do
     system("rake ci RAILS_ENV=test")
   else
     Jettywrapper.wrap(Jettywrapper.load_config) do
-      Rake::Task["bassi:refresh_fixtures"].invoke
+      Rake::Task["bassi:jetty_nuke"].invoke
+      Rake::Task["bassi:index_fixtures"].invoke
       Rake::Task["rspec"].invoke
     end
   end
@@ -16,9 +17,9 @@ end
 desc "Stop dev jetty, run `rake ci`, start dev jetty."
 task :local_ci do  
   system("rake jetty:stop")
+  system("rake bassi:jetty_nuke RAILS_ENV=test")
   system("rake db:migrate RAILS_ENV=test")  
-  system("rake jetty:start RAILS_ENV=test")
-  system("rake bassi:refresh_fixtures RAILS_ENV=test")
+  system("rake bassi:index_fixtures RAILS_ENV=test")
   system("rspec")
   system("rake jetty:stop RAILS_ENV=test")  
   system("rake jetty:start")
