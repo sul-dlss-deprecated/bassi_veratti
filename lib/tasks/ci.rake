@@ -27,6 +27,15 @@ end
 
 namespace :bassi do
 
+  desc "Copy Bassi configuration files"
+  task :config do
+    cp("#{Rails.root}/config/database.yml.example", "#{Rails.root}/config/database.yml") unless File.exists?("#{Rails.root}/config/database.yml")
+    cp("#{Rails.root}/config/solr.yml.example", "#{Rails.root}/config/solr.yml") unless File.exists?("#{Rails.root}/config/solr.yml")
+    cp("#{Rails.root}/solr_conf/solr.xml","#{Rails.root}/jetty/")
+    cp("#{Rails.root}/solr_conf/conf/schema.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")
+    cp("#{Rails.root}/solr_conf/conf/solrconfig.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")    
+  end
+  
   desc "restore jetty to initial state"
   task :jetty_nuke do
     puts "Nuking jetty"
@@ -36,16 +45,8 @@ namespace :bassi do
       system('git reset --hard HEAD') or exit
       system('git clean -dfx')        or exit
     }
-    Rake::Task['bassi:jetty_config'].invoke
+    Rake::Task['bassi:config'].invoke
     Rake::Task['jetty:start'].invoke
-  end
-  
-  desc "Setup the bassi jetty instance by coping solr config files into the right place"
-  task :jetty_config do
-    app_root=File.expand_path('../../../', __FILE__)
-    FileUtils.cp File.join(app_root,'solr_conf','solr.xml'),File.join(app_root,'jetty','solr')
-    FileUtils.cp File.join(app_root,'solr_conf','conf','schema.xml'),File.join(app_root,'jetty','solr','blacklight-core','conf')
-    FileUtils.cp File.join(app_root,'solr_conf','conf','solrconfig.xml'),File.join(app_root,'jetty','solr','blacklight-core','conf')
   end
   
   desc "Delete and index all fixtures in solr"
