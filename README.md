@@ -8,9 +8,11 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         git clone git://afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git
 
-1. Go to your new directory
+1. Copy the .yml example files:
 
         cd bassi_veratti
+        cp config/database.yml.example config/database.yml
+        cp config/solr.yml.example config/solr.yml
 
 1. [Optional] If you want to use rvmrc to manage gemsets, copy the .rvmrc example files:
 
@@ -24,11 +26,11 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
         bundle install
         cd ..
 
-1. Set up local jetty and copy the config files
+1. Set up local jetty
 
 				git submodule init
 				git submodule update
-				rake bassi:config
+				rake bassi:jetty:config
 				
 1. Migrate the database:
 
