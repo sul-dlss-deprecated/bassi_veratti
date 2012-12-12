@@ -14,7 +14,8 @@
     <div id="doc_<%= @document.id.to_s.parameterize %>">
 
       <% # bookmark/folder functions -%>
-
+      <%= render_document_heading(:h1).html_safe %>
+      
       <div class="document">
         <%= render_document_partial @document, :show %>
       </div>
