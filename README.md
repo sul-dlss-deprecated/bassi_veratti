@@ -8,10 +8,6 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         git clone /afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git
 
-1. Go to your new directory
-
-				cd bassi_veratti
-				
 1. [Optional] If you want to use rvmrc to manage gemsets, copy the .rvmrc example files:
 
         cp .rvmrc.example .rvmrc
