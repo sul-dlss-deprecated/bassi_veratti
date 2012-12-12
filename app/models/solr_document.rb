@@ -5,6 +5,68 @@ class SolrDocument
 
   self.unique_key = 'id'
 
+  def series?
+    self.has_key?(blacklight_config.series_identifying_field) and 
+      self[blacklight_config.series_identifying_field].include?(blacklight_config.series_identifying_value)
+  end
+
+  def parent
+    return nil if series?
+    @parent ||= SolrDocument.new(
+                      Blacklight.solr.select(
+                        :params => {
+                          :fq => "#{SolrDocument.unique_key}:\"#{self[blacklight_config.children_identifying_field].first}\""
+                        }
+                      )["response"]["docs"].first
+                    )
+  end
+
+  def children
+    @children ||= CollectionMembers.new(
+                              Blacklight.solr.select(
+                                :params => {
+                                  :fq => "#{blacklight_config.children_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
+                                  :rows => blacklight_config.collection_member_grid_items.to_s
+                                }
+                              )
+                            )
+  end
+
+  def box_siblings
+    @box_siblings ||= CollectionMembers.new(
+                              Blacklight.solr.select(
+                                :params => {
+                                  :fq => "#{blacklight_config.box_identifying_field}:\"#{self[blacklight_config.box_identifying_field].first}\"",
+                                  :rows => blacklight_config.collection_member_grid_items.to_s
+                                }
+                              )
+                            )
+  end
+
+  def folder_siblings
+    @folder_siblings ||= CollectionMembers.new(
+                              Blacklight.solr.select(
+                                :params => {
+                                  :fq => "#{blacklight_config.box_identifying_field}:\"#{self[blacklight_config.box_identifying_field].first}\" AND 
+                                          #{blacklight_config.folder_identifying_field}:\"#{self[blacklight_config.folder_identifying_field].first}\"",
+                                  :rows => blacklight_config.collection_member_grid_items.to_s
+                                }
+                              )
+                            )
+  end
+
+  def all_series
+    @all_series ||= Blacklight.solr.select(
+      :params => {
+        :fq => "#{blacklight_config.series_identifying_field}:\"#{blacklight_config.series_identifying_value}\"",
+        :rows => "20"
+      }
+    )["response"]["docs"].map do |document|
+      SolrDocument.new(document)
+    end
+  end
+
+
   def collection?
     self.has_key?(blacklight_config.collection_identifying_field) and 
       self[blacklight_config.collection_identifying_field].include?(blacklight_config.collection_identifying_value)

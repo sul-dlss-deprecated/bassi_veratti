@@ -31,6 +31,9 @@ class CatalogController < ApplicationController
     
     # needs to be stored so we can retreive it
     # needs to be in field list for all request handlers so we can identify collections in the search results.
+    config.series_identifying_field = "format_ssim"
+    config.series_identifying_value = "series"
+    
     config.collection_identifying_field = "format_ssim"
     config.collection_identifying_value = "Collection"
     
@@ -40,13 +43,19 @@ class CatalogController < ApplicationController
     
     # needs to be indexed so we can search it to return relationships.
     # needs to be in field list for all request handlers so we can identify collection members in the search results.
+    config.children_identifying_field = "direct_parent_ssim"
+    
     config.collection_member_identifying_field = "is_member_of_ssim"
+    
+    
+    config.box_identifying_field = "box_ssim"
+    config.folder_identifying_field = "folder_ssim"
     
     # needs to be stored so we can retreive it for display
     # needs to be in field list for all request handlers
     config.collection_member_collection_title_field = "collection_ssim"
     
-    config.collection_member_grid_items = 20
+    config.collection_member_grid_items = 1000
     
     # needs to be sotred so we can retreive it
     # needs to be in field list for all request handlers so we can get images the document anywhere in the app.
@@ -92,10 +101,9 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'pub_date_itsim', :label => 'Date', :single => true
     config.add_facet_field 'format_ssim', :label => 'Format'
-    config.add_facet_field 'subjects_ssim', :label => "Subject"
-    config.add_facet_field 'collection_ssim', :label => "Collection"
+    config.add_facet_field 'box_ssim', :label => 'Box'
+    config.add_facet_field 'folder_ssim', :label => 'Folder'
 
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
