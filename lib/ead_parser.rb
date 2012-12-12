@@ -7,15 +7,9 @@ class EadParser
     elsif file.is_a?(File)
       @file = file
     end
-    @reader = Eadsax::Ead.parse(@file.read)
-  end
-  
-  def series
-    @reader.archdesc.dsc.c01s
-  end
-  
-  def subseries
-    
+    xml = Nokogiri::XML(@file.read)
+    xml.remove_namespaces!
+    @reader = Eadsax::Ead.parse(xml.to_s)
   end
   
 end
