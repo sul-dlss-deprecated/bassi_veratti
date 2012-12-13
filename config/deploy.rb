@@ -52,6 +52,9 @@ namespace :app do
 end
 
 namespace :jetty do
+  task :config do
+    run "cd #{deploy_to}/current && rake bassi:config RAILS_ENV=#{rails_env}"
+  end
   task :start do 
     run "cd #{deploy_to}/current && rake jetty:start RAILS_ENV=#{rails_env}"
   end
@@ -84,3 +87,4 @@ namespace :deploy do
 end
 
 after "deploy", "deploy:migrate"
+after "deploy", "app:add_date_to_version"
