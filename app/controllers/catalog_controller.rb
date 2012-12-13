@@ -31,7 +31,7 @@ class CatalogController < ApplicationController
     
     # needs to be stored so we can retreive it
     # needs to be in field list for all request handlers so we can identify collections in the search results.
-    config.series_identifying_field = "format_ssim"
+    config.series_identifying_field = "level_ssim"
     config.series_identifying_value = "series"
     
     config.collection_identifying_field = "format_ssim"
@@ -101,9 +101,11 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'format_ssim', :label => 'Format'
-    config.add_facet_field 'box_ssim', :label => 'Box'
-    config.add_facet_field 'folder_ssim', :label => 'Folder'
+    config.add_facet_field 'level_ssim', :label => 'Level'
+    config.add_facet_field 'personal_name_ssim', :label => "Personal Name", :limit => 10
+    config.add_facet_field 'geographic_name_ssim', :label => "Location", :limit => 10
+    config.add_facet_field 'corporate_name_ssim', :label => "Corporate Name", :limit => 10
+    config.add_facet_field 'family_name_ssim', :label => "Family Name"
 
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
@@ -121,15 +123,14 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
 
-    config.add_index_field 'pub_date_itsim', :label => 'Date:'
-    config.add_index_field 'format_ssim', :label => 'Format:'
+    config.add_index_field 'level_ssim', :label => 'Level:'
+    config.add_index_field 'unit_date_ssim', :label => 'Date:'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
-    config.add_show_field 'pub_date_itsim', :label => 'Date:'
-    config.add_show_field 'format_ssim', :label => 'Format:'
-    config.add_show_field 'country_origin_tsi', :label => 'Country of orgin:'
-    config.add_show_field 'subjects_ssim', :label => 'Subjects:'
+    config.add_show_field 'level_ssim', :label => 'Level:'
+    config.add_show_field 'unit_date_ssim', :label => 'Date:'
+    config.add_show_field 'extent_ssim', :label => 'Physical Desc:'
     config.add_show_field 'description_tsim', :label => 'Description:'
 
     # "fielded" search configuration. Used by pulldown among other places.
