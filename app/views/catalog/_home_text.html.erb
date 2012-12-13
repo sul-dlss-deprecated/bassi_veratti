@@ -1,28 +1,40 @@
-<div class="row">
-  <div class="span3">
-  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>
-		Featured Collection 1
-  </div>
-  <div class="span3">
-  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>	
-  	Featured Collection 2
-  </div>
-  <div class="span3">
-  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>	
-  	Featured Collection 3
-  </div>
-</div>
-
-
-<div class="row">
-	<div class="span9 about-dl">
-		<h3 class="section-heading">About the Collection</h3>
-		<p>
-			<%= link_to image_tag('bv-sample.png', :width => '120'), about_project_path %>
-      <%= t('bassi.home.about_text_html') %>
-		</p>
-		<p>
-			<%= link_to 'More', about_project_path %>
-		</p>
+<div id="content" class="span9">
+	<div class="row">
+	  <div class="span9">
+	    <h2>Collection Highlights</h2>
+	  </div>
 	</div>
+
+  <div class="row featured-collections">
+    <div class="span3">
+      <%= image_tag('bv-sample.png', :class => 'highlight-poster-image') %>
+        <h3 class="collection-title">University Correspondence</h3>
+        <span>(14 items)</span>
+      </div>
+      <div class="span3">
+        <%= image_tag('bv-sample-2.png', :class => 'highlight-poster-image') %>
+        <h3 class="collection-title">Official Documents</h3>
+        <span>(22 items)</span>
+      </div>
+      <div class="span3">
+        <%= image_tag('bv-sample-3.png', :class => 'highlight-poster-image') %>
+        <h3 class="collection-title">Personal Letters</h3>
+        <span>(11 items)</span>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="span9 about-dl">
+      <h3 class="section-heading">About the Collection</h3>
+      <p>
+        <%= link_to image_tag('bv-sample.png', :width => '120'), about_project_path %>
+        <%= t('bassi.home.about_text_html') %>
+      </p>
+      <p>
+        <%= link_to 'More', about_project_path %>
+      </p>
+    </div>
+  </div>
+
 </div>
