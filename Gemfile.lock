@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sul-dlss/eadsax.git
-  revision: 57a1dcd4d3c4763a90b3062a68aba96bbc77fdca
+  revision: 1d9304df09b359611973b5d0ff343881483a0ffa
   specs:
     eadsax (0.0.0)
       sax-machine
