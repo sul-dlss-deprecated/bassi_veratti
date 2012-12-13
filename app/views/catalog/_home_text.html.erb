@@ -1,29 +1,15 @@
-<% all_collections=SolrDocument.new.all_collections%>
-<div class="row slideshow">
-  <div class="span6">
-    <div id="all_collections_carousel" class="carousel slide">
-      <div class="carousel-inner">
-        <%- all_collections.each_with_index do |collection, index| -%>
-          <div class="item<%= " active" if index == 0 %>" data-collection-title="<%= collection[blacklight_config.show.heading] %>" data-collection-href="<%= collection_path(collection) %>" data-collection-description="<%= collection[blacklight_config.collection_description_field].try(:first) %>">
-            <a id="collection-image-link" href="<%=collection_path(collection)%>"><canvas height="300px" width="400px" class="image-stitch" id="image-stitch-<%= index %>" data-image-urls="<%= collection.collection_members.map{|c| c.images.first }.join(', ') %>"></canvas></a>
-          </div>
-        <%- end -%>
-      </div>
-    </div>
+<div class="row">
+  <div class="span3">
+  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>
+		Featured Collection 1
   </div>
-  <div id="featured-collection-nav" class="span3">
-		<div class="row">
-			<div class="span3">
-		    <div class="all_collections carousel-controls">
-		      <a class="carousel-control left" href="#all_collections_carousel" data-slide="prev">&lsaquo;</a>
-		      <a class="carousel-control right" href="#all_collections_carousel" data-slide="next">&rsaquo;</a>
-		    </div>
-			</div>
-		</div>
-		<div class="row">
-	    <div id="featured-description" class="span3">
-	    </div>
-		</div>
+  <div class="span3">
+  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>	
+  	Featured Collection 2
+  </div>
+  <div class="span3">
+  	<p><%= image_tag('bv-sample.png', :width => '120') %></p>	
+  	Featured Collection 3
   </div>
 </div>
 

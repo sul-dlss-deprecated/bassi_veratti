@@ -17,7 +17,7 @@ en:
       collections: 'Collection Highlights'
       background: 'Background'
       content_inventory: 'Content Inventory'
-      terms_of_use_message: 'This is the terms of use message that appears once for each user the first time they visit the website.'
+      terms_of_use_message: "Copyright @ Biblioteca dell’Archiginnasio. All rights are reserved to Biblioteca dell'Archiginnasio, Comune di Bologna. The images can only be printed by using this page and for personal/scholarly use. Any other use must be requested in writing to Biblioteca dell'Archiginnasio: archiginnasio@comune.bologna.it."
       terms_continue: 'Continue using the website.'
       close: 'Close'
     about:

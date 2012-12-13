@@ -34,8 +34,8 @@
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
 
-  <body onload="<%= onload_text %>"
-        class="<%= render_body_class %> <%= "scrollspy-content" if on_scrollspy_page? %> ">
+  <body onload="<%= raw onload_text %>"
+        class="<%= render_body_class %> <%= "scrollspy-content" if on_scrollspy_page? %>">
 
 		<% show_terms=show_terms_dialog?%>
 	  <%= render(:partial => 'shared/terms_dialog') if show_terms%>

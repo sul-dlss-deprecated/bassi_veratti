@@ -77,4 +77,627 @@ en:
         <p>Each group is introduced by a short explanatory note.</p>
         <p>Each archival item (file, register, single document) was titled, dated and given a description of its physical extent. The title is in inverted commas if it was found in and transcribed from the same item; when there was no original title or if it can only be partially inferred, a title referring to the content was given, without commas. The date of each item, whenever possible and meaningful, is expressed as year, month and day. When dates are reconstructed or inferred, square brackets are used. The physical extent of files is given according to the documents or papers they are made of, while for registers the leaves were counted. Notes, if necessary, are after each item.</p>
         <p>Thanks to its restoration, the collection is in good shape; when necessary, however, the particular state of an item's preservation is described in a note.</p>
-
+      abbreviations_title: 'Abbreviations'
+      abbreviations_text_html: |
+        <dl class="dl-horizontal">
+            <dt>c., cc.</dt>
+            <dd>leaf, leaves</dd>
+            <dt>cc. num. orig.</dt>
+            <dd>original page number</dd>
+            <dt>doc., docc.</dt>
+            <dd>document, documents</dd>
+            <dt>fasc., fascc.</dt>
+            <dd>file, files</dd>
+            <dt>fasc. ril.</dt>
+            <dd>bound file</dd>
+            <dt>m.</dt>
+            <dd>dead</dd>
+            <dt>mz., mzz.</dt>
+            <dd>bundle, bundles</dd>
+            <dt>n.</dt>
+            <dd>born</dd>
+            <dt>n., nn.</dt>
+            <dd>number, numbers</dd>
+            <dt>p., pp.</dt>
+            <dd>page, pages</dd>
+            <dt>pz., pzz.</dt>
+            <dd>item, items</dd>
+            <dt>reg., regg.</dt>
+            <dd>register, registers</dd>
+            <dt>rif.</dt>
+            <dd>referring to</dd>
+            <dt>s.a.</dt>
+            <dd>without author</dd>
+            <dt>s.d.</dt>
+            <dd>without date</dd>
+            <dt>s.g.</dt>
+            <dd>without day</dd>
+            <dt>s.l.</dt>
+            <dd>without place</dd>
+            <dt>s.m.</dt>
+            <dd>without month</dd>
+            <dt>s.n.t.</dt>
+            <dd>without imprints</dd>
+            <dt>vol., voll.</dt>
+            <dd>volume, volumes</dd>
+            <dt>°°</dt>
+            <dd>married to</dd>
+        </dl>
+      bibliography_title: 'Bibliography'
+      bibliography_text_html: |
+      bibliography_text_html: |
+        <ul>
+          <li>GIOVANNI FANTUZZI, 
+              <em>Elogio della dottoressa Laura Maria Caterina Bassi Verati</em>, Bologna, s.n.t., 1778.</li>
+          <li>MICHELANGELO GUALANDI, 
+              <em>Medaglia e ricordi dell'Antico Reggimento in lode di Laura Bassi</em>, "Almanacco Statistico Bolognese", XIII, 1842, pp. 65-77.</li>
+          <li>
+              <em>Lettere inedite alla celebre Laura Bassi scritte da illustri italiani e stranieri con biografia</em>, a cura di G. Cenerelli, Bologna, 1885.</li>
+          <li>GIOVANNI BATTISTA COMELLI, 
+              <em>Laura Bassi e il suo primo trionfo</em>, "Studi e Memorie per la storia dell'Università di Bologna", III, 1912 (Biblioteca de "L'Archiginnasio", s. I, vol. III), pp. 197-256.</li>
+          <li>ALBANO SORBELLI, 
+              <em>Cimeli e autografi riguardanti Laura Bassi donati alla Biblioteca</em>, "L'Archiginnasio", XVIII, 1923, p. 96.</li>
+          <li>ALBANO SORBELLI, 
+              <em>Cospicuo dono alla biblioteca dell'Archiginnasio</em>, "L'Archiginnasio", XIX, 1924, pp. 128-129.</li>
+          <li>ALBANO SORBELLI,
+              <em>Dono di scritti e cimeli di Laura Bassi Veratti</em>, "L'Archiginnasio", XX, 1925, pp. 100-101.</li>
+          <li>
+              <em>Epistolario di Laura Bassi Veratti</em>, a cura di E. Melli, in
+              <em>Studi e inediti per il primo centenario dell'Istituto Magistrale Laura Bassi</em>, a cura di P. Cazzani, Bologna, Tip. STEB, 1961, pp. 53-187.</li>
+          <li>RAFFAELLA TOMMASI, 
+              <em>Documenti riguardanti Laura Bassi conservati presso l'Archiginnasio</em>, "L'Archiginnasio", LVII, 1962, pp. 319-324.</li>
+          <li>MARIO FANTI, 
+              <em>Il fondo Scarselli nella Biblioteca Comunale dell'Archiginnasio</em>, "L'Archiginnasio", LVII, 1962, pp. 325-328.</li>
+          <li>RAFFAELE MAZZEI, 
+              <em>Esperimenti sulla elettricità medica a Bologna nel '700</em>, "Il Carrobbio", 1984, pp. 200-207.</li>
+          <li>ELIO MELLI,
+              <em>Laura Bassi Verati: ridiscussioni e nuovi spunti, in Alma Mater Studiorum. La presenza femminile dal XVIII al XX secolo</em>, Bologna, CLUEB, 1988, pp. 71-79.</li>
+          <li>MARTA CAVAZZA, 
+              <em>"Dottrici" e lettrici dell'Università di Bologna nel settecento</em>, "Annali di Storia dell'Università', I, 1997, pp. 109-126.</li>
+        </ul>
+      index_title: 'Index'
+      index_text_html: |
+        <p>This index provides a list of all personal, corporate and place names found in the guide.</p>
+        <ul>
+          <li>Accademici Agiati vedi Accademia degli Agiati (Roveredo)</li>
+          <li>Accademia degli Agiati (Roveredo)</li>
+          <li>Accademia degli Amanti della Botanica (Cortona)</li>
+          <li>Accademia degli Arcadi (Roma)</li>
+          <li>Accademia degli Ardenti (Bologna)</li>
+          <li>Accademia dei Dissonanti (Modena)</li>
+          <li>Accademia Emonia (Busseto)</li>
+          <li>Accademia degli Erranti (Fermo)</li>
+          <li>Accademia degli Erranti già Raffrontati</li>
+          <li>Accademia dei Fluttuanti (Finale di Modena)</li>
+          <li>Accademia Fulginia (Foligno)</li>
+          <li>Accademia degli Ipocondriaci (Reggio Emilia)</li>
+          <li>Accademia dei Placidi (Recanati)</li>
+          <li>Accademia dei Teopneusti (Correggio)</li>
+          <li>Accarisi, Floriano</li>
+          <li>Agli Puccetti, Laura</li>
+          <li>Albergati Fontani, Ginevra</li>
+          <li>Aldini, Giovanni</li>
+          <li>Aldrovandi, Filippo</li>
+          <li>Aldrovandi, Pier Iacopo</li>
+          <li>Aldrovandi, Pietro, vedi Aldrovandi, Pier Iacopo</li>
+          <li>Aldrovandi Marescotti, Carlo Filippo</li>
+          <li>Algardi, Francesco Antonio</li>
+          <li>Algardi, Giovanni</li>
+          <li>Amministrazione centrale del Reno</li>
+          <li>Ancona</li>
+          <li>Angela Matilde, suora, vedi Albergati Fontani, Ginevra</li>
+          <li>Angelelli, Teresa</li>
+          <li>Anosiro Minali</li>
+          <li>Antici, Tommaso, cardinale</li>
+          <li>Anton Maria da Pistoja, cappuccino</li>
+          <li>Ascoli</li>
+          <li>Aranti, Silvio</li>
+          <li>Archetti, Giovanni Andrea, cardinale</li>
+          <li>Assunteria di Abbondanza</li>
+          <li>Assunteria delle Acque</li>
+          <li>Assunteria di Governo</li>
+          <li>Assunteria di Sanità</li>
+          <li>Atti, Giuseppe</li>
+          <li>B.P.L.T.</li>
+          <li>B[...], Ferdinando</li>
+          <li>Baccelli, Liberato</li>
+          <li>Bacialli, Angelo Michele</li>
+          <li>Bajotti, Rinaldo</li>
+          <li>Baldi, Antonio</li>
+          <li>Bandiera, Giovanni Nicolò</li>
+          <li>Baroni, Innocenzo</li>
+          <li>Bassi, famiglia</li>
+          <li>Bassi, Carlo Filippo</li>
+          <li>Bassi, Felice</li>
+          <li>Bassi, Francesco</li>
+          <li>Bassi, Gaspare</li>
+          <li>Bassi, Giacinto</li>
+          <li>Bassi, Giacomo</li>
+          <li>Bassi, Giovanni</li>
+          <li>Bassi, Giuseppe</li>
+          <li>Bassi, Giuseppe Maria</li>
+          <li>Bassi, Laura</li>
+          <li>Bavari, Francesco Saverio</li>
+          <li>Bavoli, Giuseppe Maria</li>
+          <li>Bazzani, Matteo</li>
+          <li>Beccari, Giacomo Bartolomeo</li>
+          <li>Bellettini, Pierangelo</li>
+          <li>Bellini, Stefano</li>
+          <li>Belluzzi, Francesco Maria</li>
+          <li>Benati, Giorgio</li>
+          <li>Benelli, fratelli</li>
+          <li>Benelli, Francesco Maria</li>
+          <li>Benelli, Giuseppe</li>
+          <li>Benelli, Ludovico</li>
+          <li>Bergonzi Ranuzzi, Maria</li>
+          <li>Bernardi, Angelo Antonio</li>
+          <li>Bernardi, Antonio</li>
+          <li>Bertacini, Antonio</li>
+          <li>Bertinoro</li>
+          <li>Bertoloni, Antonio</li>
+          <li>Bertolotti, Angelo</li>
+          <li>Biasini, Giovanni</li>
+          <li>Bignami, Angelo</li>
+          <li>Blasi, Matteo</li>
+          <li>Bologna</li>
+          <li>Bonaccorsi, Giovanna</li>
+          <li>Bonazzi, Bartolomeo</li>
+          <li>Bonfioli Malvezzi, Alfonso</li>
+          <li>Bonini, Giovanni Battista</li>
+          <li>Borgognoni, Vincenzo</li>
+          <li>Borsari, Lorenzo</li>
+          <li>Branciforte Colonna, Antonio</li>
+          <li>Brighenti, Nicola Vittorio</li>
+          <li>Brizzi, Bernardino</li>
+          <li>Bruzzi, Elisabetta</li>
+          <li>Budrio</li>
+          <li>Busseto</li>
+          <li>Ca[...], Luigi</li>
+          <li>Cagnaroni, Giuseppe</li>
+          <li>Calvi, Jacopo Alessandro</li>
+          <li>Calvoli, famiglia</li>
+          <li>Calvoli, Giacomo</li>
+          <li>Calvoli, Giuseppe</li>
+          <li>Calvoli, Rosalia</li>
+          <li>Camerino</li>
+          <li>Canneto (Bari)</li>
+          <li>Canova, Giuseppe</li>
+          <li>Cantelli Cremonini, Giulia Teresa</li>
+          <li>Cantelli Tagliazucchi, Veronica</li>
+          <li>Canterzani, Sebastiano</li>
+          <li>Cappi, Maria Anna Margherita</li>
+          <li>Carini, Anna Caterina</li>
+          <li>Carlani, Carlo Antonio</li>
+          <li>Casignoli, Giovanni Domenico</li>
+          <li>Cassoni, Giuseppe</li>
+          <li>Castelli, monsignore</li>
+          <li>Castelli, Giovanni Battista</li>
+          <li>Castelli, Virginia</li>
+          <li>Castiglioni, Filippo</li>
+          <li>Castiglioni, Francesco Saverio, vedi Pio VIII, papa</li>
+          <li>Cavalleri, Domenico</li>
+          <li>Cavazza, Marta</li>
+          <li>Cavazzi, Bartolomeo</li>
+          <li>Cazzani, Pietro</li>
+          <li>Celsi, Giuseppe</li>
+          <li>Cenerelli, Giuseppe</li>
+          <li>Cesari, Rosa Maria</li>
+          <li>Cesena</li>
+          <li>Chierichetti Forti, Rosa</li>
+          <li>Chierichetti, Ermenegildo</li>
+          <li>Chierici, Francesco Maria</li>
+          <li>Cingoli</li>
+          <li>Collegio medico chirurgico di Bologna</li>
+          <li>Colli, Francesco</li>
+          <li>Colli, Giuseppe</li>
+          <li>Comelli, Giovanni Battista</li>
+          <li>Commissione cantonale di leva</li>
+          <li>Commissione dipartimentale di Sanità del Reno</li>
+          <li>Commissione provinciale di Sanità</li>
+          <li>Compagnia di Gesù (Modena)</li>
+          <li>Compagnia del Santissimo Sacramento (parrocchia di Santa Caterina)</li>
+          <li>Conventi, Benedetto</li>
+          <li>Corradini (Coradini) Zinanni, Maria Maddalena</li>
+          <li>Correggio</li>
+          <li>Corticelli, Alessandro</li>
+          <li>Cortona</li>
+          <li>Cospi, Girolamo</li>
+          <li>Costa, Paolo</li>
+          <li>Covi, Antonio</li>
+          <li>Cremonini, Francesco Antonio Bonaventura</li>
+          <li>Cremonini, Paolo</li>
+          <li>Cremonini, Teresa Maria</li>
+          <li>Cremonini Raggi, Angela</li>
+          <li>Crivelli, Giovanni</li>
+          <li>Cruciani, Ercole</li>
+          <li>Cruciani, Giulio</li>
+          <li>Cruciani, Nicola</li>
+          <li>Cuppini, Giuseppe</li>
+          <li>D.G.C.</li>
+          <li>D'Arèncourt, Garnier</li>
+          <li>Dalisa Caistria, pastore arcade</li>
+          <li>Dalla Volpe</li>
+          <li>Dalla Volpe</li>
+          <li>Dalle Donne, Maria</li>
+          <li>Davia, Giovanni Antonio, cardinale</li>
+          <li>Davia, Giuseppe</li>
+          <li>De Bandel, Giuseppe Antonio</li>
+          <li>De Bianchi, V.</li>
+          <li>De Buoi, Bartolomeo</li>
+          <li>De Bonifazi, famiglia</li>
+          <li>Devizi (De Vizi), Vittoria</li>
+          <li>Di Polignach, Melchiorre</li>
+          <li>Direzione delle Poste nel Dipartimento del Reno</li>
+          <li>Disvetro (Modena)</li>
+          <li>Dodi, Gaetano</li>
+          <li>Dodi, Pietro</li>
+          <li>Dugliolo</li>
+          <li>Emiliani, Luigi</li>
+          <li>Ercolani Ratta Garganelli, Elisabetta</li>
+          <li>F.P.</li>
+          <li>Fabri, Francesco</li>
+          <li>Fabri, Ranier Bernardino</li>
+          <li>Fano</li>
+          <li>Fanti, Mario</li>
+          <li>Fantoni, Pio</li>
+          <li>Fantuzzi, Giovanni</li>
+          <li>Farri, Francesco</li>
+          <li>Felici, Giovanni Battista</li>
+          <li>Fermo</li>
+          <li>Ferrara</li>
+          <li>Ferri, Antonio</li>
+          <li>Ferri, Giuseppe</li>
+          <li>Ferri, Gregorio Antonio</li>
+          <li>Fiandrini, Ottavio</li>
+          <li>Fieschi, Adriano</li>
+          <li>Finale Emilia</li>
+          <li>Fiorini, Anna</li>
+          <li>Fiorini, Domenico</li>
+          <li>Firenze</li>
+          <li>Fittili Lauri, Maria</li>
+          <li>Foligno</li>
+          <li>Formagliari, Alessandro</li>
+          <li>Francesco Anton Maria da Pistoja, cappuccino</li>
+          <li>Frascaroli, sorelle</li>
+          <li>Frascaroli, Antonia Maria</li>
+          <li>Frascaroli, Caterina Maria</li>
+          <li>Frascaroli, Domenico</li>
+          <li>Frascaroli, Giuseppe</li>
+          <li>Frascaroli, Matteo</li>
+          <li>Frascaroli, Rosa Maria</li>
+          <li>Fratta, Domenico Maria</li>
+          <li>Frulli, Carlo</li>
+          <li>Fulchi, Bartolomeo</li>
+          <li>G.A.G.</li>
+          <li>G.B.A.</li>
+          <li>G.B.F.F.C.</li>
+          <li>G.C.C.</li>
+          <li>G.M.</li>
+          <li>G.M.C.</li>
+          <li>G.P.C.</li>
+          <li>G.V.D.F.</li>
+          <li>Gaiba, Giuseppe</li>
+          <li>Galli, Pietro</li>
+          <li>Galvani, Giacomo Filippo Antonio</li>
+          <li>Galvani, Luigi</li>
+          <li>Gambarini Gandolfi, Carlo</li>
+          <li>Gamberini, notaio</li>
+          <li>Garattoni, Giuseppe Enea</li>
+          <li>Garelli, Antonio, canonico</li>
+          <li>Garelli, Salvatore</li>
+          <li>Garetti, Nicolò</li>
+          <li>Garetti, Paolo Francesco</li>
+          <li>Gasperini, Giuseppe</li>
+          <li>Gennari, Filippo</li>
+          <li>Genova</li>
+          <li>Gherardi, Adriano</li>
+          <li>Ghisilieri, Francesco</li>
+          <li>Gini, Cesare Massimiliano</li>
+          <li>Giovannini, Carlo</li>
+          <li>Giron, Giovanni Giuseppe, principe di Canneto</li>
+          <li>Giuliani, Giuseppe</li>
+          <li>Giusti, Filippo</li>
+          <li>Giustiniani, Giacomo</li>
+          <li>Gnecco, Luigi</li>
+          <li>Golfieri, Giovanni Paolo</li>
+          <li>Gonzaga, Angelo</li>
+          <li>Gozzi, Arturo</li>
+          <li>Gozzi, Fulvio</li>
+          <li>Grimaldi, Girolamo, cardinale legato</li>
+          <li>Gualandi, Michelangelo</li>
+          <li>Guardia Nazionale di Bologna</li>
+          <li>Guarmani, Giuseppe Filippo</li>
+          <li>Guglielmini, Petronilla, principessa di Canneto</li>
+          <li>Guscelli, Mario</li>
+          <li>Hercolani, Filippo</li>
+          <li>I.M.</li>
+          <li>Iesi</li>
+          <li>Ikrzetuski, Gaetano Giuseppe</li>
+          <li>Imola</li>
+          <li>Istituto delle Scienze</li>
+          <li>Istituto Nazionale, vedi Istituto delle Scienze</li>
+          <li>Köhler, Johann David</li>
+          <li>L.F.F.M.</li>
+          <li>L.M.</li>
+          <li>Laghi, Luigi</li>
+          <li>Lambertini Vighi, Giovanni</li>
+          <li>Lambertini, Cornelia</li>
+          <li>Lambertini, Francesco</li>
+          <li>Lambertini, Giovanni</li>
+          <li>Lambertini, Maria Imelda Lucrezia</li>
+          <li>Lambertini, Prospero, arcivescovo, poi papa Benedetto XIV</li>
+          <li>Lante, Antonio, cardinale</li>
+          <li>Laurinda, pastore arcade, vedi Bassi, Laura</li>
+          <li>Lazzari, Antonio</li>
+          <li>Leprotti, Antonio</li>
+          <li>Le Sage, Georges Louis</li>
+          <li>Liceo dipartimentale del Reno, vedi San Luigi, liceo</li>
+          <li>Liceo provinciale di Bologna, vedi San Luigi, liceo</li>
+          <li>Locatelli, Cesare</li>
+          <li>Loiani, Giacinto</li>
+          <li>Lolli, Giuseppe</li>
+          <li>Longhi, Francesco</li>
+          <li>Lucchesini, Giovanni</li>
+          <li>M.D.G.L.</li>
+          <li>M.G.</li>
+          <li>Malaguti, Pietro</li>
+          <li>Malalbergo</li>
+          <li>Malavolta</li>
+          <li>Malvezzi, famiglia</li>
+          <li>Manfredi, Eustachio</li>
+          <li>Manfredi, Gabriele</li>
+          <li>Manzoni Pilla, Francesca</li>
+          <li>Marchesini, Adelaide</li>
+          <li>Marchesini, Anna</li>
+          <li>Marchesini, Gaetano</li>
+          <li>Marchesini, Giuseppe</li>
+          <li>Marchesini, Maria</li>
+          <li>Marchetti, Giulio</li>
+          <li>Marconi, Enrico</li>
+          <li>Marconi, Luigia</li>
+          <li>Mareggiani, Maria</li>
+          <li>Marescalchi, F.</li>
+          <li>Maria Casimira, suora, vedi Veratti, Angela</li>
+          <li>Marrocchi, Pier Tommaso, frate</li>
+          <li>Martinelli, Vincenzo</li>
+          <li>Massei, Alfonso</li>
+          <li>Masucci, Samaritana</li>
+          <li>Mattioli, Ludovico</li>
+          <li>Mazzanti, Flora</li>
+          <li>Mazza, Teresa</li>
+          <li>Mazzanti, Francesco Antonio</li>
+          <li>Mazzei, Raffaele</li>
+          <li>Mazzi, Maria Colomba</li>
+          <li>Mazzoni, famiglia</li>
+          <li>Mazzoni, Giulio</li>
+          <li>Melchiorri, Gaetano</li>
+          <li>Melli, Elio</li>
+          <li>Mezzolara</li>
+          <li>Minarelli, Giuseppe</li>
+          <li>Modena</li>
+          <li>Modona, vedi Modena</li>
+          <li>Mogliano</li>
+          <li>Molinelli, Giovanni Pietro</li>
+          <li>Molinelli, Pietro Paolo</li>
+          <li>Mondini, Achille</li>
+          <li>Mondini, Anna</li>
+          <li>Mondini, Carlo</li>
+          <li>Mondini, Francesco</li>
+          <li>Mondini, Vincenzo</li>
+          <li>Montalto, collegio</li>
+          <li>Montanari, Giovanni Battista</li>
+          <li>Montecòsaro (Macerata)</li>
+          <li>Monti, s.n.</li>
+          <li>Monti, Basilio</li>
+          <li>Monti, Gaetano</li>
+          <li>Monti, Giulio Cesare</li>
+          <li>Moreschi, Alessandro</li>
+          <li>Moreschi, Giambattista</li>
+          <li>Mosca, Carlo</li>
+          <li>Mosca, Francesco</li>
+          <li>Moscati, Pietro</li>
+          <li>Muzzi, Giuseppe</li>
+          <li>Nanuzzi, Francesca</li>
+          <li>Napoli</li>
+          <li>Napoleone I, imperatore dei Francesi</li>
+          <li>Nembrini Gonzaga, Alessandro</li>
+          <li>Nembrini Gonzaga, Cesare</li>
+          <li>Norimberba</li>
+          <li>Oddi, Giuseppe</li>
+          <li>Olimene Anfrisio, pastore emonio</li>
+          <li>Opera delle Scuole Pie</li>
+          <li>Opera pia dei Poveri Vergognosi</li>
+          <li>Oppizzoni, Carlo, cardinale</li>
+          <li>Oriana Ecalidea, vedi Cantelli Tagliazucchi, Veronica</li>
+          <li>Orengo, Luigi</li>
+          <li>Orlandi, Carlo</li>
+          <li>Ortolani, F.</li>
+          <li>Osimo</li>
+          <li>Pagnini, Giuseppe</li>
+          <li>Palpigni, Caterina</li>
+          <li>Panichi, Serafino</li>
+          <li>Parisani, Giuseppe</li>
+          <li>Parma</li>
+          <li>Pavia, Antonio</li>
+          <li>Pelizzoni, Luigia</li>
+          <li>Perez, Francesco</li>
+          <li>Perugia</li>
+          <li>Pesaro</li>
+          <li>Pia Antonia Maria Redegonda Teresa, suora, vedi Cremonini, Teresa Maria</li>
+          <li>Piana, Luigi</li>
+          <li>Piccioli, Benedetto</li>
+          <li>Pio VI, papa</li>
+          <li>Pio VII, papa</li>
+          <li>Pio VIII, papa</li>
+          <li>Pironi, Giuseppe</li>
+          <li>Pistoia</li>
+          <li>Poggi, Caterina</li>
+          <li>Poggi, Francesco</li>
+          <li>Pozzi, Vincenzo</li>
+          <li>Prefettura Dipartimentale del Reno</li>
+          <li>Presidoni, Geronima</li>
+          <li>Prospera Caterina Maria Imelda, suora, vedi Lambertini, Maria Imelda Lucrezia</li>
+          <li>Quercia, Lucia</li>
+          <li>Quirini Stampalia, Alvise</li>
+          <li>Raggi, Antonio</li>
+          <li>Raimondi, Caterina Redegonda</li>
+          <li>Raimondi, Luigi Camillo</li>
+          <li>Raimondi, Maria</li>
+          <li>Raimondi, Matteo</li>
+          <li>Raimondi, Nicolò</li>
+          <li>Rambaldi, Antonio</li>
+          <li>Ramponi, Domenico</li>
+          <li>Ramponi, Giovanni</li>
+          <li>Ranuzzi, Marco Antonio</li>
+          <li>Rattagarganelli, Ludovico Maria</li>
+          <li>Ravenna</li>
+          <li>Recanati</li>
+          <li>Redi, Maria Gioseffa, suora</li>
+          <li>Reggio Emilia</li>
+          <li>Regia Reggenza provvisoria</li>
+          <li>Righi Fangarezi, Lucia</li>
+          <li>Rimini</li>
+          <li>Riviera, Tarsizio</li>
+          <li>Rizzardi, Maria Camilla, suora</li>
+          <li>Rizzoli, Lodovico</li>
+          <li>Roffeni, Giacomo</li>
+          <li>Roli, Francesco Maria</li>
+          <li>Roma</li>
+          <li>Romani, Nicolò</li>
+          <li>Roveredo</li>
+          <li>Roversi, Melchiorre</li>
+          <li>Rubbiati, Tranquillino</li>
+          <li>Rusconi, Giuseppe Benedetto</li>
+          <li>Rusi, Vincenzo</li>
+          <li>Rusticelli, Angela</li>
+          <li>Rusticelli, Giovanni</li>
+          <li>Rusticelli, Luca</li>
+          <li>Ruvinetti, Giulia</li>
+          <li>S.R.B.</li>
+          <li>S. Loran, Maria Caterina</li>
+          <li>Salaroli, Camillo</li>
+          <li>Salaroli, Giovanni</li>
+          <li>Sambuceti, Luigi</li>
+          <li>Sampieri, Filippo</li>
+          <li>San Biagio, chiesa</li>
+          <li>San Giovanni Battista, chiesa (Disvetro)</li>
+          <li>San Giovanni Battista, monastero</li>
+          <li>San Giovanni in Monte, chiesa</li>
+          <li>San Giovanni in Persiceto</li>
+          <li>San Lorenzo, monastero</li>
+          <li>San Luigi, liceo</li>
+          <li>San Petronio, chiesa</li>
+          <li>San Salvatore, chiesa</li>
+          <li>Sanseverino</li>
+          <li>Santa Caterina, chiesa</li>
+          <li>Santa Lucia, liceo</li>
+          <li>Santa Maria degli Angeli, confraternita</li>
+          <li>Santa Maria degli Angeli, monastero</li>
+          <li>Santa Maria della Purificazione, monastero</li>
+          <li>Santa Maria Maddalena, monastero</li>
+          <li>Santissima Annunziata, convento</li>
+          <li>Santissima Concezione, monastero</li>
+          <li>Scarpellini, Feliciano</li>
+          <li>Scarselli, Cesare Alessandro</li>
+          <li>Scarselli, Flaminio</li>
+          <li>Sebastiani, Francesco</li>
+          <li>Serpieri, Giulio Cesare</li>
+          <li>Serpieri, Marcellino</li>
+          <li>Sibari Tessalicense, pastore arcade</li>
+          <li>Simonetti, Alberico</li>
+          <li>Simonetti, Prospero</li>
+          <li>Sivieri, Giuseppe</li>
+          <li>Somenzari, Teodoro</li>
+          <li>Sorbelli, Albano</li>
+          <li>Spallanzani, Lazzaro</li>
+          <li>Spezieria della Vita</li>
+          <li>Spezieria di Santa Caterina</li>
+          <li>Spina, Giuseppe, cardinale</li>
+          <li>Spinelli, s.n.</li>
+          <li>Spoleto</li>
+          <li>Stegani, Lorenzo</li>
+          <li>Tacconi, Gaetano</li>
+          <li>Tadolini, Maria</li>
+          <li>Talisio P[elleo], vedi D'Arèncourt, Garnier</li>
+          <li>Termanini, Gaetano</li>
+          <li>Testa, Giuseppe</li>
+          <li>Tomba, Filippo</li>
+          <li>Tommasi, Raffaella</li>
+          <li>Torcioni, Caterina</li>
+          <li>Torre, Paolo Francesco</li>
+          <li>Trebbi, Giovanni</li>
+          <li>Trebbi, Pietro Giovanni</li>
+          <li>Tribunale di Bologna</li>
+          <li>Trombelli, Giovanni Grisostomo</li>
+          <li>Turrio, Giacomo</li>
+          <li>Ufficio delle Ipoteche di Bologna</li>
+          <li>Università degli Apatisti (Firenze)</li>
+          <li>Urbino</li>
+          <li>Uttini, Gaetano</li>
+          <li>Valeriani, Orazio</li>
+          <li>Vanducci, Laura</li>
+          <li>Varrini, Ottavio</li>
+          <li>Veggetti, Liborio</li>
+          <li>Venezia</li>
+          <li>Venturoli, Giuseppe</li>
+          <li>Verardini Prendiparti, Andrea</li>
+          <li>Veratti, famiglia</li>
+          <li>Veratti, Angela</li>
+          <li>Veratti, Anna</li>
+          <li>Veratti, Anna Maria</li>
+          <li>Veratti, Antonio</li>
+          <li>Veratti, Benedetto</li>
+          <li>Veratti, Bruno</li>
+          <li>Veratti, Carlo di Giuseppe</li>
+          <li>Veratti, Caterina, nata 1739</li>
+          <li>Veratti, Caterina, nata 1742</li>
+          <li>Veratti, Caterina, nata 1745</li>
+          <li>Veratti, Caterina, nata 1750</li>
+          <li>Veratti, Ciro</li>
+          <li>Veratti, Domenica</li>
+          <li>Veratti, Domenico</li>
+          <li>Veratti, Elisabetta</li>
+          <li>Veratti, Ferdinando</li>
+          <li>Veratti, Flaminio</li>
+          <li>Veratti, Francesco di Domenico</li>
+          <li>Veratti, Francesco di Paolo</li>
+          <li>Veratti, Gaetano</li>
+          <li>Veratti, Geminiano</li>
+          <li>Veratti, Geminiano di Domenico</li>
+          <li>Veratti, Giacomo</li>
+          <li>Veratti, Giovanni Battista</li>
+          <li>Veratti, Giovanni di Carlo</li>
+          <li>Veratti, Giovanni di Domenico</li>
+          <li>Veratti, Giovanni Francesco di Giuseppe</li>
+          <li>Veratti, Giovanni Pietro</li>
+          <li>Veratti, Giuseppe di Carlo</li>
+          <li>Veratti, Giuseppe di Francesco di Domenico</li>
+          <li>Veratti, Giuseppe di Francesco di Paolo</li>
+          <li>Veratti, Giuseppe di Paolo</li>
+          <li>Veratti, Gustavo</li>
+          <li>Veratti, Laura Maria Caterina</li>
+          <li>Veratti, Leonida</li>
+          <li>Veratti, Margherita</li>
+          <li>Veratti, Maria Chiara</li>
+          <li>Veratti, Paola</li>
+          <li>Veratti, Paolo</li>
+          <li>Veratti, Teresa di Ciro</li>
+          <li>Veratti, Teresa di Francesco</li>
+          <li>Veratti Mazzoni, Emma</li>
+          <li>Verona</li>
+          <li>Veronesi Viani, Maria</li>
+          <li>Viani, Vincenzo</li>
+          <li>Vitali, Costanza Beatrice</li>
+          <li>Vitali, Girolamo</li>
+          <li>Vizzani, Angelo Michele</li>
+          <li>Zagnoni, Gabriele Maria</li>
+          <li>Zanoni, Bartolomeo</li>
+          <li>Zanotti, Alessandro</li>
+          <li>Zanotti, Francesco Maria</li>
+          <li>Zanotti, Giampietro</li>
+          <li>Zanotti, Luigi</li>
+          <li>Zarri, Anna</li>
+          <li>Zeneroni, Bernardino</li>
+          <li>Zoli, Agostino</li>
+          <li>Zoli, Filippo</li>
+        </ul>
