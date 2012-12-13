@@ -12,7 +12,6 @@ task :"parse-ead" do
     solr.commit
   end
   #all_items(ead)
-  #solrize_ead ead
   
 end
 
@@ -41,16 +40,16 @@ def solrize_ead(ead)
         containers = containers_for_collection(c03)
         c03.c04s.each do |c04|
           containers = containers_for_collection(c04)
-          documents << document_from_contents(c04, c03, c01, containers)
+          documents << document_from_contents(ead, c04, c03, c01, containers)
         end
-        documents << document_from_contents(c03, c02, c01, containers)
+        documents << document_from_contents(ead, c03, c02, c01, containers)
       end
-      documents << document_from_contents(c02, c01, c01, containers)
+      documents << document_from_contents(ead, c02, c01, c01, containers)
     end
     
     documents << {:id => c01.identifier,
-                  :title_tsi => clean_string(c01.did.unittitle.raw),
-                  :format_ssim => c01.level,
+                  :title_tsi => clean_string(c01.did.unittitle),
+                  :level_ssim => c01.level,
                   :purl_ssi => c01.dao.try(:href)}
   end
   #puts documents.join("\n")
@@ -84,10 +83,23 @@ def description(content)
   contents
 end
 
-def document_from_contents(content, direct_parent, series, containers)
+def dates_from_unitdate(did)
+  dates = OpenStruct.new
+  normalized_dates = did.unitdate.try(:normal)
+  if normalized_dates
+    dates.date = did.unitdate.try(:value)
+    dates.start_year = did.unitdate.normal.split("/").first
+    dates.end_year = did.unitdate.normal.split("/").last
+  end
+  dates
+end
+
+def document_from_contents(ead, content, direct_parent, series, containers)
+  unittitle_parts = ead.unittitle_parts(content.identifier)
+  dates = dates_from_unitdate(content.did)
   {:id => content.identifier,
-   :title_tsi => clean_string(content.did.unittitle.raw),
-   :format_ssim => content.level,
+   :title_tsi => clean_string(content.did.unittitle),
+   :level_ssim => content.level,
    :direct_parent_ssim => direct_parent.identifier,
    :direct_parent_level_ssim => direct_parent.level,
    :box_ssim => containers["Box"],
@@ -95,5 +107,13 @@ def document_from_contents(content, direct_parent, series, containers)
    :series_ssim => series.identifier,
    :purl_ssi => content.dao.try(:href),
    :extent_ssim => content.did.physdesc.extent,
-   :description_tsim => description(content)}
+   :description_tsim => description(content),
+   :personal_name_ssim => unittitle_parts.persname,
+   :geographic_name_ssim => unittitle_parts.geogname,
+   :corporate_name_ssim => unittitle_parts.corpname,
+   :family_name_ssim => unittitle_parts.famname,
+   :unit_date_ssim => dates.try(:date),
+   :begin_year_itsim => dates.try(:start_year),
+   :end_year_itsim => dates.try(:end_year)
+   }
 end
