@@ -7,8 +7,10 @@ require 'pathname'
 set :stages, %W(staging development production)
 set :default_stage, "staging"
 set :bundle_flags, "--quiet"
-set :repository, "git://afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git"
-set :deploy_via, :remote_cache
+
+set :sunet_id,   Capistrano::CLI.ui.ask('SUNetID: ') { |q| q.default =  `whoami`.chomp }
+set :repository, "ssh://#{sunet_id}@corn.stanford.edu/afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git"
+set :deploy_via, :copy
 
 require 'capistrano/ext/multistage'
 
@@ -37,7 +39,7 @@ set :keep_releases, 3
 set :deploy_to, "#{destination}/#{application}"
 
 set :branch do
-  # DEFAULT_TAG = `git tag`.split("\n").last
+  DEFAULT_TAG = 'master'
   tag = Capistrano::CLI.ui.ask "Tag or branch to deploy (make sure to push the tag or branch first): [#{DEFAULT_TAG}] "
   tag = DEFAULT_TAG if tag.empty?
   tag
@@ -82,4 +84,3 @@ namespace :deploy do
 end
 
 after "deploy", "deploy:migrate"
-after "deploy", "app:add_date_to_version"

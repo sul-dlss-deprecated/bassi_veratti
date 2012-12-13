@@ -1,8 +1,6 @@
 set :rails_env, "staging"
-set :deployment_host, "bassi-stage.stanford.edu"
+set :deployment_host, "bv-stage.stanford.edu"
 set :bundle_without, [:deployment, :development, :test]
-
-DEFAULT_TAG='master'
 
 role :web, deployment_host
 role :app, deployment_host
