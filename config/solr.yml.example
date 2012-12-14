@@ -14,7 +14,7 @@ development: &dev
   jetty_path: './jetty'
   url: http://localhost:8983/solr
 test: &test
-  url: http://localhost:<%= ENV["TEST_JETTY_PORT"] || '8888' %>/solr
+  url: http://localhost:<%= ENV["TEST_JETTY_PORT"] || '8888' %>/solr/blacklight-core
 staging: 
   <<: *dev
 production: &prod

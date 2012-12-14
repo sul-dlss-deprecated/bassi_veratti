@@ -1,35 +1,19 @@
 require 'rsolr'
 require 'ead_parser'
-desc "Parse EAD File"
-task :"parse-ead" do
+namespace :bassi do
+  desc "Parse EAD File"
+  task :"parse-ead" do
   
-  ead = EadParser.new("#{Rails.root}/data/bv-ead.xml")
-
-  solr = Blacklight.solr
-  documents = solrize_ead ead
-  unless documents.blank?
-    documents.each{|doc| solr.add doc }
-    solr.commit
-  end
-  #all_items(ead)
-  
-end
-
-def all_items(ead)
-  ead.reader.archdesc.dsc.c01s.each do |c01|
-    c01.c02s.each do |c02|
-      puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c02.dao.try(:href)} | #{print_types(c02)}"
-      c02.c03s.each do |c03|
-        puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c03.dao.try(:href)} | #{print_types(c03)}"
-        c03.c04s.each do |c04|
-          puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c04.level}:#{c04.identifier} -> #{c04.dao.try(:href)} | #{print_types(c04)}"
-        end
-      end
+    ead = EadParser.new("#{Rails.root}/data/bv-ead.xml")
+    
+    solr = Blacklight.solr
+    documents = solrize_ead ead
+    unless documents.blank?
+      documents.each{|doc| solr.add doc }
+      solr.commit
     end
-    puts "\n"
   end
 end
-
 
 def solrize_ead(ead)
   documents = []
@@ -52,8 +36,23 @@ def solrize_ead(ead)
                   :level_ssim => c01.level,
                   :purl_ssi => c01.dao.try(:href)}
   end
-  #puts documents.join("\n")
   documents
+end
+
+# used for debugging ead hierarchy.
+def all_items(ead)
+  ead.reader.archdesc.dsc.c01s.each do |c01|
+    c01.c02s.each do |c02|
+      puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c02.dao.try(:href)} | #{print_types(c02)}"
+      c02.c03s.each do |c03|
+        puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c03.dao.try(:href)} | #{print_types(c03)}"
+        c03.c04s.each do |c04|
+          puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c04.level}:#{c04.identifier} -> #{c04.dao.try(:href)} | #{print_types(c04)}"
+        end
+      end
+    end
+    puts "\n"
+  end
 end
 
 def print_types(c)

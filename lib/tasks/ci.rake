@@ -58,12 +58,7 @@ namespace :bassi do
   
   desc "Index all fixutres into solr"
   task :index_fixtures do
-    add_docs = []
-    Dir.glob("#{Rails.root}/spec/fixtures/*.xml") do |file|
-      add_docs << File.read(file)
-    end
-    puts "Adding #{add_docs.count} documents to #{Blacklight.solr.options[:url]}"
-    RestClient.post "#{Blacklight.solr.options[:url]}/update?commit=true", "<update><add>#{add_docs.join(" ")}</add></update>", :content_type => "text/xml"
+    Rake::Task["bassi:parse-ead"].invoke
   end
   
   desc "Delete all records in solr"
