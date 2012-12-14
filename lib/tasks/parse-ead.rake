@@ -124,7 +124,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   imageids=image_ids_from_purl(purl)
 
   {:id => content.identifier,
-   :title_tsi => clean_string(content.did.unittitle),
+   :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
    :level_ssim => content.level,
    :direct_parent_ssim => direct_parent.identifier,
    :direct_parent_level_ssim => direct_parent.level,
