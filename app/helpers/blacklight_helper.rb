@@ -1,5 +1,9 @@
 module BlacklightHelper
   include Blacklight::BlacklightHelperBehavior
+  
+  def field_value_separator
+    "<br/>"
+  end
   # def document_partial_name(document)
   #   case
   #     when document.collection?
