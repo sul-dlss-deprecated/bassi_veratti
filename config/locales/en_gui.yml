@@ -3,6 +3,7 @@ en:
     application_name: 'Bassi Veratti Collection'
   bassi:
     nav:
+      bassi_collection: 'Bassi-Veratti Collection'      
       about: 'About'
       contact: 'Contact'
       contact_us: 'Contact Us'

@@ -1,0 +1,38 @@
+<ul class="breadcrumb">
+  <li><%= link_to t('bassi.nav.bassi_collection'), root_path%></li>
+  
+  <% if on_about_pages %>
+  	> <li><%= link_to t('bassi.nav.about'), about_project_path%></li>
+		<% case @page_name %>
+ 			<% when "laura_bassi" %> 
+				> <%=t('bassi.nav.laura_bassi') %> 
+ 			<% when "project" %> 
+				> <%=t('bassi.nav.project_overview') %> 
+ 			<% when "history" %> 
+				> <%=t('bassi.nav.project_history') %> 
+ 			<% when "stanford_team" %> 
+				> <%=t('bassi.nav.project_team_stanford') %> 
+ 			<% when "italy_team" %> 
+				> <%=t('bassi.nav.project_team_italy') %> 
+ 			<% when "acknowledgements" %> 
+				> <%=t('bassi.nav.acknowledgements') %> 
+ 			<% when "contact" %> 
+				> <%=t('bassi.nav.contact_us') %>	
+ 			<% when "terms_of_use" %> 
+				> <%=t('bassi.nav.use_policy') %>														
+		 <% end %>
+  <% end %>
+
+ <% if on_background_page %>
+  	> <li><%= t('bassi.nav.background') %></li>
+ <% end %>
+
+ <% if on_inventory_pages %>
+  	> <li><%= t('bassi.nav.content_inventory') %></li>
+ <% end %>
+
+ <% if on_collections_pages %>
+  	> <li><%= t('bassi.nav.collections') %></li>
+ <% end %>
+
+</ul>

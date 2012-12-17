@@ -3,6 +3,7 @@ it:
     application_name: 'Inventario Laura Bassi'
   bassi:
     nav:
+      bassi_collection: 'Bassi-Veratti Collection'            
       about: 'About'
       home: 'Home'
       report_problem: 'Report a Problem'
@@ -19,7 +20,7 @@ it:
       content_inventory: 'Content Inventory'
       terms_of_use_message: "Copyright © Biblioteca dell'Archiginnasio. La Biblioteca dell'Archiginnasio del Comune di Bologna possiede tutti i diritti su questa immagine. L'immagine non può essere copiata o estratta in altro modo eccetto che stampando la pagina ed esclusivamente per finalità di studio privato. Per ogni altro utilizzo deve essere richiesta un'autorizzazione specifica alla Biblioteca dell'Archiginnasio scrivendo a: archiginnasio@comune.bologna.it."
       terms_continue: 'Continue using the website.'      
-      close: 'Close'      
+      close: 'Close'    
     about:
       project_title: 'About the Bassi Veratti Collection'
       contact_title: 'Contact Us'
