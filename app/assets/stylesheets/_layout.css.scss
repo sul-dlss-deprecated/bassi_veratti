@@ -4,7 +4,13 @@ body {
 
 #main-container {
   padding-bottom: 50px;
-  padding-top: 30px;
+  padding-top: 6px;
+  .breadcrumb {
+    color: #666;
+    font-size: 13px;
+    margin-bottom:6px;
+    margin-left: 5px;
+  }
 }
 
 body {
@@ -23,4 +29,9 @@ body {
       padding-left: 20px;
       padding-right: 20px;
     }
+}
+#main-container .breadcrumb {
+  @media (min-width: 1200px) {
+    margin-left: 15px;
+  }
 }
