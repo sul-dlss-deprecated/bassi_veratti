@@ -1,5 +1,7 @@
 require 'rsolr'
 require 'ead_parser'
+require 'rest-client'
+
 namespace :bassi do
   desc "Parse EAD File"
   task :"parse-ead" do
@@ -93,9 +95,34 @@ def dates_from_unitdate(did)
   dates
 end
 
+def image_ids_from_purl(purl)
+  image_ids=[]
+  if purl
+    begin 
+      result = RestClient.get "#{purl}.xml"  # now get the content metadata from the PURL page and index the filenames
+      doc = Nokogiri::XML(result)
+      cm=doc.xpath('//contentMetadata')
+      files=cm.xpath('//file')
+      image_ids=files.collect {|file| file.attributes['id']}
+    rescue # we might get a 404 from the rest client call if the object is not yet accessioned...
+    
+    end
+  end
+  return image_ids
+end
+
+def druid_from_purl(purl)
+  purl ? "druid:#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
+end
+
 def document_from_contents(ead, content, direct_parent, series, containers)
   unittitle_parts = ead.unittitle_parts(content.identifier)
   dates = dates_from_unitdate(content.did)
+
+  purl=content.dao.try(:href)
+  druid=druid_from_purl(purl)
+  imageids=image_ids_from_purl(purl)
+
   {:id => content.identifier,
    :title_tsi => clean_string(content.did.unittitle),
    :level_ssim => content.level,
@@ -104,7 +131,9 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :box_ssim => containers["Box"],
    :folder_ssim => containers["Folder"],
    :series_ssim => series.identifier,
-   :purl_ssi => content.dao.try(:href),
+   :purl_ssi => purl,
+   :druid_ssi => druid,
+   :imageid_ssim => imageids,
    :extent_ssim => content.did.physdesc.extent,
    :description_tsim => description(content),
    :personal_name_ssim => unittitle_parts.persname,
