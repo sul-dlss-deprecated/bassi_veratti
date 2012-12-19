@@ -7,6 +7,7 @@
 #header-navbar-static-top {
   border-bottom: 1px solid #dddddd;
   &.navbar {
+      font-family: "Helvetica","Arial",sans-serif;
     .logo {
       text-align: center;
       img {
@@ -22,18 +23,17 @@
       margin-top: 6px;
       padding-bottom: 3px;
       > li {
-        &.active > a {color: #990000;}
+        &.active > a {color: $active_nav_link_color;}
         > a {
-          background-color: white;
+          background-color: $header_bg_color;
           box-shadow: none;
-          color: #000000;
-          font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
+          color: $inactive_nav_link_color;
         	font-weight: 700;
         	text-transform: uppercase;
         	font-size: 0.965em;
         	-webkit-font-smoothing: antialiased;
           padding: 8px 25px 5px 3px;
-          &:hover, &:focus {color: #990000;}
+          &:hover, &:focus {color: $active_nav_link_color;}
         }
       }
       > li:last-child > a {padding-right: 0}
@@ -41,14 +41,14 @@
   }
   h1 {
     border-bottom: none;
-    font-size: 2.5em;
-    font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
-    margin: 10px 0 5px;
+    font-size: 3.3em;
+    font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
+    margin: 0;
   	line-height: 1.5em;
     padding-bottom: 0;
   }  
   .navbar-inner {
-    background-color: white;
+    background: $header_bg_color;
     background-image: none;
     border: none;
     box-shadow: none;

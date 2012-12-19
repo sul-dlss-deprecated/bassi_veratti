@@ -36,7 +36,7 @@ class CatalogController < ApplicationController
     
     config.collection_identifying_field = "format_ssim"
     config.collection_identifying_value = "Collection"
-    
+        
     # needs to be stored so we can retreive it for display.
     # needs to be in field list for all request handlers.
     config.collection_description_field = "description_tsim"
@@ -50,6 +50,14 @@ class CatalogController < ApplicationController
     
     config.box_identifying_field = "box_ssim"
     config.folder_identifying_field = "folder_ssim"
+    
+    
+    config.folder_identifier_field = "level_ssim"
+    config.folder_identifier_value = "Folder"
+    
+    config.parent_folder_identifying_field = "parent_folder_ssim"
+    
+    config.folder_in_series_identifying_field = "series_ssim"
     
     # needs to be stored so we can retreive it for display
     # needs to be in field list for all request handlers

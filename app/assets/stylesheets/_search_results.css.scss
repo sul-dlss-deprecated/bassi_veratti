@@ -1,6 +1,6 @@
 /* Gallery View */
 .gallery_toggle {
-  border-top: 2px dotted #dddddd;
+  border-top: 2px dotted darken($container_bg_color, 10%);
   font-size: 12px;
   margin-top: 30px;
   padding-top: 10px;
@@ -52,10 +52,10 @@
 /* Results paging/controls */
 #search-results-metadata {
   &.well {
-    background-color: #eeeeee;
+    background-color: $header_bg_color;
     padding: 12px 10px 6px;
     #sortAndPerPage {
-      background-color: #eeeeee;
+      background-color: $header_bg_color;
       border: none;
       box-shadow: none;
       margin-bottom: 0;
