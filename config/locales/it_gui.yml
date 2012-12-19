@@ -42,7 +42,8 @@ it:
       notes: 'Notes'
       previous: 'prev page'
       next: 'next page'
-      showing: "Showing page %{page} of {total}"
+      showing: 'Showing page'
+      of: 'of'
       all_items: 'All Items In This Folder'
       show_in_inventory: "Show this %{item} in Content Inventory"      
     collection:

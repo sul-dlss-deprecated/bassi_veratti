@@ -9,7 +9,18 @@
 		<dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
 		<dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
 	</dl>
-	<%@document.images.each do |image|%>
-		<%=image_tag image%>
-	<% end %>
+	<div id="image_carousel" class="carousel slide">
+    <div class="carousel-inner">
+	    <%- @document.images.each_with_index do |image,index|%>
+        <div class="item<%= " active" if index == 0 %>">
+          <%= image_tag(image, :alt => "Image #{index}") %>
+        </div>
+      <%- end -%>
+    </div>
+    <div class="carousel-controls">
+      <a class="carousel-control left" href="#image_carousel" data-slide="prev">&lsaquo;</a>
+      <span class="number-of-items"><%=t('bassi.show.showing')%> <span id="iterator">1</span> <%= "#{t('bassi.show.of')} #{@document.images.count}" if @document.images.count > 1 %></span>
+      <a class="carousel-control right" href="#image_carousel" data-slide="next">&rsaquo;</a>
+    </div>
+  </div>
 </div>
