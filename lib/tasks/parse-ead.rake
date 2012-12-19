@@ -19,13 +19,26 @@ end
 
 def solrize_ead(ead)
   documents = []
+  folders = []
   ead.reader.archdesc.dsc.c01s.each do |c01|
     c01.c02s.each do |c02|
       containers = containers_for_collection(c02)
+      unless folders.include? container_key(containers)
+        documents << folder_from_contents(c02, containers, c01)
+        folders << container_key(containers) unless folders.include? container_key(containers)
+      end
       c02.c03s.each do |c03|
         containers = containers_for_collection(c03)
+        unless folders.include? container_key(containers)
+          documents << folder_from_contents(c02, containers, c01)
+          folders << container_key(containers) unless folders.include? container_key(containers)
+        end
         c03.c04s.each do |c04|
           containers = containers_for_collection(c04)
+          unless folders.include? container_key(containers)
+            documents << folder_from_contents(c02, containers, c01)
+            folders << container_key(containers) unless folders.include? container_key(containers)
+          end
           documents << document_from_contents(ead, c04, c03, c01, containers)
         end
         documents << document_from_contents(ead, c03, c02, c01, containers)
@@ -36,6 +49,7 @@ def solrize_ead(ead)
     documents << {:id => c01.identifier,
                   :title_tsi => clean_string(c01.did.unittitle),
                   :level_ssim => c01.level,
+                  :description_tsim => description(c01),
                   :purl_ssi => c01.dao.try(:href)}
   end
   documents
@@ -65,6 +79,11 @@ def clean_string(s)
   s.gsub(/\s+/, " ").strip unless s.nil?
 end
 
+def container_key(containers)
+  return nil if containers.blank?
+  "box#{containers["Box"]}-folder#{containers["Folder"]}"
+end
+
 def containers_for_collection(c)
   types = {}
   c.did.container_types.each_with_index do |type,ix|
@@ -87,10 +106,12 @@ end
 def dates_from_unitdate(did)
   dates = OpenStruct.new
   normalized_dates = did.unitdate.try(:normal)
-  if normalized_dates
+  if did.unitdate
     dates.date = did.unitdate.try(:value)
-    dates.start_year = did.unitdate.normal.split("/").first
-    dates.end_year = did.unitdate.normal.split("/").last
+    if normalized_dates
+      dates.start_year = did.unitdate.normal.split("/").first
+      dates.end_year = did.unitdate.normal.split("/").last
+    end
   end
   dates
 end
@@ -115,6 +136,22 @@ def druid_from_purl(purl)
   purl ? "#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
 end
 
+def folder_from_contents(content, containers, series)
+  dates = dates_from_unitdate(content.did)
+  {:id => container_key(containers),
+   :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
+   :level_ssim => "Folder",
+   :box_ssim => containers["Box"],
+   :folder_ssim => containers["Folder"],
+   :extent_ssim => content.did.physdesc.try(:extent),
+   :unit_date_ssim => dates.try(:date),
+   :begin_year_itsim => dates.try(:start_year),
+   :end_year_itsim => dates.try(:end_year),
+   :description_tsim => description(content),
+   :series_ssim => series.identifier
+  }
+end
+
 def document_from_contents(ead, content, direct_parent, series, containers)
   unittitle_parts = ead.unittitle_parts(content.identifier)
   dates = dates_from_unitdate(content.did)
@@ -130,6 +167,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :direct_parent_level_ssim => direct_parent.level,
    :box_ssim => containers["Box"],
    :folder_ssim => containers["Folder"],
+   :parent_folder_ssim => container_key(containers),
    :series_ssim => series.identifier,
    :purl_ssi => purl,
    :druid_ssi => druid,
