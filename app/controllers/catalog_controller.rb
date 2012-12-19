@@ -57,9 +57,9 @@ class CatalogController < ApplicationController
     
     config.collection_member_grid_items = 1000
     
-    # needs to be sotred so we can retreive it
+    # needs to be stored so we can retreive it
     # needs to be in field list for all request handlers so we can get images the document anywhere in the app.
-    config.image_identifier_field = "image_id_ssm"
+    config.image_identifier_field = "image_id_ssim"
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or 
     ## parameters included in the Blacklight-jetty document requestHandler.

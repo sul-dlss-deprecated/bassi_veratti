@@ -112,7 +112,7 @@ def image_ids_from_purl(purl)
 end
 
 def druid_from_purl(purl)
-  purl ? "druid:#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
+  purl ? "#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
 end
 
 def document_from_contents(ead, content, direct_parent, series, containers)
@@ -133,7 +133,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :series_ssim => series.identifier,
    :purl_ssi => purl,
    :druid_ssi => druid,
-   :imageid_ssim => imageids,
+   :image_id_ssim => imageids,
    :extent_ssim => content.did.physdesc.extent,
    :description_tsim => description(content),
    :personal_name_ssim => unittitle_parts.persname,

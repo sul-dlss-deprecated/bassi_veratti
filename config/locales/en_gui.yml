@@ -38,6 +38,18 @@ en:
       member_detail: 'Item Detail'
     collection_members:
       items_name: 'image'
+    show:
+      date: 'Date'
+      description: 'Physical Description'
+      people: 'People'
+      families: 'Families'
+      locations: 'Locations'
+      notes: 'Notes'
+      previous: 'prev page'
+      next: 'next page'
+      showing: "Showing page %{page} of {total}"
+      all_items: 'All Items In This Folder'
+      show_in_inventory: "Show this %{item} in Content Inventory"
     collection_members_grid:
       members_link: 'View All Collection Items'
       collection_link: 'View this collection'

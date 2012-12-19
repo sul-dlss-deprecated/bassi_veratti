@@ -1,0 +1,15 @@
+<%= render_document_heading(:h1).html_safe %>
+
+<div class="document">
+	<dl class="dl-horizontal  dl-invert">
+		<dt><%=t('bassi.show.date')%>:</dt><dd><%=@document.date%>&nbsp;</dd>
+		<dt><%=t('bassi.show.description')%>:</dt><dd><%=@document.description%>&nbsp;</dd>
+		<dt><%=t('bassi.show.people')%>:</dt><dd><%=@document.people%>&nbsp;</dd>
+		<dt><%=t('bassi.show.families')%>:</dt><dd><%=@document.families%>&nbsp;</dd>
+		<dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
+		<dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
+	</dl>
+	<%@document.images.each do |image|%>
+		<%=image_tag image%>
+	<% end %>
+</div>

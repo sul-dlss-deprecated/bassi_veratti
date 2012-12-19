@@ -2,9 +2,37 @@
 class SolrDocument 
 
   include Blacklight::Solr::Document
-
+  
   self.unique_key = 'id'
 
+  def date
+    multivalue_field('unit_date_ssim')
+  end
+
+  def description
+    multivalue_field('description_tsim')
+  end
+
+  def people
+    multivalue_field('personal_name_ssim')    
+  end
+
+  def families
+    multivalue_field('family_name_ssim')
+  end
+
+  def location
+    multivalue_field('geographic_name_ssim')
+  end
+
+  def notes
+    multivalue_field('extent_ssim')
+  end
+          
+	def multivalue_field(name)
+	  self[name.to_sym].nil? ? ' ': self[name.to_sym].join(', ')
+  end
+  
   def series?
     self.has_key?(blacklight_config.series_identifying_field) and 
       self[blacklight_config.series_identifying_field].include?(blacklight_config.series_identifying_value)
@@ -128,10 +156,10 @@ class SolrDocument
   end
   
   def images(size=:default)
-    return nil unless self.has_key?(blacklight_config.image_identifier_field)
+    return [] unless self.has_key?(blacklight_config.image_identifier_field)
     stacks_url = BassiVeratti::Application.config.stacks_url
     self[blacklight_config.image_identifier_field].map do |image_id|
-      "#{stacks_url}/#{self["id"]}/#{image_id}#{SolrDocument.image_dimensions[size]}"
+      "#{stacks_url}/#{self["druid_ssi"]}/#{image_id.chomp('.jp2')}#{SolrDocument.image_dimensions[size]}.jpg"
     end
   end
   
@@ -163,7 +191,7 @@ class SolrDocument
      
 
   def self.image_dimensions
-    options = {:default => "_square",
+    options = {:default => "_thumb",
                :large   => "_thumb" }
   end
                          

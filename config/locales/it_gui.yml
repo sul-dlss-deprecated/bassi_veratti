@@ -33,6 +33,18 @@ it:
       stanford_team_title: 'Project Team: Stanford'
       italy_team_title: 'Project Team: Italy'
       history_title: 'Project History'
+    show:
+      date: 'Date'
+      description: 'Physical Description'
+      people: 'People'
+      families: 'Families'
+      locations: 'Locations'
+      notes: 'Notes'
+      previous: 'prev page'
+      next: 'next page'
+      showing: "Showing page %{page} of {total}"
+      all_items: 'All Items In This Folder'
+      show_in_inventory: "Show this %{item} in Content Inventory"      
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'
