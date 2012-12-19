@@ -1,7 +1,9 @@
 #content.inventory {
   p {font-size: 14px;}
+  ul.series {margin-left: 0;}
 	li {
 	  line-height: 1.4em;
 	  list-style-type:none;
+	  &[data-behavior='toggle-handler']{cursor: pointer;}
 	}
 }

@@ -2,31 +2,33 @@
 
 <div id="content" class="span9 inventory">
   <h2><%= @page_title %></h2>
-  <div>
+  <div data-collapse="true">
     <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
       <h3 id="series<%= index+1 %>"><%= series[blacklight_config.show.heading] %></h3>
-      <%= series[:description_tsim].join %>
-      <ul>
-        <li><%= pluralize(series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length,"box") %> <%= pluralize(series.folders.total_members, "folder") -%> <%= pluralize(series.folders.map{|f|  f.children.total_members.to_i }.inject(:+), "item")%></li>
+      <p><%= series[:description_tsim].join %></p>
+      <ul class="series">
+        <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%= pluralize(series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length,"box") %> <%= pluralize(series.folders.total_members, "folder") -%> <%= pluralize(series.folders.map{|f|  f.children.total_members.to_i }.inject(:+), "item")%></li>
         <li>
           <ul>
             <%- series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.each do |box, folders| -%>
-              <li>Box <%= box %></li>
+              <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> Box <%= box %></li>
               <li>
                 <ul>
                   <%- folders.each do |folder| -%>
-                    <li>Folder <%= folder[blacklight_config.folder_identifying_field].first %>: <%= folder[blacklight_config.show.heading] %></li>
-                    <ul>
-                      <li><%= pluralize(folder.children.total_members, "item") %>:</li>
-                      <li>
-                        <ul>
-                          <%- folder.children.each do |document| -%>
-                            <% document.images %>
-                            <li><%= link_to(document[blacklight_config.show.heading], catalog_path(document[:id])) %></li>
-                          <%- end -%>
-                        </ul>
-                      </li>
-                    </ul>
+                    <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> Folder <%= folder[blacklight_config.folder_identifying_field].first %>: <%= folder[blacklight_config.show.heading] %></li>
+                    <li>
+                      <ul>
+                        <li><%= pluralize(folder.children.total_members, "item") %>:</li>
+                        <li>
+                          <ul>
+                            <%- folder.children.each do |document| -%>
+                              <% document.images %>
+                              <li><%= link_to(document[blacklight_config.show.heading], catalog_path(document[:id])) %></li>
+                            <%- end -%>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
                   <%- end -%>
                 </ul>
               </li>
