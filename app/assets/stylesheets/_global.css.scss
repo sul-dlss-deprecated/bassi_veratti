@@ -1,6 +1,16 @@
 /* TODO: Refactor to use mix-ins, etc. */
 
 /* Variables */
+/* theme color palette */
+$container_bg_color: lighten(#e8e3d3, 12%);
+$header_bg_color: lighten(#e8e3d3, 9%);
+$heading_color: darken(#a58e76, 20%);
+$text_color: darken(#a58e76, 30%);
+$active_link_color: darken(#a58e76, 20%);
+$active_nav_link_color: darken(#a58e76, 13%);
+$inactive_nav_link_color: $text_color;
+$sidebar_header_color: #AA7D17;
+
 /* constraint (you searched for:) details: */
 $constraint_bg_color: #F0AF00;
 $constraint_border_color: darken($constraint_bg_color, 20%);
@@ -8,18 +18,19 @@ $constraint_border_active_color: #FFD27A !default;
 
 /* Mixins */
 @mixin red-top_border {
-  border-top: 5px solid #990000;
+  border-top: 5px solid #AA7D17;
   padding-top: 10px;
 }
 
 @mixin gray-top_border {
-  border-top: 5px solid #DDDDDD;
+  border-top: 5px solid darken($container_bg_color, 10%);
   padding-top: 10px;
 }
 
 @mixin page-header {
   @include gray-top_border;
-  color: #990000;
+  color: $heading_color;
+  font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
   margin-top: 0;
   padding-top: 10px;
   text-transform: uppercase;
@@ -42,8 +53,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica","Arial",sans-serif;
-  background: #f7f7f7;
+  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
+  background: $container_bg_color;
   font-size: 0.85em;
   line-height: 18px;
   margin: 0;
@@ -75,7 +86,7 @@ img {
 }
 
 a {
-	color: #990000;
+	color: $active_link_color;
 	text-decoration: none;
 }
 a:hover {
@@ -104,11 +115,11 @@ a:hover {
 h1 {
 	display: block;
 	float: left;
-	font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
+	font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
 	font-weight: 700;
 	font-size: 1.5em;
 	line-height: 1.5em;
-	color: #000000;
+	color: $text_color;
 	margin-top: 30px;
 	-webkit-font-smoothing: antialiased;
 	margin-bottom: 30px;
@@ -117,15 +128,16 @@ h1 {
 }
 h2 {
   @include page-header;
-	font-size: 1.325em;
+	font-size: 1.5em;
 	line-height: 1.5em;
 }
 h3 {
+  font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
 	font-size: 1.125em;
 	line-height: 1.5em;
 }
 p {
-  font-family: "Helvetica","Arial",sans-serif;
+  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
   color: #333333;
 //  font-size: 0.8em;
   font-size: 13px;
@@ -150,6 +162,7 @@ span.content-type {
   color: #222;
   > [class^="icon-"] {background-image: none; }
 }
+.nav-header {color: $sidebar_header_color;}
 
 // Override Blacklight theme pagination styling
 .pagination {
@@ -172,7 +185,7 @@ span.content-type {
         line-height: 1.5em;
       }
       > a:hover {
-        color: #990000;
+        color: $active_nav_link_color;
         text-decoration: underline;
       }
       &.disabled > a:hover, &.active > a:hover {text-decoration: none;}
