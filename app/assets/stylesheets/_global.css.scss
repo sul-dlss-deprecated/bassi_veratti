@@ -1,18 +1,21 @@
 /* TODO: Refactor to use mix-ins, etc. */
 
 /* Variables */
-/* theme color palette */
+/* Theme color palette */
 $container_bg_color: lighten(#e8e3d3, 12%);
 $header_bg_color: lighten(#e8e3d3, 9%);
 $heading_color: darken(#a58e76, 20%);
+$sidebar_header_color: #AA7D17;
 $text_color: darken(#a58e76, 30%);
+
 $active_link_color: darken(#a58e76, 20%);
 $active_nav_link_color: darken(#a58e76, 13%);
 $inactive_nav_link_color: $text_color;
-$sidebar_header_color: #AA7D17;
+$facet_link_color: darken(#AA7D17, 5%);
+$facet_selected_color: lighten(#AA7D17, 5%);
 
 /* constraint (you searched for:) details: */
-$constraint_bg_color: #F0AF00;
+$constraint_bg_color: #ece7da;
 $constraint_border_color: darken($constraint_bg_color, 20%);
 $constraint_border_active_color: #FFD27A !default;
 
@@ -118,7 +121,7 @@ h1 {
 	font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
 	font-weight: 700;
 	font-size: 1.5em;
-	line-height: 1.5em;
+	line-height: 1.1em;
 	color: $text_color;
 	margin-top: 30px;
 	-webkit-font-smoothing: antialiased;
