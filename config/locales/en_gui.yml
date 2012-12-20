@@ -51,6 +51,7 @@ en:
       of: 'of'
       all_items: 'All Items In This Folder'
       show_in_inventory: "Show this %{item} in Content Inventory"
+      citation: 'Citation'
     collection_members_grid:
       members_link: 'View All Collection Items'
       collection_link: 'View this collection'

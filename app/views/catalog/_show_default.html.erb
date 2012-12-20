@@ -8,6 +8,8 @@
 		<dt><%=t('bassi.show.families')%>:</dt><dd><%=@document.families%>&nbsp;</dd>
 		<dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
 		<dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
+		<dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%>&nbsp;</dd>
+		
 	</dl>
 	<%if @document.images.size > 0 %>
 	<div id="image_carousel" class="carousel slide">

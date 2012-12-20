@@ -28,6 +28,10 @@ class SolrDocument
   def notes
     multivalue_field('extent_ssim')
   end
+  
+  def purl
+    self[:purl_ssi]
+  end
           
 	def multivalue_field(name)
 	  self[name.to_sym].nil? ? ' ': self[name.to_sym].join(', ')

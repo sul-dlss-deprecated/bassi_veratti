@@ -44,6 +44,7 @@ it:
       next: 'next page'
       showing: 'Showing page'
       of: 'of'
+      citation: 'Citation'      
       all_items: 'All Items In This Folder'
       show_in_inventory: "Show this %{item} in Content Inventory"      
     collection:
