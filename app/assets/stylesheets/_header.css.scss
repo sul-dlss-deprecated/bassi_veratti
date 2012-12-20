@@ -5,7 +5,7 @@
 }
 
 #header-navbar-static-top {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid $nav_border_color;
   &.navbar {
       font-family: "Helvetica","Arial",sans-serif;
     .logo {
@@ -17,8 +17,8 @@
       }
     }
     .nav {
-      border-bottom: 1px solid #dddddd;
-      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid $nav_border_color;
+      border-top: 1px solid $nav_border_color;
       clear: left;
       margin-top: 6px;
       padding-bottom: 3px;

@@ -1,7 +1,10 @@
 .blacklight-catalog-index {
   h3 {
     padding-top: 10px;
-    &.section-heading {border-top: 3px solid #dddddd;}
+    &.section-heading {
+      border-top: 3px solid darken($header_bg_color, 5%);
+      font-size: 1.25em;
+    }
   }
   #featured-collection-nav {
     @include red-top_border;
@@ -25,6 +28,14 @@
 }
 
 .blacklight-catalog-show {
+  #document, #document h4 {
+    margin-top: 0;
+    .document-details {
+      margin-bottom: 50px;
+      margin-top: 10px;
+      dt {color: $active_nav_link_color;}
+    }
+  }
   h2 {@include page-header;}
   .member-image img {margin-bottom: 20px;}
   .show-document-title {

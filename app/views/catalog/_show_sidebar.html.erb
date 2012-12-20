@@ -1,11 +1,6 @@
 <div id="sidebar-nav">
-  <% if @previous_document || @next_document %>
-    <%= render :partial => 'collection_navigation' %>
-  <% end %>
 	<%= render :partial => 'bookmarks_history' %>
-  <ul class="nav nav-list">
-    <%= render :partial => 'show_tools' %>
-  </ul>
+  <%= render :partial => 'show_tools' %>
 </div>
   
 <% unless @document.more_like_this.empty? %>

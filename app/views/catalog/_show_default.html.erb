@@ -1,30 +1,43 @@
-<%= render_document_heading(:h1).html_safe %>
-
 <div class="document">
-	<dl class="dl-horizontal  dl-invert">
-		<dt><%=t('bassi.show.date')%>:</dt><dd><%=@document.date%>&nbsp;</dd>
-		<dt><%=t('bassi.show.description')%>:</dt><dd><%=@document.description%>&nbsp;</dd>
-		<dt><%=t('bassi.show.people')%>:</dt><dd><%=@document.people%>&nbsp;</dd>
-		<dt><%=t('bassi.show.families')%>:</dt><dd><%=@document.families%>&nbsp;</dd>
-		<dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
-		<dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
-		<dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%>&nbsp;</dd>
-		
-	</dl>
-	<%if @document.images.size > 0 %>
-	<div id="image_carousel" class="carousel slide">
-    <div class="carousel-inner">
-	    <%- @document.images.each_with_index do |image,index|%>
-        <div class="item<%= " active" if index == 0 %>">
-          <%= image_tag(image, :alt => "Image #{index}") %>
-        </div>
-      <%- end -%>
-    </div>
-    <div class="carousel-controls">
-      <a class="carousel-control left" href="#image_carousel" data-slide="prev">&lsaquo;</a>
-      <span class="number-of-items"><%=t('bassi.show.showing')%> <span id="iterator">1</span> <%= "#{t('bassi.show.of')} #{@document.images.count}" if @document.images.count > 1 %></span>
-      <a class="carousel-control right" href="#image_carousel" data-slide="next">&rsaquo;</a>
+  <div class="row">
+    <div class="span9">
+      <h2><%= t('bassi.collection.member_detail') %></h2>
     </div>
   </div>
-  <% end %>
+
+  <div class="row document-details">
+    <div class="span4 member-image">
+      <%if @document.images.size > 0 %>
+        <div id="image_carousel" class="carousel slide">
+          <div class="carousel-inner">
+            <%- @document.images.each_with_index do |image,index|%>
+              <div class="item<%= " active" if index == 0 %>">
+                <%= image_tag(image, :alt => "Image #{index}") %>
+              </div>
+            <%- end -%>
+          </div>
+          <div class="carousel-controls">
+            <a class="carousel-control left" href="#image_carousel" data-slide="prev">&lsaquo;</a>
+            <span class="number-of-items"><%=t('bassi.show.showing')%> <span id="iterator">1</span> <%= "#{t('bassi.show.of')} #{@document.images.count}" if @document.images.count > 1 %></span>
+            <a class="carousel-control right" href="#image_carousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="span5">
+      <%= render_document_heading(:h4).html_safe %>
+      <dl class="dl-horizontal  dl-invert">
+        <dt><%=t('bassi.show.date')%>:</dt><dd><%=@document.date%>&nbsp;</dd>
+        <dt><%=t('bassi.show.description')%>:</dt><dd><%=@document.description%>&nbsp;</dd>
+        <dt><%=t('bassi.show.people')%>:</dt><dd><%=@document.people%>&nbsp;</dd>
+        <dt><%=t('bassi.show.families')%>:</dt><dd><%=@document.families%>&nbsp;</dd>
+        <dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
+        <dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
+        <dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%>&nbsp;</dd>
+      </dl>
+    <div>
+
+  </div>
 </div>
+
