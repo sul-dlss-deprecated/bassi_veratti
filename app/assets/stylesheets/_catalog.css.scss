@@ -28,6 +28,14 @@
 }
 
 .blacklight-catalog-show {
+  #document, #document h4 {
+    margin-top: 0;
+    .document-details {
+      margin-bottom: 50px;
+      margin-top: 10px;
+      dt {color: $active_nav_link_color;}
+    }
+  }
   h2 {@include page-header;}
   .member-image img {margin-bottom: 20px;}
   .show-document-title {
