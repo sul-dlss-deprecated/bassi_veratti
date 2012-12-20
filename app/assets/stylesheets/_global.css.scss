@@ -2,17 +2,23 @@
 
 /* Variables */
 /* Theme color palette */
-$container_bg_color: lighten(#e8e3d3, 12%);
-$header_bg_color: lighten(#e8e3d3, 9%);
-$heading_color: darken(#a58e76, 20%);
-$sidebar_header_color: #AA7D17;
-$text_color: darken(#a58e76, 30%);
 
-$active_link_color: darken(#a58e76, 20%);
-$active_nav_link_color: darken(#a58e76, 13%);
+$header_bg_color: #f8f6f1;
+$nav_border_color: #e3dbce;
+
+$container_bg_color: #fdfdfb;
+$heading_color: #6d5b48;
+$sidebar_header_color: #AA7D17;
+$text_color: #4e4134;
+
+$active_link_color: #6d5b48;
+$hover_link_color: #c08e1a;
+$active_nav_link_color: #836d56;
 $inactive_nav_link_color: $text_color;
-$facet_link_color: darken(#AA7D17, 5%);
-$facet_selected_color: lighten(#AA7D17, 5%);
+
+$facet_box_background_color: lighten($header_bg_color, 1%);
+$facet_link_color: #946c14;
+$facet_selected_color: #c08e1a;
 
 /* constraint (you searched for:) details: */
 $constraint_bg_color: #ece7da;
@@ -26,7 +32,7 @@ $constraint_border_active_color: #FFD27A !default;
 }
 
 @mixin gray-top_border {
-  border-top: 5px solid darken($container_bg_color, 10%);
+  border-top: 5px solid darken($header_bg_color, 8%);
   padding-top: 10px;
 }
 
@@ -93,7 +99,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #660000;
+	color: $hover_link_color;
 	text-decoration: underline;
 }
 #news-gothic .normal {
