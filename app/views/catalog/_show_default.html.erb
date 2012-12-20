@@ -9,6 +9,7 @@
 		<dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
 		<dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
 	</dl>
+	<%if @document.images.size > 0 %>
 	<div id="image_carousel" class="carousel slide">
     <div class="carousel-inner">
 	    <%- @document.images.each_with_index do |image,index|%>
@@ -23,4 +24,5 @@
       <a class="carousel-control right" href="#image_carousel" data-slide="next">&rsaquo;</a>
     </div>
   </div>
+  <% end %>
 </div>
