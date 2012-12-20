@@ -12,9 +12,9 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         cp .rvmrc.example .rvmrc
         cp deploy/.rvmrc.example deploy/.rvmrc
-				cd ..
-				cd bassi_veratti
-				
+		cd ..
+		cd bassi_veratti
+
 1. Install dependencies via bundler for both the main and deploy directories:
 
         bundle install
@@ -24,10 +24,10 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
 1. Set up local jetty and copy config files
 
-				git submodule init
-				git submodule update
-				rake bassi:config
-				
+		git submodule init
+		git submodule update
+		rake bassi:config
+
 1. Migrate the database:
 
         rake db:migrate
@@ -35,8 +35,8 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
 1. Start solr and load the fixtures: (you should first stop any other jetty processes if you have multiple jetty-related projects):
 
-        rake jetty:start 
-        rake bassi_veratti:index_fixtures 
+        rake jetty:start
+        rake bassi:index_fixtures
 
 
 1. Start Rails:
@@ -61,7 +61,7 @@ You can run the test suite locally by running:
 
     rake local_ci
 
-This will stop development jetty, force you into the test environment, start jetty, start solr, 
+This will stop development jetty, force you into the test environment, start jetty, start solr,
 delete all the records in the test solr core, index all fixtures in `spec/fixtures`, run `db:migrate` in test,
 then run the tests, and then restart development jetty
 
