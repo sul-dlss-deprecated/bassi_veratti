@@ -6,7 +6,7 @@ namespace :bassi do
   desc "Parse EAD File"
   task :"parse-ead" do
   
-    ead = EadParser.new("#{Rails.root}/data/bv-ead.xml")
+    ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
     
     solr = Blacklight.solr
     documents = solrize_ead ead
@@ -45,9 +45,9 @@ def solrize_ead(ead)
       end
       documents << document_from_contents(ead, c02, c01, c01, containers)
     end
-    
+    dates = dates_from_unitdate(c01.did)
     documents << {:id => c01.identifier,
-                  :title_tsi => clean_string(c01.did.unittitle),
+                  :title_tsi => [clean_string(c01.did.unittitle), dates.try(:date)].join(" "),
                   :level_ssim => c01.level,
                   :description_tsim => description(c01),
                   :purl_ssi => c01.dao.try(:href)}
