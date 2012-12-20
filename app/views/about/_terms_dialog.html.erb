@@ -1,6 +1,10 @@
- <div class="modal-body">
-   <p><%=t('bassi.nav.terms_of_use_message')%></p>
+<div class="modal-body">
+  <p><%=t('bassi.nav.terms_of_use_message')%></p>
+	 <p><%=t('bassi.nav.terms_of_use_acknowledgement')%></p>
+   
+		<p><form action="<%=@params[:return_to] || root_url%>" method="get">
+			<input type="submit" class="btn" name="<%=t('bassi.nav.terms_continue')%>" value="<%=t('bassi.nav.terms_continue')%>">
+		</form>
+		</p>
 		
-		<%= link_to t('bassi.nav.terms_continue'),@params[:return_to]%>
-		
- </div>
+</div>

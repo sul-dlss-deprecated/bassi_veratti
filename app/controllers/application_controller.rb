@@ -22,11 +22,19 @@ class ApplicationController < ActionController::Base
     { :locale => I18n.locale }
   end
   
+  def on_pages_that_do_not_require_terms_dialog
+    on_background_page || on_home_page || on_about_pages
+  end
+  
+  def seen_terms_dialog?
+    cookies[:seen_terms] || false
+  end
+  
   def show_terms_dialog?
-    if cookies[:seen_terms] || on_background_page || on_home_page || on_about_pages
+    if seen_terms_dialog? || on_pages_that_do_not_require_terms_dialog
       return false
-    else
-      cookies[:seen_terms] = { :value => true, :expires => 10.years.from_now }
+    elsif !on_pages_that_do_not_require_terms_dialog
+      cookies[:seen_terms] = { :value => true, :expires => 10.years.from_now } # they've seen it now!
       return true
     end
   end
