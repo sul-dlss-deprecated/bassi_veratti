@@ -173,6 +173,8 @@ span.content-type {
 }
 .nav-header {color: $sidebar_header_color;}
 
+.nav > li > a:hover {border-radius: 10px;}
+
 // Override Blacklight theme pagination styling
 .pagination {
   border-top: 1px solid #dddddd;
