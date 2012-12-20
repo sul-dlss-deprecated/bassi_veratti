@@ -6,7 +6,7 @@ namespace :bassi do
   desc "Parse EAD File"
   task :"parse-ead" do
   
-    ead = EadParser.new("#{Rails.root}/data/bv-ead.xml")
+    ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
     
     solr = Blacklight.solr
     documents = solrize_ead ead
