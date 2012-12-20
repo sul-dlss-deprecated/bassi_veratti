@@ -69,6 +69,11 @@ it:
       facets:
         title: 'Browse'
     sidebar:
+      actions:
+        title: 'Actions'
+        view_in_inventory: 'View in Content Inventory'
+        print: 'Print Item Details'
+        cite: 'Cite this Item'
       navigation:
         title: 'Navigation'
         all_collections: 'All Collections'
@@ -77,8 +82,8 @@ it:
         search_history: 'Search History'
       finding_aid:
         title: 'Finding Aid'
-        download_pdf: 'Download PDF'
-        download_ead: 'Download EAD XML'
+        download_pdf: 'PDF'
+        download_ead: 'EAD XML'
       inventory:
         title: 'Inventory Contents'
       background:
