@@ -39,10 +39,9 @@
   <body onload="<%= raw onload_text %>"
         class="<%= render_body_class %> <%= "scrollspy-content" if on_scrollspy_page? %>">
 
-		<% show_terms=show_terms_dialog?%>
-	  <%= render(:partial => 'shared/terms_dialog') if show_terms%>
+	  <%= render(:partial => 'shared/terms_dialog') if show_terms_dialog?%>
 		<noscript>
-			<% if show_terms %><meta http-equiv="refresh" content="0; URL=/about/terms_dialog?return_to=<%=request.path%>"><% end %>
+			<% if show_terms_dialog? %><meta http-equiv="refresh" content="0; URL=/about/terms_dialog?return_to=<%=request.path%>"><% end %>
 		</noscript>
 
     <div id="su-wrap"> <!-- #su-wrap start -->
@@ -56,7 +55,7 @@
                   <!-- Top bar -->
                   <div id="search-found" class="row hidden-phone">
                     <%= topbar_items.join('').html_safe %>
-										<%= render :partial=>'shared/breadcrumbs' %>
+										<%= render :partial=>'shared/breadcrumbs' unless @no_nav%>
                   </div>
                   <!-- /Top bar -->
                         <div class="row">
@@ -71,7 +70,6 @@
                              <%= yield %>
                              </div>   
       </div>
-
       <%= render :partial => 'shared/footer' %>
       
         </div> <!-- #su-content end -->

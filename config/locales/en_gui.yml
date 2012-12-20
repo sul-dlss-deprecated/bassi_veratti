@@ -1,6 +1,6 @@
 en:
   blacklight:
-    application_name: 'Bassi Veratti Collection'
+    application_name: 'Bassi-Veratti Collection'
   bassi:
     nav:
       bassi_collection: 'Bassi-Veratti Collection'      
@@ -19,7 +19,8 @@ en:
       background: 'Background'
       content_inventory: 'Content Inventory'
       terms_of_use_message: "Copyright @ Biblioteca dell’Archiginnasio. All rights are reserved to Biblioteca dell'Archiginnasio, Comune di Bologna. The images can only be printed by using this page and for personal/scholarly use. Any other use must be requested in writing to Biblioteca dell'Archiginnasio: archiginnasio@comune.bologna.it."
-      terms_continue: 'Continue using the website.'
+      terms_of_use_acknowledgement: 'By clicking agree and continuing to use the website, you acknowledge and agree to abide by these terms.'
+      terms_continue: 'Agree'
       close: 'Close'
     about:
       project_title: 'About the Bassi Veratti Collection'
@@ -68,6 +69,11 @@ en:
       facets:
         title: 'Browse'
     sidebar:
+      actions:
+        title: 'Actions'
+        view_in_inventory: 'View in Content Inventory'
+        print: 'Print Item Details'
+        cite: 'Cite this Item'
       navigation:
         title: 'Navigation'
         all_collections: 'All Collections'
@@ -76,8 +82,8 @@ en:
         search_history: 'Search History'
       finding_aid:
         title: 'Finding Aid'
-        download_pdf: 'Download PDF'
-        download_ead: 'Download EAD XML'
+        download_pdf: 'PDF'
+        download_ead: 'EAD XML'
       inventory:
         title: 'Inventory Contents'
       background:
