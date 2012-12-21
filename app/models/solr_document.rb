@@ -36,9 +36,21 @@ class SolrDocument
   def purl
     self[:purl_ssi]
   end
+  
+  def level
+    multivalue_field(blacklight_config.folder_identifier_field).first
+  end
           
+  def box
+    multivalue_field(blacklight_config.box_identifying_field).first
+  end
+
+  def folder
+    multivalue_field(blacklight_config.folder_identifying_field).first    
+  end
+  
 	def multivalue_field(name)
-	  self[name.to_sym].nil? ? ' ': self[name.to_sym].join(', ')
+	  self[name.to_sym].nil? ? ['']: self[name.to_sym]
   end
 
   def images(size=:default)
@@ -117,6 +129,17 @@ class SolrDocument
     
   end
 
+  def silbings
+    @siblings ||= SolrDocument.new(
+                              Blacklight.solr.select(
+                                :params => {
+                                  :fq => "id:\"#{self[:direct_parent_ssim].first}\""
+                                }
+                              )
+                            )
+    return @siblings#.children
+  end
+  
   def box_siblings
     @box_siblings ||= CollectionMembers.new(
                               Blacklight.solr.select(
@@ -132,10 +155,8 @@ class SolrDocument
     @folder_siblings ||= CollectionMembers.new(
                               Blacklight.solr.select(
                                 :params => {
-                                  :fq => "#{blacklight_config.box_identifying_field}:\"#{self[blacklight_config.box_identifying_field].first}\" AND 
-                                          #{blacklight_config.folder_identifying_field}:\"#{self[blacklight_config.folder_identifying_field].first}\"",
-                                  :rows => blacklight_config.collection_member_grid_items.to_s
-                                }
+                                  :fq => "#{blacklight_config.box_identifying_field}:\"#{self.box}\" AND 
+                                          #{blacklight_config.folder_identifying_field}:\"#{self.folder}\" AND NOT id:\"box#{self.box}-folder#{self.folder}\""                                }
                               )
                             )
   end

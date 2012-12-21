@@ -40,6 +40,15 @@ en:
     collection_members:
       items_name: 'image'
     show:
+      box: 
+        one: 'Box'
+        other: "%{count} Boxes"
+      folder: 
+        one: 'Folder'
+        other: "%{count} Folders"
+      item: 
+        one: 'Item'
+        other: "%{count} Items"
       date: 'Date'
       description: 'Physical Description'
       people: 'People'
@@ -50,9 +59,9 @@ en:
       next: 'next page'
       showing: 'Showing page'
       of: 'of'
-      all_items: 'All Items In This Folder'
       show_in_inventory: "Show this %{item} in Content Inventory"
       citation: 'Citation'
+      all_items_in_folder: "All Items In This Folder"       
     collection_members_grid:
       members_link: 'View All Collection Items'
       collection_link: 'View this collection'

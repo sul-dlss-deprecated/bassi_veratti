@@ -35,6 +35,15 @@ it:
       italy_team_title: 'Project Team: Bologna'
       history_title: 'Project History'
     show:
+      box: 
+        one: 'Box'
+        other: "%{count} Boxes"
+      folder: 
+        one: 'Folder'
+        other: "%{count} Folders"
+      item: 
+        one: 'Item'
+        other: "%{count} Items"
       date: 'Date'
       description: 'Physical Description'
       people: 'People'
@@ -45,9 +54,9 @@ it:
       next: 'next page'
       showing: 'Showing page'
       of: 'of'
-      citation: 'Citation'      
-      all_items: 'All Items In This Folder'
-      show_in_inventory: "Show this %{item} in Content Inventory"      
+      show_in_inventory: "Show this %{item} in Content Inventory"
+      citation: 'Citation'
+      all_items_in_folder: "All Items In This Folder"    
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'
