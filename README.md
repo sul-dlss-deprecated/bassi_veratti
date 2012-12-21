@@ -1,8 +1,8 @@
-== Bassi Veratti Collection
+# Bassi Veratti Collection
 
 This is a Blacklight application for the Bassi Verati Collection at Stanford University.
 
-== Getting Started
+## Getting Started
 
 1. Checkout the code
 
@@ -12,8 +12,8 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         cp .rvmrc.example .rvmrc
         cp deploy/.rvmrc.example deploy/.rvmrc
-		cd ..
-		cd bassi_veratti
+        cd ..
+        cd bassi_veratti
 
 1. Install dependencies via bundler for both the main and deploy directories:
 
@@ -24,9 +24,9 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
 1. Set up local jetty and copy config files
 
-		git submodule init
-		git submodule update
-		rake bassi:config
+        git submodule init
+        git submodule update
+        rake bassi:config
 
 1. Migrate the database:
 
@@ -70,4 +70,4 @@ then run the tests, and then restart development jetty
 
 To reset jetty and solr back to their initial state:
 
-	  rake bassi:jetty_nuke
+    rake bassi:jetty_nuke
