@@ -48,9 +48,13 @@
 <div class="row">
   <div class="span9">
 		<h3><%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)</h3> 
-		<% @document.folder_siblings.documents.each do |sibling| %>
-				<%= link_to(image_tag(sibling.first_image(:square),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
-		<% end %>
+		<ul class="preview-folder-items">
+  		<% @document.folder_siblings.documents.each do |sibling| %>
+  		  <li>
+  				<%= link_to(image_tag(sibling.first_image(:square),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
+  			</li>
+  		<% end %>
+		</ul>
   </div>
 </div>
 <% end %>
