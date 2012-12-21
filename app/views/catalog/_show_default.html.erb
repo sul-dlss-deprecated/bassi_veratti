@@ -28,16 +28,30 @@
     <div class="span5">
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
-        <dt><%=t('bassi.show.date')%>:</dt><dd><%=@document.date%>&nbsp;</dd>
-        <dt><%=t('bassi.show.description')%>:</dt><dd><%=@document.description%>&nbsp;</dd>
-        <dt><%=t('bassi.show.people')%>:</dt><dd><%=@document.people%>&nbsp;</dd>
-        <dt><%=t('bassi.show.families')%>:</dt><dd><%=@document.families%>&nbsp;</dd>
-        <dt><%=t('bassi.show.location')%>:</dt><dd><%=@document.location%>&nbsp;</dd>
-        <dt><%=t('bassi.show.notes')%>:</dt><dd><%=@document.notes%>&nbsp;</dd>
-        <dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%>&nbsp;</dd>
+        <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
+				<dt><%=t('bassi.show.box.one')%>:</dt><dd><%=@document.box%></dd>
+				<dt><%=t('bassi.show.folder.one')%>:</dt><dd><%=@document.folder%></dd> 
+        <dt><%=t('bassi.show.description')%>:</dt><dd><%=show_list(@document.description)%>&nbsp;</dd>
+        <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_list(@document.people)%>&nbsp;</dd>
+        <dt><%=t('bassi.show.families')%>:</dt><dd><%=show_list(@document.families)%>&nbsp;</dd>
+        <dt><%=t('bassi.show.location')%>:</dt><dd><%=show_list(@document.location)%>&nbsp;</dd>
+        <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_list(@document.notes)%>&nbsp;</dd>
+        <% unless @document.purl.blank? %><dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%>&nbsp;</dd><%end %>
       </dl>
     <div>
 
   </div>
+
+
 </div>
+<% if @document.folder_siblings.documents.size > 0%>
+<div class="row">
+  <div class="span9">
+		<h3><%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)</h3> 
+		<% @document.folder_siblings.documents.each do |sibling| %>
+				<%= link_to(image_tag(sibling.first_image(:square),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
+		<% end %>
+  </div>
+</div>
+<% end %>
 

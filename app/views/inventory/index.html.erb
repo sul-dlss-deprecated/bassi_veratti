@@ -9,26 +9,25 @@
       <ul class="series">
         <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
           <i style="display:none;" class="icon-plus-sign"></i> 
-          <%= link_to("#{pluralize(series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length,"box")} #{pluralize(series.folders.total_members, "folder")} #{pluralize(series.folders.map{|f|  f.children.total_members.to_i }.inject(:+), "item")}", "##{series[:id]}") %>
+          <%= link_to("#{t('bassi.show.box',:count=>series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length)} #{t('bassi.show.folder',:count=>series.folders.total_members)} #{t('bassi.show.item',:count=>series.folders.map{|f|  f.children.total_members.to_i }.inject(:+))}", "##{series[:id]}") %>
         </li>
         <li>
           <ul class="box-list">
             <%- series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.each do |box, folders| -%>
               <li data-behavior='toggle-handler' data-reference-id="#<%= "box#{box}" %>">
-                <i style="display:none;" class="icon-plus-sign"></i><%= link_to("Box #{box}", "#box#{box}") %>
+                <i style="display:none;" class="icon-plus-sign"></i> <%= link_to("#{t('bassi.show.box', :count=>1)} #{box}", "#box#{box}") %>
               </li>
               <li>
                 <ul class="folder-list">
                   <%- folders.each do |folder| -%>
                     <li data-behavior='toggle-handler' data-reference-id="#<%= folder[:id] %>">
-                      <i style="display:none;" class="icon-plus-sign"></i> <%= link_to("Folder #{folder[blacklight_config.folder_identifying_field].first}: #{folder[blacklight_config.show.heading]}", "##{folder[:id]}") %>
+                      <i style="display:none;" class="icon-plus-sign"></i> 
+                      <%= link_to("#{t('bassi.show.folder', :count=>1)} #{folder[blacklight_config.folder_identifying_field].first}: #{folder[blacklight_config.show.heading]}", "##{folder[:id]}") %>
                     </li>
                     <li>
                       <ul class="folder-items">
-                        <li class="item-count"><%= pluralize(folder.children.total_members, "item") %>:</li>
-                        <li>
-														<ul class="item-list">
-															
+                        <li class="item-count"><%=t('bassi.show.item',:count=>folder.children.total_members)%>:</li>
+														<ul class="item-list">															
                             <%- folder.children.each do |document| -%>
 															<li class="item-image-link" data-image-link="<%=catalog_path(document[:id])%>" data-image-url="<%=document.first_image(:square)%>" data-image-title="<%=document.title%>">
 															<noscript>

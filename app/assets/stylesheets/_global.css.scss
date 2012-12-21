@@ -167,13 +167,13 @@ span.content-type {
 }
 .nav-list > .active > a,
 .nav-list > .active > a:hover {
-  background-color: #eee;
+  background-color: #eae5d6;
   color: #222;
   > [class^="icon-"] {background-image: none; }
 }
 .nav-header {color: $sidebar_header_color;}
 
-.nav > li > a:hover {border-radius: 10px;}
+.nav > li > a  {border-radius: 10px;}
 
 // Override Blacklight theme pagination styling
 .pagination {
