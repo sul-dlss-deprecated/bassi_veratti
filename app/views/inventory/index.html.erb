@@ -5,7 +5,7 @@
   <div data-collapse="true">
     <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
       <h3 id="series<%= index+1 %>"><%= series[blacklight_config.show.heading] %></h3>
-      <p><%= series[:description_tsim].join %></p>
+      <p><%= series.description %></p>
       <ul class="series">
         <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%= pluralize(series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length,"box") %> <%= pluralize(series.folders.total_members, "folder") -%> <%= pluralize(series.folders.map{|f|  f.children.total_members.to_i }.inject(:+), "item")%></li>
         <li>
@@ -20,12 +20,16 @@
                       <ul>
                         <li><%= pluralize(folder.children.total_members, "item") %>:</li>
                         <li>
-                          <ul>
+														<ul>
+															
                             <%- folder.children.each do |document| -%>
-                              <% document.images %>
-                              <li><%= link_to(document[blacklight_config.show.heading], catalog_path(document[:id])) %></li>
+															<li class="item-image-link" data-image-link="<%=catalog_path(document[:id])%>" data-image-url="<%=document.first_image(:square)%>" data-image-title="<%=document.title%>">
+															<noscript>
+                              	<%= link_to(image_tag(document.first_image(:square),:alt=>document.title,:title=>document.title,:border=>0), catalog_path(document[:id])) %>
+															</noscript>
+														</li>
                             <%- end -%>
-                          </ul>
+														</ul>
                         </li>
                       </ul>
                     </li>

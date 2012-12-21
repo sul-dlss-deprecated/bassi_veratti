@@ -5,6 +5,10 @@ class SolrDocument
   
   self.unique_key = 'id'
 
+  def title
+    self[:title_tsi]
+  end
+  
   def date
     multivalue_field('unit_date_ssim')
   end
@@ -36,6 +40,25 @@ class SolrDocument
 	def multivalue_field(name)
 	  self[name.to_sym].nil? ? ' ': self[name.to_sym].join(', ')
   end
+
+  def images(size=:default)
+    return [] unless self.has_key?(blacklight_config.image_identifier_field)
+    stacks_url = BassiVeratti::Application.config.stacks_url
+    self[blacklight_config.image_identifier_field].map do |image_id|
+      "#{stacks_url}/#{self["druid_ssi"]}/#{image_id.chomp('.jp2')}#{SolrDocument.image_dimensions[size]}.jpg"
+    end
+  end
+
+  def first_image(size=:default)
+    return "http://placehold.it/100x100" unless self.has_key?(blacklight_config.image_identifier_field)
+    stacks_url = BassiVeratti::Application.config.stacks_url
+    images(size).first
+  end
+  
+   def self.image_dimensions
+     options = {:default => "_thumb",
+                :square   => "_square" }
+   end
   
   def series?
     self.has_key?(blacklight_config.series_identifying_field) and 
@@ -189,14 +212,6 @@ class SolrDocument
     end
   end
   
-  def images(size=:default)
-    return [] unless self.has_key?(blacklight_config.image_identifier_field)
-    stacks_url = BassiVeratti::Application.config.stacks_url
-    self[blacklight_config.image_identifier_field].map do |image_id|
-      "#{stacks_url}/#{self["druid_ssi"]}/#{image_id.chomp('.jp2')}#{SolrDocument.image_dimensions[size]}.jpg"
-    end
-  end
-  
   # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marc_display
   extension_parameters[:marc_format_type] = :marcxml
@@ -222,12 +237,7 @@ class SolrDocument
                          :language => "language_facet",
                          :format => "format_ssim"
                          )
-     
 
-  def self.image_dimensions
-    options = {:default => "_thumb",
-               :large   => "_thumb" }
-  end
                          
   private
   
