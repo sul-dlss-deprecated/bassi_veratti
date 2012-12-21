@@ -8,6 +8,7 @@
     font-size: 14px;
     margin-top: 3px;
   }
+  i {margin-right: 3px;}
   ul.series {
     margin-bottom: 35px;
     margin-left: 0;
@@ -27,11 +28,13 @@
     }
     ul.folder-list {
       li {
-        text-indent: -1em;
+        text-indent: -1.5em;
         margin-left: 1em;
       }
       ul.folder-items {margin-left: 0;}
-      li.item-count {font-style: italic;}
+      li.item-count {
+        font-style: italic;
+        margin-left: 1.5em}
     }
     ul.item-list {
       margin-left: 0;
