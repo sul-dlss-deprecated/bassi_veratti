@@ -29,8 +29,8 @@
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
-				<dt><%=t('bassi.show.box.one')%>:</dt><dd><%=@document.box%></dd>
-				<dt><%=t('bassi.show.folder.one')%>:</dt><dd><%=@document.folder%></dd> 
+				<dt><%=t('bassi.show.box.word')%>:</dt><dd><%=@document.box%></dd>
+				<dt><%=t('bassi.show.folder.word')%>:</dt><dd><%=@document.folder%></dd> 
         <dt><%=t('bassi.show.description')%>:</dt><dd><%=show_list(@document.description)%>&nbsp;</dd>
         <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_list(@document.people)%>&nbsp;</dd>
         <dt><%=t('bassi.show.families')%>:</dt><dd><%=show_list(@document.families)%>&nbsp;</dd>
@@ -42,8 +42,9 @@
 
   </div>
 
-
 </div>
+
+
 <% if @document.folder_siblings.documents.size > 0%>
 <div class="row">
   <div class="span9">

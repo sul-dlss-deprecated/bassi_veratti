@@ -36,13 +36,15 @@ it:
       history_title: 'Project History'
     show:
       box: 
-        one: 'Box'
+        word: 'Box'
+        one: '1 Box'
         other: "%{count} Boxes"
       folder: 
-        one: 'Folder'
+        word: 'Folder'        
+        one: '1 Folder'
         other: "%{count} Folders"
       item: 
-        one: 'Item'
+        one: '1 Item'
         other: "%{count} Items"
       date: 'Date'
       description: 'Physical Description'
@@ -56,7 +58,7 @@ it:
       of: 'of'
       show_in_inventory: "Show this %{item} in Content Inventory"
       citation: 'Citation'
-      all_items_in_folder: "All Items In This Folder"    
+      all_items_in_folder: "Other Items In This Folder"    
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'
