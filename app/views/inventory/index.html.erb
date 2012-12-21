@@ -9,18 +9,18 @@
       <ul class="series">
         <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%= pluralize(series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length,"box") %> <%= pluralize(series.folders.total_members, "folder") -%> <%= pluralize(series.folders.map{|f|  f.children.total_members.to_i }.inject(:+), "item")%></li>
         <li>
-          <ul>
+          <ul class="box-list">
             <%- series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.each do |box, folders| -%>
               <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> Box <%= box %></li>
               <li>
-                <ul>
+                <ul class="folder-list">
                   <%- folders.each do |folder| -%>
                     <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> Folder <%= folder[blacklight_config.folder_identifying_field].first %>: <%= folder[blacklight_config.show.heading] %></li>
                     <li>
-                      <ul>
-                        <li><%= pluralize(folder.children.total_members, "item") %>:</li>
+                      <ul class="folder-items">
+                        <li class="item-count"><%= pluralize(folder.children.total_members, "item") %>:</li>
                         <li>
-														<ul>
+														<ul class="item-list">
 															
                             <%- folder.children.each do |document| -%>
 															<li class="item-image-link" data-image-link="<%=catalog_path(document[:id])%>" data-image-url="<%=document.first_image(:square)%>" data-image-title="<%=document.title%>">

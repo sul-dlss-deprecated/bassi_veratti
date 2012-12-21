@@ -1,9 +1,48 @@
 #content.inventory {
-  p {font-size: 14px;}
-  ul.series {margin-left: 0;}
-	li {
-	  line-height: 1.4em;
-	  list-style-type:none;
-	  &[data-behavior='toggle-handler']{cursor: pointer;}
-	}
+  h3 {
+    clear: both;
+    font-size: 1.5em;
+    &:before {content: "Series ";}
+  }
+  p {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  ul.series {
+    margin-bottom: 35px;
+    margin-left: 0;
+    text-transform: uppercase;
+    li {
+      clear: both;
+      line-height: 1.4em;
+      list-style-type:none;
+      &[data-behavior='toggle-handler']{cursor: pointer;}
+    }
+    > li {margin-bottom: 10px;}
+    > li > ul li {
+      margin-bottom: 10px;
+      text-transform: none;
+    }
+    ul.box-list li {
+    }
+    ul.folder-list {
+      li {
+        text-indent: -1em;
+        margin-left: 1em;
+      }
+      ul.folder-items {margin-left: 0;}
+      li.item-count {font-style: italic;}
+    }
+    ul.item-list {
+      margin-left: 0;
+      li {
+        clear: none;
+        float: left;
+        margin-right: 20px;
+        margin-left: 0;
+        text-indent: 0;
+        &:last-child {margin-bottom: 30px;}
+      }
+    }
+  }
 }
