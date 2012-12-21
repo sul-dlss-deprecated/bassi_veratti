@@ -9,19 +9,17 @@
       <ul class="series">
         <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%=t('bassi.show.box',:count=>series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length)%>  <%=t('bassi.show.folder',:count=>series.folders.total_members)%>  <%=t('bassi.show.item',:count=>series.folders.map{|f|  f.children.total_members.to_i }.inject(:+))%></li>
         <li>
-          <ul>
+          <ul class="box-list">
             <%- series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.each do |box, folders| -%>
               <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%=t('bassi.show.box', :count=>1)%> <%= box %></li>
               <li>
-                <ul>
+                <ul class="folder-list">
                   <%- folders.each do |folder| -%>
                     <li data-behavior='toggle-handler'><i style="display:none;" class="icon-plus-sign"></i> <%=t('bassi.show.folder', :count=>1)%> <%= folder[blacklight_config.folder_identifying_field].first %>: <%= folder[blacklight_config.show.heading] %></li>
                     <li>
-                      <ul>
-                        <li><%=t('bassi.show.item',:count=>folder.children.total_members)%>:</li>
-                        <li>
-														<ul>
-															
+                      <ul class="folder-items">
+                        <li class="item-count"><%=t('bassi.show.item',:count=>folder.children.total_members)%>:</li>
+														<ul class="item-list">															
                             <%- folder.children.each do |document| -%>
 															<li class="item-image-link" data-image-link="<%=catalog_path(document[:id])%>" data-image-url="<%=document.first_image(:square)%>" data-image-title="<%=document.title%>">
 															<noscript>
