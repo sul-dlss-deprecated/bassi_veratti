@@ -7,7 +7,7 @@ $(document).ready(function(){
 				icon.toggle();
 			  var nested_list = $(this).next("li");	
   			nested_list.hide();
-				$("a", $(this)).click(function(){
+				$("a, i", $(this)).click(function(){
 					icon.toggleClass("icon-minus-sign");
 					nested_list.slideToggle();
 				});
@@ -22,8 +22,10 @@ $(document).ready(function(){
 	  var focus = $("[data-reference-id='" + window.location.hash +"']");
 	  // Show the next list item and all its hidden list item parents
 	  focus.next("li").show();
+	  focus.children("i").toggleClass("icon-minus-sign");
 	  focus.parents("li:hidden").each(function(){
 		  $(this).show();
+  		$(this).prev("li").children("i").toggleClass("icon-minus-sign");
 	  });
 	  // Scroll to the item that we're trying to focus on.
 		$(window).scrollTop(focus.offset().top);
