@@ -7,7 +7,7 @@ $(document).ready(function(){
 				icon.toggle();
 			  var nested_list = $(this).next("li");	
   			nested_list.hide();
-				$(this).click(function(){
+				$("a", $(this)).click(function(){
 					icon.toggleClass("icon-minus-sign");
 					nested_list.slideToggle();
 				});
@@ -16,4 +16,18 @@ $(document).ready(function(){
 		// Refresh the scrollspy since we've changed the DOM
 		$('.scrollspy-content').scrollspy("refresh");
 	}
+	
+	// When we have an anchor on the inventory page on page load
+  if($(".blacklight-inventory").length > 0 && window.location.hash != '') {
+	  var focus = $("[data-reference-id='" + window.location.hash +"']");
+	  // Show the next list item and all its hidden list item parents
+	  focus.next("li").show();
+	  focus.parents("li:hidden").each(function(){
+		  $(this).show();
+	  });
+	  // Scroll to the item that we're trying to focus on.
+		$(window).scrollTop(focus.offset().top);
+		// Refresh the scrollspy since we've changed the DOM
+		$('.scrollspy-content').scrollspy("refresh");
+  }
 });
