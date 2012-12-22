@@ -10,6 +10,8 @@ $(document).ready(function(){
 				$("a, i", $(this)).click(function(){
 					icon.toggleClass("icon-minus-sign");
 					nested_list.slideToggle();
+					// Refresh the scrollspy since we've changed the DOM
+					$('.scrollspy-content').scrollspy("refresh");
 				});
 			});
 		});
