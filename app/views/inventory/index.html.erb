@@ -9,7 +9,7 @@
       <ul class="series">
         <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
           <i style="display:none;" class="icon-plus-sign"></i> 
-          <%= link_to("#{t('bassi.show.box',:count=>series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length)} #{t('bassi.show.folder',:count=>series.folders.total_members)} #{t('bassi.show.item',:count=>series.folders.map{|f|  f.children.total_members.to_i }.inject(:+))}", "##{series[:id]}") %>
+          <%= link_to("#{t('bassi.show.box',:count=>series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length)},  #{t('bassi.show.folder',:count=>series.folders.total_members)},  #{t('bassi.show.item',:count=>series.folders.map{|f|  f.children.total_members.to_i }.inject(:+))}", "##{series[:id]}") %>
         </li>
         <li>
           <ul class="box-list">
