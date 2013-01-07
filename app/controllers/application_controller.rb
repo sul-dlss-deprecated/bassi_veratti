@@ -34,8 +34,16 @@ class ApplicationController < ActionController::Base
     if seen_terms_dialog? || on_pages_that_do_not_require_terms_dialog
       return false
     elsif !on_pages_that_do_not_require_terms_dialog
-      cookies[:seen_terms] = { :value => true, :expires => 10.years.from_now } # they've seen it now!
       return true
+    end
+  end
+  
+  def accept_terms
+    cookies[:seen_terms] = { :value => true, :expires => 10.years.from_now } # they've seen it now!
+    if params[:return_to].blank?
+      render :nothing=>true
+    else
+      redirect_to params[:return_to]
     end
   end
 

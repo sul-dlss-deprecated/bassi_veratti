@@ -11,6 +11,7 @@
     <p><%=t('bassi.nav.terms_of_use_acknowledgement')%></p>
   </div>
   <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal"><%=t('bassi.nav.terms_continue')%></a>
+    <a href="<%=root_url%>" class="btn"><%=t('bassi.nav.terms_disagree')%></a>
+    <button class="tod-agree btn btn-primary" data-url="<%=accept_terms_path%>" data-dismiss="modal"><%=t('bassi.nav.terms_continue')%></button>
   </div>
 </div>
