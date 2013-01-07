@@ -1,6 +1,5 @@
 @mixin modal-header {
-	background-color: #8A887D;;
-	color: #fff;
+	background-color: #8A887D;
 	text-align: center;
 }
 
@@ -18,7 +17,11 @@
 	.modal-header {
 	  @include modal-header;
 	  padding: 0 0 9px;
-	  h3 {font-size: 18px;}
+	  h3 {
+	    border-top: 1px solid #999;
+      color: #fff;
+	    font-size: 18px;
+	  }
 	}
 	.modal-footer {
 		padding: 15px;
