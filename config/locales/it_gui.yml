@@ -60,6 +60,7 @@ it:
       showing: 'Showing page'
       of: 'of'
       show_in_inventory: "Show this %{item} in Content Inventory"
+      view_in_inventory: "View this %{item} in Content Inventory"
       citation: 'Citation'
       all_items_in_folder: "Other Items In This Folder"    
     collection:
