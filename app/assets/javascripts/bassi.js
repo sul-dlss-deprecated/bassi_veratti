@@ -24,11 +24,4 @@ $(document).ready(function(){
 
   $('.scrollspy-content').scrollspy({offset: 30});
 
-	// click agree on modal terms window sends ajax event
-  $(".tod-agree").each(function(){
-    $(this).click(function(){
-      $.post($(this).attr("data-url") + "?format=js");
-    });
-  });
-
 });

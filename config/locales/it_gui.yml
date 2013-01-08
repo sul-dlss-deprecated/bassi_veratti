@@ -44,6 +44,8 @@ it:
         word: 'Folder'        
         one: '1 Folder'
         other: "%{count} Folders"
+      series:
+        word: 'Series'        
       item: 
         one: '1 Item'
         other: "%{count} Items"

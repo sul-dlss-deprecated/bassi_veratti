@@ -40,6 +40,10 @@ class SolrDocument
   def level
     multivalue_field(blacklight_config.folder_identifier_field).first
   end
+
+  def series
+    multivalue_field('series_ssim').first
+  end
           
   def box
     multivalue_field(blacklight_config.box_identifying_field).first
@@ -170,6 +174,17 @@ class SolrDocument
   def collection_member?
     self.has_key?(blacklight_config.collection_member_identifying_field) and 
       !self[blacklight_config.collection_member_identifying_field].blank?
+  end
+  
+  # return this current document's series title (unless it is already a series)
+  def series_title
+    return self.title if self.series?
+    @doc=SolrDocument.new(Blacklight.solr.select(:params => {:fq => "#{SolrDocument.unique_key}:#{self.series}"})["response"]["docs"].first)  
+    return @doc.title
+  end
+  
+  def series_number
+    series_title[0]
   end
   
   # Return a SolrDocument object of the parent collection of a collection member
