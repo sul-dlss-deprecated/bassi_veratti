@@ -39,13 +39,13 @@
               <li class="<%="active" if on_home_page%>">
                 <%= link_to t('bassi.nav.home').upcase, root_path %>
               </li>
-              <li class="<%="active" if on_collections_pages%>">
+              <li class="<%="active" if on_collections_pages && !on_show_page %>">
                 <%= link_to t('bassi.nav.collections').upcase, all_collections_path%>
               </li>
               <li class="<%="active" if on_background_page%>">
                 <%= link_to t('bassi.nav.background').upcase, background_path%>
               </li>
-              <li class="<%="active" if on_inventory_pages%>">
+              <li class="<%="active" if on_inventory_pages || on_show_page %>">
                 <%= link_to t('bassi.nav.content_inventory').upcase, inventory_path%>
               </li>
               <li class="<%="active" if on_about_pages%>"><%= link_to t('bassi.nav.about').upcase, about_project_path %></li>
