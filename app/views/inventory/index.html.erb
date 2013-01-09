@@ -1,3 +1,9 @@
+<script language="JavaScript">
+	$(document).ready(function(){
+			$(".truncate").truncate({max_length: 450,  less: '&laquo; <%=t('bassi.show.less')%>', more: '<%=t('bassi.show.more')%> &raquo;'});
+	});
+</script>
+
 <%= render :partial => 'show_inventory_sidebar' %>
 
 <div id="content" class="span9 inventory">
@@ -5,7 +11,7 @@
   <div data-collapse="true">
     <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
       <h3 id="series<%= index+1 %>"><%= series[blacklight_config.show.heading] %></h3>
-      <p><%= show_list(series.description) %></p>
+      <p class="truncate"><%= show_list(series.description) %></p>
       <ul class="series">
         <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
           <i style="display:none;" class="icon-plus-sign"></i> 

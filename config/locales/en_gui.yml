@@ -54,6 +54,8 @@ en:
       item: 
         one: '1 Item'
         other: "%{count} Items"
+      more: 'more'
+      less: 'less'
       date: 'Date'
       description: 'Physical Description'
       people: 'People'
