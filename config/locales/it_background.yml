@@ -128,547 +128,547 @@ it:
       index_text_html: |
         <p>L'indice fornisce una lista di tutti i nomi di persona, ente e luogo presenti nell'inventario.</p>
         <ul>
-          <li>Accademici Agiati vedi Accademia degli Agiati (Roveredo)</li>
-          <li>Accademia degli Agiati (Roveredo)</li>
-          <li>Accademia degli Amanti della Botanica (Cortona)</li>
-          <li>Accademia degli Arcadi (Roma)</li>
-          <li>Accademia degli Ardenti (Bologna)</li>
-          <li>Accademia dei Dissonanti (Modena)</li>
-          <li>Accademia Emonia (Busseto)</li>
-          <li>Accademia degli Erranti (Fermo)</li>
-          <li>Accademia degli Erranti già Raffrontati</li>
-          <li>Accademia dei Fluttuanti (Finale di Modena)</li>
-          <li>Accademia Fulginia (Foligno)</li>
-          <li>Accademia degli Ipocondriaci (Reggio Emilia)</li>
-          <li>Accademia dei Placidi (Recanati)</li>
-          <li>Accademia dei Teopneusti (Correggio)</li>
-          <li>Accarisi, Floriano</li>
-          <li>Agli Puccetti, Laura</li>
-          <li>Albergati Fontani, Ginevra</li>
-          <li>Aldini, Giovanni</li>
-          <li>Aldrovandi, Filippo</li>
-          <li>Aldrovandi, Pier Iacopo</li>
-          <li>Aldrovandi, Pietro, vedi Aldrovandi, Pier Iacopo</li>
-          <li>Aldrovandi Marescotti, Carlo Filippo</li>
-          <li>Algardi, Francesco Antonio</li>
-          <li>Algardi, Giovanni</li>
-          <li>Amministrazione centrale del Reno</li>
-          <li>Ancona</li>
-          <li>Angela Matilde, suora, vedi Albergati Fontani, Ginevra</li>
-          <li>Angelelli, Teresa</li>
-          <li>Anosiro Minali</li>
-          <li>Antici, Tommaso, cardinale</li>
-          <li>Anton Maria da Pistoja, cappuccino</li>
-          <li>Ascoli</li>
-          <li>Aranti, Silvio</li>
-          <li>Archetti, Giovanni Andrea, cardinale</li>
-          <li>Assunteria di Abbondanza</li>
-          <li>Assunteria delle Acque</li>
-          <li>Assunteria di Governo</li>
-          <li>Assunteria di Sanità</li>
-          <li>Atti, Giuseppe</li>
-          <li>B.P.L.T.</li>
-          <li>B[...], Ferdinando</li>
-          <li>Baccelli, Liberato</li>
-          <li>Bacialli, Angelo Michele</li>
-          <li>Bajotti, Rinaldo</li>
-          <li>Baldi, Antonio</li>
-          <li>Bandiera, Giovanni Nicolò</li>
-          <li>Baroni, Innocenzo</li>
-          <li>Bassi, famiglia</li>
-          <li>Bassi, Carlo Filippo</li>
-          <li>Bassi, Felice</li>
-          <li>Bassi, Francesco</li>
-          <li>Bassi, Gaspare</li>
-          <li>Bassi, Giacinto</li>
-          <li>Bassi, Giacomo</li>
-          <li>Bassi, Giovanni</li>
-          <li>Bassi, Giuseppe</li>
-          <li>Bassi, Giuseppe Maria</li>
-          <li>Bassi, Laura</li>
-          <li>Bavari, Francesco Saverio</li>
-          <li>Bavoli, Giuseppe Maria</li>
-          <li>Bazzani, Matteo</li>
-          <li>Beccari, Giacomo Bartolomeo</li>
-          <li>Bellettini, Pierangelo</li>
-          <li>Bellini, Stefano</li>
-          <li>Belluzzi, Francesco Maria</li>
-          <li>Benati, Giorgio</li>
-          <li>Benelli, fratelli</li>
-          <li>Benelli, Francesco Maria</li>
-          <li>Benelli, Giuseppe</li>
-          <li>Benelli, Ludovico</li>
-          <li>Bergonzi Ranuzzi, Maria</li>
-          <li>Bernardi, Angelo Antonio</li>
-          <li>Bernardi, Antonio</li>
-          <li>Bertacini, Antonio</li>
-          <li>Bertinoro</li>
-          <li>Bertoloni, Antonio</li>
-          <li>Bertolotti, Angelo</li>
-          <li>Biasini, Giovanni</li>
-          <li>Bignami, Angelo</li>
-          <li>Blasi, Matteo</li>
-          <li>Bologna</li>
-          <li>Bonaccorsi, Giovanna</li>
-          <li>Bonazzi, Bartolomeo</li>
-          <li>Bonfioli Malvezzi, Alfonso</li>
-          <li>Bonini, Giovanni Battista</li>
-          <li>Borgognoni, Vincenzo</li>
-          <li>Borsari, Lorenzo</li>
-          <li>Branciforte Colonna, Antonio</li>
-          <li>Brighenti, Nicola Vittorio</li>
-          <li>Brizzi, Bernardino</li>
-          <li>Bruzzi, Elisabetta</li>
-          <li>Budrio</li>
-          <li>Busseto</li>
-          <li>Ca[...], Luigi</li>
-          <li>Cagnaroni, Giuseppe</li>
-          <li>Calvi, Jacopo Alessandro</li>
-          <li>Calvoli, famiglia</li>
-          <li>Calvoli, Giacomo</li>
-          <li>Calvoli, Giuseppe</li>
-          <li>Calvoli, Rosalia</li>
-          <li>Camerino</li>
-          <li>Canneto (Bari)</li>
-          <li>Canova, Giuseppe</li>
-          <li>Cantelli Cremonini, Giulia Teresa</li>
-          <li>Cantelli Tagliazucchi, Veronica</li>
-          <li>Canterzani, Sebastiano</li>
-          <li>Cappi, Maria Anna Margherita</li>
-          <li>Carini, Anna Caterina</li>
-          <li>Carlani, Carlo Antonio</li>
-          <li>Casignoli, Giovanni Domenico</li>
-          <li>Cassoni, Giuseppe</li>
-          <li>Castelli, monsignore</li>
-          <li>Castelli, Giovanni Battista</li>
-          <li>Castelli, Virginia</li>
-          <li>Castiglioni, Filippo</li>
-          <li>Castiglioni, Francesco Saverio, vedi Pio VIII, papa</li>
-          <li>Cavalleri, Domenico</li>
-          <li>Cavazza, Marta</li>
-          <li>Cavazzi, Bartolomeo</li>
-          <li>Cazzani, Pietro</li>
-          <li>Celsi, Giuseppe</li>
-          <li>Cenerelli, Giuseppe</li>
-          <li>Cesari, Rosa Maria</li>
-          <li>Cesena</li>
-          <li>Chierichetti Forti, Rosa</li>
-          <li>Chierichetti, Ermenegildo</li>
-          <li>Chierici, Francesco Maria</li>
-          <li>Cingoli</li>
-          <li>Collegio medico chirurgico di Bologna</li>
-          <li>Colli, Francesco</li>
-          <li>Colli, Giuseppe</li>
-          <li>Comelli, Giovanni Battista</li>
-          <li>Commissione cantonale di leva</li>
-          <li>Commissione dipartimentale di Sanità del Reno</li>
-          <li>Commissione provinciale di Sanità</li>
-          <li>Compagnia di Gesù (Modena)</li>
-          <li>Compagnia del Santissimo Sacramento (parrocchia di Santa Caterina)</li>
-          <li>Conventi, Benedetto</li>
-          <li>Corradini (Coradini) Zinanni, Maria Maddalena</li>
-          <li>Correggio</li>
-          <li>Corticelli, Alessandro</li>
-          <li>Cortona</li>
-          <li>Cospi, Girolamo</li>
-          <li>Costa, Paolo</li>
-          <li>Covi, Antonio</li>
-          <li>Cremonini, Francesco Antonio Bonaventura</li>
-          <li>Cremonini, Paolo</li>
-          <li>Cremonini, Teresa Maria</li>
-          <li>Cremonini Raggi, Angela</li>
-          <li>Crivelli, Giovanni</li>
-          <li>Cruciani, Ercole</li>
-          <li>Cruciani, Giulio</li>
-          <li>Cruciani, Nicola</li>
-          <li>Cuppini, Giuseppe</li>
-          <li>D.G.C.</li>
-          <li>D'Arèncourt, Garnier</li>
-          <li>Dalisa Caistria, pastore arcade</li>
-          <li>Dalla Volpe</li>
-          <li>Dalla Volpe</li>
-          <li>Dalle Donne, Maria</li>
-          <li>Davia, Giovanni Antonio, cardinale</li>
-          <li>Davia, Giuseppe</li>
-          <li>De Bandel, Giuseppe Antonio</li>
-          <li>De Bianchi, V.</li>
-          <li>De Buoi, Bartolomeo</li>
-          <li>De Bonifazi, famiglia</li>
-          <li>Devizi (De Vizi), Vittoria</li>
-          <li>Di Polignach, Melchiorre</li>
-          <li>Direzione delle Poste nel Dipartimento del Reno</li>
-          <li>Disvetro (Modena)</li>
-          <li>Dodi, Gaetano</li>
-          <li>Dodi, Pietro</li>
-          <li>Dugliolo</li>
-          <li>Emiliani, Luigi</li>
-          <li>Ercolani Ratta Garganelli, Elisabetta</li>
-          <li>F.P.</li>
-          <li>Fabri, Francesco</li>
-          <li>Fabri, Ranier Bernardino</li>
-          <li>Fano</li>
-          <li>Fanti, Mario</li>
-          <li>Fantoni, Pio</li>
-          <li>Fantuzzi, Giovanni</li>
-          <li>Farri, Francesco</li>
-          <li>Felici, Giovanni Battista</li>
-          <li>Fermo</li>
-          <li>Ferrara</li>
-          <li>Ferri, Antonio</li>
-          <li>Ferri, Giuseppe</li>
-          <li>Ferri, Gregorio Antonio</li>
-          <li>Fiandrini, Ottavio</li>
-          <li>Fieschi, Adriano</li>
-          <li>Finale Emilia</li>
-          <li>Fiorini, Anna</li>
-          <li>Fiorini, Domenico</li>
-          <li>Firenze</li>
-          <li>Fittili Lauri, Maria</li>
-          <li>Foligno</li>
-          <li>Formagliari, Alessandro</li>
-          <li>Francesco Anton Maria da Pistoja, cappuccino</li>
-          <li>Frascaroli, sorelle</li>
-          <li>Frascaroli, Antonia Maria</li>
-          <li>Frascaroli, Caterina Maria</li>
-          <li>Frascaroli, Domenico</li>
-          <li>Frascaroli, Giuseppe</li>
-          <li>Frascaroli, Matteo</li>
-          <li>Frascaroli, Rosa Maria</li>
-          <li>Fratta, Domenico Maria</li>
-          <li>Frulli, Carlo</li>
-          <li>Fulchi, Bartolomeo</li>
-          <li>G.A.G.</li>
-          <li>G.B.A.</li>
-          <li>G.B.F.F.C.</li>
-          <li>G.C.C.</li>
-          <li>G.M.</li>
-          <li>G.M.C.</li>
-          <li>G.P.C.</li>
-          <li>G.V.D.F.</li>
-          <li>Gaiba, Giuseppe</li>
-          <li>Galli, Pietro</li>
-          <li>Galvani, Giacomo Filippo Antonio</li>
-          <li>Galvani, Luigi</li>
-          <li>Gambarini Gandolfi, Carlo</li>
-          <li>Gamberini, notaio</li>
-          <li>Garattoni, Giuseppe Enea</li>
-          <li>Garelli, Antonio, canonico</li>
-          <li>Garelli, Salvatore</li>
-          <li>Garetti, Nicolò</li>
-          <li>Garetti, Paolo Francesco</li>
-          <li>Gasperini, Giuseppe</li>
-          <li>Gennari, Filippo</li>
-          <li>Genova</li>
-          <li>Gherardi, Adriano</li>
-          <li>Ghisilieri, Francesco</li>
-          <li>Gini, Cesare Massimiliano</li>
-          <li>Giovannini, Carlo</li>
-          <li>Giron, Giovanni Giuseppe, principe di Canneto</li>
-          <li>Giuliani, Giuseppe</li>
-          <li>Giusti, Filippo</li>
-          <li>Giustiniani, Giacomo</li>
-          <li>Gnecco, Luigi</li>
-          <li>Golfieri, Giovanni Paolo</li>
-          <li>Gonzaga, Angelo</li>
-          <li>Gozzi, Arturo</li>
-          <li>Gozzi, Fulvio</li>
-          <li>Grimaldi, Girolamo, cardinale legato</li>
-          <li>Gualandi, Michelangelo</li>
-          <li>Guardia Nazionale di Bologna</li>
-          <li>Guarmani, Giuseppe Filippo</li>
-          <li>Guglielmini, Petronilla, principessa di Canneto</li>
-          <li>Guscelli, Mario</li>
-          <li>Hercolani, Filippo</li>
-          <li>I.M.</li>
-          <li>Iesi</li>
-          <li>Ikrzetuski, Gaetano Giuseppe</li>
-          <li>Imola</li>
-          <li>Istituto delle Scienze</li>
-          <li>Istituto Nazionale, vedi Istituto delle Scienze</li>
-          <li>Köhler, Johann David</li>
-          <li>L.F.F.M.</li>
-          <li>L.M.</li>
-          <li>Laghi, Luigi</li>
-          <li>Lambertini Vighi, Giovanni</li>
-          <li>Lambertini, Cornelia</li>
-          <li>Lambertini, Francesco</li>
-          <li>Lambertini, Giovanni</li>
-          <li>Lambertini, Maria Imelda Lucrezia</li>
-          <li>Lambertini, Prospero, arcivescovo, poi papa Benedetto XIV</li>
-          <li>Lante, Antonio, cardinale</li>
-          <li>Laurinda, pastore arcade, vedi Bassi, Laura</li>
-          <li>Lazzari, Antonio</li>
-          <li>Leprotti, Antonio</li>
-          <li>Le Sage, Georges Louis</li>
-          <li>Liceo dipartimentale del Reno, vedi San Luigi, liceo</li>
-          <li>Liceo provinciale di Bologna, vedi San Luigi, liceo</li>
-          <li>Locatelli, Cesare</li>
-          <li>Loiani, Giacinto</li>
-          <li>Lolli, Giuseppe</li>
-          <li>Longhi, Francesco</li>
-          <li>Lucchesini, Giovanni</li>
-          <li>M.D.G.L.</li>
-          <li>M.G.</li>
-          <li>Malaguti, Pietro</li>
-          <li>Malalbergo</li>
-          <li>Malavolta</li>
-          <li>Malvezzi, famiglia</li>
-          <li>Manfredi, Eustachio</li>
-          <li>Manfredi, Gabriele</li>
-          <li>Manzoni Pilla, Francesca</li>
-          <li>Marchesini, Adelaide</li>
-          <li>Marchesini, Anna</li>
-          <li>Marchesini, Gaetano</li>
-          <li>Marchesini, Giuseppe</li>
-          <li>Marchesini, Maria</li>
-          <li>Marchetti, Giulio</li>
-          <li>Marconi, Enrico</li>
-          <li>Marconi, Luigia</li>
-          <li>Mareggiani, Maria</li>
-          <li>Marescalchi, F.</li>
-          <li>Maria Casimira, suora, vedi Veratti, Angela</li>
-          <li>Marrocchi, Pier Tommaso, frate</li>
-          <li>Martinelli, Vincenzo</li>
-          <li>Massei, Alfonso</li>
-          <li>Masucci, Samaritana</li>
-          <li>Mattioli, Ludovico</li>
-          <li>Mazzanti, Flora</li>
-          <li>Mazza, Teresa</li>
-          <li>Mazzanti, Francesco Antonio</li>
-          <li>Mazzei, Raffaele</li>
-          <li>Mazzi, Maria Colomba</li>
-          <li>Mazzoni, famiglia</li>
-          <li>Mazzoni, Giulio</li>
-          <li>Melchiorri, Gaetano</li>
-          <li>Melli, Elio</li>
-          <li>Mezzolara</li>
-          <li>Minarelli, Giuseppe</li>
-          <li>Modena</li>
-          <li>Modona, vedi Modena</li>
-          <li>Mogliano</li>
-          <li>Molinelli, Giovanni Pietro</li>
-          <li>Molinelli, Pietro Paolo</li>
-          <li>Mondini, Achille</li>
-          <li>Mondini, Anna</li>
-          <li>Mondini, Carlo</li>
-          <li>Mondini, Francesco</li>
-          <li>Mondini, Vincenzo</li>
-          <li>Montalto, collegio</li>
-          <li>Montanari, Giovanni Battista</li>
-          <li>Montecòsaro (Macerata)</li>
-          <li>Monti, s.n.</li>
-          <li>Monti, Basilio</li>
-          <li>Monti, Gaetano</li>
-          <li>Monti, Giulio Cesare</li>
-          <li>Moreschi, Alessandro</li>
-          <li>Moreschi, Giambattista</li>
-          <li>Mosca, Carlo</li>
-          <li>Mosca, Francesco</li>
-          <li>Moscati, Pietro</li>
-          <li>Muzzi, Giuseppe</li>
-          <li>Nanuzzi, Francesca</li>
-          <li>Napoli</li>
-          <li>Napoleone I, imperatore dei Francesi</li>
-          <li>Nembrini Gonzaga, Alessandro</li>
-          <li>Nembrini Gonzaga, Cesare</li>
-          <li>Norimberba</li>
-          <li>Oddi, Giuseppe</li>
-          <li>Olimene Anfrisio, pastore emonio</li>
-          <li>Opera delle Scuole Pie</li>
-          <li>Opera pia dei Poveri Vergognosi</li>
-          <li>Oppizzoni, Carlo, cardinale</li>
-          <li>Oriana Ecalidea, vedi Cantelli Tagliazucchi, Veronica</li>
-          <li>Orengo, Luigi</li>
-          <li>Orlandi, Carlo</li>
-          <li>Ortolani, F.</li>
-          <li>Osimo</li>
-          <li>Pagnini, Giuseppe</li>
-          <li>Palpigni, Caterina</li>
-          <li>Panichi, Serafino</li>
-          <li>Parisani, Giuseppe</li>
-          <li>Parma</li>
-          <li>Pavia, Antonio</li>
-          <li>Pelizzoni, Luigia</li>
-          <li>Perez, Francesco</li>
-          <li>Perugia</li>
-          <li>Pesaro</li>
-          <li>Pia Antonia Maria Redegonda Teresa, suora, vedi Cremonini, Teresa Maria</li>
-          <li>Piana, Luigi</li>
-          <li>Piccioli, Benedetto</li>
-          <li>Pio VI, papa</li>
-          <li>Pio VII, papa</li>
-          <li>Pio VIII, papa</li>
-          <li>Pironi, Giuseppe</li>
-          <li>Pistoia</li>
-          <li>Poggi, Caterina</li>
-          <li>Poggi, Francesco</li>
-          <li>Pozzi, Vincenzo</li>
-          <li>Prefettura Dipartimentale del Reno</li>
-          <li>Presidoni, Geronima</li>
-          <li>Prospera Caterina Maria Imelda, suora, vedi Lambertini, Maria Imelda Lucrezia</li>
-          <li>Quercia, Lucia</li>
-          <li>Quirini Stampalia, Alvise</li>
-          <li>Raggi, Antonio</li>
-          <li>Raimondi, Caterina Redegonda</li>
-          <li>Raimondi, Luigi Camillo</li>
-          <li>Raimondi, Maria</li>
-          <li>Raimondi, Matteo</li>
-          <li>Raimondi, Nicolò</li>
-          <li>Rambaldi, Antonio</li>
-          <li>Ramponi, Domenico</li>
-          <li>Ramponi, Giovanni</li>
-          <li>Ranuzzi, Marco Antonio</li>
-          <li>Rattagarganelli, Ludovico Maria</li>
-          <li>Ravenna</li>
-          <li>Recanati</li>
-          <li>Redi, Maria Gioseffa, suora</li>
-          <li>Reggio Emilia</li>
-          <li>Regia Reggenza provvisoria</li>
-          <li>Righi Fangarezi, Lucia</li>
-          <li>Rimini</li>
-          <li>Riviera, Tarsizio</li>
-          <li>Rizzardi, Maria Camilla, suora</li>
-          <li>Rizzoli, Lodovico</li>
-          <li>Roffeni, Giacomo</li>
-          <li>Roli, Francesco Maria</li>
-          <li>Roma</li>
-          <li>Romani, Nicolò</li>
-          <li>Roveredo</li>
-          <li>Roversi, Melchiorre</li>
-          <li>Rubbiati, Tranquillino</li>
-          <li>Rusconi, Giuseppe Benedetto</li>
-          <li>Rusi, Vincenzo</li>
-          <li>Rusticelli, Angela</li>
-          <li>Rusticelli, Giovanni</li>
-          <li>Rusticelli, Luca</li>
-          <li>Ruvinetti, Giulia</li>
-          <li>S.R.B.</li>
-          <li>S. Loran, Maria Caterina</li>
-          <li>Salaroli, Camillo</li>
-          <li>Salaroli, Giovanni</li>
-          <li>Sambuceti, Luigi</li>
-          <li>Sampieri, Filippo</li>
-          <li>San Biagio, chiesa</li>
-          <li>San Giovanni Battista, chiesa (Disvetro)</li>
-          <li>San Giovanni Battista, monastero</li>
-          <li>San Giovanni in Monte, chiesa</li>
-          <li>San Giovanni in Persiceto</li>
-          <li>San Lorenzo, monastero</li>
-          <li>San Luigi, liceo</li>
-          <li>San Petronio, chiesa</li>
-          <li>San Salvatore, chiesa</li>
-          <li>Sanseverino</li>
-          <li>Santa Caterina, chiesa</li>
-          <li>Santa Lucia, liceo</li>
-          <li>Santa Maria degli Angeli, confraternita</li>
-          <li>Santa Maria degli Angeli, monastero</li>
-          <li>Santa Maria della Purificazione, monastero</li>
-          <li>Santa Maria Maddalena, monastero</li>
-          <li>Santissima Annunziata, convento</li>
-          <li>Santissima Concezione, monastero</li>
-          <li>Scarpellini, Feliciano</li>
-          <li>Scarselli, Cesare Alessandro</li>
-          <li>Scarselli, Flaminio</li>
-          <li>Sebastiani, Francesco</li>
-          <li>Serpieri, Giulio Cesare</li>
-          <li>Serpieri, Marcellino</li>
-          <li>Sibari Tessalicense, pastore arcade</li>
-          <li>Simonetti, Alberico</li>
-          <li>Simonetti, Prospero</li>
-          <li>Sivieri, Giuseppe</li>
-          <li>Somenzari, Teodoro</li>
-          <li>Sorbelli, Albano</li>
-          <li>Spallanzani, Lazzaro</li>
-          <li>Spezieria della Vita</li>
-          <li>Spezieria di Santa Caterina</li>
-          <li>Spina, Giuseppe, cardinale</li>
-          <li>Spinelli, s.n.</li>
-          <li>Spoleto</li>
-          <li>Stegani, Lorenzo</li>
-          <li>Tacconi, Gaetano</li>
-          <li>Tadolini, Maria</li>
-          <li>Talisio P[elleo], vedi D'Arèncourt, Garnier</li>
-          <li>Termanini, Gaetano</li>
-          <li>Testa, Giuseppe</li>
-          <li>Tomba, Filippo</li>
-          <li>Tommasi, Raffaella</li>
-          <li>Torcioni, Caterina</li>
-          <li>Torre, Paolo Francesco</li>
-          <li>Trebbi, Giovanni</li>
-          <li>Trebbi, Pietro Giovanni</li>
-          <li>Tribunale di Bologna</li>
-          <li>Trombelli, Giovanni Grisostomo</li>
-          <li>Turrio, Giacomo</li>
-          <li>Ufficio delle Ipoteche di Bologna</li>
-          <li>Università degli Apatisti (Firenze)</li>
-          <li>Urbino</li>
-          <li>Uttini, Gaetano</li>
-          <li>Valeriani, Orazio</li>
-          <li>Vanducci, Laura</li>
-          <li>Varrini, Ottavio</li>
-          <li>Veggetti, Liborio</li>
-          <li>Venezia</li>
-          <li>Venturoli, Giuseppe</li>
-          <li>Verardini Prendiparti, Andrea</li>
-          <li>Veratti, famiglia</li>
-          <li>Veratti, Angela</li>
-          <li>Veratti, Anna</li>
-          <li>Veratti, Anna Maria</li>
-          <li>Veratti, Antonio</li>
-          <li>Veratti, Benedetto</li>
-          <li>Veratti, Bruno</li>
-          <li>Veratti, Carlo di Giuseppe</li>
-          <li>Veratti, Caterina, nata 1739</li>
-          <li>Veratti, Caterina, nata 1742</li>
-          <li>Veratti, Caterina, nata 1745</li>
-          <li>Veratti, Caterina, nata 1750</li>
-          <li>Veratti, Ciro</li>
-          <li>Veratti, Domenica</li>
-          <li>Veratti, Domenico</li>
-          <li>Veratti, Elisabetta</li>
-          <li>Veratti, Ferdinando</li>
-          <li>Veratti, Flaminio</li>
-          <li>Veratti, Francesco di Domenico</li>
-          <li>Veratti, Francesco di Paolo</li>
-          <li>Veratti, Gaetano</li>
-          <li>Veratti, Geminiano</li>
-          <li>Veratti, Geminiano di Domenico</li>
-          <li>Veratti, Giacomo</li>
-          <li>Veratti, Giovanni Battista</li>
-          <li>Veratti, Giovanni di Carlo</li>
-          <li>Veratti, Giovanni di Domenico</li>
-          <li>Veratti, Giovanni Francesco di Giuseppe</li>
-          <li>Veratti, Giovanni Pietro</li>
-          <li>Veratti, Giuseppe di Carlo</li>
-          <li>Veratti, Giuseppe di Francesco di Domenico</li>
-          <li>Veratti, Giuseppe di Francesco di Paolo</li>
-          <li>Veratti, Giuseppe di Paolo</li>
-          <li>Veratti, Gustavo</li>
-          <li>Veratti, Laura Maria Caterina</li>
-          <li>Veratti, Leonida</li>
-          <li>Veratti, Margherita</li>
-          <li>Veratti, Maria Chiara</li>
-          <li>Veratti, Paola</li>
-          <li>Veratti, Paolo</li>
-          <li>Veratti, Teresa di Ciro</li>
-          <li>Veratti, Teresa di Francesco</li>
-          <li>Veratti Mazzoni, Emma</li>
-          <li>Verona</li>
-          <li>Veronesi Viani, Maria</li>
-          <li>Viani, Vincenzo</li>
-          <li>Vitali, Costanza Beatrice</li>
-          <li>Vitali, Girolamo</li>
-          <li>Vizzani, Angelo Michele</li>
-          <li>Zagnoni, Gabriele Maria</li>
-          <li>Zanoni, Bartolomeo</li>
-          <li>Zanotti, Alessandro</li>
-          <li>Zanotti, Francesco Maria</li>
-          <li>Zanotti, Giampietro</li>
-          <li>Zanotti, Luigi</li>
-          <li>Zarri, Anna</li>
-          <li>Zeneroni, Bernardino</li>
-          <li>Zoli, Agostino</li>
-          <li>Zoli, Filippo</li>
+        <li><a href="/it/catalog?q=Accademici%20Agiati%20vedi%20Accademia%20degli%20Agiati%20(Roveredo)">Accademici Agiati vedi Accademia degli Agiati (Roveredo)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Agiati%20(Roveredo)">Accademia degli Agiati (Roveredo)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Amanti%20della%20Botanica%20(Cortona)">Accademia degli Amanti della Botanica (Cortona)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Arcadi%20(Roma)">Accademia degli Arcadi (Roma)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Ardenti%20(Bologna)">Accademia degli Ardenti (Bologna)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20dei%20Dissonanti%20(Modena)">Accademia dei Dissonanti (Modena)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20Emonia%20(Busseto)">Accademia Emonia (Busseto)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Erranti%20(Fermo)">Accademia degli Erranti (Fermo)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Erranti%20gi%C3%A0%20Raffrontati">Accademia degli Erranti già Raffrontati</a></li>
+        <li><a href="/it/catalog?q=Accademia%20dei%20Fluttuanti%20(Finale%20di%20Modena)">Accademia dei Fluttuanti (Finale di Modena)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20Fulginia%20(Foligno)">Accademia Fulginia (Foligno)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20degli%20Ipocondriaci%20(Reggio%20Emilia)">Accademia degli Ipocondriaci (Reggio Emilia)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20dei%20Placidi%20(Recanati)">Accademia dei Placidi (Recanati)</a></li>
+        <li><a href="/it/catalog?q=Accademia%20dei%20Teopneusti%20(Correggio)">Accademia dei Teopneusti (Correggio)</a></li>
+        <li><a href="/it/catalog?q=Accarisi,%20Floriano">Accarisi, Floriano</a></li>
+        <li><a href="/it/catalog?q=Agli%20Puccetti,%20Laura">Agli Puccetti, Laura</a></li>
+        <li><a href="/it/catalog?q=Albergati%20Fontani,%20Ginevra">Albergati Fontani, Ginevra</a></li>
+        <li><a href="/it/catalog?q=Aldini,%20Giovanni">Aldini, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Aldrovandi,%20Filippo">Aldrovandi, Filippo</a></li>
+        <li><a href="/it/catalog?q=Aldrovandi,%20Pier%20Iacopo">Aldrovandi, Pier Iacopo</a></li>
+        <li><a href="/it/catalog?q=Aldrovandi,%20Pietro,%20vedi%20Aldrovandi,%20Pier%20Iacopo">Aldrovandi, Pietro, vedi Aldrovandi, Pier Iacopo</a></li>
+        <li><a href="/it/catalog?q=Aldrovandi%20Marescotti,%20Carlo%20Filippo">Aldrovandi Marescotti, Carlo Filippo</a></li>
+        <li><a href="/it/catalog?q=Algardi,%20Francesco%20Antonio">Algardi, Francesco Antonio</a></li>
+        <li><a href="/it/catalog?q=Algardi,%20Giovanni">Algardi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Amministrazione%20centrale%20del%20Reno">Amministrazione centrale del Reno</a></li>
+        <li><a href="/it/catalog?q=Ancona">Ancona</a></li>
+        <li><a href="/it/catalog?q=Angela%20Matilde,%20suora,%20vedi%20Albergati%20Fontani,%20Ginevra">Angela Matilde, suora, vedi Albergati Fontani, Ginevra</a></li>
+        <li><a href="/it/catalog?q=Angelelli,%20Teresa">Angelelli, Teresa</a></li>
+        <li><a href="/it/catalog?q=Anosiro%20Minali">Anosiro Minali</a></li>
+        <li><a href="/it/catalog?q=Antici,%20Tommaso,%20cardinale">Antici, Tommaso, cardinale</a></li>
+        <li><a href="/it/catalog?q=Anton%20Maria%20da%20Pistoja,%20cappuccino">Anton Maria da Pistoja, cappuccino</a></li>
+        <li><a href="/it/catalog?q=Ascoli">Ascoli</a></li>
+        <li><a href="/it/catalog?q=Aranti,%20Silvio">Aranti, Silvio</a></li>
+        <li><a href="/it/catalog?q=Archetti,%20Giovanni%20Andrea,%20cardinale">Archetti, Giovanni Andrea, cardinale</a></li>
+        <li><a href="/it/catalog?q=Assunteria%20di%20Abbondanza">Assunteria di Abbondanza</a></li>
+        <li><a href="/it/catalog?q=Assunteria%20delle%20Acque">Assunteria delle Acque</a></li>
+        <li><a href="/it/catalog?q=Assunteria%20di%20Governo">Assunteria di Governo</a></li>
+        <li><a href="/it/catalog?q=Assunteria%20di%20Sanit%C3%A0">Assunteria di Sanità</a></li>
+        <li><a href="/it/catalog?q=Atti,%20Giuseppe">Atti, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=B.P.L.T.">B.P.L.T.</a></li>
+        <li><a href="/it/catalog?q=B[...],%20Ferdinando">B[...], Ferdinando</a></li>
+        <li><a href="/it/catalog?q=Baccelli,%20Liberato">Baccelli, Liberato</a></li>
+        <li><a href="/it/catalog?q=Bacialli,%20Angelo%20Michele">Bacialli, Angelo Michele</a></li>
+        <li><a href="/it/catalog?q=Bajotti,%20Rinaldo">Bajotti, Rinaldo</a></li>
+        <li><a href="/it/catalog?q=Baldi,%20Antonio">Baldi, Antonio</a></li>
+        <li><a href="/it/catalog?q=Bandiera,%20Giovanni%20Nicol%C3%B2">Bandiera, Giovanni Nicolò</a></li>
+        <li><a href="/it/catalog?q=Baroni,%20Innocenzo">Baroni, Innocenzo</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20famiglia">Bassi, famiglia</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Carlo%20Filippo">Bassi, Carlo Filippo</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Felice">Bassi, Felice</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Francesco">Bassi, Francesco</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Gaspare">Bassi, Gaspare</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Giacinto">Bassi, Giacinto</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Giacomo">Bassi, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Giovanni">Bassi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Giuseppe">Bassi, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Giuseppe%20Maria">Bassi, Giuseppe Maria</a></li>
+        <li><a href="/it/catalog?q=Bassi,%20Laura">Bassi, Laura</a></li>
+        <li><a href="/it/catalog?q=Bavari,%20Francesco%20Saverio">Bavari, Francesco Saverio</a></li>
+        <li><a href="/it/catalog?q=Bavoli,%20Giuseppe%20Maria">Bavoli, Giuseppe Maria</a></li>
+        <li><a href="/it/catalog?q=Bazzani,%20Matteo">Bazzani, Matteo</a></li>
+        <li><a href="/it/catalog?q=Beccari,%20Giacomo%20Bartolomeo">Beccari, Giacomo Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=Bellettini,%20Pierangelo">Bellettini, Pierangelo</a></li>
+        <li><a href="/it/catalog?q=Bellini,%20Stefano">Bellini, Stefano</a></li>
+        <li><a href="/it/catalog?q=Belluzzi,%20Francesco%20Maria">Belluzzi, Francesco Maria</a></li>
+        <li><a href="/it/catalog?q=Benati,%20Giorgio">Benati, Giorgio</a></li>
+        <li><a href="/it/catalog?q=Benelli,%20fratelli">Benelli, fratelli</a></li>
+        <li><a href="/it/catalog?q=Benelli,%20Francesco%20Maria">Benelli, Francesco Maria</a></li>
+        <li><a href="/it/catalog?q=Benelli,%20Giuseppe">Benelli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Benelli,%20Ludovico">Benelli, Ludovico</a></li>
+        <li><a href="/it/catalog?q=Bergonzi%20Ranuzzi,%20Maria">Bergonzi Ranuzzi, Maria</a></li>
+        <li><a href="/it/catalog?q=Bernardi,%20Angelo%20Antonio">Bernardi, Angelo Antonio</a></li>
+        <li><a href="/it/catalog?q=Bernardi,%20Antonio">Bernardi, Antonio</a></li>
+        <li><a href="/it/catalog?q=Bertacini,%20Antonio">Bertacini, Antonio</a></li>
+        <li><a href="/it/catalog?q=Bertinoro">Bertinoro</a></li>
+        <li><a href="/it/catalog?q=Bertoloni,%20Antonio">Bertoloni, Antonio</a></li>
+        <li><a href="/it/catalog?q=Bertolotti,%20Angelo">Bertolotti, Angelo</a></li>
+        <li><a href="/it/catalog?q=Biasini,%20Giovanni">Biasini, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Bignami,%20Angelo">Bignami, Angelo</a></li>
+        <li><a href="/it/catalog?q=Blasi,%20Matteo">Blasi, Matteo</a></li>
+        <li><a href="/it/catalog?q=Bologna">Bologna</a></li>
+        <li><a href="/it/catalog?q=Bonaccorsi,%20Giovanna">Bonaccorsi, Giovanna</a></li>
+        <li><a href="/it/catalog?q=Bonazzi,%20Bartolomeo">Bonazzi, Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=Bonfioli%20Malvezzi,%20Alfonso">Bonfioli Malvezzi, Alfonso</a></li>
+        <li><a href="/it/catalog?q=Bonini,%20Giovanni%20Battista">Bonini, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Borgognoni,%20Vincenzo">Borgognoni, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Borsari,%20Lorenzo">Borsari, Lorenzo</a></li>
+        <li><a href="/it/catalog?q=Branciforte%20Colonna,%20Antonio">Branciforte Colonna, Antonio</a></li>
+        <li><a href="/it/catalog?q=Brighenti,%20Nicola%20Vittorio">Brighenti, Nicola Vittorio</a></li>
+        <li><a href="/it/catalog?q=Brizzi,%20Bernardino">Brizzi, Bernardino</a></li>
+        <li><a href="/it/catalog?q=Bruzzi,%20Elisabetta">Bruzzi, Elisabetta</a></li>
+        <li><a href="/it/catalog?q=Budrio">Budrio</a></li>
+        <li><a href="/it/catalog?q=Busseto">Busseto</a></li>
+        <li><a href="/it/catalog?q=Ca[...],%20Luigi">Ca[...], Luigi</a></li>
+        <li><a href="/it/catalog?q=Cagnaroni,%20Giuseppe">Cagnaroni, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Calvi,%20Jacopo%20Alessandro">Calvi, Jacopo Alessandro</a></li>
+        <li><a href="/it/catalog?q=Calvoli,%20famiglia">Calvoli, famiglia</a></li>
+        <li><a href="/it/catalog?q=Calvoli,%20Giacomo">Calvoli, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Calvoli,%20Giuseppe">Calvoli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Calvoli,%20Rosalia">Calvoli, Rosalia</a></li>
+        <li><a href="/it/catalog?q=Camerino">Camerino</a></li>
+        <li><a href="/it/catalog?q=Canneto%20(Bari)">Canneto (Bari)</a></li>
+        <li><a href="/it/catalog?q=Canova,%20Giuseppe">Canova, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Cantelli%20Cremonini,%20Giulia%20Teresa">Cantelli Cremonini, Giulia Teresa</a></li>
+        <li><a href="/it/catalog?q=Cantelli%20Tagliazucchi,%20Veronica">Cantelli Tagliazucchi, Veronica</a></li>
+        <li><a href="/it/catalog?q=Canterzani,%20Sebastiano">Canterzani, Sebastiano</a></li>
+        <li><a href="/it/catalog?q=Cappi,%20Maria%20Anna%20Margherita">Cappi, Maria Anna Margherita</a></li>
+        <li><a href="/it/catalog?q=Carini,%20Anna%20Caterina">Carini, Anna Caterina</a></li>
+        <li><a href="/it/catalog?q=Carlani,%20Carlo%20Antonio">Carlani, Carlo Antonio</a></li>
+        <li><a href="/it/catalog?q=Casignoli,%20Giovanni%20Domenico">Casignoli, Giovanni Domenico</a></li>
+        <li><a href="/it/catalog?q=Cassoni,%20Giuseppe">Cassoni, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Castelli,%20monsignore">Castelli, monsignore</a></li>
+        <li><a href="/it/catalog?q=Castelli,%20Giovanni%20Battista">Castelli, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Castelli,%20Virginia">Castelli, Virginia</a></li>
+        <li><a href="/it/catalog?q=Castiglioni,%20Filippo">Castiglioni, Filippo</a></li>
+        <li><a href="/it/catalog?q=Castiglioni,%20Francesco%20Saverio,%20vedi%20Pio%20VIII,%20papa">Castiglioni, Francesco Saverio, vedi Pio VIII, papa</a></li>
+        <li><a href="/it/catalog?q=Cavalleri,%20Domenico">Cavalleri, Domenico</a></li>
+        <li><a href="/it/catalog?q=Cavazza,%20Marta">Cavazza, Marta</a></li>
+        <li><a href="/it/catalog?q=Cavazzi,%20Bartolomeo">Cavazzi, Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=Cazzani,%20Pietro">Cazzani, Pietro</a></li>
+        <li><a href="/it/catalog?q=Celsi,%20Giuseppe">Celsi, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Cenerelli,%20Giuseppe">Cenerelli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Cesari,%20Rosa%20Maria">Cesari, Rosa Maria</a></li>
+        <li><a href="/it/catalog?q=Cesena">Cesena</a></li>
+        <li><a href="/it/catalog?q=Chierichetti%20Forti,%20Rosa">Chierichetti Forti, Rosa</a></li>
+        <li><a href="/it/catalog?q=Chierichetti,%20Ermenegildo">Chierichetti, Ermenegildo</a></li>
+        <li><a href="/it/catalog?q=Chierici,%20Francesco%20Maria">Chierici, Francesco Maria</a></li>
+        <li><a href="/it/catalog?q=Cingoli">Cingoli</a></li>
+        <li><a href="/it/catalog?q=Collegio%20medico%20chirurgico%20di%20Bologna">Collegio medico chirurgico di Bologna</a></li>
+        <li><a href="/it/catalog?q=Colli,%20Francesco">Colli, Francesco</a></li>
+        <li><a href="/it/catalog?q=Colli,%20Giuseppe">Colli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Comelli,%20Giovanni%20Battista">Comelli, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Commissione%20cantonale%20di%20leva">Commissione cantonale di leva</a></li>
+        <li><a href="/it/catalog?q=Commissione%20dipartimentale%20di%20Sanit%C3%A0%20del%20Reno">Commissione dipartimentale di Sanità del Reno</a></li>
+        <li><a href="/it/catalog?q=Commissione%20provinciale%20di%20Sanit%C3%A0">Commissione provinciale di Sanità</a></li>
+        <li><a href="/it/catalog?q=Compagnia%20di%20Ges%C3%B9%20(Modena)">Compagnia di Gesù (Modena)</a></li>
+        <li><a href="/it/catalog?q=Compagnia%20del%20Santissimo%20Sacramento%20(parrocchia%20di%20Santa%20Caterina)">Compagnia del Santissimo Sacramento (parrocchia di Santa Caterina)</a></li>
+        <li><a href="/it/catalog?q=Conventi,%20Benedetto">Conventi, Benedetto</a></li>
+        <li><a href="/it/catalog?q=Corradini%20(Coradini)%20Zinanni,%20Maria%20Maddalena">Corradini (Coradini) Zinanni, Maria Maddalena</a></li>
+        <li><a href="/it/catalog?q=Correggio">Correggio</a></li>
+        <li><a href="/it/catalog?q=Corticelli,%20Alessandro">Corticelli, Alessandro</a></li>
+        <li><a href="/it/catalog?q=Cortona">Cortona</a></li>
+        <li><a href="/it/catalog?q=Cospi,%20Girolamo">Cospi, Girolamo</a></li>
+        <li><a href="/it/catalog?q=Costa,%20Paolo">Costa, Paolo</a></li>
+        <li><a href="/it/catalog?q=Covi,%20Antonio">Covi, Antonio</a></li>
+        <li><a href="/it/catalog?q=Cremonini,%20Francesco%20Antonio%20Bonaventura">Cremonini, Francesco Antonio Bonaventura</a></li>
+        <li><a href="/it/catalog?q=Cremonini,%20Paolo">Cremonini, Paolo</a></li>
+        <li><a href="/it/catalog?q=Cremonini,%20Teresa%20Maria">Cremonini, Teresa Maria</a></li>
+        <li><a href="/it/catalog?q=Cremonini%20Raggi,%20Angela">Cremonini Raggi, Angela</a></li>
+        <li><a href="/it/catalog?q=Crivelli,%20Giovanni">Crivelli, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Cruciani,%20Ercole">Cruciani, Ercole</a></li>
+        <li><a href="/it/catalog?q=Cruciani,%20Giulio">Cruciani, Giulio</a></li>
+        <li><a href="/it/catalog?q=Cruciani,%20Nicola">Cruciani, Nicola</a></li>
+        <li><a href="/it/catalog?q=Cuppini,%20Giuseppe">Cuppini, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=D.G.C.">D.G.C.</a></li>
+        <li><a href="/it/catalog?q=D'Ar%C3%A8ncourt,%20Garnier">D'Arèncourt, Garnier</a></li>
+        <li><a href="/it/catalog?q=Dalisa%20Caistria,%20pastore%20arcade">Dalisa Caistria, pastore arcade</a></li>
+        <li><a href="/it/catalog?q=Dalla%20Volpe">Dalla Volpe</a></li>
+        <li><a href="/it/catalog?q=Dalla%20Volpe">Dalla Volpe</a></li>
+        <li><a href="/it/catalog?q=Dalle%20Donne,%20Maria">Dalle Donne, Maria</a></li>
+        <li><a href="/it/catalog?q=Davia,%20Giovanni%20Antonio,%20cardinale">Davia, Giovanni Antonio, cardinale</a></li>
+        <li><a href="/it/catalog?q=Davia,%20Giuseppe">Davia, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=De%20Bandel,%20Giuseppe%20Antonio">De Bandel, Giuseppe Antonio</a></li>
+        <li><a href="/it/catalog?q=De%20Bianchi,%20V.">De Bianchi, V.</a></li>
+        <li><a href="/it/catalog?q=De%20Buoi,%20Bartolomeo">De Buoi, Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=De%20Bonifazi,%20famiglia">De Bonifazi, famiglia</a></li>
+        <li><a href="/it/catalog?q=Devizi%20(De%20Vizi),%20Vittoria">Devizi (De Vizi), Vittoria</a></li>
+        <li><a href="/it/catalog?q=Di%20Polignach,%20Melchiorre">Di Polignach, Melchiorre</a></li>
+        <li><a href="/it/catalog?q=Direzione%20delle%20Poste%20nel%20Dipartimento%20del%20Reno">Direzione delle Poste nel Dipartimento del Reno</a></li>
+        <li><a href="/it/catalog?q=Disvetro%20(Modena)">Disvetro (Modena)</a></li>
+        <li><a href="/it/catalog?q=Dodi,%20Gaetano">Dodi, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Dodi,%20Pietro">Dodi, Pietro</a></li>
+        <li><a href="/it/catalog?q=Dugliolo">Dugliolo</a></li>
+        <li><a href="/it/catalog?q=Emiliani,%20Luigi">Emiliani, Luigi</a></li>
+        <li><a href="/it/catalog?q=Ercolani%20Ratta%20Garganelli,%20Elisabetta">Ercolani Ratta Garganelli, Elisabetta</a></li>
+        <li><a href="/it/catalog?q=F.P.">F.P.</a></li>
+        <li><a href="/it/catalog?q=Fabri,%20Francesco">Fabri, Francesco</a></li>
+        <li><a href="/it/catalog?q=Fabri,%20Ranier%20Bernardino">Fabri, Ranier Bernardino</a></li>
+        <li><a href="/it/catalog?q=Fano">Fano</a></li>
+        <li><a href="/it/catalog?q=Fanti,%20Mario">Fanti, Mario</a></li>
+        <li><a href="/it/catalog?q=Fantoni,%20Pio">Fantoni, Pio</a></li>
+        <li><a href="/it/catalog?q=Fantuzzi,%20Giovanni">Fantuzzi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Farri,%20Francesco">Farri, Francesco</a></li>
+        <li><a href="/it/catalog?q=Felici,%20Giovanni%20Battista">Felici, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Fermo">Fermo</a></li>
+        <li><a href="/it/catalog?q=Ferrara">Ferrara</a></li>
+        <li><a href="/it/catalog?q=Ferri,%20Antonio">Ferri, Antonio</a></li>
+        <li><a href="/it/catalog?q=Ferri,%20Giuseppe">Ferri, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Ferri,%20Gregorio%20Antonio">Ferri, Gregorio Antonio</a></li>
+        <li><a href="/it/catalog?q=Fiandrini,%20Ottavio">Fiandrini, Ottavio</a></li>
+        <li><a href="/it/catalog?q=Fieschi,%20Adriano">Fieschi, Adriano</a></li>
+        <li><a href="/it/catalog?q=Finale%20Emilia">Finale Emilia</a></li>
+        <li><a href="/it/catalog?q=Fiorini,%20Anna">Fiorini, Anna</a></li>
+        <li><a href="/it/catalog?q=Fiorini,%20Domenico">Fiorini, Domenico</a></li>
+        <li><a href="/it/catalog?q=Firenze">Firenze</a></li>
+        <li><a href="/it/catalog?q=Fittili%20Lauri,%20Maria">Fittili Lauri, Maria</a></li>
+        <li><a href="/it/catalog?q=Foligno">Foligno</a></li>
+        <li><a href="/it/catalog?q=Formagliari,%20Alessandro">Formagliari, Alessandro</a></li>
+        <li><a href="/it/catalog?q=Francesco%20Anton%20Maria%20da%20Pistoja,%20cappuccino">Francesco Anton Maria da Pistoja, cappuccino</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20sorelle">Frascaroli, sorelle</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Antonia%20Maria">Frascaroli, Antonia Maria</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Caterina%20Maria">Frascaroli, Caterina Maria</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Domenico">Frascaroli, Domenico</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Giuseppe">Frascaroli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Matteo">Frascaroli, Matteo</a></li>
+        <li><a href="/it/catalog?q=Frascaroli,%20Rosa%20Maria">Frascaroli, Rosa Maria</a></li>
+        <li><a href="/it/catalog?q=Fratta,%20Domenico%20Maria">Fratta, Domenico Maria</a></li>
+        <li><a href="/it/catalog?q=Frulli,%20Carlo">Frulli, Carlo</a></li>
+        <li><a href="/it/catalog?q=Fulchi,%20Bartolomeo">Fulchi, Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=G.A.G.">G.A.G.</a></li>
+        <li><a href="/it/catalog?q=G.B.A.">G.B.A.</a></li>
+        <li><a href="/it/catalog?q=G.B.F.F.C.">G.B.F.F.C.</a></li>
+        <li><a href="/it/catalog?q=G.C.C.">G.C.C.</a></li>
+        <li><a href="/it/catalog?q=G.M.">G.M.</a></li>
+        <li><a href="/it/catalog?q=G.M.C.">G.M.C.</a></li>
+        <li><a href="/it/catalog?q=G.P.C.">G.P.C.</a></li>
+        <li><a href="/it/catalog?q=G.V.D.F.">G.V.D.F.</a></li>
+        <li><a href="/it/catalog?q=Gaiba,%20Giuseppe">Gaiba, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Galli,%20Pietro">Galli, Pietro</a></li>
+        <li><a href="/it/catalog?q=Galvani,%20Giacomo%20Filippo%20Antonio">Galvani, Giacomo Filippo Antonio</a></li>
+        <li><a href="/it/catalog?q=Galvani,%20Luigi">Galvani, Luigi</a></li>
+        <li><a href="/it/catalog?q=Gambarini%20Gandolfi,%20Carlo">Gambarini Gandolfi, Carlo</a></li>
+        <li><a href="/it/catalog?q=Gamberini,%20notaio">Gamberini, notaio</a></li>
+        <li><a href="/it/catalog?q=Garattoni,%20Giuseppe%20Enea">Garattoni, Giuseppe Enea</a></li>
+        <li><a href="/it/catalog?q=Garelli,%20Antonio,%20canonico">Garelli, Antonio, canonico</a></li>
+        <li><a href="/it/catalog?q=Garelli,%20Salvatore">Garelli, Salvatore</a></li>
+        <li><a href="/it/catalog?q=Garetti,%20Nicol%C3%B2">Garetti, Nicolò</a></li>
+        <li><a href="/it/catalog?q=Garetti,%20Paolo%20Francesco">Garetti, Paolo Francesco</a></li>
+        <li><a href="/it/catalog?q=Gasperini,%20Giuseppe">Gasperini, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Gennari,%20Filippo">Gennari, Filippo</a></li>
+        <li><a href="/it/catalog?q=Genova">Genova</a></li>
+        <li><a href="/it/catalog?q=Gherardi,%20Adriano">Gherardi, Adriano</a></li>
+        <li><a href="/it/catalog?q=Ghisilieri,%20Francesco">Ghisilieri, Francesco</a></li>
+        <li><a href="/it/catalog?q=Gini,%20Cesare%20Massimiliano">Gini, Cesare Massimiliano</a></li>
+        <li><a href="/it/catalog?q=Giovannini,%20Carlo">Giovannini, Carlo</a></li>
+        <li><a href="/it/catalog?q=Giron,%20Giovanni%20Giuseppe,%20principe%20di%20Canneto">Giron, Giovanni Giuseppe, principe di Canneto</a></li>
+        <li><a href="/it/catalog?q=Giuliani,%20Giuseppe">Giuliani, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Giusti,%20Filippo">Giusti, Filippo</a></li>
+        <li><a href="/it/catalog?q=Giustiniani,%20Giacomo">Giustiniani, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Gnecco,%20Luigi">Gnecco, Luigi</a></li>
+        <li><a href="/it/catalog?q=Golfieri,%20Giovanni%20Paolo">Golfieri, Giovanni Paolo</a></li>
+        <li><a href="/it/catalog?q=Gonzaga,%20Angelo">Gonzaga, Angelo</a></li>
+        <li><a href="/it/catalog?q=Gozzi,%20Arturo">Gozzi, Arturo</a></li>
+        <li><a href="/it/catalog?q=Gozzi,%20Fulvio">Gozzi, Fulvio</a></li>
+        <li><a href="/it/catalog?q=Grimaldi,%20Girolamo,%20cardinale%20legato">Grimaldi, Girolamo, cardinale legato</a></li>
+        <li><a href="/it/catalog?q=Gualandi,%20Michelangelo">Gualandi, Michelangelo</a></li>
+        <li><a href="/it/catalog?q=Guardia%20Nazionale%20di%20Bologna">Guardia Nazionale di Bologna</a></li>
+        <li><a href="/it/catalog?q=Guarmani,%20Giuseppe%20Filippo">Guarmani, Giuseppe Filippo</a></li>
+        <li><a href="/it/catalog?q=Guglielmini,%20Petronilla,%20principessa%20di%20Canneto">Guglielmini, Petronilla, principessa di Canneto</a></li>
+        <li><a href="/it/catalog?q=Guscelli,%20Mario">Guscelli, Mario</a></li>
+        <li><a href="/it/catalog?q=Hercolani,%20Filippo">Hercolani, Filippo</a></li>
+        <li><a href="/it/catalog?q=I.M.">I.M.</a></li>
+        <li><a href="/it/catalog?q=Iesi">Iesi</a></li>
+        <li><a href="/it/catalog?q=Ikrzetuski,%20Gaetano%20Giuseppe">Ikrzetuski, Gaetano Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Imola">Imola</a></li>
+        <li><a href="/it/catalog?q=Istituto%20delle%20Scienze">Istituto delle Scienze</a></li>
+        <li><a href="/it/catalog?q=Istituto%20Nazionale,%20vedi%20Istituto%20delle%20Scienze">Istituto Nazionale, vedi Istituto delle Scienze</a></li>
+        <li><a href="/it/catalog?q=K%C3%B6hler,%20Johann%20David">Köhler, Johann David</a></li>
+        <li><a href="/it/catalog?q=L.F.F.M.">L.F.F.M.</a></li>
+        <li><a href="/it/catalog?q=L.M.">L.M.</a></li>
+        <li><a href="/it/catalog?q=Laghi,%20Luigi">Laghi, Luigi</a></li>
+        <li><a href="/it/catalog?q=Lambertini%20Vighi,%20Giovanni">Lambertini Vighi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Lambertini,%20Cornelia">Lambertini, Cornelia</a></li>
+        <li><a href="/it/catalog?q=Lambertini,%20Francesco">Lambertini, Francesco</a></li>
+        <li><a href="/it/catalog?q=Lambertini,%20Giovanni">Lambertini, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Lambertini,%20Maria%20Imelda%20Lucrezia">Lambertini, Maria Imelda Lucrezia</a></li>
+        <li><a href="/it/catalog?q=Lambertini,%20Prospero,%20arcivescovo,%20poi%20papa%20Benedetto%20XIV">Lambertini, Prospero, arcivescovo, poi papa Benedetto XIV</a></li>
+        <li><a href="/it/catalog?q=Lante,%20Antonio,%20cardinale">Lante, Antonio, cardinale</a></li>
+        <li><a href="/it/catalog?q=Laurinda,%20pastore%20arcade,%20vedi%20Bassi,%20Laura">Laurinda, pastore arcade, vedi Bassi, Laura</a></li>
+        <li><a href="/it/catalog?q=Lazzari,%20Antonio">Lazzari, Antonio</a></li>
+        <li><a href="/it/catalog?q=Leprotti,%20Antonio">Leprotti, Antonio</a></li>
+        <li><a href="/it/catalog?q=Le%20Sage,%20Georges%20Louis">Le Sage, Georges Louis</a></li>
+        <li><a href="/it/catalog?q=Liceo%20dipartimentale%20del%20Reno,%20vedi%20San%20Luigi,%20liceo">Liceo dipartimentale del Reno, vedi San Luigi, liceo</a></li>
+        <li><a href="/it/catalog?q=Liceo%20provinciale%20di%20Bologna,%20vedi%20San%20Luigi,%20liceo">Liceo provinciale di Bologna, vedi San Luigi, liceo</a></li>
+        <li><a href="/it/catalog?q=Locatelli,%20Cesare">Locatelli, Cesare</a></li>
+        <li><a href="/it/catalog?q=Loiani,%20Giacinto">Loiani, Giacinto</a></li>
+        <li><a href="/it/catalog?q=Lolli,%20Giuseppe">Lolli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Longhi,%20Francesco">Longhi, Francesco</a></li>
+        <li><a href="/it/catalog?q=Lucchesini,%20Giovanni">Lucchesini, Giovanni</a></li>
+        <li><a href="/it/catalog?q=M.D.G.L.">M.D.G.L.</a></li>
+        <li><a href="/it/catalog?q=M.G.">M.G.</a></li>
+        <li><a href="/it/catalog?q=Malaguti,%20Pietro">Malaguti, Pietro</a></li>
+        <li><a href="/it/catalog?q=Malalbergo">Malalbergo</a></li>
+        <li><a href="/it/catalog?q=Malavolta">Malavolta</a></li>
+        <li><a href="/it/catalog?q=Malvezzi,%20famiglia">Malvezzi, famiglia</a></li>
+        <li><a href="/it/catalog?q=Manfredi,%20Eustachio">Manfredi, Eustachio</a></li>
+        <li><a href="/it/catalog?q=Manfredi,%20Gabriele">Manfredi, Gabriele</a></li>
+        <li><a href="/it/catalog?q=Manzoni%20Pilla,%20Francesca">Manzoni Pilla, Francesca</a></li>
+        <li><a href="/it/catalog?q=Marchesini,%20Adelaide">Marchesini, Adelaide</a></li>
+        <li><a href="/it/catalog?q=Marchesini,%20Anna">Marchesini, Anna</a></li>
+        <li><a href="/it/catalog?q=Marchesini,%20Gaetano">Marchesini, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Marchesini,%20Giuseppe">Marchesini, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Marchesini,%20Maria">Marchesini, Maria</a></li>
+        <li><a href="/it/catalog?q=Marchetti,%20Giulio">Marchetti, Giulio</a></li>
+        <li><a href="/it/catalog?q=Marconi,%20Enrico">Marconi, Enrico</a></li>
+        <li><a href="/it/catalog?q=Marconi,%20Luigia">Marconi, Luigia</a></li>
+        <li><a href="/it/catalog?q=Mareggiani,%20Maria">Mareggiani, Maria</a></li>
+        <li><a href="/it/catalog?q=Marescalchi,%20F.">Marescalchi, F.</a></li>
+        <li><a href="/it/catalog?q=Maria%20Casimira,%20suora,%20vedi%20Veratti,%20Angela">Maria Casimira, suora, vedi Veratti, Angela</a></li>
+        <li><a href="/it/catalog?q=Marrocchi,%20Pier%20Tommaso,%20frate">Marrocchi, Pier Tommaso, frate</a></li>
+        <li><a href="/it/catalog?q=Martinelli,%20Vincenzo">Martinelli, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Massei,%20Alfonso">Massei, Alfonso</a></li>
+        <li><a href="/it/catalog?q=Masucci,%20Samaritana">Masucci, Samaritana</a></li>
+        <li><a href="/it/catalog?q=Mattioli,%20Ludovico">Mattioli, Ludovico</a></li>
+        <li><a href="/it/catalog?q=Mazzanti,%20Flora">Mazzanti, Flora</a></li>
+        <li><a href="/it/catalog?q=Mazza,%20Teresa">Mazza, Teresa</a></li>
+        <li><a href="/it/catalog?q=Mazzanti,%20Francesco%20Antonio">Mazzanti, Francesco Antonio</a></li>
+        <li><a href="/it/catalog?q=Mazzei,%20Raffaele">Mazzei, Raffaele</a></li>
+        <li><a href="/it/catalog?q=Mazzi,%20Maria%20Colomba">Mazzi, Maria Colomba</a></li>
+        <li><a href="/it/catalog?q=Mazzoni,%20famiglia">Mazzoni, famiglia</a></li>
+        <li><a href="/it/catalog?q=Mazzoni,%20Giulio">Mazzoni, Giulio</a></li>
+        <li><a href="/it/catalog?q=Melchiorri,%20Gaetano">Melchiorri, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Melli,%20Elio">Melli, Elio</a></li>
+        <li><a href="/it/catalog?q=Mezzolara">Mezzolara</a></li>
+        <li><a href="/it/catalog?q=Minarelli,%20Giuseppe">Minarelli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Modena">Modena</a></li>
+        <li><a href="/it/catalog?q=Modona,%20vedi%20Modena">Modona, vedi Modena</a></li>
+        <li><a href="/it/catalog?q=Mogliano">Mogliano</a></li>
+        <li><a href="/it/catalog?q=Molinelli,%20Giovanni%20Pietro">Molinelli, Giovanni Pietro</a></li>
+        <li><a href="/it/catalog?q=Molinelli,%20Pietro%20Paolo">Molinelli, Pietro Paolo</a></li>
+        <li><a href="/it/catalog?q=Mondini,%20Achille">Mondini, Achille</a></li>
+        <li><a href="/it/catalog?q=Mondini,%20Anna">Mondini, Anna</a></li>
+        <li><a href="/it/catalog?q=Mondini,%20Carlo">Mondini, Carlo</a></li>
+        <li><a href="/it/catalog?q=Mondini,%20Francesco">Mondini, Francesco</a></li>
+        <li><a href="/it/catalog?q=Mondini,%20Vincenzo">Mondini, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Montalto,%20collegio">Montalto, collegio</a></li>
+        <li><a href="/it/catalog?q=Montanari,%20Giovanni%20Battista">Montanari, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Montec%C3%B2saro%20(Macerata)">Montecòsaro (Macerata)</a></li>
+        <li><a href="/it/catalog?q=Monti,%20s.n.">Monti, s.n.</a></li>
+        <li><a href="/it/catalog?q=Monti,%20Basilio">Monti, Basilio</a></li>
+        <li><a href="/it/catalog?q=Monti,%20Gaetano">Monti, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Monti,%20Giulio%20Cesare">Monti, Giulio Cesare</a></li>
+        <li><a href="/it/catalog?q=Moreschi,%20Alessandro">Moreschi, Alessandro</a></li>
+        <li><a href="/it/catalog?q=Moreschi,%20Giambattista">Moreschi, Giambattista</a></li>
+        <li><a href="/it/catalog?q=Mosca,%20Carlo">Mosca, Carlo</a></li>
+        <li><a href="/it/catalog?q=Mosca,%20Francesco">Mosca, Francesco</a></li>
+        <li><a href="/it/catalog?q=Moscati,%20Pietro">Moscati, Pietro</a></li>
+        <li><a href="/it/catalog?q=Muzzi,%20Giuseppe">Muzzi, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Nanuzzi,%20Francesca">Nanuzzi, Francesca</a></li>
+        <li><a href="/it/catalog?q=Napoli">Napoli</a></li>
+        <li><a href="/it/catalog?q=Napoleone%20I,%20imperatore%20dei%20Francesi">Napoleone I, imperatore dei Francesi</a></li>
+        <li><a href="/it/catalog?q=Nembrini%20Gonzaga,%20Alessandro">Nembrini Gonzaga, Alessandro</a></li>
+        <li><a href="/it/catalog?q=Nembrini%20Gonzaga,%20Cesare">Nembrini Gonzaga, Cesare</a></li>
+        <li><a href="/it/catalog?q=Norimberba">Norimberba</a></li>
+        <li><a href="/it/catalog?q=Oddi,%20Giuseppe">Oddi, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Olimene%20Anfrisio,%20pastore%20emonio">Olimene Anfrisio, pastore emonio</a></li>
+        <li><a href="/it/catalog?q=Opera%20delle%20Scuole%20Pie">Opera delle Scuole Pie</a></li>
+        <li><a href="/it/catalog?q=Opera%20pia%20dei%20Poveri%20Vergognosi">Opera pia dei Poveri Vergognosi</a></li>
+        <li><a href="/it/catalog?q=Oppizzoni,%20Carlo,%20cardinale">Oppizzoni, Carlo, cardinale</a></li>
+        <li><a href="/it/catalog?q=Oriana%20Ecalidea,%20vedi%20Cantelli%20Tagliazucchi,%20Veronica">Oriana Ecalidea, vedi Cantelli Tagliazucchi, Veronica</a></li>
+        <li><a href="/it/catalog?q=Orengo,%20Luigi">Orengo, Luigi</a></li>
+        <li><a href="/it/catalog?q=Orlandi,%20Carlo">Orlandi, Carlo</a></li>
+        <li><a href="/it/catalog?q=Ortolani,%20F.">Ortolani, F.</a></li>
+        <li><a href="/it/catalog?q=Osimo">Osimo</a></li>
+        <li><a href="/it/catalog?q=Pagnini,%20Giuseppe">Pagnini, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Palpigni,%20Caterina">Palpigni, Caterina</a></li>
+        <li><a href="/it/catalog?q=Panichi,%20Serafino">Panichi, Serafino</a></li>
+        <li><a href="/it/catalog?q=Parisani,%20Giuseppe">Parisani, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Parma">Parma</a></li>
+        <li><a href="/it/catalog?q=Pavia,%20Antonio">Pavia, Antonio</a></li>
+        <li><a href="/it/catalog?q=Pelizzoni,%20Luigia">Pelizzoni, Luigia</a></li>
+        <li><a href="/it/catalog?q=Perez,%20Francesco">Perez, Francesco</a></li>
+        <li><a href="/it/catalog?q=Perugia">Perugia</a></li>
+        <li><a href="/it/catalog?q=Pesaro">Pesaro</a></li>
+        <li><a href="/it/catalog?q=Pia%20Antonia%20Maria%20Redegonda%20Teresa,%20suora,%20vedi%20Cremonini,%20Teresa%20Maria">Pia Antonia Maria Redegonda Teresa, suora, vedi Cremonini, Teresa Maria</a></li>
+        <li><a href="/it/catalog?q=Piana,%20Luigi">Piana, Luigi</a></li>
+        <li><a href="/it/catalog?q=Piccioli,%20Benedetto">Piccioli, Benedetto</a></li>
+        <li><a href="/it/catalog?q=Pio%20VI,%20papa">Pio VI, papa</a></li>
+        <li><a href="/it/catalog?q=Pio%20VII,%20papa">Pio VII, papa</a></li>
+        <li><a href="/it/catalog?q=Pio%20VIII,%20papa">Pio VIII, papa</a></li>
+        <li><a href="/it/catalog?q=Pironi,%20Giuseppe">Pironi, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Pistoia">Pistoia</a></li>
+        <li><a href="/it/catalog?q=Poggi,%20Caterina">Poggi, Caterina</a></li>
+        <li><a href="/it/catalog?q=Poggi,%20Francesco">Poggi, Francesco</a></li>
+        <li><a href="/it/catalog?q=Pozzi,%20Vincenzo">Pozzi, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Prefettura%20Dipartimentale%20del%20Reno">Prefettura Dipartimentale del Reno</a></li>
+        <li><a href="/it/catalog?q=Presidoni,%20Geronima">Presidoni, Geronima</a></li>
+        <li><a href="/it/catalog?q=Prospera%20Caterina%20Maria%20Imelda,%20suora,%20vedi%20Lambertini,%20Maria%20Imelda%20Lucrezia">Prospera Caterina Maria Imelda, suora, vedi Lambertini, Maria Imelda Lucrezia</a></li>
+        <li><a href="/it/catalog?q=Quercia,%20Lucia">Quercia, Lucia</a></li>
+        <li><a href="/it/catalog?q=Quirini%20Stampalia,%20Alvise">Quirini Stampalia, Alvise</a></li>
+        <li><a href="/it/catalog?q=Raggi,%20Antonio">Raggi, Antonio</a></li>
+        <li><a href="/it/catalog?q=Raimondi,%20Caterina%20Redegonda">Raimondi, Caterina Redegonda</a></li>
+        <li><a href="/it/catalog?q=Raimondi,%20Luigi%20Camillo">Raimondi, Luigi Camillo</a></li>
+        <li><a href="/it/catalog?q=Raimondi,%20Maria">Raimondi, Maria</a></li>
+        <li><a href="/it/catalog?q=Raimondi,%20Matteo">Raimondi, Matteo</a></li>
+        <li><a href="/it/catalog?q=Raimondi,%20Nicol%C3%B2">Raimondi, Nicolò</a></li>
+        <li><a href="/it/catalog?q=Rambaldi,%20Antonio">Rambaldi, Antonio</a></li>
+        <li><a href="/it/catalog?q=Ramponi,%20Domenico">Ramponi, Domenico</a></li>
+        <li><a href="/it/catalog?q=Ramponi,%20Giovanni">Ramponi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Ranuzzi,%20Marco%20Antonio">Ranuzzi, Marco Antonio</a></li>
+        <li><a href="/it/catalog?q=Rattagarganelli,%20Ludovico%20Maria">Rattagarganelli, Ludovico Maria</a></li>
+        <li><a href="/it/catalog?q=Ravenna">Ravenna</a></li>
+        <li><a href="/it/catalog?q=Recanati">Recanati</a></li>
+        <li><a href="/it/catalog?q=Redi,%20Maria%20Gioseffa,%20suora">Redi, Maria Gioseffa, suora</a></li>
+        <li><a href="/it/catalog?q=Reggio%20Emilia">Reggio Emilia</a></li>
+        <li><a href="/it/catalog?q=Regia%20Reggenza%20provvisoria">Regia Reggenza provvisoria</a></li>
+        <li><a href="/it/catalog?q=Righi%20Fangarezi,%20Lucia">Righi Fangarezi, Lucia</a></li>
+        <li><a href="/it/catalog?q=Rimini">Rimini</a></li>
+        <li><a href="/it/catalog?q=Riviera,%20Tarsizio">Riviera, Tarsizio</a></li>
+        <li><a href="/it/catalog?q=Rizzardi,%20Maria%20Camilla,%20suora">Rizzardi, Maria Camilla, suora</a></li>
+        <li><a href="/it/catalog?q=Rizzoli,%20Lodovico">Rizzoli, Lodovico</a></li>
+        <li><a href="/it/catalog?q=Roffeni,%20Giacomo">Roffeni, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Roli,%20Francesco%20Maria">Roli, Francesco Maria</a></li>
+        <li><a href="/it/catalog?q=Roma">Roma</a></li>
+        <li><a href="/it/catalog?q=Romani,%20Nicol%C3%B2">Romani, Nicolò</a></li>
+        <li><a href="/it/catalog?q=Roveredo">Roveredo</a></li>
+        <li><a href="/it/catalog?q=Roversi,%20Melchiorre">Roversi, Melchiorre</a></li>
+        <li><a href="/it/catalog?q=Rubbiati,%20Tranquillino">Rubbiati, Tranquillino</a></li>
+        <li><a href="/it/catalog?q=Rusconi,%20Giuseppe%20Benedetto">Rusconi, Giuseppe Benedetto</a></li>
+        <li><a href="/it/catalog?q=Rusi,%20Vincenzo">Rusi, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Rusticelli,%20Angela">Rusticelli, Angela</a></li>
+        <li><a href="/it/catalog?q=Rusticelli,%20Giovanni">Rusticelli, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Rusticelli,%20Luca">Rusticelli, Luca</a></li>
+        <li><a href="/it/catalog?q=Ruvinetti,%20Giulia">Ruvinetti, Giulia</a></li>
+        <li><a href="/it/catalog?q=S.R.B.">S.R.B.</a></li>
+        <li><a href="/it/catalog?q=S.%20Loran,%20Maria%20Caterina">S. Loran, Maria Caterina</a></li>
+        <li><a href="/it/catalog?q=Salaroli,%20Camillo">Salaroli, Camillo</a></li>
+        <li><a href="/it/catalog?q=Salaroli,%20Giovanni">Salaroli, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Sambuceti,%20Luigi">Sambuceti, Luigi</a></li>
+        <li><a href="/it/catalog?q=Sampieri,%20Filippo">Sampieri, Filippo</a></li>
+        <li><a href="/it/catalog?q=San%20Biagio,%20chiesa">San Biagio, chiesa</a></li>
+        <li><a href="/it/catalog?q=San%20Giovanni%20Battista,%20chiesa%20(Disvetro)">San Giovanni Battista, chiesa (Disvetro)</a></li>
+        <li><a href="/it/catalog?q=San%20Giovanni%20Battista,%20monastero">San Giovanni Battista, monastero</a></li>
+        <li><a href="/it/catalog?q=San%20Giovanni%20in%20Monte,%20chiesa">San Giovanni in Monte, chiesa</a></li>
+        <li><a href="/it/catalog?q=San%20Giovanni%20in%20Persiceto">San Giovanni in Persiceto</a></li>
+        <li><a href="/it/catalog?q=San%20Lorenzo,%20monastero">San Lorenzo, monastero</a></li>
+        <li><a href="/it/catalog?q=San%20Luigi,%20liceo">San Luigi, liceo</a></li>
+        <li><a href="/it/catalog?q=San%20Petronio,%20chiesa">San Petronio, chiesa</a></li>
+        <li><a href="/it/catalog?q=San%20Salvatore,%20chiesa">San Salvatore, chiesa</a></li>
+        <li><a href="/it/catalog?q=Sanseverino">Sanseverino</a></li>
+        <li><a href="/it/catalog?q=Santa%20Caterina,%20chiesa">Santa Caterina, chiesa</a></li>
+        <li><a href="/it/catalog?q=Santa%20Lucia,%20liceo">Santa Lucia, liceo</a></li>
+        <li><a href="/it/catalog?q=Santa%20Maria%20degli%20Angeli,%20confraternita">Santa Maria degli Angeli, confraternita</a></li>
+        <li><a href="/it/catalog?q=Santa%20Maria%20degli%20Angeli,%20monastero">Santa Maria degli Angeli, monastero</a></li>
+        <li><a href="/it/catalog?q=Santa%20Maria%20della%20Purificazione,%20monastero">Santa Maria della Purificazione, monastero</a></li>
+        <li><a href="/it/catalog?q=Santa%20Maria%20Maddalena,%20monastero">Santa Maria Maddalena, monastero</a></li>
+        <li><a href="/it/catalog?q=Santissima%20Annunziata,%20convento">Santissima Annunziata, convento</a></li>
+        <li><a href="/it/catalog?q=Santissima%20Concezione,%20monastero">Santissima Concezione, monastero</a></li>
+        <li><a href="/it/catalog?q=Scarpellini,%20Feliciano">Scarpellini, Feliciano</a></li>
+        <li><a href="/it/catalog?q=Scarselli,%20Cesare%20Alessandro">Scarselli, Cesare Alessandro</a></li>
+        <li><a href="/it/catalog?q=Scarselli,%20Flaminio">Scarselli, Flaminio</a></li>
+        <li><a href="/it/catalog?q=Sebastiani,%20Francesco">Sebastiani, Francesco</a></li>
+        <li><a href="/it/catalog?q=Serpieri,%20Giulio%20Cesare">Serpieri, Giulio Cesare</a></li>
+        <li><a href="/it/catalog?q=Serpieri,%20Marcellino">Serpieri, Marcellino</a></li>
+        <li><a href="/it/catalog?q=Sibari%20Tessalicense,%20pastore%20arcade">Sibari Tessalicense, pastore arcade</a></li>
+        <li><a href="/it/catalog?q=Simonetti,%20Alberico">Simonetti, Alberico</a></li>
+        <li><a href="/it/catalog?q=Simonetti,%20Prospero">Simonetti, Prospero</a></li>
+        <li><a href="/it/catalog?q=Sivieri,%20Giuseppe">Sivieri, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Somenzari,%20Teodoro">Somenzari, Teodoro</a></li>
+        <li><a href="/it/catalog?q=Sorbelli,%20Albano">Sorbelli, Albano</a></li>
+        <li><a href="/it/catalog?q=Spallanzani,%20Lazzaro">Spallanzani, Lazzaro</a></li>
+        <li><a href="/it/catalog?q=Spezieria%20della%20Vita">Spezieria della Vita</a></li>
+        <li><a href="/it/catalog?q=Spezieria%20di%20Santa%20Caterina">Spezieria di Santa Caterina</a></li>
+        <li><a href="/it/catalog?q=Spina,%20Giuseppe,%20cardinale">Spina, Giuseppe, cardinale</a></li>
+        <li><a href="/it/catalog?q=Spinelli,%20s.n.">Spinelli, s.n.</a></li>
+        <li><a href="/it/catalog?q=Spoleto">Spoleto</a></li>
+        <li><a href="/it/catalog?q=Stegani,%20Lorenzo">Stegani, Lorenzo</a></li>
+        <li><a href="/it/catalog?q=Tacconi,%20Gaetano">Tacconi, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Tadolini,%20Maria">Tadolini, Maria</a></li>
+        <li><a href="/it/catalog?q=Talisio%20P[elleo],%20vedi%20D'Ar%C3%A8ncourt,%20Garnier">Talisio P[elleo], vedi D'Arèncourt, Garnier</a></li>
+        <li><a href="/it/catalog?q=Termanini,%20Gaetano">Termanini, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Testa,%20Giuseppe">Testa, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Tomba,%20Filippo">Tomba, Filippo</a></li>
+        <li><a href="/it/catalog?q=Tommasi,%20Raffaella">Tommasi, Raffaella</a></li>
+        <li><a href="/it/catalog?q=Torcioni,%20Caterina">Torcioni, Caterina</a></li>
+        <li><a href="/it/catalog?q=Torre,%20Paolo%20Francesco">Torre, Paolo Francesco</a></li>
+        <li><a href="/it/catalog?q=Trebbi,%20Giovanni">Trebbi, Giovanni</a></li>
+        <li><a href="/it/catalog?q=Trebbi,%20Pietro%20Giovanni">Trebbi, Pietro Giovanni</a></li>
+        <li><a href="/it/catalog?q=Tribunale%20di%20Bologna">Tribunale di Bologna</a></li>
+        <li><a href="/it/catalog?q=Trombelli,%20Giovanni%20Grisostomo">Trombelli, Giovanni Grisostomo</a></li>
+        <li><a href="/it/catalog?q=Turrio,%20Giacomo">Turrio, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Ufficio%20delle%20Ipoteche%20di%20Bologna">Ufficio delle Ipoteche di Bologna</a></li>
+        <li><a href="/it/catalog?q=Universit%C3%A0%20degli%20Apatisti%20(Firenze)">Università degli Apatisti (Firenze)</a></li>
+        <li><a href="/it/catalog?q=Urbino">Urbino</a></li>
+        <li><a href="/it/catalog?q=Uttini,%20Gaetano">Uttini, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Valeriani,%20Orazio">Valeriani, Orazio</a></li>
+        <li><a href="/it/catalog?q=Vanducci,%20Laura">Vanducci, Laura</a></li>
+        <li><a href="/it/catalog?q=Varrini,%20Ottavio">Varrini, Ottavio</a></li>
+        <li><a href="/it/catalog?q=Veggetti,%20Liborio">Veggetti, Liborio</a></li>
+        <li><a href="/it/catalog?q=Venezia">Venezia</a></li>
+        <li><a href="/it/catalog?q=Venturoli,%20Giuseppe">Venturoli, Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Verardini%20Prendiparti,%20Andrea">Verardini Prendiparti, Andrea</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20famiglia">Veratti, famiglia</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Angela">Veratti, Angela</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Anna">Veratti, Anna</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Anna%20Maria">Veratti, Anna Maria</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Antonio">Veratti, Antonio</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Benedetto">Veratti, Benedetto</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Bruno">Veratti, Bruno</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Carlo%20di%20Giuseppe">Veratti, Carlo di Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Caterina,%20nata%201739">Veratti, Caterina, nata 1739</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Caterina,%20nata%201742">Veratti, Caterina, nata 1742</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Caterina,%20nata%201745">Veratti, Caterina, nata 1745</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Caterina,%20nata%201750">Veratti, Caterina, nata 1750</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Ciro">Veratti, Ciro</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Domenica">Veratti, Domenica</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Domenico">Veratti, Domenico</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Elisabetta">Veratti, Elisabetta</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Ferdinando">Veratti, Ferdinando</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Flaminio">Veratti, Flaminio</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Francesco%20di%20Domenico">Veratti, Francesco di Domenico</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Francesco%20di%20Paolo">Veratti, Francesco di Paolo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Gaetano">Veratti, Gaetano</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Geminiano">Veratti, Geminiano</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Geminiano%20di%20Domenico">Veratti, Geminiano di Domenico</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giacomo">Veratti, Giacomo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giovanni%20Battista">Veratti, Giovanni Battista</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giovanni%20di%20Carlo">Veratti, Giovanni di Carlo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giovanni%20di%20Domenico">Veratti, Giovanni di Domenico</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giovanni%20Francesco%20di%20Giuseppe">Veratti, Giovanni Francesco di Giuseppe</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giovanni%20Pietro">Veratti, Giovanni Pietro</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giuseppe%20di%20Carlo">Veratti, Giuseppe di Carlo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giuseppe%20di%20Francesco%20di%20Domenico">Veratti, Giuseppe di Francesco di Domenico</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giuseppe%20di%20Francesco%20di%20Paolo">Veratti, Giuseppe di Francesco di Paolo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Giuseppe%20di%20Paolo">Veratti, Giuseppe di Paolo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Gustavo">Veratti, Gustavo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Laura%20Maria%20Caterina">Veratti, Laura Maria Caterina</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Leonida">Veratti, Leonida</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Margherita">Veratti, Margherita</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Maria%20Chiara">Veratti, Maria Chiara</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Paola">Veratti, Paola</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Paolo">Veratti, Paolo</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Teresa%20di%20Ciro">Veratti, Teresa di Ciro</a></li>
+        <li><a href="/it/catalog?q=Veratti,%20Teresa%20di%20Francesco">Veratti, Teresa di Francesco</a></li>
+        <li><a href="/it/catalog?q=Veratti%20Mazzoni,%20Emma">Veratti Mazzoni, Emma</a></li>
+        <li><a href="/it/catalog?q=Verona">Verona</a></li>
+        <li><a href="/it/catalog?q=Veronesi%20Viani,%20Maria">Veronesi Viani, Maria</a></li>
+        <li><a href="/it/catalog?q=Viani,%20Vincenzo">Viani, Vincenzo</a></li>
+        <li><a href="/it/catalog?q=Vitali,%20Costanza%20Beatrice">Vitali, Costanza Beatrice</a></li>
+        <li><a href="/it/catalog?q=Vitali,%20Girolamo">Vitali, Girolamo</a></li>
+        <li><a href="/it/catalog?q=Vizzani,%20Angelo%20Michele">Vizzani, Angelo Michele</a></li>
+        <li><a href="/it/catalog?q=Zagnoni,%20Gabriele%20Maria">Zagnoni, Gabriele Maria</a></li>
+        <li><a href="/it/catalog?q=Zanoni,%20Bartolomeo">Zanoni, Bartolomeo</a></li>
+        <li><a href="/it/catalog?q=Zanotti,%20Alessandro">Zanotti, Alessandro</a></li>
+        <li><a href="/it/catalog?q=Zanotti,%20Francesco%20Maria">Zanotti, Francesco Maria</a></li>
+        <li><a href="/it/catalog?q=Zanotti,%20Giampietro">Zanotti, Giampietro</a></li>
+        <li><a href="/it/catalog?q=Zanotti,%20Luigi">Zanotti, Luigi</a></li>
+        <li><a href="/it/catalog?q=Zarri,%20Anna">Zarri, Anna</a></li>
+        <li><a href="/it/catalog?q=Zeneroni,%20Bernardino">Zeneroni, Bernardino</a></li>
+        <li><a href="/it/catalog?q=Zoli,%20Agostino">Zoli, Agostino</a></li>
+        <li><a href="/it/catalog?q=Zoli,%20Filippo">Zoli, Filippo</a></li>
         </ul>
       footnotes_title: 'Note al testo'
       footnotes_text_html: |

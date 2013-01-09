@@ -8,10 +8,15 @@ module ApplicationHelper
     mvf.join(', ')
   end
   
-  def show_formatted_list(mvf)
+  def show_formatted_list(mvf,opts={})
     content_tag(:ul, :class => "item-mvf-list") do
       mvf.collect do |val|
-        content_tag(:li, val)
+        if opts[:facet]
+          output=link_to(val,catalog_index_path(:"f[#{opts[:facet]}][]"=>"#{val}"))
+        else
+          output=val
+        end
+        content_tag(:li, output)
       end.join.html_safe
     end
   end

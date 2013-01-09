@@ -25,6 +25,10 @@ class SolrDocument
     multivalue_field('family_name_ssim')
   end
 
+  def corporations
+    multivalue_field('corporate_name_ssim')
+  end
+
   def location
     multivalue_field('geographic_name_ssim')
   end

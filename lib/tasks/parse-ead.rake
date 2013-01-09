@@ -1,6 +1,7 @@
 require 'rsolr'
 require 'ead_parser'
 require 'rest-client'
+require 'open-uri'
 
 namespace :bassi do
   desc "Parse EAD File"
@@ -15,6 +16,24 @@ namespace :bassi do
       solr.commit
     end
   end
+  
+  desc "Generate index HTML"
+  task :"generate-index" do
+    
+    f = File.open("#{Rails.root}/data/bassi-ead.xml")
+    doc = Nokogiri::XML(f)
+    f.close
+    doc.root.search('indexentry').each do |node|
+      node.children.each do |child|
+        if child.class == Nokogiri::XML::Element
+          result="<li><a href=\"/it/catalog?q=#{URI::encode(child.content)}\">#{child.content}</a></li>"
+          puts result
+        end
+      end
+    end
+    
+  end
+  
 end
 
 def solrize_ead(ead)

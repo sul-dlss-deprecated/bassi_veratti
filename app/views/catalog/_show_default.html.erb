@@ -33,13 +33,16 @@
           <dt><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
         <% end %>
         <% unless list_is_empty?(@document.people) %>
-          <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_formatted_list(@document.people)%></dd>
+          <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_formatted_list(@document.people,:facet=>'personal_name_ssim')%></dd>
         <% end %>
         <% unless list_is_empty?(@document.families) %>
-          <dt><%=t('bassi.show.families')%>:</dt><dd><%=show_formatted_list(@document.families)%></dd>
+          <dt><%=t('bassi.show.families')%>:</dt><dd><%=show_formatted_list(@document.families,:facet=>'family_name_ssim')%></dd>
+        <% end %>
+        <% unless list_is_empty?(@document.corporations) %>
+          <dt><%=t('bassi.show.corporations')%>:</dt><dd><%=show_formatted_list(@document.corporations,:facet=>'corporate_name_ssim')%></dd>
         <% end %>
         <% unless list_is_empty?(@document.location) %>
-          <dt><%=t('bassi.show.location')%>:</dt><dd><%=show_formatted_list(@document.location)%></dd>
+          <dt><%=t('bassi.show.location')%>:</dt><dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%></dd>
         <% end %>
         <% unless list_is_empty?(@document.notes) %>
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
