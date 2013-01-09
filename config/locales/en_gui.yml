@@ -81,6 +81,7 @@ en:
     search:
       search_results: 'Results'
       gallery_toggle:
+        default: 'Results'
         gallery: 'Images'
         list: 'Text'
       search_label: 'Search'

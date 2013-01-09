@@ -49,6 +49,38 @@
   }
 }
 
+/* Default View */
+#documents.default {
+  .documentHeader {
+    display: inline-block;
+    .index_title {
+      float: left;
+      margin: 0;
+      max-width: 480px;
+    }
+  }
+  .row {margin-bottom: 20px; padding-left: 10px;}
+  dl {margin-top: 8px;}
+  dt {
+    text-align: left;
+    width: 50px;
+  }
+  dd {margin-left: 60px;}
+  img {vertical-align: top;}
+  .results-image {
+    margin-top: 2px;
+  }
+  .results-metadata {margin-left: 0;}
+}
+
+/* Breadcrumb-like single-line display of result's ancestors */
+ul.inventory-ancestry {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
 /* Results paging/controls */
 #search-results-metadata {
   &.well {
@@ -93,7 +125,6 @@
   }
 }
 
-
 /* Search Form */
 #sidebar .search_form {
 	margin-bottom: 15px;
@@ -106,5 +137,18 @@
 		@media(max-width: 767px){
 		  width: 98%;
 		}
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 768px) and (max-width: 979px) {
+  .blacklight-catalog-index #documents.default {
+    .results-image {padding-right: 10px;}
+  }
+}
+@media (max-width: 767px) {
+  .blacklight-catalog-index #documents.default {
+    .dl-horizontal dt {float: left;}
+    .results-image {margin-bottom: 10px;}
   }
 }
