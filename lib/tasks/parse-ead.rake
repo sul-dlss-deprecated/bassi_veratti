@@ -95,7 +95,8 @@ def print_types(c)
 end
 
 def clean_string(s)
-  s.gsub(/\s+/, " ").strip unless s.nil?
+  str = (s.class == Array ? s.join(' ') : s) 
+  str.gsub(/\s+/, " ").strip unless str.nil?
 end
 
 def container_key(containers)
@@ -116,8 +117,10 @@ def description(content)
   content.odd.each do |odd|
     contents << clean_string(odd.try(:p))
   end
-  if contents.blank? and !content.scopecontent.nil?
-    contents << content.scopecontent.ps.join(" ")
+  if !content.scopecontent.nil?
+    content.scopecontent.each do |scope|
+      contents << clean_string(scope.try(:ps))
+    end
   end
   contents
 end

@@ -4,6 +4,16 @@ module ApplicationHelper
     on_background_page || on_inventory_pages
   end
 
+  # series descriptions always come in pairs, the first in italian, the second in english...depending on tbe language, show a particular version
+  def show_series_language_description(mvf,language)
+    notes=[]
+    mvf.each_with_index do |note,index|
+#      notes << note + '***INDEX:' + (index % 2).to_s
+      notes << note if (((index % 2) == 0 && language == :it) || ((index % 2) == 1 && language == :en))
+    end
+    return notes.join('<br /><br />')
+  end
+  
   def show_list(mvf)
     mvf.join(', ')
   end

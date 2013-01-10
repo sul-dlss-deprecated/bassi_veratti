@@ -14,7 +14,7 @@ class SolrDocument
   end
 
   def description
-    multivalue_field('description_tsim')
+    multivalue_field('extent_ssim')    
   end
 
   def people
@@ -34,7 +34,7 @@ class SolrDocument
   end
 
   def notes
-    multivalue_field('extent_ssim')
+    multivalue_field('description_tsim')
   end
   
   def purl
