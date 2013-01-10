@@ -25,7 +25,10 @@
   ul.inventory-ancestry {margin-top: 5px;}
   .documentHeader {
     padding-top: 0;
-    h5 {font-size: 13px;}
+    h5 {
+      font-size: 13px;
+      line-height: 16px;
+    }
   }
   ul.inventory-ancestry, .documentHeader {margin-left: 3px;}
 }
