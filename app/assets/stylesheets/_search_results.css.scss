@@ -38,14 +38,15 @@
 	}		
 }
 
-/* Brief/List View */
-.brief {
-  .document {
-	  border-bottom: none;
-	  .index_title {
-		  margin-top: 0;
-		  margin-right: 5px;
-	  }
+/* Brief/Text Only View */
+#documents.brief {
+  .row {
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  .documentHeader {
+    .index_title {max-width: 600px;}
+    margin-top: 0;
   }
 }
 

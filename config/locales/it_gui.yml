@@ -83,7 +83,7 @@ it:
       gallery_toggle:
         default: 'Results'
         gallery: 'Images'
-        list: 'Text'
+        text: 'Text only'
       search_label: 'Search'
       facets:
         title: 'Browse'
