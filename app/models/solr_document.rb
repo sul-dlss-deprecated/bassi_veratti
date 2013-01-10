@@ -77,7 +77,8 @@ class SolrDocument
   
    def self.image_dimensions
      options = {:default => "_thumb",
-                :square   => "_square" }
+                :square   => "_square",
+                :thumb => "_thumb" }
    end
   
   def series?

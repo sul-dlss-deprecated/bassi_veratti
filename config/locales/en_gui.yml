@@ -82,7 +82,7 @@ en:
       search_results: 'Results'
       gallery_toggle:
         default: 'Results'
-        gallery: 'Images'
+        gallery: 'Gallery'
         text: 'Text only'
       search_label: 'Search'
       facets:
