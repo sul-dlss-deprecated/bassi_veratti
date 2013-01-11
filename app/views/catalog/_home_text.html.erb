@@ -9,7 +9,7 @@
 		<% @highlights.each do |highlight| %>
     <div class="span3">
       	<%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),catalog_index_path(:q=>"#{highlight.query}"))  %>
-        <h3 class="collection-title"><%=highlight.send("name_#{I18n.locale}")%></h3>
+        <h3 class="collection-title"><%= link_to(highlight.send("name_#{I18n.locale}"),catalog_index_path(:q=>"#{highlight.query}"))  %></h3>
         <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
       </div>
 		<% end %>
