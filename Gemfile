@@ -35,6 +35,7 @@ group :development, :staging, :test do
   gem 'sqlite3'
 end
 
+gem 'geocoder'
 gem 'jquery-rails'
 
 gem "bootstrap-sass"
