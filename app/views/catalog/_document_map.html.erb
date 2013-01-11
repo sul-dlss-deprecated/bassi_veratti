@@ -1,0 +1,30 @@
+<%= render "gallery_toggle" %>
+
+<script language="JavaScript">
+	$(document).ready(function(){
+		var options = {
+			zoom: 5,
+			center: new google.maps.LatLng(41.9015141,12.4607737),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+		
+		<%- documents.each_with_index do |document, index| -%>
+				<%- document.coordinates.each_with_index do |coord,ix| 
+					if coord.size > 0 then
+						coords=coord.split(",")-%>
+						new google.maps.Marker({position: new google.maps.LatLng(<%=coords[0]%>,<%=coords[1]%>),map: map,title:'<%=document.location[ix]%>'});
+					<% end %>
+				<% end %>
+		<% end %>
+	});
+</script>
+
+<div id="documents" class="map">
+
+	<div id="result_map"></div>
+
+  <%- documents.each_with_index do |document, index| -%>
+		<%= document.location %>
+  <%- end -%>
+</div>

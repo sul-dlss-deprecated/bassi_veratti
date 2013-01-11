@@ -79,7 +79,7 @@ class CatalogController < ApplicationController
      :q => '{!raw f=id v=$id}' 
     }
     
-    config.document_index_view_types = ["default", "gallery", "brief"]
+    config.document_index_view_types = ["default", "gallery", "brief", "map"]
 
     # solr field configuration for search results/index views
     config.index.show_link = 'title_tsi'
