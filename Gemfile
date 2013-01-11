@@ -4,7 +4,7 @@ gem 'bundler', '>= 1.2.0'
 
 ruby "1.9.3"
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -35,6 +35,7 @@ group :development, :staging, :test do
   gem 'sqlite3'
 end
 
+gem 'geocoder'
 gem 'jquery-rails'
 
 gem "bootstrap-sass"

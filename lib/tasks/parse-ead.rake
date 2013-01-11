@@ -2,6 +2,7 @@ require 'rsolr'
 require 'ead_parser'
 require 'rest-client'
 require 'open-uri'
+require 'geocoder'
 
 namespace :bassi do
   desc "Parse EAD File"
@@ -178,6 +179,12 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   unittitle_parts = ead.unittitle_parts(content.identifier)
   dates = dates_from_unitdate(content.did)
 
+  coordinates=[]
+  unittitle_parts.geogname.each do |location_name|
+    results=Geocoder.search(location_name)
+    coordinates << "#{results.first.latitude},#{results.first.longitude}" if results.size > 0
+  end
+  
   purl=content.dao.try(:href)
   druid=druid_from_purl(purl)
   imageids=image_ids_from_purl(purl)
@@ -198,6 +205,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :description_tsim => description(content),
    :personal_name_ssim => unittitle_parts.persname,
    :geographic_name_ssim => unittitle_parts.geogname,
+   :coordinates_ssim => coordinates,
    :corporate_name_ssim => unittitle_parts.corpname,
    :family_name_ssim => unittitle_parts.famname,
    :unit_date_ssim => dates.try(:date),

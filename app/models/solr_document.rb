@@ -33,6 +33,10 @@ class SolrDocument
     multivalue_field('geographic_name_ssim')
   end
 
+  def coordinates
+    multivalue_field('coordinates_ssim')
+  end
+    
   def notes
     multivalue_field('description_tsim')
   end
