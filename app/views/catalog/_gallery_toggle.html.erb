@@ -1,5 +1,6 @@
 <div class='gallery_toggle'>
   <%= link_to(t('bassi.search.gallery_toggle.default'), catalog_index_path(params.merge(:view => 'default')), :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %> | 
   <%= link_to(t('bassi.search.gallery_toggle.text'), catalog_index_path(params.merge(:view => 'brief')), :class=>"#{'active' if params[:view] == 'brief'}") %> | 
-  <%= link_to(t('bassi.search.gallery_toggle.gallery'), catalog_index_path(params.merge(:view => 'gallery')), :class=>"#{'active' if params[:view] == 'gallery'}") %>
+  <%= link_to(t('bassi.search.gallery_toggle.gallery'), catalog_index_path(params.merge(:view => 'gallery')), :class=>"#{'active' if params[:view] == 'gallery'}") %> | 
+  <%= link_to(t('bassi.search.gallery_toggle.map'), catalog_index_path(params.merge(:view => 'map')), :class=>"#{'active' if params[:view] == 'map'}") %>
 </div>
