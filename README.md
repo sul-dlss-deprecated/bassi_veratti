@@ -32,12 +32,14 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         rake db:migrate
         rake db:migrate RAILS_ENV=test
+				rake db:seed
+				rake db:seed RAILS_ENV=test
 
 1. Start solr and load the fixtures: (you should first stop any other jetty processes if you have multiple jetty-related projects):
 
         rake jetty:start
         rake bassi:index_fixtures
-
+				rake bassi:parse-ead
 
 1. Start Rails:
 
@@ -65,6 +67,11 @@ This will stop development jetty, force you into the test environment, start jet
 delete all the records in the test solr core, index all fixtures in `spec/fixtures`, run `db:migrate` in test,
 then run the tests, and then restart development jetty
 
+## Collection Highlights
+
+The collection highlights shown on the home page are stored in MySQL.  The database entries are created in db/seeds.rb
+For each collection highlight, you need a name in English and Italian, a local placeholder image to show (placed in the assets/image folder), and a description (not shown).
+You also need a list of IDs that belong in the collection.
 
 ## Utils
 

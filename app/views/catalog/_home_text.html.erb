@@ -1,26 +1,18 @@
 <div id="content" class="span9">
 	<div class="row">
 	  <div class="span9">
-	    <h2>Collection Highlights<span class="highlights-link"><a href="#">More Highlights</a></span></h2>
+	    <h2><%=t('bassi.home.collection_hightlights')%></h2>
 	  </div>
 	</div>
 
   <div class="row featured-collections">
+		<% @highlights.each do |highlight| %>
     <div class="span3">
-      <%= image_tag('bv-sample.png', :class => 'highlight-poster-image') %>
-        <h3 class="collection-title">University Correspondence</h3>
-        <span>(14 items)</span>
+      	<%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),catalog_index_path(:q=>"#{highlight.query}"))  %>
+        <h3 class="collection-title"><%=highlight.send("name_#{I18n.locale}")%></h3>
+        <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
       </div>
-      <div class="span3">
-        <%= image_tag('bv-sample-2.png', :class => 'highlight-poster-image') %>
-        <h3 class="collection-title">Official Documents</h3>
-        <span>(22 items)</span>
-      </div>
-      <div class="span3">
-        <%= image_tag('bv-sample-3.png', :class => 'highlight-poster-image') %>
-        <h3 class="collection-title">Personal Letters</h3>
-        <span>(11 items)</span>
-    </div>
+		<% end %>
   </div>
 
 

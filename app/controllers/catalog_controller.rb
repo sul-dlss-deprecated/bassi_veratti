@@ -14,6 +14,11 @@ class CatalogController < ApplicationController
   def current_or_guest_user
     guest_user
   end
+
+  def index
+    @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
+    super
+  end
   
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
