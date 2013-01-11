@@ -214,3 +214,10 @@ span.content-type {
 @media (max-width: 767px) {
   .pagination {clear: both;}
 }
+
+#result_map {
+	height: 600px;
+	width: 600px;
+}
+
+#result_map img { max-width:none; }
