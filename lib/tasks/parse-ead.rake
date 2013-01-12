@@ -31,7 +31,13 @@ namespace :bassi do
         end
       end
     end
-    
+  end
+
+  desc "Generate tab-delimited list of item identifiers"
+  task :"generate-item-list" do
+
+    ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
+    documents = list_items ead
   end
   
 end
@@ -83,6 +89,22 @@ def all_items(ead)
         puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c03.dao.try(:href)} | #{print_types(c03)}"
         c03.c04s.each do |c04|
           puts "#{c01.level}:#{c01.identifier} -> #{c02.level}:#{c02.identifier} -> #{c03.level}:#{c03.identifier} -> #{c04.level}:#{c04.identifier} -> #{c04.dao.try(:href)} | #{print_types(c04)}"
+        end
+      end
+    end
+    puts "\n"
+  end
+end
+
+# tab-delimited version of all_items method
+def list_items(ead)
+  ead.reader.archdesc.dsc.c01s.each do |c01|
+    c01.c02s.each do |c02|
+      puts "#{c01.level}:#{c01.identifier} \t #{c02.level}:#{c02.identifier} \t #{c02.dao.try(:href)} \t #{print_types(c02)}"
+      c02.c03s.each do |c03|
+        puts "#{c01.level}:#{c01.identifier} \t #{c02.level}:#{c02.identifier} \t #{c03.level}:#{c03.identifier} \t #{c03.dao.try(:href)} \t #{print_types(c03)}"
+        c03.c04s.each do |c04|
+          puts "#{c01.level}:#{c01.identifier} \t #{c02.level}:#{c02.identifier} \t #{c03.level}:#{c03.identifier} \t #{c04.level}:#{c04.identifier} \t #{c04.dao.try(:href)} \t #{print_types(c04)}"
         end
       end
     end
