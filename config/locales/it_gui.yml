@@ -3,7 +3,7 @@ it:
     application_name: 'Inventario Laura Bassi'
   bassi:
     nav:
-      bassi_collection: 'Bassi-Veratti Collection'            
+      bassi_collection: 'Inventario Laura Bassi'
       about: 'About'
       home: 'Home'
       report_problem: 'Report a Problem'
@@ -83,19 +83,20 @@ it:
     search:
       search_results: 'Results'
       gallery_toggle:
-        default: 'Results'
+        default: 'Risultati'
         gallery: 'Gallery'
         text: 'Text only'
         map: 'Map'
       search_label: 'Ricerca'
       facets:
-        title: 'Browse'
+        title: 'Limitare la ricerca'
     sidebar:
       actions:
         title: 'Actions'
         view_in_inventory: 'View in Content Inventory'
         print: 'Print Item Details'
         cite: 'Cite this Item'
+        bookmark: 'Segnalibro'
       navigation:
         title: 'Navigation'
         all_collections: 'All Collections'

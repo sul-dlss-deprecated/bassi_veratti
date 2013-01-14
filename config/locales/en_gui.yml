@@ -96,6 +96,7 @@ en:
         view_in_inventory: 'View in Content Inventory'
         print: 'Print Item Details'
         cite: 'Cite this Item'
+        bookmark: 'Bookmark'
       navigation:
         title: 'Navigation'
         all_collections: 'All Collections'

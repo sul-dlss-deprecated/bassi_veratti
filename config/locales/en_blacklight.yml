@@ -1,25 +1,25 @@
 en:
+  active_record:
+    models:
+      feedback: 'Feedback'
+    attributes:
+      feedback:
+        name: 'Your Name'
+        email: 'Your Email'
+        message: 'Your Message'
+  views:
+    pagination:
+      first: '&laquo; First'
+      last: 'Last &raquo;'
+      previous: '&laquo; Previous'
+      next: 'Next &raquo;'
+      truncate: '…'
+
+    pagination_compact:
+      previous: '&laquo; Previous'
+      next: 'Next &raquo;'
+
   blacklight:
-    active_record:
-      models:
-        feedback: 'Feedback'
-      attributes:
-        feedback:
-          name: 'Your Name'
-          email: 'Your Email'
-          message: 'Your Message'
-    views:
-      pagination:
-        first: '&laquo; First'
-        last: 'Last &raquo;'
-        previous: '&laquo; Previous'
-        next: 'Next &raquo;'
-        truncate: '…'
-
-      pagination_compact:
-        previous: '&laquo; Previous'
-        next: 'Next &raquo;'
-
     header_links:
       login: 'Login'
       logout: 'Log Out'

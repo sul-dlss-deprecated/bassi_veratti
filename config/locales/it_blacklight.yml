@@ -1,4 +1,24 @@
 it:
+  active_record:
+    models:
+      feedback: 'Feedback'
+    attributes:
+      feedback:
+        name: 'Nome'
+        email: 'Indirizzo email' 
+        message: 'Messaggio' 
+  views:
+    pagination:
+      first: '&laquo; Primo' 
+      last: 'Ultimo &raquo;' 
+      previous: '&laquo; Precedente' 
+      next: 'Prossimo &raquo;' 
+      truncate: '…'
+      
+    pagination_compact:
+      previous: '&laquo; Precedente'
+      next: 'Prossimo &raquo;'
+
   blacklight:
     active_record:
       models:
@@ -19,7 +39,7 @@ it:
     header_links:
       login: 'Effettuare il login' 
       logout: 'Effettuare il logout'
-      bookmarks: 'segnalibri' 
+      bookmarks: 'Segnalibri'
       saved_searches: 'Ricerche salvate' 
       selected_items: 'Dati selezionati' 
       search_history: 'Cronologia di ricerca' 
@@ -52,7 +72,7 @@ it:
         failure: "Spiacente, c'è stato un problema durante la cancellazione dei signalibri"
       need_login: "Effetua il login per gestire e visualizzare i segnalibri."
       list_title: 'Segnalibri'
-      delete: 'Rimuovi' 
+      delete: 'Rimuovi'
 
       feedback:
       valid_name: 'È richiesto un nome valido'
@@ -161,14 +181,15 @@ it:
 
     search:
       title: '%{application_name} Risultati di ricerca'
-      search_results_header: 'Ricerca'
+      search_results_header: 'Risultati di Ricerca'
       search_results: 'Risultati di ricerca'
       errors:
         request_error: 'Spiacente, la ricerca richiesta non è stata capita'
         invalid_solr_id: 'Spiacente, il record richiesto non esiste'
       per_page:
-        label: 'Indicare %{select} per pagina'
+        label: '%{count}<span class="hide-text"> per pagina</span>'
         title: 'Numero dei risultati da indicare per pagina'
+        button_label: '%{count} per pagina'
         submit: 'Aggiornare'
       sort:
         label: 'Ordina per %{select}'
