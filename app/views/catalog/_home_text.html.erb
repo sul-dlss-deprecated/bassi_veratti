@@ -29,4 +29,30 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="span9 overview">
+      <h3 class="section-heading">Overview By
+        <div class="overview tabbable tabs-below">
+          <ul class="nav nav-pills">
+            <li><%= link_to "Document Type", '#tab1', "data-toggle" => "pill" %></li>
+            <li><%= link_to "Location", '#tab2', "data-toggle" => "pill" %></li>
+          </ul>
+        </h3>
+
+          <div class="overview-area tab-content">
+
+            <div class="tab-pane fade" id="tab1">
+              -- DOCUMENT TYPE VIZ GOES HERE --
+            </div>
+
+            <div class="tab-pane fade" id="tab2">
+              -- LOCATION VIZ GOES HERE --
+              <%#= render :partial => 'overview_map' %>
+            </div>
+
+          </div><!-- end overview-area -->
+        </div><!-- end tabbable -->
+    </div>
+  </div>
+
 </div>
