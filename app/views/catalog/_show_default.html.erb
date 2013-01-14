@@ -42,7 +42,10 @@
           <dt><%=t('bassi.show.corporations')%>:</dt><dd><%=show_formatted_list(@document.corporations,:facet=>'corporate_name_ssim')%></dd>
         <% end %>
         <% unless list_is_empty?(@document.location) %>
-          <dt><%=t('bassi.show.location')%>:</dt><dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%></dd>
+          <dt><%=t('bassi.show.locations')%>:</dt>
+						<dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%> 
+							<% unless list_is_empty?(@document.coordinates) %><a href="#location-map" data-toggle="modal" id="show-map-link" class="hidden"><i class="icon-globe"></i><%=t('bassi.show.show_map')%></a><% end %>
+						</dd>
         <% end %>
         <% unless list_is_empty?(@document.notes) %>
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
@@ -74,4 +77,38 @@
 		</ul>
   </div>
 </div>
+<% end %>
+
+<% unless list_is_empty?(@document.coordinates) %>
+	<script>
+	$(document).ready(function(){
+  	$('#location-map').modal({keyboard: true, backdrop: 'static', show: false});
+		$('#show-map-link').removeClass('hidden');
+		var options = {
+			zoom: 6,
+			center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+		<%- @document.coordinates.each do |coordinate| %>			  
+			new google.maps.Marker({position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),map: map,title:"<%=coordinate[:name]%>"});
+		<% end %>
+
+	});
+
+	</script>
+
+	<div class="modal fade" id="location-map">
+	  <div class="modal-header">
+	    <h3><%=t('bassi.show.map')%></h3>
+	  </div>
+	  <div class="modal-body">
+			
+				<div id="result_map"></div>
+
+	  </div>
+	  <div class="modal-footer">
+	    <button class="tod-agree btn btn-primary" data-dismiss="modal"><%=t('bassi.nav.close')%></button>
+	  </div>
+	</div>
 <% end %>

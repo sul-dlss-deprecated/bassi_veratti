@@ -31,11 +31,15 @@
     &#187; <li><%= t('bassi.nav.content_inventory') %></li>
  <% end %>
 
+ <% if on_collection_highlights_page %>
+    &#187; <li><%=t('bassi.home.collection_highlights')%></li>
+ <% end %>
+
  <% if on_show_page %>
     &#187; <%= render :partial => "shared/ancestor_breadcrumb", :locals => {:document => @document} %>
  <% end %>
 
-	<% if on_collections_pages || on_show_page%>
+	<% if (on_collections_pages || on_show_page) && !on_collection_highlights_page%>
 		&#187; <li><%= raw truncate(@page_title) %></li>
 	<% end %>
 </ul>

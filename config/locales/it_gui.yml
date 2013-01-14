@@ -52,6 +52,8 @@ it:
       more: 'more'
       less: 'less'        
       date: 'Date'
+      map: 'Map'
+      show_map: 'Show on Map'
       description: 'Physical Description'
       people: 'People'
       families: 'Families'

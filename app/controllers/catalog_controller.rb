@@ -15,6 +15,10 @@ class CatalogController < ApplicationController
     guest_user
   end
 
+  def highlights
+    @highlights=CollectionHighlight.find(:all,:order=>:sort_order)
+  end
+  
   def index
     @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
     super

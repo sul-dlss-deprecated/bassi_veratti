@@ -33,8 +33,15 @@ class SolrDocument
     multivalue_field('geographic_name_ssim')
   end
 
+  # grab the indexed coordinates, which include location name, latitude, and longitude, delimited by a pipe, and return an array of hashes, which makes them easier to work with
   def coordinates
-    multivalue_field('coordinates_ssim')
+    raw_coords=multivalue_field('coordinates_ssim')
+    coords = []
+    raw_coords.each do |raw_coord|
+       split_coord=raw_coord.split('|')
+       coords << {:name=>split_coord[0],:lat=>split_coord[1],:lon=>split_coord[2]}
+    end  
+    return coords  
   end
     
   def notes

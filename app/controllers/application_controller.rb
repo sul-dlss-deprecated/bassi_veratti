@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   rescue_from Exception, :with=>:exception_on_website
   layout "bassi"
   
-  helper_method :show_terms_dialog?, :on_home_page, :on_collections_pages, :on_background_page, :on_about_pages, :on_inventory_pages, :on_show_page
+  helper_method :show_terms_dialog?, :on_home_page, :on_collection_highlights_page, :on_collections_pages, :on_background_page, :on_about_pages, :on_inventory_pages, :on_show_page
   
   before_filter :set_locale
 
@@ -59,6 +59,10 @@ class ApplicationController < ActionController::Base
     request_path[:controller] == 'catalog' && !on_home_page
   end
 
+  def on_collection_highlights_page
+    request_path[:controller] == 'catalog' && request_path[:action] == 'highlights'
+  end
+  
   def on_show_page
     request_path[:controller] == 'catalog' && request_path[:action] == 'show'
   end

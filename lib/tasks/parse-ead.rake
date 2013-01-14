@@ -204,7 +204,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   coordinates=[]
   unittitle_parts.geogname.each do |location_name|
     results=Geocoder.search(location_name)
-    coordinates << "#{results.first.latitude},#{results.first.longitude}" if results.size > 0
+    coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
   end
   
   purl=content.dao.try(:href)
