@@ -87,7 +87,7 @@ it:
         gallery: 'Gallery'
         text: 'Text only'
         map: 'Map'
-      search_label: 'Search'
+      search_label: 'Ricerca'
       facets:
         title: 'Browse'
     sidebar:
