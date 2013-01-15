@@ -37,8 +37,18 @@
   font-size: 13px;
   .nav-pills {
     margin-bottom: 0;
-    .active > a {
+    li > a {
+      background-color: $header_bg_color;
+      border: 1px solid darken($header_bg_color, 5%);
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    li > a:hover {
+      background-color: darken($header_bg_color, 5%);
+    }
+    .active > a, .active > a:hover {
       background-color: darken($header_bg_color, 10%);
+      border: 1px solid darken($header_bg_color, 10%);
       color: $active_link_color;
     }
   }
