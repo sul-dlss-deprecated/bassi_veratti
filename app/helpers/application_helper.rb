@@ -36,5 +36,13 @@ module ApplicationHelper
       return true
     end
   end
+  
+  def link_to_collection_highlight(highlight)
+    link_to("#{highlight.send("name_#{I18n.locale}")}", catalog_index_path(params_for_collection_highlight(highlight)))
+  end
+  
+  def params_for_collection_highlight(highlight)
+    {:f => {blacklight_config.collection_highlight_field.to_sym => ["highlight_#{highlight.id}"]}}
+  end
 
 end

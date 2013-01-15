@@ -5,6 +5,14 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
   
+  def self.collection_highlights
+    opts = {}
+    CollectionHighlight.find(:all,:order=>:sort_order).each do |highlight|
+      opts[:"highlight_#{highlight.id}"] = {:label => highlight.send("name_#{I18n.locale}"), :fq => "id:(#{highlight.query.gsub('or', 'OR')})"}
+    end
+    opts
+  end
+    
   def current_user; nil; end
   
   def guest_user
@@ -16,11 +24,11 @@ class CatalogController < ApplicationController
   end
 
   def highlights
-    @highlights=CollectionHighlight.find(:all,:order=>:sort_order)
+    @highlights=CollectionHighlight.order("sort_order")
   end
   
   def index
-    @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
+    @highlights=CollectionHighlight.order("sort_order").limit(3)
     super
   end
   
@@ -37,6 +45,8 @@ class CatalogController < ApplicationController
     
     
     # various Bassi Veratti specific collection field configurations
+    config.collection_highlight_field = "highlight_ssim"
+    
     
     # needs to be stored so we can retreive it
     # needs to be in field list for all request handlers so we can identify collections in the search results.
@@ -124,6 +134,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'corporate_name_ssim', :label => "Corporate Name", :limit => 10
     config.add_facet_field 'family_name_ssim', :label => "Family Name"
 
+    config.add_facet_field 'highlight_ssim', :label => "Collection Highlights", :show => false,  :query => collection_highlights
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
     #    :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
@@ -230,4 +241,6 @@ class CatalogController < ApplicationController
     u.save
     u
   end
+  
+  
 end 
