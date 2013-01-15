@@ -1,11 +1,18 @@
+<div id="sidebar" class="span3">
+  <%= render "search_form" %>
+  <%#= render :partial=>'facets' %>
+</div>
+
 <div id="content" class="span9">
   <h2><%=t('bassi.home.collection_highlights')%></h2>
 
-	<% @highlights.each do |highlight| %>
-		<%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),catalog_index_path(:q=>"#{highlight.query}"))  %>
-    <h3 class="collection-title"><%= link_to(highlight.send("name_#{I18n.locale}"),catalog_index_path(:q=>"#{highlight.query}"))  %></h3>
-    <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
-  	<br />
-	<% end %>
-	
+  <ul class="image-grid">
+    <% @highlights.each do |highlight| %>
+      <li class="image-item">
+        <%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),catalog_index_path(params_for_collection_highlight(highlight)))  %>
+        <h3 class="collection-title"><%= link_to_collection_highlight(highlight) %></h3>
+        <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
+      </li>
+    <% end %>
+  </ul>
 </div>
