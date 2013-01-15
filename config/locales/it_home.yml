@@ -1,6 +1,9 @@
 it:
   bassi:
     home:
+      location: Location
+      document_type: Document Type      
+      overview_by: Overview By      
       collection_highlights: Collection Highlights
       more_highlights: More Highlights
       about_text_html: |

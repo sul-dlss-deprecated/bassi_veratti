@@ -20,15 +20,29 @@ class CatalogController < ApplicationController
   end
   
   def index
-    @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
     
-    # get all documents, iterate over those with coordinates, and build the content needed to show on the map
-    # @all_docs=Blacklight.solr.get 'select',:params=>{:q=>'*:*'}
-    # @all_docs['response']['docs'].each do |document|
-    #   
-    # end
-    @all_docs=get_search_results(:q=>'*:*')
-
+    if on_home_page
+      @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
+    
+      # get all documents, iterate over those with coordinates, and build the content needed to show on the map
+      # this is all fragment cached, so its only done once
+      unless fragment_exist?(:controller=>'catalog',:action=>'index',:action_suffix => 'map')
+        @document_locations={}
+        location_facets=Blacklight.solr.get 'select',:params=>{:q=>'*:*',:rows=>0,:facet=>true,:'facet.field'=>'geographic_name_ssim'}
+        location_names=location_facets['facet_counts']['facet_fields']['geographic_name_ssim']
+        location_names.each_with_index do |location_name,index|
+          if index % 2 == 0
+            puts "*** looking up #{location_name} with #{location_names[index+1]} numbers"
+            results=Geocoder.search(location_name)
+            sleep 0.1  # don't overload the geolookup API
+            if results.size > 0 
+              @document_locations.merge!(location_name=>{:lat=>results.first.latitude,:lon=>results.first.longitude,:count=>location_names[index+1]}) 
+            end
+          end
+        end
+      end
+    end
+    
     super
   end
   
