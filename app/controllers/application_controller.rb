@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
   
   def on_home_page
-    request.path == '/' && params[:f].blank?
+    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && params[:f].blank?
   end
   
   def on_collections_pages
