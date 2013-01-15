@@ -21,6 +21,14 @@ class CatalogController < ApplicationController
   
   def index
     @highlights=CollectionHighlight.find(:all,:order=>:sort_order,:limit=>3)
+    
+    # get all documents, iterate over those with coordinates, and build the content needed to show on the map
+    # @all_docs=Blacklight.solr.get 'select',:params=>{:q=>'*:*'}
+    # @all_docs['response']['docs'].each do |document|
+    #   
+    # end
+    @all_docs=get_search_results(:q=>'*:*')
+
     super
   end
   

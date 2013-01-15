@@ -1,0 +1,16 @@
+<script language="JavaScript">
+	$(document).ready(function(){
+		var options = {
+			zoom: 5,
+			center: new google.maps.LatLng(42.915141,11.107737),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+	});
+</script>
+
+<div id="documents" class="map">
+
+	<div id="result_map"></div>
+
+</div>
