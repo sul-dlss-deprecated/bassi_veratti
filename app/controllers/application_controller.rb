@@ -60,7 +60,7 @@ class ApplicationController < ActionController::Base
   end
 
   def on_collection_highlights_page
-    request_path[:controller] == 'catalog' && request_path[:action] == 'highlights'
+    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && !params[:highlights].blank?
   end
   
   def on_show_page

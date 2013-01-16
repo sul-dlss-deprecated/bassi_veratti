@@ -2,6 +2,14 @@ en:
   blacklight:
     application_name: 'Bassi-Veratti Collection'
   bassi:
+    facet:
+      personal_name: 'Personal Name'
+      location: 'Location'
+      corporate_name: 'Corporate Name'
+      family_name: 'Family Name'
+      start_year: 'Start Year'
+      end_year: 'End Year'
+      all_fields: 'All Fields'
     nav:
       bassi_collection: 'Bassi-Veratti Collection'      
       about: 'About'
@@ -61,6 +69,7 @@ en:
       show_map: 'Show on Map'
       description: 'Physical Description'
       people: 'People'
+      level: 'Level'
       families: 'Families'
       locations: 'Locations'
       corporations: 'Corporations'

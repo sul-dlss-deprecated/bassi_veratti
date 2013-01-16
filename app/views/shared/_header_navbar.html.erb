@@ -40,7 +40,7 @@
                 <%= link_to t('bassi.nav.home').upcase, root_path %>
               </li>
               <li class="<%="active" if on_collection_highlights_page%>">
-                <%= link_to t('bassi.nav.collections').upcase, collection_highlights_path%>
+                <%= link_to t('bassi.nav.collections').upcase, root_path(:highlights=>true)%>
               </li>
               <li class="<%="active" if on_background_page%>">
                 <%= link_to t('bassi.nav.background').upcase, background_path%>

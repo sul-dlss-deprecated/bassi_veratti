@@ -9,8 +9,6 @@ BassiVeratti::Application.routes.draw do
     match 'logout',  :to => 'catalog#index', :as => 'destroy_user_session'
     match 'account', :to => 'catalog#index', :as => 'edit_user_registration'
   
-    match 'collections', :to => 'catalog#highlights', :as => 'collection_highlights'
-
     # Handles all About pages.
     match 'about', :to => 'about#show', :as => 'about_project', :defaults => {:id=>'project'} # no page specified, go to project page
     match 'about/contact', :to=> 'about#contact' # specific contact us about page

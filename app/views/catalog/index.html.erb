@@ -8,7 +8,11 @@
 
     <% unless has_search_parameters? %>
 	    <%# if there are no input/search related params, display the "home" partial -%>
-	    <%= render 'home' %>
+	    <% if on_collection_highlights_page %>
+				<%= render 'highlights' %>
+			<% else %>
+				<%= render 'home' %>
+			<% end %>
     <% else %>
 
       <% @page_title = t('bassi.search.search_label') %>
