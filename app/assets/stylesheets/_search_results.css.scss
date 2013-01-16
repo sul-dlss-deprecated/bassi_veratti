@@ -1,13 +1,14 @@
 /* Map View */
-#documents.map {
-  
-}
+#documents.map {}
 
 /* Gallery View */
+.row.view-toggle {
+
+}
 .gallery_toggle {
-  border-top: 2px dotted darken($container_bg_color, 10%);
+  float: right;
   font-size: 12px;
-  margin-top: 30px;
+  margin-bottom: 10px;
   padding-top: 10px;
 	text-align: right;
 	.active {
@@ -17,7 +18,32 @@
 			text-decoration: none;
 		}
 	}
+	.nav-pills {
+    margin-bottom: 0;
+    li > a {
+      background-color: $header_bg_color;
+      border: 1px solid darken($header_bg_color, 5%);
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    li > a:hover {
+      background-color: darken($header_bg_color, 5%);
+    }
+    li > a.active, a.active:hover {
+      background-color: darken($header_bg_color, 10%);
+      border: 1px solid darken($header_bg_color, 10%);
+      color: $active_link_color;
+    }
+  }
 }
+
+#documents {
+  border-top: 2px dotted darken($container_bg_color, 10%);
+  margin-top: 0;
+  padding-top: 15px;
+}
+
+/* Gallery View */
 #documents.gallery {
   ul.image-grid {list-style-type: none;}
   ul.image-grid li.image-item {
@@ -86,6 +112,7 @@ ul.inventory-ancestry {
 #search-results-metadata {
   &.well {
     background-color: $header_bg_color;
+    margin-bottom: 15px;
     padding: 12px 10px 6px;
     #sortAndPerPage {
       background-color: $header_bg_color;

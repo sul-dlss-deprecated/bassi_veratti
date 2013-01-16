@@ -1,7 +1,13 @@
-<div class='gallery_toggle'>
-  <%= link_to(t('bassi.search.gallery_toggle.default'), catalog_index_path(params.merge(:view => 'default')), :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %> | 
-  <%= link_to(t('bassi.search.gallery_toggle.text'), catalog_index_path(params.merge(:view => 'brief')), :class=>"#{'active' if params[:view] == 'brief'}") %> | 
-  <%= link_to(t('bassi.search.gallery_toggle.gallery'), catalog_index_path(params.merge(:view => 'gallery')), :class=>"#{'active' if params[:view] == 'gallery'}") %>
-	<!-- MAP VIEW CURRENTLY DISABLED IN SEARCH RESULTS -->
-  <%#= link_to(t('bassi.search.gallery_toggle.map'), catalog_index_path(params.merge(:view => 'map')), :class=>"#{'active' if params[:view] == 'map'}") %>
+<div class="row view-toggle">
+  <div class="span9">
+    <div class='gallery_toggle tabbable tabs-below'>
+      <ul class="nav nav-pills">
+        <li><%= link_to(t('bassi.search.gallery_toggle.default'), catalog_index_path(params.merge(:view => 'default')), :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %></li>
+        <li><%= link_to(t('bassi.search.gallery_toggle.text'), catalog_index_path(params.merge(:view => 'brief')), :class=>"#{'active' if params[:view] == 'brief'}") %></li>
+        <li><%= link_to(t('bassi.search.gallery_toggle.gallery'), catalog_index_path(params.merge(:view => 'gallery')), :class=>"#{'active' if params[:view] == 'gallery'}") %></li>
+        <!-- MAP VIEW CURRENTLY DISABLED IN SEARCH RESULTS -->
+        <%#= link_to(t('bassi.search.gallery_toggle.map'), catalog_index_path(params.merge(:view => 'map')), :class=>"#{'active' if params[:view] == 'map'}") %>
+      </ul>
+    </div>
+  </div>
 </div>
