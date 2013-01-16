@@ -3,7 +3,7 @@ en:
     home:
       location: Location
       document_type: Document Type
-      overview_by: Overview By
+      overview_by: Collection Overview
       collection_highlights: Collection Highlights
       more_highlights: More Highlights
       about_text_html: |

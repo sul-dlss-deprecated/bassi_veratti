@@ -58,5 +58,12 @@
   border: 2px solid darken($header_bg_color, 8%);
   clear: both;
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
 }
+
+#result_map {
+	height: 375px;
+	width: 100%;
+}
+
+#result_map img { max-width:none; }
