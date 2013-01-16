@@ -63,9 +63,22 @@
       <str name="qf">
         id
         title_tsi
+        extent_ssim
+        description_tsim
+        personal_name_ssim
+        geographic_name_ssim
+        corporate_name_ssim
+        family_name_ssim
+        unit_date_ssim
       </str>
       <str name="pf">
-        title_tsi^20
+        title_tsi^50
+        description_tsim^40
+        personal_name_ssim^30
+        geographic_name_ssim^30
+        corporate_name_ssim^30
+        family_name_ssim^30
+        unit_date_ssim^20
       </str>
     </lst>
   </requestHandler>
