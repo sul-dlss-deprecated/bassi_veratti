@@ -23,6 +23,8 @@
     li > a {
       background-color: $header_bg_color;
       border: 1px solid darken($header_bg_color, 5%);
+      font-weight: 600;
+      margin-left: 6px;
       padding-top: 4px;
       padding-bottom: 4px;
     }
