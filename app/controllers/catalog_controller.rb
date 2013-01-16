@@ -36,7 +36,7 @@ class CatalogController < ApplicationController
         location_names=location_facets['facet_counts']['facet_fields']['geographic_name_ssim']
         location_names.each_with_index do |location_name,index|
           if index % 2 == 0
-            puts "*** looking up #{location_name} with #{location_names[index+1]} numbers"
+            #puts "*** looking up #{location_name} with #{location_names[index+1]} numbers"
             results=Geocoder.search(location_name)
             sleep 0.1  # don't overload the geolookup API
             if results.size > 0 

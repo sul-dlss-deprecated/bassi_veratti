@@ -205,7 +205,6 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   coordinates=[]
   unittitle_parts.geogname.each do |location_name|
     results=Geocoder.search(location_name,:cache =>cached_lookup)
-    puts "*** looking up #{location_name}"
     sleep 0.1 # don't overload the geolookup API
     coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
   end

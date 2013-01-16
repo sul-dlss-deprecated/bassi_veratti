@@ -46,21 +46,21 @@ class ApplicationController < ActionController::Base
       redirect_to params[:return_to]
     end
   end
-
+  
   def request_path
     Rails.application.routes.recognize_path(request.path)
   end
   
   def on_home_page
-    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && params[:f].blank?
+    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && params[:f].blank? && !on_collection_highlights_page
   end
   
   def on_collections_pages
-    request_path[:controller] == 'catalog' && !on_home_page
+    request_path[:controller] == 'catalog' && !on_home_page && !on_collection_highlights_page
   end
 
   def on_collection_highlights_page
-    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && !params[:highlights].blank?
+    request_path[:controller] == 'catalog' && request_path[:action] == 'index' && %w{/collections /en/collections /it/collections}.include?(request.path)
   end
   
   def on_show_page

@@ -7,8 +7,8 @@
 <div id="content" class="span9">   
 
     <% unless has_search_parameters? %>
-	    <%# if there are no input/search related params, display the "home" partial -%>
-	    <% if on_collection_highlights_page %>
+	    <%# if there are no input/search related params, display the "home" or collection highlight partial -%>
+			<% if on_collection_highlights_page %>
 				<%= render 'highlights' %>
 			<% else %>
 				<%= render 'home' %>
