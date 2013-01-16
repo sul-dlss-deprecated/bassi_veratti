@@ -150,7 +150,7 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'level_ssim', :label => 'Level'
+    #config.add_facet_field 'level_ssim', :label => 'Level'
     config.add_facet_field 'personal_name_ssim', :label => "Personal Name", :limit => 10
     config.add_facet_field 'geographic_name_ssim', :label => "Location", :limit => 10
     config.add_facet_field 'corporate_name_ssim', :label => "Corporate Name", :limit => 10
