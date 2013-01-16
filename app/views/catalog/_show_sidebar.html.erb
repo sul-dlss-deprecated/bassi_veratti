@@ -1,14 +1,14 @@
 <div id="sidebar-nav">
 	<%= render :partial => 'show_actions' %>
-	<%= render :partial => 'bookmarks_history' %>
-  <%= render :partial => 'show_tools' %>
+
+	<%- # Deferring bookmark feature for now -%>
+	<%#= render :partial => 'bookmarks_history' -%>
+
+  <%-
+   # Only using a couple of the default Blacklight features that
+   # reside in the show_tools partial, and we don't want to use
+   # the Tools header, so we've just extracted the tools features
+   # we want and include them in the show_actions partial.
+  %>
+  <%#= render :partial => 'show_tools' %>
 </div>
-  
-<% unless @document.more_like_this.empty? %>
-<div id="sidebar-mlt">
-  <ul class="nav nav-list">
-  <li class="nav-header">More Like This</li>
-    <%= render :collection => @document.more_like_this, :partial => 'show_more_like_this', :as => :document %>
-  </ul>
-</div>
-<% end %>
