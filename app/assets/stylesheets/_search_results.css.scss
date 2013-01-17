@@ -1,44 +1,6 @@
 /* Map View */
 #documents.map {}
 
-/* Gallery View */
-.row.view-toggle {
-
-}
-.gallery_toggle {
-  float: right;
-  font-size: 12px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-	text-align: right;
-	.active {
-		color: black;
-		cursor: default;
-		&:hover{
-			text-decoration: none;
-		}
-	}
-	.nav-pills {
-    margin-bottom: 0;
-    li > a {
-      background-color: $header_bg_color;
-      border: 1px solid darken($header_bg_color, 5%);
-      font-weight: 600;
-      margin-left: 6px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-    }
-    li > a:hover {
-      background-color: darken($header_bg_color, 5%);
-    }
-    li > a.active, a.active:hover {
-      background-color: darken($header_bg_color, 10%);
-      border: 1px solid darken($header_bg_color, 10%);
-      color: $active_link_color;
-    }
-  }
-}
-
 #documents {
   border-top: 2px dotted darken($container_bg_color, 10%);
   margin-top: 0;
@@ -112,53 +74,88 @@ ul.inventory-ancestry {
 }
 
 /* Results paging/controls */
-#search-results-metadata {
-  &.well {
-    background-color: $header_bg_color;
-    margin-bottom: 15px;
-    padding: 12px 10px 6px;
-    #sortAndPerPage {
+.row.view-toggle {
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.gallery_toggle {
+  font-size: 12px;
+  float: right;
+	.active {
+		color: black;
+		cursor: default;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	.nav-pills {
+    margin-bottom: 0;
+    li > a {
       background-color: $header_bg_color;
-      border: none;
-      box-shadow: none;
-      margin-bottom: 0;
-      padding: 0;
+      border: 1px solid darken($header_bg_color, 5%);
+      font-weight: 600;
+      margin-left: 6px;
+      padding-top: 4px;
+      padding-bottom: 4px;
     }
-    .well-constraints, #sortAndPerPage {font-size: 0.85em;}
-    .well-constraints {
-      clear: right;
-      margin: 20px 8px 0 0;
-      .appliedFilter {
-        padding: 1px 50px 1px 1em;
-        .btnRemove {
-          /* override the BL icon used as separator */
-          background: asset_url('remove.png', image) no-repeat center center;
-          background-size: 8px 8px;
-        }
-        .queryName,.filterName {
-          /* override the BL icon used as separator */
-          background: none;
-          padding-right: 0;
-          &:after {
-            content: ">";   /* Facet > Value separator */
-            padding-left: 6px;
-          }
-        }
+    li > a:hover {
+      background-color: darken($header_bg_color, 5%);
+    }
+    li > a.active, a.active:hover {
+      background-color: darken($header_bg_color, 10%);
+      border: 1px solid darken($header_bg_color, 10%);
+      color: $active_link_color;
+    }
+  }
+}
+
+.prev-next {
+  margin-top: 5px;
+}
+#sort-drowpdown, #per_page-dropdown {
+  margin-top: 3px;
+  z-index: 9999;
+}
+.css-dropdown li {
+  font-size: 12px;
+  padding: 2px 10px;
+  > a {padding: 2px;}
+}
+span.constraints-label {margin-right: 0.5em;}
+
+#sortAndPerPage {
+  background-color: $body_bg_color;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+.constraints, #sortAndPerPage {font-size: 0.85em;}
+.constraints {
+  clear: right;
+  margin: 0 8px 0 0;
+  .appliedFilter {
+    padding: 1px 50px 1px 1em;
+    .btnRemove {
+      /* override the BL icon used as separator */
+      background: asset_url('remove.png', image) no-repeat center center;
+      background-size: 8px 8px;
+    }
+    .queryName,.filterName {
+      /* override the BL icon used as separator */
+      background: none;
+      padding-right: 0;
+      &:after {
+        content: ">";   /* Facet > Value separator */
+        padding-left: 6px;
       }
     }
-    .css-dropdown li {
-      font-size: 12px;
-      padding: 2px 10px;
-      > a {padding: 2px;}
-    }
-    #sort-drowpdown, #per_page-dropdown {z-index: 9999;}
-    span.constraints-label {margin-right: 0.5em;}
   }
 }
 
 /* Search Form */
 #sidebar .search_form {
-	margin-bottom: 15px;
+	margin-bottom: 55px;
 	input.hide {
 		position:absolute;
 		left: -1000px;

@@ -1,5 +1,14 @@
 <div class="row view-toggle">
-  <div class="span9">
+
+  <div class="span3 prev-next">
+    <% if paginate_params(@response).num_pages > 1 %>
+    <%= paginate_rsolr_response @response, :theme => :blacklight_compact %>
+    <% else %>
+    <%= render_pagination_info(@response) %>
+    <% end %>
+  </div>
+
+  <div class="span4">
     <div class='gallery_toggle tabbable tabs-below'>
       <ul class="nav nav-pills">
         <li><%= link_to(t('bassi.search.gallery_toggle.default'), catalog_index_path(params.merge(:view => 'default')), :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %></li>
@@ -10,4 +19,9 @@
       </ul>
     </div>
   </div>
+
+  <div class="span2">
+    <%= render 'sort_and_per_page' %>
+  </div>
+
 </div>
