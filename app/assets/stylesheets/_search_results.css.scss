@@ -12,11 +12,11 @@
 #documents.gallery {
   ul.image-grid {list-style-type: none;}
   ul.image-grid li.image-item {
-    clear: none;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-right: 20px;
-    max-width: 140px;
+    min-height: 360px;
+    width: 205px;
   }
   ul.inventory-ancestry {margin-top: 5px;}
   .documentHeader {

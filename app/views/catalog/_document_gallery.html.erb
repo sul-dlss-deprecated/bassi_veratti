@@ -22,7 +22,7 @@
         <div class="documentHeader clearfix">
           <h5 class="index_title">
             <%#= link_to_document document, :label=> document_show_link_field %>
-            <%= link_to(truncate(document.title, :length => 38),
+            <%= link_to(truncate(document.title, :length => 55),
                   catalog_path(document[:id])) %>
           </h5>
           <% # bookmark functions for items/docs -%>
