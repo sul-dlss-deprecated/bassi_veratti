@@ -177,6 +177,8 @@ span.content-type {
 
 .hidden {display: none;}
 
+.search_form .btn {float: right;}
+
 // Override Blacklight theme pagination styling
 .pagination {
   border-top: 1px solid #dddddd;
@@ -215,4 +217,5 @@ span.content-type {
 }
 @media (max-width: 767px) {
   .pagination {clear: both;}
+  .search_form .btn {float: left;}
 }
