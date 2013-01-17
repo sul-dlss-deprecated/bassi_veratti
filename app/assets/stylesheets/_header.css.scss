@@ -71,7 +71,10 @@
     }
     &.navbar {
       .site-header-content {text-align: center;}
-      h1 {float: none;}
+      h1 {
+        font-size: 2.5em;
+        float: none;
+      }
       .language-toggle {text-align: center;}
       .nav > li:last-child > a {padding-right: 25px}
     }
