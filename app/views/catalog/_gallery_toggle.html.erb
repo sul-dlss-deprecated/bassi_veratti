@@ -1,4 +1,4 @@
-<div class="row view-toggle">
+<div class="row results-controls">
 
   <div class="span3 prev-next">
     <% if paginate_params(@response).num_pages > 1 %>
@@ -8,7 +8,7 @@
     <% end %>
   </div>
 
-  <div class="span4">
+  <div class="span4 view-toggle">
     <div class='gallery_toggle tabbable tabs-below'>
       <ul class="nav nav-pills">
         <li><%= link_to(t('bassi.search.gallery_toggle.default'), catalog_index_path(params.merge(:view => 'default')), :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %></li>
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="span2">
+  <div class="span2 page-pulldown">
     <%= render 'sort_and_per_page' %>
   </div>
 

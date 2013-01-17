@@ -74,7 +74,7 @@ ul.inventory-ancestry {
 }
 
 /* Results paging/controls */
-.row.view-toggle {
+.row.results-controls {
   margin-bottom: 5px;
   margin-top: 20px;
 }
@@ -173,6 +173,14 @@ span.constraints-label {margin-right: 0.5em;}
   .blacklight-catalog-index #documents.default {
     .results-image {padding-right: 10px;}
   }
+  .prev-next, .page-pulldown, .view-toggle {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 100%;
+  }
+  .prev-next {margin-bottom: 0;}
+  .gallery_toggle, #sortAndPerPage {margin-right: 20px;}
 }
 @media (max-width: 767px) {
   .blacklight-catalog-index #documents.default {
