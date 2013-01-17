@@ -21,7 +21,9 @@
         <!-- Not using the document_header partial here because we need to truncate title -->
         <div class="documentHeader clearfix">
           <h5 class="index_title">
-            <%= link_to_document document, :label=> document_show_link_field %>
+            <%#= link_to_document document, :label=> document_show_link_field %>
+            <%= link_to(truncate(document.title, :length => 38),
+                  catalog_path(document[:id])) %>
           </h5>
           <% # bookmark functions for items/docs -%>
           <%#= render_index_doc_actions document, :wrapping_class => "documentFunctions span2" %>
