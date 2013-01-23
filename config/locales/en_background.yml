@@ -12,7 +12,7 @@ en:
       language: 'Language'      
       language_text: 'Italian'
       title: Background
-      extent_description_title: 'Extent Description'      
+      extent_description_title: 'Extent description'      
       extent_description_text_html: |
         <p>Each series is described here by indicating the dates and the numbering of the boxes that contain the series.</p>
         <ol>
@@ -29,7 +29,7 @@ en:
           <li>Documents referring to Francesco Veratti, 1830, box 12</li>
           <li>Various materials, 1712-18th century, box 12</li>
         </ol>
-      custodial_note_title: 'Custodial History Note'
+      custodial_note_title: 'Custodial history note'
       custodial_note_text_html: |
         <p>The documents of Laura Maria Caterina Bassi Veratti <a href="#footnote_1">[1]</a>, of her son Paolo and, more generally, of the Bassi and Veratti families, were bequeathed to the Archiginnasio Library between 1922 and 1924. The donation, which also included a large number of printed scientific works, was made according to the will of Laura's direct descendant Giovanni Veratti, by his daughter Emma and her husband, Giulio Mazzoni <a href="#footnote_2">[2]</a>.</p>
         <p>Originally, the bequest only included two boxes containing the documents that refer to Laura Bassi exclusively: letters, treatises, a silver medal dedicated to Laura Bassi for her first lecture at the Archiginnasio <a href="#footnote_3">[3]</a>, and a punch used to cut one of the medal's two faces.</p>
@@ -48,7 +48,7 @@ en:
         <p>Originally, these documents were not organized either chronologically or by subject; rather, progressive numbering was handwritten on the documents sometime in the 20th century <a href="#footnote_11">[11]</a>. The material was little more than an unarranged stratification of various documents. They were initially organised by sorting them and then filing them under the names of the individuals they were ascribed to, following the chronology of the family and considering the descendants. In the case of Paolo Veratti—the best-known of Laura's children and the most frequently mentioned—the documents were also filed either according to subject or to significant events in his life. The two families' documents were interspersed with papers that cannot be associated either with the Veratti or the Bassi, or with any related subject, and these were therefore separated and added as miscellanea.</p>
         <p>It should also be noted that the nucleus of the collection, bequeathed in the 1920s by the Mazzoni family, was later added to the material that was donated to the Archiginnasio in 1905 as part of the important gift of Arturo Gozzi <a href="#footnote_12">[12]</a>. It is not clear when this union of the two collections occurred, but we can guess that it was carried out fairly soon after the Mazzoni material was received, given that archivists of that period tended to arrange by subject rather than by provenance. Certainly it had occurred by 1962, when the first inventory of the Laura Bassi boxes was completed, inasmuch as the material was already included in that inventory.</p>
         <p>Thanks to a list of materials included in the Gozzi donation, the identification of some of the documents that were added is possible. When the collection was arranged, that documentation was included, both because it was a consolidation and because the list is so cursory, it does not allow for the certain identification of all the material <a href="#footnote_13">[13]</a>. Whenever possible, the provenance is indicated in a note.</p>
-      notes_title: 'Methodological Notes'
+      notes_title: 'Methodological notes'
       notes_text_html: |
         <p>When the rearrangement began, there were nine boxes:
         <ul>
