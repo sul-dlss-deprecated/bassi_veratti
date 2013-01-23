@@ -1,38 +1,99 @@
 it:
   bassi:
     about_text_html: |
-      About the project
+      <p>
+        [To be translated]
+      </p>
     laura_bassi_text_html: |
       <img src="/assets/BVP.jpg" width="200"/>
       <p>
-        Laura Bassi (1711-1778) was one of the most important and visible
-        scientific women in eighteenth-century Europe. In 1732 she was the
-        second woman to receive a university degree in Europe and the first
-        to be offered an official university teaching position, both at the
-        University of Bologna. She was the first female member of the
-        Bologna Academy of Sciences, one of Italy’s leading academies, and
-        played a significant role in the spread of Newtonian experimental
-        physics through her teaching, research, and correspondence. While
-        little documentary evidence of her own scientific work survives, she
-        nonetheless had an active program of research and experimentation
-        for many decades and was widely reputed to be an outstanding teacher
-        of experimental physics. Bassi carried on extensive correspondence
-        with other natural philosophers of her time, including Alessandro
-        Volta, Lazzaro Spallanzani, Giovanni Battista Beccaria,
-        Jean-François Nollet, Voltaire, and Francesco Algarotti.
+        Laura Bassi (1731-1778) fu una delle più importanti e riconosciute scienziate del XVIII secolo
+        in Europa. Nel 1732 fu la seconda donna a conseguire una laurea e la prima cui fu offerto un
+        insegnamento universitario ufficiale, sempre a Bologna. La prima donna a diventare membro
+        dell’Accademia delle Scienze di Bologna, una delle principale Accademie in Italia ed ebbe un
+        ruolo significativo nella diffusione della fisica sperimentale di Newton attraverso
+        l’insegnamento, la ricerca e la corrispondenza. Pur se rimangono poche testimonianze del suo
+        lavoro scientifico, svolse tuttavia per vari decenni un intenso programma di ricerca e
+        sperimentazione e fu sempre ritenuta una eccezionale docente di fisica sperimentale. Laura
+        Bassi intrattenne frequenti rapporti epistolari con i filosofi naturalisti dell’epoca, inclusi
+        Alessandro Volta, Lazzaro Spallanzani, Giovanni Battista Beccaria, Jean-François Nollet,
+        Voltaire e Francesco Algarotti.
       </p>
       <p>
-        Encouraged in her studies by her family and by the intellectual...
+        Incoraggiata nei suoi studi dalla famiglia e dalla comunità intellettuale di Bologna, all’età
+        di vent’anni fu invitata a sostenere in pubblico 49 tesi di fisica e filosofia. Poco tempo
+        dopo questo successo, fu insignita dall’Università di Bologna di uno speciale dottorato,
+        seguito ex-officio dalla chiamata alla cattedra di filosofia presso la stessa università. A
+        Bologna sostenne dissertazioni su materie quali gravità, rifrangibilità, meccanica e
+        idraulica. Insieme al marito Giuseppe Veratti, fece di Bologna un centro di ricerca
+        sperimentale sull’elettricità. Laura Bassi era un personaggio di alto profilo, che sosteneva
+        spesso in pubblico discussioni accademiche, appariva regolarmente alla dissezione anatomica
+        pubblica che si teneva nel periodo di carnevale, attirando a Bologna visitatori di rango da
+        tutta Europa, componeva poesie per importanti funzioni pubbliche e godette del patronato di
+        molti contemporanei. Tuttavia, malgrado la sua presenza pubblica, la maggior parte dei suoi
+        insegnamenti e della sua ricerca si svolse a casa, dove dal 1749 fino alla sua morte, lei e il
+        marito tennero un laboratorio, diedero lezione di fisica sperimentale e filosofia naturale e
+        animarono un salotto scientifico. Nel 1776 fu nominata professore di fisica sperimentale
+        presso l’Accademia delle Scienze di Bologna, con suo marito come assistente, che le subentrò
+        alla morte avvenuta appena due anni dopo. Mentre Laura Bassi fu celebrata in vita ed è tuttora
+        al centro delle ricerca, ci mancano studi su di lui. Il loro figlio più giovane, Paolo
+        Veratti, continuò ad insegnare utilizzando il gabinetto scientifico di famiglia, ma non
+        raggiunse mai il successo della madre o del padre.
       </p>
       <p>
-        [NEEDS TRANSLATION]
+        Il fondo Bassi-Veratti dell’Archiginnasio è la chiave di volta di ogni ricerca su Laura Bassi,
+        sul marito Giuseppe Veratti e la loro famiglia. Per la sua intensa attività di scienziata,
+        docente, poetessa, moglie e madre, la produzione a stampa di Laura Bassi non riflette la
+        vastità del suo talento. Furono pubblicate solo le tesi che diedero inizio alla sua carriera e
+        quattro trattati nei Commentarii dell’Accademia delle Scienze. Sappiamo che durante la sua
+        vita fu figura celebrata nell’ ambiente intellettuale di Bologna e che ebbe un ruolo
+        importante nel diffondere le idee di Newton sulla fisica e la filosofia naturale, ma sappiamo
+        di meno sul suo quotidiano e su quello della sua famiglia. Il fondo Bassi-Veratti consiste di
+        12 buste d’archivio. Quattro contengono i documenti legali e notarili di entrambe le famiglie,
+        due sono dedicati ai materiali su Laura Bassi e i rimanenti contengono materiali sul marito
+        Giuseppe Veratti, il figlio Paolo, che divenne medico e fisico sperimentale come i genitori e
+        professore all’Università di Bologna, nonché documenti di famiglia, sui Bassi e specialmente
+        sui Veratti. Questo materiale fu donato all’Archiginnasio nel 1922-1924. Oltre a studi
+        scientifici e documenti legali, l’archivio conserva lettere, poesie scritte per celebrare il
+        talento e gli eventi salienti della vita di Laura Bassi, materiale commemorativo in occasione
+        della sua morte, pubblicazioni a stampa, la medaglia commemorativa del 1732 e relativo conio,
+        nonchè una lastra di rame incisa con il suo ritratto.
       </p>
     terms_of_use_text_html: |
       Copyright © Biblioteca dell'Archiginnasio. La Biblioteca dell'Archiginnasio del Comune di Bologna possiede tutti i diritti su questa immagine.
        L'immagine non può essere copiata o estratta in altro modo eccetto che stampando la pagina ed esclusivamente per finalità di studio privato.
        Per ogni altro utilizzo deve essere richiesta un'autorizzazione specifica alla Biblioteca dell'Archiginnasio scrivendo a: archiginnasio@comune.bologna.it.
     project_history_text_html: |
-      Project History
+      <p>
+        Il fondo Bassi-Veratti online è il frutto di una collaborazione pluriennale fra Stanford University
+        Libraries, Biblioteca Comunale dell’Archiginnasio di Bologna e Istituto per i beni artistici
+        culturali e naturali della Regione Emilia-Romagna, per realizzare una versione digitale
+        dell’archivio di Laura Bassi, l’influente scienziata del XVIII secolo. Il fondo, facente parte
+        delle ricche collezioni dell’Archiginnasio, contiene non solo materiale relativo a Laura
+        Bassi, ma anche riferibile al marito, lo scienziato Giuseppe Veratti, ai loro figli e alla di
+        lui famiglia.
+      </p>
+      <p>
+        L’idea del fondo Bassi-Veratti online è nata nel 2010, dalla discussione fra Stanford
+        University Libraries, la Biblioteca Comunale dell’Archiginnasio, l’IBC Soprintendenza per i
+        beni librari della Regione Emilia Romagna e la professoressa Paula Findlen di Stanford. Lo
+        sviluppo che ne è seguito è stato un vero progetto internazionale, dove l’Archiginnasio ha
+        fornito l’archivio, l’inventario e la sua approfondita conoscenza dei contenuti, della storia
+        e dell’organizzazione dei documenti, mentre i bibliotecari di Stanford e gli specialisti di
+        tecnologie digitali trasformavano l’inventario in uno strumento di ricerca digitale, gestendo
+        la digitalizzazione a distanza e concettualizzando e creando l’interfaccia bilingue. L’IBC ha
+        fornito un supporto costante all’iniziativa, grazie alla notevole esperienza maturata nei
+        progetti internazionali.
+      </p>
+      <p>
+        La realizzazione consente a studiosi e studenti di tutto il mondo di accedere a fonti storiche
+        primarie; consiste di una interfaccia in linea che premette l’accesso alle versioni
+        digitalizzate di tutti i materiali del fondo Bassi-Veratti dell’Archiginnasio di Bologna,
+        attraverso un dettagliato inventario, taggato per potere essere interrogato per parole chiave
+        e termini di indice. Siccome i contenuti dell’inventario sono legati alle corrispettive
+        immagini digitali, gli studiosi possono facilmente navigare dalle descrizioni ai facsimili
+        digitali.
+      </p>
     project_team_stanford_text_html: |
       Project Team Stanford   
     project_team_italy_text_html: |
