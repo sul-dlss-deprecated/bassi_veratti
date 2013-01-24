@@ -7,8 +7,7 @@ en:
       location: 'Location'
       corporate_name: 'Corporate name'
       family_name: 'Family name'
-      start_year: 'Start year'
-      end_year: 'End year'
+      date_range: 'Date'
       all_fields: 'All fields'
     nav:
       bassi_collection: 'Bassi-Veratti Collection'      

@@ -161,6 +161,12 @@ def dates_from_unitdate(did)
   dates
 end
 
+def date_range_from_unitdate(dates)
+  if dates.try(:start_year) and dates.try(:end_year)
+    return (dates.start_year..dates.end_year).to_a
+  end
+end
+
 def image_ids_from_purl(purl)
   image_ids=[]
   if purl
@@ -232,6 +238,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :coordinates_ssim => coordinates,
    :corporate_name_ssim => unittitle_parts.corpname,
    :family_name_ssim => unittitle_parts.famname,
+   :date_range_itim => date_range_from_unitdate(dates),
    :unit_date_ssim => dates.try(:date),
    :begin_year_itsim => dates.try(:start_year),
    :end_year_itsim => dates.try(:end_year)
