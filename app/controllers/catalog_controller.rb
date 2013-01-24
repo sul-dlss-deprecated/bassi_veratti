@@ -155,7 +155,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'geographic_name_ssim', :label => I18n.t('bassi.facet.location'), :limit => 10
     config.add_facet_field 'corporate_name_ssim', :label => I18n.t('bassi.facet.corporate_name'), :limit => 10
     config.add_facet_field 'family_name_ssim', :label => I18n.t('bassi.facet.family_name')
-    config.add_facet_field 'begin_year_itsim', :label => I18n.t('bassi.facet.start_year'), :limit => 10
+    config.add_facet_field 'begin_year_itsim', :label => I18n.t('bassi.facet.start_year'), :range => true
     config.add_facet_field 'end_year_itsim', :label => I18n.t('bassi.facet.end_year'), :limit => 10
 
     config.add_facet_field 'highlight_ssim', :label => I18n.t('bassi.nav.collections'), :show => false,  :query => collection_highlights

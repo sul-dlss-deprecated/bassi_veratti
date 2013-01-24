@@ -9,7 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- */
+
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *
+*/
 
 @import "bootstrap";
 @import "bootstrap-responsive";
