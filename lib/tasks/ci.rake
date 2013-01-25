@@ -29,7 +29,11 @@ namespace :bassi do
 
   desc "Expire caches"
   task :expire_caches => :environment do
-      Rails.cache.clear
+      begin
+        Rails.cache.clear
+      rescue
+        puts "Warning: no caching folder found"
+      end
   end  
 
   desc "Copy Bassi configuration files"
