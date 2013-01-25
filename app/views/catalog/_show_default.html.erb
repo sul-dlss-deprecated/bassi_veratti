@@ -29,6 +29,9 @@
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
+        <% unless list_is_empty?(@document.document_types) %>
+          <dt><%=t('bassi.show.document_types')%>:</dt><dd><%=show_formatted_list(@document.document_types)%></dd>
+        <% end %>
 				<% unless list_is_empty?(@document.description) %>
           <dt><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
         <% end %>

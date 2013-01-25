@@ -3,6 +3,7 @@ require 'ead_parser'
 require 'rest-client'
 require 'open-uri'
 require 'geocoder'
+require 'document_types'
 
 namespace :bassi do
   desc "Parse EAD File"
@@ -221,6 +222,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
 
   {:id => content.identifier,
    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
+   :document_types_ssim => DocumentTypes.document_types[content.identifier],
    :level_ssim => content.level,
    :direct_parent_ssim => direct_parent.identifier,
    :direct_parent_level_ssim => direct_parent.level,
