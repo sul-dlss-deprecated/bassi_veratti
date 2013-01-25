@@ -10,6 +10,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "blacklight", '~> 4.0.0'
+gem "blacklight_range_limit"
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
 
 # Gems used only for assets and not required

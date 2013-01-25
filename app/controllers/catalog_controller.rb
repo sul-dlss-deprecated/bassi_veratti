@@ -151,14 +151,14 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'personal_name_ssim', :label => I18n.t('bassi.facet.personal_name'), :limit => 10
-    config.add_facet_field 'geographic_name_ssim', :label => I18n.t('bassi.facet.location'), :limit => 10
-    config.add_facet_field 'corporate_name_ssim', :label => I18n.t('bassi.facet.corporate_name'), :limit => 10
-    config.add_facet_field 'family_name_ssim', :label => I18n.t('bassi.facet.family_name')
-    config.add_facet_field 'begin_year_itsim', :label => I18n.t('bassi.facet.start_year'), :limit => 10
-    config.add_facet_field 'end_year_itsim', :label => I18n.t('bassi.facet.end_year'), :limit => 10
+    config.add_facet_field 'document_types_ssim', :label => 'bassi.facet.document_types'
+    config.add_facet_field 'personal_name_ssim', :label => 'bassi.facet.personal_name', :limit => 10
+    config.add_facet_field 'geographic_name_ssim', :label => 'bassi.facet.location', :limit => 10
+    config.add_facet_field 'corporate_name_ssim', :label => 'bassi.facet.corporate_name', :limit => 10
+    config.add_facet_field 'family_name_ssim', :label => 'bassi.facet.family_name'
+    config.add_facet_field 'date_range_itim', :label => 'bassi.facet.date_range', :range => true
 
-    config.add_facet_field 'highlight_ssim', :label => I18n.t('bassi.nav.collections'), :show => false,  :query => collection_highlights
+    config.add_facet_field 'highlight_ssim', :label => 'bassi.nav.collections', :show => false,  :query => collection_highlights
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
     #    :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
@@ -175,12 +175,12 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
 
-    config.add_index_field 'level_ssim', :label => "#{I18n.t('bassi.show.level')}:"
-    config.add_index_field 'unit_date_ssim', :label => "#{I18n.t('bassi.show.date')}:"
+    config.add_index_field 'document_types_ssim', :label => 'bassi.show.document_types'
+    config.add_index_field 'unit_date_ssim', :label => 'bassi.show.date'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
-    config.add_show_field 'level_ssim', :label => "#{I18n.t('bassi.show.level')}:"
+    config.add_show_field 'document_types_ssim', :label => "#{I18n.t('bassi.show.document_types')}:"
     config.add_show_field 'unit_date_ssim', :label => "#{I18n.t('bassi.show.date')}:"
     config.add_show_field 'extent_ssim',  :label => "#{I18n.t('bassi.show.physical_description')}:"
     config.add_show_field 'description_tsim', :label => "#{I18n.t('bassi.show.notes')}:"

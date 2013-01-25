@@ -3,12 +3,12 @@ en:
     application_name: 'Bassi-Veratti Collection'
   bassi:
     facet:
+      document_types: 'Document type'
       personal_name: 'Personal name'
       location: 'Location'
       corporate_name: 'Corporate name'
       family_name: 'Family name'
-      start_year: 'Start year'
-      end_year: 'End year'
+      date_range: 'Date'
       all_fields: 'All fields'
     nav:
       bassi_collection: 'Bassi-Veratti Collection'      
@@ -66,6 +66,7 @@ en:
       less: 'less'
       date: 'Date'
       map: 'Map'
+      document_types: 'Document type'
       show_map: 'Show on map'
       description: 'Physical description'
       people: 'People'

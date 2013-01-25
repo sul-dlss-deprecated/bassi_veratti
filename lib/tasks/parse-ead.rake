@@ -3,6 +3,7 @@ require 'ead_parser'
 require 'rest-client'
 require 'open-uri'
 require 'geocoder'
+require 'document_types'
 
 namespace :bassi do
   
@@ -162,6 +163,12 @@ def dates_from_unitdate(did)
   dates
 end
 
+def date_range_from_unitdate(dates)
+  if dates.try(:start_year) and dates.try(:end_year)
+    return (dates.start_year..dates.end_year).to_a
+  end
+end
+
 def image_ids_from_purl(purl)
   image_ids=[]
   if purl
@@ -216,6 +223,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
 
   {:id => content.identifier,
    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
+   :document_types_ssim => DocumentTypes.document_types[content.identifier],
    :level_ssim => content.level,
    :direct_parent_ssim => direct_parent.identifier,
    :direct_parent_level_ssim => direct_parent.level,
@@ -233,6 +241,7 @@ def document_from_contents(ead, content, direct_parent, series, containers)
    :coordinates_ssim => coordinates,
    :corporate_name_ssim => unittitle_parts.corpname,
    :family_name_ssim => unittitle_parts.famname,
+   :date_range_itim => date_range_from_unitdate(dates),
    :unit_date_ssim => dates.try(:date),
    :begin_year_itsim => dates.try(:start_year),
    :end_year_itsim => dates.try(:end_year)
