@@ -5,6 +5,7 @@ require 'open-uri'
 require 'geocoder'
 
 namespace :bassi do
+  
   desc "Parse EAD File"
   task :"parse-ead" do
   

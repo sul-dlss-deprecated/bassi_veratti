@@ -27,6 +27,11 @@ end
 
 namespace :bassi do
 
+  desc "Expire caches"
+  task :expire_caches => :environment do
+      Rails.cache.clear
+  end  
+
   desc "Copy Bassi configuration files"
   task :config do
     cp("#{Rails.root}/config/database.yml.example", "#{Rails.root}/config/database.yml") unless File.exists?("#{Rails.root}/config/database.yml")
@@ -58,6 +63,7 @@ namespace :bassi do
   desc "Index all fixutres into solr"
   task :index_fixtures do
     Rake::Task["bassi:parse-ead"].invoke
+    Rake::Task["bassi:expire_caches"].invoke
   end
   
   desc "Delete all records in solr"
