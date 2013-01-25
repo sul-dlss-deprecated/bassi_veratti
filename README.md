@@ -67,6 +67,15 @@ This will stop development jetty, force you into the test environment, start jet
 delete all the records in the test solr core, index all fixtures in `spec/fixtures`, run `db:migrate` in test,
 then run the tests, and then restart development jetty
 
+## Caching
+
+The map on the home page and the collection inventory page are stored in a fragment cache to speed up delivery.  
+Caching is currently enabled in all environments (including development) and stored on disk in the tmp folder of the app.
+Fragment caches should be automatically purged on an EAD re-index or deployment via the following rake task (which
+can be run manually if needed):
+
+rake bassi:expire_caches
+
 ## Collection Highlights
 
 The collection highlights shown on the home page are stored in MySQL.  The database entries are created in db/seeds.rb
