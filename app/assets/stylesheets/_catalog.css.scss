@@ -105,10 +105,22 @@
     margin-left: 0;
     margin-bottom: 0;
   }
+  .metadata ul.nav-list {
+    margin-top: 30px;
+    padding-left: 0;
+    li {line-height: 16px;}
+  }
 }
 
 
 /* Responsive styles */
+@media (max-width: 979px) {
+  .blacklight-catalog-show .metadata {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .slideshow img {margin-bottom: 20px;}
   .blacklight-catalog-show .dl-horizontal {
