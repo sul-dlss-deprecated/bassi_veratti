@@ -42,11 +42,44 @@
       margin-top: 3px;
     }
   }
+  .limit_content .current {
+    margin-left: 14px;
+    form.range_limit {
+      margin-top: 12px;
+      input.range_begin, input.range_end {
+        width: 3em;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
   #facets-bassi .btn-navbar {
     display: block;
     margin: 5px;
+  }
+}
+
+#sidebar {
+  .limit_content .current {
+    margin-left: 14px;
+  }
+  form.range_limit {
+    margin-left: 14px;
+    margin-top: 12px;
+    input.range_begin, input.range_end {
+      width: 3em;
+    }
+  }
+  .ui-widget-header {
+    background: darken($header_bg_color, 5%);
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: darken($header_bg_color, 10%);
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
+  .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background: #c08e1a;
+    border: darken(#c08e1a, 10%);
   }
 }
