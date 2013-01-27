@@ -76,7 +76,7 @@
 
 <% if @document.folder_siblings.documents.size > 0%>
 <div class="row">
-  <div class="span9">
+  <div class="span12">
 		<h3>
 		  <%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)
 		  <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>
