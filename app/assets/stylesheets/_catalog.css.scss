@@ -92,6 +92,7 @@
   }
   ul.preview-folder-items {
     margin-left: 0;
+    img {@include image_border_thumbnail;}
     li {
       list-style-type: none;
       float: left;

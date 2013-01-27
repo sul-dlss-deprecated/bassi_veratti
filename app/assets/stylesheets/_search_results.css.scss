@@ -58,7 +58,10 @@
     width: 50px;
   }
   dd {margin-left: 60px;}
-  img {vertical-align: top;}
+  img {
+    @include image_border_thumbnail;
+    vertical-align: top;
+  }
   .results-image {
     margin-top: 2px;
   }

@@ -39,6 +39,7 @@
     }
     ul.item-list {
       margin-left: 0;
+      img {@include image_border_thumbnail;}
       li {
         clear: none;
         float: left;
