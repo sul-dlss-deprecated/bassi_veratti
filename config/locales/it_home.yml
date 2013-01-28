@@ -1,11 +1,11 @@
 it:
   bassi:
     home:
-      location: Location
+      location: 'Luogo'
       document_type: Document Type      
       overview_by: Overview By      
-      collection_highlights: Collection Highlights
-      more_highlights: More Highlights
+      collection_highlights: 'Elementi notevoli'
+      more_highlights: 'Altri elementi notevoli'
       about_text_html: |
         <p>
           The online Bassi-Veratti Collection is a multi-year collaboration
@@ -18,4 +18,4 @@ it:
           Laura Bassi, but also those of her husband, scientist Giuseppe
           Veratti, their children, and his family.
         </p>
-      about_collection_html: About the collection
+      about_collection_html: 'A proposito delle raccolte'

@@ -11,7 +11,7 @@ it:
       extent_text: '12.0 boxes (~6,000 digital objects)'
       language: 'Language'      
       language_text: 'Italiano'
-      title: 'Background'
+      title: 'Contesto storico'
       extent_description_title: 'Elenco di consistenza'      
       extent_description_text_html: |
         <p>Delle singole serie che costituiscono il fondo si riportano l'indicazione degli estremi cronologici e la numerazione dei cartoni entro i quali le serie sono collocate.</p>
