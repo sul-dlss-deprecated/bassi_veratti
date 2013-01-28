@@ -57,7 +57,7 @@ it:
       item:
         one: '1 Pezzo'
         other: "%{count} pezzi"
-      more: 'more'
+      more: 'di più'
       less: 'less'
       date: 'Date'
       map: 'Map'
