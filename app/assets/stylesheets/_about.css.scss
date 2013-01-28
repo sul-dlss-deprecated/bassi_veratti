@@ -26,6 +26,10 @@
     text-indent: -9999px;
     background: #AA7D17;
   }
+  span.contact-link {
+    display: block;
+    margin-top: 4px;
+  }
 
   // Make textarea wide as reasonable given viewport size
   @media (min-width: 980px) {
