@@ -12,7 +12,7 @@ it:
       all_fields: 'All fields'
     nav:
       bassi_collection: 'Inventario Laura Bassi'
-      about: 'a proposito di'
+      about: 'Progetto'
       home: 'Home'
       report_problem: 'Segnala un errore'
       project_history: 'Storia del progetto'
