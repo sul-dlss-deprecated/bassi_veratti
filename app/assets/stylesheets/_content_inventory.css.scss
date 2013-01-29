@@ -51,3 +51,8 @@
     }
   }
 }
+
+#sidebar-nav > .nav-list li.pe-download-icon {
+  background: transparent asset_url('icon-download.png', image) 1px 4px no-repeat;
+  a {padding-left: 35px;}
+}
