@@ -2,8 +2,8 @@
   $(document).ready(function(){
     $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
                                      'druid': '<%= document[:druid_ssi] %>',
-																		 'size': 'zoom',
-                                     'width': 390,
+																		 'size': 'thumb',
+                                     'width': 400,
                                      'height': 500});  
   });
 </script>
@@ -33,10 +33,10 @@
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
         <% unless list_is_empty?(@document.document_types) %>
-          <dt><%=t('bassi.show.document_types')%>:</dt><dd><%=show_formatted_list(@document.document_types)%></dd>
+          <dt style='white-space: normal;'><%=t('bassi.show.document_types')%>:</dt><dd class="doc-type" ><%=show_formatted_list(@document.document_types)%></dd>
         <% end %>
 				<% unless list_is_empty?(@document.description) %>
-          <dt><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
+          <dt style='white-space: normal;'><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
         <% end %>
         <% unless list_is_empty?(@document.people) %>
           <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_formatted_list(@document.people,:facet=>'personal_name_ssim')%></dd>
