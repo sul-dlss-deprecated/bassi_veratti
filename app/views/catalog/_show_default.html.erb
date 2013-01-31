@@ -60,9 +60,9 @@
         <% unless list_is_empty?(@document.notes) %>
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
         <% end %>
-        <% unless @document.purl.blank? %>
-          <dt><%=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%></dd>
-        <% end %>
+        <%# unless @document.purl.blank? %>
+          <!-- <dt><%#=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%></dd> -->
+        <%# end %>
       </dl>
 
       <%= render :partial => 'show_actions' %>

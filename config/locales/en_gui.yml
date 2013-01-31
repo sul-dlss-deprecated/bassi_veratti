@@ -81,7 +81,7 @@ en:
       of: 'of'
       show_in_inventory: "Show this %{item} in content inventory"
       view_in_inventory: "View this %{item} in content inventory"
-      citation: 'Citation'
+      citation: 'Permanent URL'
       all_items_in_folder: "Other items in this folder"
     collection_members_grid:
       members_link: 'View all collection items'
