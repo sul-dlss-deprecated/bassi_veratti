@@ -3,8 +3,8 @@
     $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
                                      'druid': '<%= document[:druid_ssi] %>',
 																		 'size': 'thumb',
-                                     'width': 400,
-                                     'height': 500});  
+                                     'width': 365,
+                                     'height': 600});
   });
 </script>
 
@@ -16,7 +16,7 @@
   </div>
 
   <div class="row document-details">
-    <div class="span7 member-image">
+    <div class="span6 member-image">
       <%if @document.images.size > 0 %>
 				<div id="image_workspace"></div>
 				
@@ -28,7 +28,7 @@
       <% end %>
     </div>
 
-    <div class="span5 metadata">
+    <div class="span6 metadata">
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
