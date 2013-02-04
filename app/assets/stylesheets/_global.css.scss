@@ -180,6 +180,7 @@ span.content-type {
 .nav-header {color: $sidebar_header_color;}
 
 .nav > li > a  {border-radius: 6px;}
+.nav li + .nav-header.second {margin-top: 25px;}
 
 .hidden {display: none;}
 
