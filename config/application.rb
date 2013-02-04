@@ -9,6 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+VERSION = File.read('VERSION')
+
 module BassiVeratti
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -65,10 +67,11 @@ module BassiVeratti
     config.assets.compress = !Rails.env.development?
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = VERSION
   end
 end
 
+BassiVeratti::Application.config.version = VERSION # read from VERSION file at base of website
 BassiVeratti::Application.config.google_api_key = "AIzaSyCZxogTGsi5KK8_hRf6Z7tWRkxocoMx_Bk"
 BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/config/stacks.yml")[Rails.env]["url"]
 BassiVeratti::Application.config.contact_us_topics = {'default'=>'Select a topic...', 'terms of use'=>'Terms of Use question', 'error'=>'Problem with the website','other'=>'Other questions'} # sets the list of topics shown in the contact us page

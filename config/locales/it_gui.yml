@@ -43,6 +43,7 @@ it:
       stanford_team_title: 'Project Team: Stanford'
       italy_team_title: 'Project Team: Bologna'
       history_title: 'Il progetto a grandi linee'
+      version_title: 'Application Version'      
     show:
       box:
         word: 'Cartone'

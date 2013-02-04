@@ -1,15 +1,5 @@
 $(document).ready(function(){
 
-	// Carousel on show page	
-	$("#image_carousel").carousel({
-		interval: false
-	})
-	$("#image_carousel").bind('slid', function(){
-	  var carousel = $(this);
-	  var index = $('.active', carousel).index('#' + carousel.attr("id") + ' .item');
-	  $("#iterator", carousel).text(parseInt(index) + 1);
-	});
-	
 	// load any images on the content inventory page
 	itemImages=$('.item-image-link');
 	for (var i = 0 ; i < itemImages.length; i++) {

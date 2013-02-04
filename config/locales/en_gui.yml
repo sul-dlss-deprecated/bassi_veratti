@@ -43,6 +43,7 @@ en:
       stanford_team_title: 'Project team: Stanford'
       italy_team_title: 'Project team: Bologna'
       history_title: 'Project history'
+      version_title: 'Application Version'
     collection:
       collection_detail: 'Collection detail'
       member_detail: 'Item detail'
