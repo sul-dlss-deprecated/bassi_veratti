@@ -99,4 +99,11 @@ it:
     project_team_italy_text_html: |
       Project Team Bologna
     acknowledgements_text_html: |
-      Acknowledgements
+      <p>
+        The project partners would like to thank the generous financial support of
+        Guerrino De Luca, the Marini Foundation and the Gladys Krieble Delmas Foundation.
+      </p>
+      <p>
+        Special thanks to the Blacklight open source community for the use of their
+        discovery interface: projectblacklight.org
+      </p>
