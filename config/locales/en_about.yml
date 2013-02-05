@@ -88,8 +88,8 @@ en:
         portrait of Laura Bassi.
       </p>
     terms_of_use_text_html: |
-      Copyright @ Biblioteca dell’Archiginnasio. All rights are reserved to Biblioteca dell'Archiginnasio, Comune di Bologna. 
-      The images can only be printed by using this page and for personal/scholarly use. Any other use must be requested in 
+      Copyright @ Biblioteca dell’Archiginnasio. All rights are reserved to Biblioteca dell'Archiginnasio, Comune di Bologna.
+      The images can only be printed by using this page and for personal/scholarly use. Any other use must be requested in
       writing to Biblioteca dell'Archiginnasio : archiginnasio@comune.bologna.it.
     project_history_text_html                  : |
       <p>
@@ -114,7 +114,33 @@ en:
         projects.
       </p>
     project_team_stanford_text_html: |
-      Project Team Stanford   
+      <ul>
+        <li>University Librarian: Michael A. Keller</li>
+        <li>Faculty Advisor: Paula Findlen</li>
+        <li>Project Director: John Haeger</li>
+      </ul>
+      <ul>
+        <li>Catherine Aster, Project Manager</li>
+        <li>Jin Chen, Image Quality Assurance Production</li>
+        <li>Christopher DeRosa, Curatorial Assistant</li>
+        <li>Glynn Edwards, EAD Consultant</li>
+        <li>Gary Geisler, Web Application Developer</li>
+        <li>Jessie Keck, Web Application Developer</li>
+        <li>Peter Mangiafico, Web Application Developer</li>
+        <li>Matt Pearson, Image Quality Assurance Specialist</li>
+        <li>Ravi Shankar, Accessioning Engineer</li>
+        <li>Christy Smith, Metadata Assistant</li>
+        <li>Sarah Sussman, Curator, French and Italian Collections</li>
+      </ul>
+      <p>Special thanks are due to the following:</p>
+        <ul>
+          <li>Intern from the University of Verona and librarian at Trento Municipal
+          Library, Mariapia Tessari, for her work on the finding aid.</li>
+          <li>Stanford University Libraries, Digital Libraries Systems and Services staff:
+          Ben Albritton, Tony Calavano, Doris Cheung, Tom Cramer, Christopher Jesudurai,
+          Charles Kerns, Lynn McRae, Tony Navarrete, Michael Olson, Stuart Snydman.</li>
+          <li>Stanford Libraries staff Andrew Herkovic and Robert Schwarzwalder.</li>
+        </ul>
     project_team_italy_text_html: |
       Project Team Bologna
     acknowledgements_text_html: |
