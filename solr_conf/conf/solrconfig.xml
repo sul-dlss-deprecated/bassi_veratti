@@ -80,6 +80,9 @@
         family_name_ssim^30
         unit_date_ssim^20
       </str>
+      <str name="hl">on</str>
+      <str name="hl.fl">title_tsi extent_ssim description_tsim unit_date_ssim</str>
+      <str name="hl.fragsize">0</str>
     </lst>
   </requestHandler>
   
