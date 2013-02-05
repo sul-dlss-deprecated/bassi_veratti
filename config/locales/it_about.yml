@@ -106,16 +106,47 @@ it:
         <li>Sarah Sussman, Curator, French and Italian Collections</li>
       </ul>
       <p>Special thanks are due to the following:</p>
-        <ul>
-          <li>Intern from the University of Verona and librarian at Trento Municipal
-          Library, Mariapia Tessari, for her work on the finding aid.</li>
-          <li>Stanford University Libraries, Digital Libraries Systems and Services staff:
-          Ben Albritton, Tony Calavano, Doris Cheung, Tom Cramer, Christopher Jesudurai,
-          Charles Kerns, Lynn McRae, Tony Navarrete, Michael Olson, Stuart Snydman.</li>
-          <li>Stanford Libraries staff Andrew Herkovic and Robert Schwarzwalder.</li>
-        </ul>
+      <ul>
+        <li>Intern from the University of Verona and librarian at Trento Municipal
+        Library, Mariapia Tessari, for her work on the finding aid.</li>
+        <li>Stanford University Libraries, Digital Libraries Systems and Services staff:
+        Ben Albritton, Tony Calavano, Doris Cheung, Tom Cramer, Christopher Jesudurai,
+        Charles Kerns, Lynn McRae, Tony Navarrete, Michael Olson, Stuart Snydman.</li>
+        <li>Stanford Libraries staff Andrew Herkovic and Robert Schwarzwalder.</li>
+      </ul>
     project_team_italy_text_html: |
-      Project Team Bologna
+      <ul>
+        <li>Pierangelo Bellettini</li>
+        <li>Rosaria Campioni</li>
+      </ul>
+      <p>Project</p>
+      <ul>
+        <li>Margherita Spinazzola, Coordinator of European and International Projects, Istituto per i
+        beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+        <li>Ruggero Ruggeri, Head of IT services, Istituzione Biblioteche del Comune di Bologna
+        </li>
+        <li>Anna Manfron, Head of Biblioteca dell'Archiginnasio and of special libraries of
+        Istituzione Biblioteche del Comune di Bologna</li>
+        <li>Patrizia Busi, Archivist of the manuscripts and rare books section of Biblioteca dell'Archiginnasio</li>
+        <li>Letizia Zarri, administrative services</li>
+      </ul>
+      <p>Communication</p>
+        <ul>
+          <li>Valeria Cicala, Press Officer, Istituto per i beni artistici, culturali e
+          naturali Regione Emilia-Romagna</li>
+          <li>Carlo Tovoli, Press and Communication, Istituto per i beni artistici, culturali
+          e naturali Regione Emilia-Romagna</li>
+          <li>Andrea Scardova, Photographer, Istituto per i beni artistici, culturali e
+          naturali Regione Emilia-Romagna</li>
+          <li>Monica Chili, Graphic designer, Regione Emilia-Romagna</li>
+          <li>Christian Lertola, IT and web conference services, Regione Emilia-Romagna</li>
+          <li>Valeria Roncuzzi, Communication Officer of Istituzione Biblioteche del Comune di
+          Bologna</li>
+          <li>Manuela Marchesan, Communication and graphic designer of Istituzione
+          Biblioteche del Comune di Bologna</li>
+          <li>Anna Maria Cava, Communication of Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Sandra Saccone, Communication of Istituzione Biblioteche del Comune di Bologna</li>
+        </ul>
     acknowledgements_text_html: |
       <p>
         The project partners would like to thank the generous financial support of
