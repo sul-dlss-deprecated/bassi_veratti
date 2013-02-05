@@ -27,4 +27,12 @@ describe ApplicationHelper do
     
   end
   
+  describe "highlight_text" do
+    it "should return the normal text of no highlighting exists" do
+      doc = {"test_field" => "Test Text"}
+      doc.should_receive(:highlight_field).with("test_field").and_return false
+      highlight_text(doc, "test_field").should == "Test Text"
+    end
+  end
+  
 end

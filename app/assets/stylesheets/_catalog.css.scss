@@ -41,7 +41,13 @@
   }
 }
 
-.index_title {color: #999999;}
+.index_title {
+	color: #999999;
+	em {
+		font-style: normal;
+	}
+}
+
 .bookmark_toggle {
 	label {
 		cursor: pointer;

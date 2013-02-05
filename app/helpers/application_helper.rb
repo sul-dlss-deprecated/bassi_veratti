@@ -1,5 +1,9 @@
 module ApplicationHelper
   
+  def highlight_text(doc, field)
+    doc.highlight_field(field) ? doc.highlight_field(field).first : doc[field]
+  end
+  
   def on_scrollspy_page?
     on_background_page || on_inventory_pages
   end
