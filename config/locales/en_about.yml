@@ -112,26 +112,26 @@ en:
         projects.
       </p>
     project_team_stanford_text_html: |
-      <ul>
-        <li>University Librarian: Michael A. Keller</li>
-        <li>Faculty Advisor: Paula Findlen</li>
-        <li>Project Director: John Haeger</li>
-      </ul>
-      <ul>
-        <li>Catherine Aster, Project Manager</li>
-        <li>Jin Chen, Image Quality Assurance Production</li>
-        <li>Christopher DeRosa, Curatorial Assistant</li>
-        <li>Glynn Edwards, EAD Consultant</li>
-        <li>Gary Geisler, Web Application Developer</li>
-        <li>Jessie Keck, Web Application Developer</li>
-        <li>Peter Mangiafico, Web Application Developer</li>
-        <li>Matt Pearson, Image Quality Assurance Specialist</li>
-        <li>Ravi Shankar, Accessioning Engineer</li>
-        <li>Christy Smith, Metadata Assistant</li>
-        <li>Sarah Sussman, Curator, French and Italian Collections</li>
-      </ul>
-      <p>Special thanks are due to the following:</p>
-      <ul>
+      <dl class="project-team dl-horizontal">
+        <dt>University Librarian</dt> <dd>Michael A. Keller</dd>
+        <dt>Faculty Advisor</dt> <dd>Paula Findlen</dd>
+        <dt>Project Director</dt> <dd>John Haeger</dd>
+      </dl>
+      <dl class="project-team dl-horizontal">
+        <dt>Catherine Aster</dt><dd>Project Manager</dd>
+        <dt>Jin Chen</dt><dd>Image Quality Assurance Production</dd>
+        <dt>Christopher DeRosa</dt><dd>Curatorial Assistant</dd>
+        <dt>Glynn Edwards</dt><dd>EAD Consultant</dd>
+        <dt>Gary Geisler</dt><dd>Web Application Developer</dd>
+        <dt>Jessie Keck</dt><dd>Web Application Developer</dd>
+        <dt>Peter Mangiafico</dt><dd>Web Application Developer</dd>
+        <dt>Matt Pearson</dt><dd>Image Quality Assurance Specialist</dd>
+        <dt>Ravi Shankar</dt><dd>Accessioning Engineer</dd>
+        <dt>Christy Smith</dt><dd>Metadata Assistant</dd>
+        <dt>Sarah Sussman</dt><dd>Curator, French and Italian Collections</dd>
+      </dl>
+      <p class="project-team">Special thanks are due to the following:
+      <ul class="project-team">
         <li>Intern from the University of Verona and librarian at Trento Municipal
         Library, Mariapia Tessari, for her work on the finding aid.</li>
         <li>Stanford University Libraries, Digital Libraries Systems and Services staff:
@@ -139,12 +139,13 @@ en:
         Charles Kerns, Lynn McRae, Tony Navarrete, Michael Olson, Stuart Snydman.</li>
         <li>Stanford Libraries staff Andrew Herkovic and Robert Schwarzwalder.</li>
       </ul>
+      </p>
     project_team_italy_text_html: |
       <ul>
         <li>Pierangelo Bellettini</li>
         <li>Rosaria Campioni</li>
       </ul>
-      <p>Project</p>
+      <h4>Project</h4>
       <ul>
         <li>Margherita Spinazzola, Coordinator of European and International Projects, Istituto per i
         beni artistici, culturali e naturali Regione Emilia-Romagna</li>
@@ -155,7 +156,7 @@ en:
         <li>Patrizia Busi, Archivist of the manuscripts and rare books section of Biblioteca dell'Archiginnasio</li>
         <li>Letizia Zarri, administrative services</li>
       </ul>
-      <p>Communication</p>
+      <h4>Communication</h4>
         <ul>
           <li>Valeria Cicala, Press Officer, Istituto per i beni artistici, culturali e
           naturali Regione Emilia-Romagna</li>
