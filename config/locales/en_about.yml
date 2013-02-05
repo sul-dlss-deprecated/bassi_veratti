@@ -113,9 +113,9 @@ en:
       </p>
     project_team_stanford_text_html: |
       <dl class="project-team dl-horizontal">
-        <dt>University Librarian</dt> <dd>Michael A. Keller</dd>
-        <dt>Faculty Advisor</dt> <dd>Paula Findlen</dd>
-        <dt>Project Director</dt> <dd>John Haeger</dd>
+        <dt>Michael A. Keller</dt><dd>University Librarian</dd>
+        <dt>Paula Findlen</dt><dd>Faculty Advisor</dd>
+        <dt>John Haeger</dt><dd>Project Director</dd>
       </dl>
       <dl class="project-team dl-horizontal">
         <dt>Catherine Aster</dt><dd>Project Manager</dd>
