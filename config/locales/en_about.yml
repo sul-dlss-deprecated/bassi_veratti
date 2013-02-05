@@ -90,31 +90,28 @@ en:
     terms_of_use_text_html: |
       Copyright @ Biblioteca dell’Archiginnasio. All rights are reserved to Biblioteca dell'Archiginnasio, Comune di Bologna. 
       The images can only be printed by using this page and for personal/scholarly use. Any other use must be requested in 
-      writing to Biblioteca dell'Archiginnasio: archiginnasio@comune.bologna.it.
-    project_history_text_html: |
+      writing to Biblioteca dell'Archiginnasio : archiginnasio@comune.bologna.it.
+    project_history_text_html                  : |
       <p>
-        The online Bassi-Veratti Collection was first conceived in 2010
-        through discussion between the Stanford University Libraries, the
-        Archiginnasio, the Soprintendenza of the Region of Emilia-Romagna,
-        and Stanford Professor of History, Paula Findlen. Its development
-        has truly been a international collaboration, with the Archiginnasio
-        providing the archive itself, its inventory and expertise about the
-        collection’s contents, history, and arrangement, and Stanford
-        librarians and digital technology specialists transforming the
-        inventory into a digital finding aid, managing the digitization work
-        from afar, and conceptualizing and creating the bilingual interface.
+        The online Bassi-Veratti Collection is a multi-year collaboration of the Stanford
+        University Libraries, the Biblioteca Comunale dell’Archiginnasio di Bologna, Italy,
+        and the Istituto per i Beni Artistici, Culturali e Naturali della Regione
+        Emilia-Romagna, to produce a digital version of the archive of the influential
+        eighteenth-century woman scientist, Laura Bassi. Part of the rich collections of the
+        Archiginnasio, the archive contains not only materials about Laura Bassi, but also
+        those of her husband, scientist Giuseppe Veratti, their children, and his family.
       </p>
       <p>
-        The online Bassi-Veratti Collection brings historical primary source
-        materials to scholars and students around the world. It consists of
-        an online interface offering access to the digitized versions of all
-        of the materials of the Bassi-Veratti Collection at the
-        Archiginnasio in Bologna. Access is via a detailed archival
-        inventory, or finding aid. This inventory has been tagged so that
-        researchers can search using keywords and index terms. Because the
-        inventory’s contents are linked to the corresponding digital images,
-        scholars can easily navigate from the descriptions of the materials
-        to the digital facsimiles.
+        The online Bassi-Veratti Collection was first conceived in 2010 through discussion between
+        the Stanford University Libraries, the Archiginnasio, the IBC Soprintendenza of the Region
+        of Emilia-Romagna, and Stanford Professor of History, Paula Findlen. Its development has
+        truly been a international collaboration, with the Archiginnasio providing the archive
+        itself, its inventory and expertise about the collection’s contents, history, and
+        arrangement, and Stanford librarians and digital technology specialists transforming the
+        inventory into a digital finding aid, managing the digitization work from afar, and
+        conceptualizing and creating the bilingual interface. The IBC has provided constant
+        support for the initiative, thanks to considerable experience gained through international
+        projects.
       </p>
     project_team_stanford_text_html: |
       Project Team Stanford   
