@@ -21,12 +21,10 @@ en:
       <p>
         The Bassi-Veratti Collection is being built on top of the Stanford
         Digital Repository to provide a web based platform for discovery and
-        study of the archive. The Collection is developed in
-        <a href="http://www.rubyonrails.org">Ruby on Rails</a> using open
-        source technologies, including
-        <a href="http://projectblacklight.org/">Blacklight</a>,
-        <a href="http://projecthydra.org/">Hydra</a>, and
-        <a href="http://fedora-commons.org/">Fedora Commons</a>.
+        study of the archive. The Collection is developed using open
+        source technologies, including 
+        <a href="http://www.rubyonrails.org">Ruby on Rails</a> and 
+        <a href="http://projectblacklight.org/">Blacklight</a>.
       </p>
     laura_bassi_text_html: |
       <img src="/assets/BVP.jpg" width="200"/>

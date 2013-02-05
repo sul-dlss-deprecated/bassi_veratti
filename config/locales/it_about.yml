@@ -2,7 +2,29 @@ it:
   bassi:
     about_text_html: |
       <p>
-        [To be translated]
+        The online Bassi-Veratti Collection is a multi-year collaboration of
+        the Stanford University Libraries, the Biblioteca Comunale
+        dell’Archiginnasio, Bologna, Italy, and the Istituto per i Beni
+        Artistici, Culturali e Naturali della Regione Emilia-Romagna, to produce
+        a digital version of the archive of the influential woman scientist,
+        Laura Bassi. Part of the rich collections of the Archiginnasio, the
+        collection contains not only materials about Laura Bassi, but also those
+        of her husband, scientist Giuseppe Veratti, their children, and his
+        family.
+      </p>
+      <p>
+        The Stanford Digital Repository ensures each digital object is
+        preserved, made available via a permanent persistent URL
+        (web address), enforces content rights and restrictions and provides
+        a common storage mechanism for other applications to build upon.
+      </p>
+      <p>
+        The Bassi-Veratti Collection is being built on top of the Stanford
+        Digital Repository to provide a web based platform for discovery and
+        study of the archive. The Collection is developed using open
+        source technologies, including
+        <a href="http://www.rubyonrails.org">Ruby on Rails</a> and
+        <a href="http://projectblacklight.org/">Blacklight</a>.
       </p>
     laura_bassi_text_html: |
       <img src="/assets/BVP.jpg" width="200"/>
