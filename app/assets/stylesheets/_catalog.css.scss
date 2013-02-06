@@ -121,8 +121,8 @@
   }
   // override image_viewer plugin styles
   .pe-h-nav {
-    background: none;
-    border: 1px solid darken($header_bg_color, 8%);
+    background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
+    // border: 1px solid darken($header_bg_color, 8%);
     width: 98%;
   }
   .pe-purl-url {
