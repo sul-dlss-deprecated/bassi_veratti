@@ -170,6 +170,10 @@ it:
           <li>Anna Maria Cava, Communication of Istituzione Biblioteche del Comune di Bologna</li>
           <li>Sandra Saccone, Communication of Istituzione Biblioteche del Comune di Bologna</li>
         </ul>
+        <div class="row logos">
+          <div class="span5 collaborator-logo first"><img src="/assets/LOG_IBC_SOPR_RER_2007_rgb.jpg" width="320"/></div>
+          <div class="span4 collaborator-logo second"><img src="/assets/marchio-nuovo-spe-6.png" width="110"/></div>
+        </div>
     acknowledgements_text_html: |
       <p>
         The project partners would like to thank the generous financial support of

@@ -36,6 +36,9 @@
   }
   ul.project-team > li {margin-bottom: 10px;}
   p.project-team {margin-bottom: 10px;}
+  #content .logos {
+    margin-top: 30px;
+  }
 
   // Make textarea wide as reasonable given viewport size
   @media (min-width: 980px) {
