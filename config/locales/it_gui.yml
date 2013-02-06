@@ -3,7 +3,7 @@ it:
     application_name: 'Inventario Laura Bassi'
   bassi:
     facet:
-      document_types: 'Document type'
+      document_types: 'Categoria di documento'
       personal_name: 'Nome personale'
       location: 'Luogo'
       corporate_name: 'Nome di ente'
