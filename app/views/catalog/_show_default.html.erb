@@ -25,6 +25,8 @@
 			       <%= image_tag(@document.images.first, :alt => "Image 1 of #{@document.images.size}") %>
 			     </div>
 				</noscript>
+      <% else %>
+        <%= image_tag("http://dummyimage.com/365x400/f8f6f1/6d5b48&text=No image associated with this item", :class => "placeholder-image") %>
       <% end %>
     </div>
 

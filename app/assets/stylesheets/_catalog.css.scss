@@ -129,6 +129,10 @@
     border: none;
     bottom: -4px;
   }
+  // placeholder image for cases where item has no associated image
+  img.placeholder-image {
+    border: 1px solid darken($header_bg_color, 15%);
+  }
 }
 
 
