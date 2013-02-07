@@ -6,7 +6,9 @@ class BassiVerattiMailer < ActionMailer::Base
     @email=opts[:email]
     @name=opts[:name]
     @subject=opts[:subject]
-    mail(:to=>BassiVeratti::Application.config.contact_us_recipients[@subject], :subject=>"Contact Message from Bassi Veratti Digital Library - #{@subject}") 
+    to=BassiVeratti::Application.config.contact_us_recipients[@subject]
+    bcc=BassiVeratti::Application.config.contact_us_bcc_recipients[@subject]    
+    mail(:to=>to,:bcc=>bcc, :subject=>"Contact Message from Bassi Veratti Digital Library - #{@subject}") 
   end
 
   def error_notification(opts={})

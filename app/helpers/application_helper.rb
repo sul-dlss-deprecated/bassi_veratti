@@ -1,5 +1,12 @@
 module ApplicationHelper
-  
+
+  # take in a hash of options for the contact us form, and then pass the values of the hash through the translation engine
+  def translate_options(options)
+    result={}
+    options.each {|k,v| result.merge!({k=>I18n.t(v)})}
+    return result
+  end
+    
   def highlight_text(doc, field)
     doc.highlight_field(field) ? doc.highlight_field(field).first : doc[field]
   end

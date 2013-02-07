@@ -74,5 +74,6 @@ end
 BassiVeratti::Application.config.version = VERSION # read from VERSION file at base of website
 BassiVeratti::Application.config.google_api_key = "AIzaSyCZxogTGsi5KK8_hRf6Z7tWRkxocoMx_Bk"
 BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/config/stacks.yml")[Rails.env]["url"]
-BassiVeratti::Application.config.contact_us_topics = {'default'=>'Select a topic...', 'terms of use'=>'Terms of Use question', 'error'=>'Problem with the website','other'=>'Other questions'} # sets the list of topics shown in the contact us page
-BassiVeratti::Application.config.contact_us_recipients = {'default'=>'petucket@stanford.edu', 'error'=>'petucket@stanford.edu','terms of use'=>'petucket@stanford.edu','other'=>'petucket@stanford.edu'} # sets the email address for each contact us topic configed above
+BassiVeratti::Application.config.contact_us_topics = {'default'=>'bassi.contact.select_topic', 'error'=>'bassi.contact.problem','other'=>'bassi.contact.other_questions'} # sets the list of topics shown in the contact us page
+BassiVeratti::Application.config.contact_us_recipients = {'default'=>'digcoll@jirasul.stanford.edu', 'error'=>'digcoll@jirasul.stanford.edu','terms of use'=>'digcoll@jirasul.stanford.edu','other'=>'digcoll@jirasul.stanford.edu'} # sets the email address for each contact us topic configed above
+BassiVeratti::Application.config.contact_us_bcc_recipients = {'default'=>'bassi-other@jirasul.stanford.edu', 'error'=>'bassi-problems@jirasul.stanford.edu','other'=>'bassi-other@jirasul.stanford.edu'} # sets the BCC email address for each contact us topic configed above
