@@ -42,7 +42,7 @@
           <div class="overview-area tab-content">
 
             <div class="tab-pane fade" id="tab1">
-              <%= render :partial => 'overview_map' %>
+              <%= render :partial => 'overview_map' unless @params[:nomap]%>
             </div>
 
             <div class="tab-pane fade" id="tab2">
