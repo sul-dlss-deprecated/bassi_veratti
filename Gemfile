@@ -35,6 +35,10 @@ group :development, :staging, :test do
   gem 'sqlite3'
 end
 
+group :staging, :production do
+  gem 'mysql', "2.8.1"
+end
+
 gem 'rest-client'
 gem 'geocoder'
 gem 'jquery-rails'

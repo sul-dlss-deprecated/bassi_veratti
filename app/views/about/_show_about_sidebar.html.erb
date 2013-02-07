@@ -11,11 +11,10 @@
 			<li><%= link_to t('bassi.nav.use_policy'), :controller => "about", :action => "show", :id=> "terms_of_use" %></li>
 
 		<li class="nav-header second"><%=t('bassi.nav.contact')%></li>
-		<li>Sarah Sussman</li>
-		<li>Curator of French and Italian Collections
-      <span class="contact-link"><%= mail_to "TBD@TBD.stanford.edu" %></span>
-    </li>
+		<li>
+		  <%= link_to 'Sarah Sussman <i class="icon-envelope"></i>'.html_safe, 'https://library.stanford.edu/people/ssussman' %>
+		</li>
+		<li>Curator, French and Italian Collections</li>
 	  </ul>
-
 	</div>
 </div>

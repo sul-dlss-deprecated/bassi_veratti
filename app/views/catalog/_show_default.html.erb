@@ -1,12 +1,14 @@
-<script type="text/javascript">
-  $(document).ready(function(){
-    $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
-                                     'druid': '<%= document[:druid_ssi] %>',
-																		 'size': 'thumb',
-                                     'width': 365,
-                                     'height': 600});
-  });
-</script>
+<%if @document.images.size > 0 %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
+                                       'druid': '<%= document[:druid_ssi] %>',
+                                       'size': 'thumb',
+                                       'width': 365,
+                                       'height': 600});
+    });
+  </script>
+<% end %>
 
 <div class="document">
   <div class="row">
@@ -18,13 +20,15 @@
   <div class="row document-details">
     <div class="span6 member-image">
       <%if @document.images.size > 0 %>
-				<div id="image_workspace"></div>
-				
- 				<noscript>
-			     <div class="item active">
-			       <%= image_tag(@document.images.first, :alt => "Image 1 of #{@document.images.size}") %>
-			     </div>
-				</noscript>
+        <div id="image_workspace"></div>
+
+        <noscript>
+           <div class="item active">
+             <%= image_tag(@document.images.first, :alt => "Image 1 of #{@document.images.size}") %>
+           </div>
+        </noscript>
+      <% else %>
+        <%= image_tag("http://dummyimage.com/365x400/f8f6f1/6d5b48&text=Description only, no image", :class => "placeholder-image") %>
       <% end %>
     </div>
 
@@ -35,7 +39,7 @@
         <% unless list_is_empty?(@document.document_types) %>
           <dt style='white-space: normal;'><%=t('bassi.show.document_types')%>:</dt><dd class="doc-type" ><%=show_formatted_list(@document.document_types,:facet=>'document_types_ssim')%></dd>
         <% end %>
-				<% unless list_is_empty?(@document.description) %>
+        <% unless list_is_empty?(@document.description) %>
           <dt style='white-space: normal;'><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
         <% end %>
         <% unless list_is_empty?(@document.people) %>
@@ -49,13 +53,13 @@
         <% end %>
         <% unless list_is_empty?(@document.location) %>
           <dt><%=t('bassi.show.locations')%>:</dt>
-						<dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%> 
-							<% unless list_is_empty?(@document.coordinates) %>
+            <dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%>
+              <% unless list_is_empty?(@document.coordinates) %>
                 <a href="#location-map" data-toggle="modal" id="show-map-link" class="hidden">
                   <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>
                 </a>
               <% end %>
-						</dd>
+            </dd>
         <% end %>
         <% unless list_is_empty?(@document.notes) %>
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
@@ -75,51 +79,51 @@
 <% if @document.folder_siblings.documents.size > 0%>
 <div class="row">
   <div class="span12">
-		<h3>
-		  <%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)
-		  <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>
-		</h3>
-		<ul class="preview-folder-items">
-  		<% @document.folder_siblings.documents.each do |sibling| %>
-  		  <li>
-  				<%= link_to(image_tag(sibling.first_image(:square),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
-  			</li>
-  		<% end %>
-		</ul>
+    <h3>
+      <%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)
+      <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>
+    </h3>
+    <ul class="preview-folder-items">
+      <% @document.folder_siblings.documents.each do |sibling| %>
+        <li>
+          <%= link_to(image_tag(sibling.first_image(:square),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 <% end %>
 
 <% unless list_is_empty?(@document.coordinates) %>
-	<script>
-	$(document).ready(function(){
-  	$('#location-map').modal({keyboard: true, backdrop: 'static', show: false});
-		$('#show-map-link').removeClass('hidden');
-		var options = {
-			zoom: 6,
-			center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
-		<%- @document.coordinates.each do |coordinate| %>			  
-			new google.maps.Marker({position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),map: map,title:"<%=coordinate[:name]%>"});
-		<% end %>
+  <script>
+  $(document).ready(function(){
+    $('#location-map').modal({keyboard: true, backdrop: 'static', show: false});
+    $('#show-map-link').removeClass('hidden');
+    var options = {
+      zoom: 6,
+      center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+    <%- @document.coordinates.each do |coordinate| %>
+      new google.maps.Marker({position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),map: map,title:"<%=coordinate[:name]%>"});
+    <% end %>
 
-	});
+  });
 
-	</script>
+  </script>
 
-	<div class="modal fade" id="location-map">
-	  <div class="modal-header">
-	    <h3><%=t('bassi.show.map')%></h3>
-	  </div>
-	  <div class="modal-body">
-			
-				<div id="result_map"></div>
+  <div class="modal fade" id="location-map">
+    <div class="modal-header">
+      <h3><%=t('bassi.show.map')%></h3>
+    </div>
+    <div class="modal-body">
 
-	  </div>
-	  <div class="modal-footer">
-	    <button class="tod-agree btn btn-primary" data-dismiss="modal"><%=t('bassi.nav.close')%></button>
-	  </div>
-	</div>
+        <div id="result_map"></div>
+
+    </div>
+    <div class="modal-footer">
+      <button class="tod-agree btn btn-primary" data-dismiss="modal"><%=t('bassi.nav.close')%></button>
+    </div>
+  </div>
 <% end %>

@@ -9,7 +9,7 @@ class CatalogController < ApplicationController
     opts = {}
     CollectionHighlight.find(:all,:order=>:sort_order).each do |highlight|
       opts[:"highlight_#{highlight.id}"] = {:label => highlight.send("name_#{I18n.locale}"), :fq => "id:(#{highlight.query.gsub('or', 'OR')})"}
-    end
+    end if ActiveRecord::Base.connection.table_exists? 'collection_highlights'
     opts
   end
     
@@ -177,8 +177,8 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
 
-    config.add_index_field 'document_types_ssim', :label => 'bassi.show.document_types'
-    config.add_index_field 'unit_date_ssim', :label => 'bassi.show.date'
+    config.add_index_field 'document_types_ssim', :label => 'bassi.show.document_types', :highlight => true
+    config.add_index_field 'unit_date_ssim', :label => 'bassi.show.date', :highlight => true
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 

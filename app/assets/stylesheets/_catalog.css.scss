@@ -25,7 +25,7 @@
     dl {margin-top: 8px;}
     dt {
       text-align: left;
-      width: 50px;
+      width: 120px;
     }
     dd {margin-left: 60px;}
     img {vertical-align: top;}
@@ -41,7 +41,13 @@
   }
 }
 
-.index_title {color: #999999;}
+.index_title {
+	color: #999999;
+	em {
+		font-style: normal;
+	}
+}
+
 .bookmark_toggle {
 	label {
 		cursor: pointer;
@@ -115,13 +121,17 @@
   }
   // override image_viewer plugin styles
   .pe-h-nav {
-    background: none;
-    border: 1px solid darken($header_bg_color, 8%);
+    background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
+    // border: 1px solid darken($header_bg_color, 8%);
     width: 98%;
   }
   .pe-purl-url {
     border: none;
     bottom: -4px;
+  }
+  // placeholder image for cases where item has no associated image
+  img.placeholder-image {
+    border: 1px solid darken($header_bg_color, 15%);
   }
 }
 

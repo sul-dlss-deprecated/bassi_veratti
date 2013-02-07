@@ -1,4 +1,4 @@
-require 'jettywrapper' unless Rails.env.production?
+require 'jettywrapper' unless Rails.env.production? or Rails.env.staging?
 require 'rest_client'
 
 desc "Run continuous integration suite"
