@@ -59,6 +59,24 @@ $constraint_border_active_color: #FFD27A !default;
   border: 1px solid #999;
 }
 
+@mixin styled_link {
+  float: right;
+  font-size: 12px;
+  text-transform: none;
+  a {
+    background-color: $header_bg_color;
+    border: 1px solid darken($header_bg_color, 5%);
+    border-radius: 6px;
+    padding: 5px 12px;
+    margin-right: 2px;
+    line-height: 14px
+  }
+  a:hover {
+    background-color: darken($header_bg_color, 5%);
+    text-decoration: none;
+  }
+}
+
 /* --- */
 
 html {
