@@ -89,6 +89,6 @@ namespace :deploy do
   end
 end
 
-after "deploy:finalize_update", "db:migrate"
+after "deploy", "db:migrate"
 after "deploy", "app:expire_caches"
 after "deploy", "app:add_date_to_version"
