@@ -116,4 +116,35 @@ describe SolrDocument do
     end
   end
   
+  describe "duplicate objects" do
+    describe "notes" do
+      it "should return the note for duplicate objects" do
+        BassiVeratti::Application.config.duplicate_copies.keys.each do |key|
+          doc = SolrDocument.new({:id => key})
+          doc.duplicate_note.should_not be_blank
+          doc.duplicate_note.should  =~ /^The content of this object is a duplicate/
+        end
+      end
+      it "should return nil when an object is not a duplicate" do
+        doc = SolrDocument.new({:id => "1235"})
+        doc.duplicate_note.should be_nil
+      end      
+    end
+    
+    describe "references" do
+      it "should return the reference for duplicate objects" do
+        BassiVeratti::Application.config.duplicate_copies.keys.each do |key|
+          doc = SolrDocument.new({:id => key})
+          doc.duplicate_reference.should_not be_blank
+          doc.duplicate_reference.should  =~ /^ref\d+/
+        end
+      end
+      it "should return nil when an object is not a duplicate" do
+        doc = SolrDocument.new({:id => "1235"})
+        doc.duplicate_reference.should be_nil
+      end      
+    end
+
+  end
+  
 end

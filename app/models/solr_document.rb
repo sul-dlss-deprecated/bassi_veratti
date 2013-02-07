@@ -52,6 +52,16 @@ class SolrDocument
     multivalue_field('description_tsim')
   end
   
+  def duplicate_note
+    return nil unless BassiVeratti::Application.config.duplicate_copies.keys.include?(self[SolrDocument.unique_key])
+    BassiVeratti::Application.config.duplicate_copies[self[SolrDocument.unique_key]][:note]
+  end
+  
+  def duplicate_reference
+    return nil unless duplicate_note
+    BassiVeratti::Application.config.duplicate_copies[self[SolrDocument.unique_key]][:duplicates]
+  end
+  
   def purl
     self[:purl_ssi]
   end
