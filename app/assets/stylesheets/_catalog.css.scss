@@ -11,14 +11,14 @@
   }
   .documentHeader {
     display: inline-block;
-	  .index_title {
-		  float: left;
+    .index_title {
+      float: left;
       margin: 0;
       max-width: 480px;
-	  }
-	  .documentFunctions {
-		  float: right;
-	  }
+    }
+    .documentFunctions {
+      float: right;
+    }
   }
   #documents.default {
     .row {margin-bottom: 20px; padding-left: 10px;}
@@ -42,17 +42,17 @@
 }
 
 .index_title {
-	color: #999999;
-	em {
-		font-style: normal;
-	}
+  color: #999999;
+  em {
+    font-style: normal;
+  }
 }
 
 .bookmark_toggle {
-	label {
-		cursor: pointer;
-		display: inline;
-	}
+  label {
+    cursor: pointer;
+    display: inline;
+  }
 }
 
 .blacklight-catalog-show {
@@ -132,16 +132,21 @@
   .modal-header {
     @include modal-header;
     padding: 0 0 9px;
-	  h3 {
-	    border-top: 1px solid #999;
+    h3 {
+      border-top: 1px solid #999;
       color: #fff;
-	    font-size: 22px;
-	  }
+      font-size: 22px;
+    }
   }
   .modal-footer {
-		padding: 15px;
-		text-align: center;
-	}
+    padding: 15px;
+    text-align: center;
+  }
+  .modal-body {
+    .citation {
+      h4 {font-size: 14px}
+    }
+  }
   // override image_viewer plugin styles
   .pe-h-nav {
     background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;

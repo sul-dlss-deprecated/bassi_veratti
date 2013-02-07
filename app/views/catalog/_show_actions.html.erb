@@ -6,8 +6,9 @@
       <span class="caret"></span>
       <ul>
         <!-- <li><%#= link_to t('bassi.sidebar.actions.print'), '#' %></li> -->
-        <li><%= link_to t('bassi.sidebar.actions.cite'), '#' %></li>
-
+        <li class="cite">
+         <%= link_to t('bassi.sidebar.actions.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :class => 'lightboxLink'} %>
+        </li>
         <%- # extracted from show_tools partial %>
         <% if @document.respond_to?( :to_email_text ) %>
           <li class="email">

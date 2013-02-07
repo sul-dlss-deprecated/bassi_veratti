@@ -84,6 +84,8 @@ en:
       view_in_inventory: "View this %{item} in content inventory"
       citation: 'Permanent URL'
       all_items_in_folder: "Other items in this folder"
+      cite:
+        title: 'Cite this item'
       item_actions: 'Item actions'
     collection_members_grid:
       members_link: 'View all collection items'
