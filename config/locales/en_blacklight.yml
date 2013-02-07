@@ -115,7 +115,7 @@ en:
     email:
       form:
         title: 'Email this'
-        to: 'Email:'
+        to: 'Email address:'
         message: 'Message:'
         submit: 'Send'
       text:

@@ -77,6 +77,11 @@ $constraint_border_active_color: #FFD27A !default;
   }
 }
 
+@mixin modal-header {
+	background-color: #8A887D;
+	text-align: center;
+}
+
 /* --- */
 
 html {
