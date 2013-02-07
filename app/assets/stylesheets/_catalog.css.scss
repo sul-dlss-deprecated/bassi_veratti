@@ -57,6 +57,7 @@
 
 .blacklight-catalog-show {
   #document, #document h4 {
+    clear: left;
     margin-top: 0;
     .document-details {
       margin-bottom: 50px;
@@ -118,6 +119,15 @@
     margin-top: 30px;
     padding-left: 0;
     li {line-height: 16px;}
+  }
+  .item-metadata-tools {
+    border-bottom: 1px solid $nav_border_color;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    .highlights-link {
+      float: left;
+      margin-top: 2px;
+    }
   }
   // override image_viewer plugin styles
   .pe-h-nav {

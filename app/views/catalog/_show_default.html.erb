@@ -33,6 +33,13 @@
     </div>
 
     <div class="span6 metadata">
+      <div class="item-metadata-tools">
+        <span class="highlights-link">
+          <%= link_to t('bassi.show.view_in_inventory', :item => 'item'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %>
+        </span>
+        <%= render :partial => 'show_actions' %>
+      </div>
+            
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
@@ -72,8 +79,6 @@
         <%# end %>
       </dl>
 
-      <%= render :partial => 'show_actions' %>
-
     </div>
 
   </div>
@@ -83,7 +88,7 @@
 <div class="row">
   <div class="span12">
     <h3>
-      <%=t('bassi.show.all_items_in_folder')%>  (<%=@document.folder_siblings.documents.size%>)
+      <%=t('bassi.show.all_items_in_folder')%> (<%=@document.folder_siblings.documents.size%>)
       <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>
     </h3>
     <ul class="preview-folder-items">

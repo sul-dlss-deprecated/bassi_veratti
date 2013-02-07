@@ -77,6 +77,7 @@ it:
       view_in_inventory: "Vedi nell’inventario"
       citation: 'Citazione'
       all_items_in_folder: 'Altri pezzi in questo fascicolo'
+      item_actions: 'Item funzioni'
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'
