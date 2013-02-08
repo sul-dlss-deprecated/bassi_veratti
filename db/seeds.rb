@@ -19,35 +19,35 @@ c1=CollectionHighlight.create(
   name_it:'Diplomi di Accademie e medaglia di Laura Bassi',
   description_en:'',
   description_it:'',
-  image_url:'bv-sample.png')
+  image_url:'https://stacks.stanford.edu/image/rp148zt6022/rp148zt6022_001_thumb.jpg')
 c2=CollectionHighlight.create(
   sort_order:2,
   name_en:'Documents dealing with Laura Bassi\'s graduation',
   name_it:'Documenti relativi alla laurea di Laura Bassi',
   description_en:'',
   description_it:'',
-  image_url:'bv-sample-2.png')
+  image_url:'https://stacks.stanford.edu/image/vg858pk9564/vg858pk9564_001_thumb.jpg')
 c3=CollectionHighlight.create(
   sort_order:3,
   name_en:'Poems in honour of Laura Bassi',
   name_it:'Poesie in elogio di Laura Bassi',
   description_en:'',
   description_it:'',
-  image_url:'bv-sample-3.png')
+  image_url:'https://stacks.stanford.edu/image/rx850qf7666/rx850qf7666_005_thumb.jpg')
 c4=CollectionHighlight.create(
   sort_order:4,
   name_en:'About Laura Bassi',
   name_it:'di Laura Bassi',
   description_en:'',
   description_it:'',
-  image_url:'bv-sample-3.png')
+  image_url:'https://stacks.stanford.edu/image/cv258zh8350/cv258zh8350_001_thumb.jpg')
 c5=CollectionHighlight.create(
   sort_order:5,
   name_en:'Documents concerning Veratti family',
   name_it:'Documenti relativi alla famiglia Veratti',
   description_en:'',
   description_it:'',
-  image_url:'bv-sample-3.png')
+  image_url:'https://stacks.stanford.edu/image/gr543cc1516/gr543cc1516_001_thumb.jpg')
 
 c1_items=%w{ref444 ref436 ref440 ref442 ref446 ref450 ref461 ref464}
 c2_items=%w{ref417 ref596 ref589 ref419 ref423}
