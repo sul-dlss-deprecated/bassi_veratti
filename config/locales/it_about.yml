@@ -12,30 +12,88 @@ it:
       describe_problem: 'Please describe your question or problem.'
     about_text_html: |
       <p>
-        The online Bassi-Veratti Collection is a multi-year collaboration of
-        the Stanford University Libraries, the Biblioteca Comunale
-        dell’Archiginnasio, Bologna, Italy, and the Istituto per i Beni
-        Artistici, Culturali e Naturali della Regione Emilia-Romagna, to produce
-        a digital version of the archive of the influential woman scientist,
-        Laura Bassi. Part of the rich collections of the Archiginnasio, the
-        collection contains not only materials about Laura Bassi, but also those
-        of her husband, scientist Giuseppe Veratti, their children, and his
-        family.
+        La realizzazione consente a studiosi e studenti di tutto il mondo di accedere a fonti storiche
+        primarie; consiste di una interfaccia in linea che premette l’accesso alle versioni digitalizzate di
+        tutti i materiali del fondo Bassi-Veratti dell’Archiginnasio di Bologna, attraverso un dettagliato
+        inventario, taggato per potere essere interrogato per parole chiave e termini di indice. Siccome i
+        contenuti dell’inventario sono legati alle corrispettive immagini digitali, gli studiosi possono
+        facilmente navigare dalle descrizioni ai facsimili digitali.
+      </p>
+      <h3>Sintesa technica</h3>
+      <p>
+        Da un documento Word, l’inventario è stato trasposto manualmente in EAD (Encoded Archival
+        Description), lo standard internazionale XML Schema sostenuto dalla Library of Congress in
+        collaborazione con la Society of American Archivists. EAD 2002, l’ultima versione approvata, consente
+        la standardizzazione delle informazioni relative ai fondi contenute negli inventari all’interno dei
+        repository. In quanto XML Schema, fornisce un ambiente per il tagging dei termini chiave che possono
+        essere estratti e indicizzati per sostenere la ricerca in un ambiente online personalizzato. Stanford
+        University Libraries (SUL) ha potuto contare sull’ inventario riccamente descritto dall’Archiginnasio
+        e ha aumentato le possibilità di ricerca taggando i nomi e i cognomi, i nomi di luogo e i nomi di
+        enti associati ai singoli documenti descritti. Queste informazioni, insieme alle date, recuperate con
+        harvesting EAD XML e lista controllata di categorie di documenti sono state usati per costruire gli
+        indici dell’ambiente di ricerca online.
       </p>
       <p>
-        The Stanford Digital Repository ensures each digital object is
-        preserved, made available via a permanent persistent URL
-        (web address), enforces content rights and restrictions and provides
-        a common storage mechanism for other applications to build upon.
+        La digitalizzazione di 672 pezzi, per un totale di 6000 immagini, del fono Bassi-Veratti è stata
+        eseguita dall’azienda italiana AdACTA srl, con la guida ed il controllo degli esperti di
+        digitalizzazione di SUL. AdACTA ha usato un I2s Suprascan Digibook 10.0 conformato alle specifiche di
+        image filing di Stanford University Libraries per produrre il master di file TIFF. Le immagini sono
+        state compresse con TIFF 6.0 LZW con una definizione di 400 ppi, non interpolati, una profondità di 8
+        bit e colore Adobe RGB (1998). Come richiesto da SUL, l’azienda ha usato per tutta la durata del
+        lavoro gli indici di controllo Image Science Associates Golden Thread; questo ha consentito un
+        attento controllo di qualità da parte del personale addetto di SUL. Immagini derivate in formato
+        JPEG2000 sono state generate dal master di TIFF e rielaborate per la visualizzazione sul sito web.
       </p>
       <p>
-        The Bassi-Veratti Collection is being built on top of the Stanford
-        Digital Repository to provide a web based platform for discovery and
-        study of the archive. The Collection is developed using open
-        source technologies, including
-        <a href="http://www.rubyonrails.org">Ruby on Rails</a> and
-        <a href="http://projectblacklight.org/">Blacklight</a>.
+        Le immagini (TIFF e JPEG 2000) e i metadati associati sono state immessi nello <a
+        href="http://library.stanford.edu/projects/stanford-digital-repository">Stanford Digital
+        Repository</a> (SDR). Lo SDR consente che ciascun oggetto digitale sia conservato e reso disponibile
+        attraverso una URL stabile; oltre a stabilire e mettere in chiaro i diritti sui contenuti e le
+        restrizioni d’uso e fornire un meccanismo di immagazzinamento comune che può essere usato come base
+        per altre applicazioni. Inoltre, SDR assicura la conservazione di lungo termine, l’accesso e la
+        gestione dei contenuti depositati dai partner di SUL. Grazie ad un insieme di tecnologie ed
+        infrastrutture, come pure grazie a prassi e politiche di programma, SDR offre:
       </p>
+      <ul>
+        <li>Conservazione: un ambiente sicuro di conservazione per assicurare la disponibilità a lungo
+        termine, integrità e accesso al contenuto.</li>
+        <li>Accesso: sostegno alla ricerca, delivery e citazione permanente degli oggetti.</li>
+        <li>Gestione: capacità di amministrare e gestire gli aspetti di contenuto quali al definizione del
+        controllo di accesso.</li>
+      </ul>
+      <p>
+        Il sito web è stato pensato e sviluppato usando tecnologie open source, usate dai tecnici di Stanford
+        per tutte le soluzioni di ricerca e accesso. La collezione digitale Bassi-Veratti è costruita per
+        essere ospitata dallo Stanford Digital Repository per fornire una piattaforma web per la ricerca dei
+        documenti archivistici e delle informazioni descrittive correlate. La collezione digitale è stata
+        sviluppata in <a href="http://www.rubyonrails.org">Ruby on Rails</a> usando <a
+        href="http://projectblacklight.org/">Blacklight</a>. Blacklight fornisce l’interfaccia di ricerca e usa un
+        indice Apache Solr, costruito per estrarre gli elementi rilevanti dalla versione EAD XML del fondo
+        Bassi-Veratti.
+      </p>
+      <p>
+        Fornire all’utenza un mezzo veloce e versatile di visualizzare, zoomare e fare panning su grandi
+        immagini ad alta risoluzione di pagine manoscritte è stata una difficile sfida per il progetto. La
+        presentazione dell’immagine del sito sfrutta il formato di compressione JPEG2000 per la
+        visualizzazione e manipolazione attraverso il browser senza fare ricorso a plug-in o ad altri
+        software altrui.
+      </p>
+      <p>
+        Il design del sito web Bassi-Veratti si basa su un approccio che mette al centro l’utente, intrapreso
+        da SUL per sviluppare i siti web delle collezioni online. Questa metodologia comporta un feedback
+        iniziale e in itinere da parte degli studiosi universitari che costituiscono l’utenza primaria delle
+        collezioni online di Stanford University Libraries. Il risultato è una applicazione web che consente
+        loro di soddisfare i propri scopi di ricerca e aumenta l’efficienza del processo di sviluppo del
+        software. Questa strategia comprende:
+      </p>
+      <ul>
+        <li>Interviste con ricercatori di settore: facoltà, personale e studenti.</li>
+        <li>Persona development: creazione di profili personalizzati non solo per la descrizione di scopi di
+        ricerca e comportamenti, ma anche di alcune caratteristiche personali</li>
+        <li>Design, comprendente l’organizzazione dei contenuti e le funzioni del sito web e qualunque
+        altro suo requisito specifico.</li>
+        <li>Wireframe, o struttura delle pagine del sito e suo aspetto generale.</li>
+      </ul>
     laura_bassi_text_html: |
       <img src="/assets/BVP.jpg" width="200"/>
       <p>
@@ -129,7 +187,7 @@ it:
         <dt>Jin Chen</dt><dd>Image Quality Assurance Production</dd>
         <dt>Christopher DeRosa</dt><dd>Curatorial Assistant</dd>
         <dt>Glynn Edwards</dt><dd>EAD Consultant</dd>
-        <dt>Gary Geisler</dt><dd>Web Application Developer</dd>
+        <dt>Gary Geisler</dt><dd>User Experience Designer/Web Application Developer</dd>
         <dt>Jessie Keck</dt><dd>Web Application Developer</dd>
         <dt>Peter Mangiafico</dt><dd>Web Application Developer</dd>
         <dt>Matt Pearson</dt><dd>Image Quality Assurance Specialist</dd>

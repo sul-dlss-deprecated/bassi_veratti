@@ -12,30 +12,88 @@ en:
       describe_problem: 'Please describe your question or problem.'
     about_text_html: |
       <p>
-        The online Bassi-Veratti Collection is a multi-year collaboration of
-        the Stanford University Libraries, the Biblioteca Comunale
-        dell’Archiginnasio, Bologna, Italy, and the Istituto per i Beni
-        Artistici, Culturali e Naturali della Regione Emilia-Romagna, to produce
-        a digital version of the archive of the influential woman scientist,
-        Laura Bassi. Part of the rich collections of the Archiginnasio, the
-        collection contains not only materials about Laura Bassi, but also those
-        of her husband, scientist Giuseppe Veratti, their children, and his
-        family.
+        The online Bassi-Veratti Collection brings historical primary source materials to scholars and
+        students around the world. It consists of an online interface offering access to the digitized
+        versions of all of the materials of the Bassi-Veratti Collection at the Archiginnasio in Bologna.
+        Access is via a detailed archival inventory, or finding aid. This inventory has been tagged so that
+        researchers can search using keywords and index terms. Because the inventory’s contents are linked to
+        the corresponding digital images, scholars can easily navigate from the descriptions of the materials
+        to the digital facsimiles.
+      </p>
+      <h3>Technical summary</h3>
+      <p>
+        The inventory, or finding aid, was transposed by hand from a Microsoft Word document to Encoded
+        Archival Description (EAD), an international standard XML schema maintained by the Library of
+        Congress in partnership with the Society of American Archivists. EAD 2002, the latest approved
+        version, allows the standardization of collection information in finding aids within and across
+        repositories. As an XML schema, it affords an environment for tagging of key terms, which can be
+        extracted and indexed to enhance discovery in a customized online environment. The Stanford
+        University Libraries (SUL) team took advantage of the richly-described collection inventory created
+        by Archiginnasio partners, and increased searchability of the collection by tagging both family and
+        personal names, geographic locations and corporate names associated with the individual documents
+        listed. This information, along with document dates harvested from the EAD XML, and a list of
+        document types generated – were used to construct the indexes for the online discovery environment
+        for the collection.
       </p>
       <p>
-        The Stanford Digital Repository ensures each digital object is
-        preserved, made available via a permanent persistent URL
-        (web address), enforces content rights and restrictions and provides
-        a common storage mechanism for other applications to build upon.
+        Digitization of the 672 items (6000 total images) in the Bassi-Veratti collection was conducted by
+        Italian Vendor AdACTA s.r.l under the direction and guidance of digitization experts from SUL. Using an
+        I2s Suprascan Digibook 10.0, AdACTA conformed to Stanford University Libraries (SUL) image file
+        specifications to produce archival master TIFF files. Image files were compressed using TIFF 6.0 LZW,
+        with a spatial frequency of 400 ppi, non-interpolated, a bit depth of 8 and an Adobe RGB (1998) color
+        space. As specified by SUL, throughout the imaging workflow Image Science Associates Golden Thread
+        targets were used by the vendor. This enabled the employment of thorough quality control by SUL’s image
+        quality staff. Derivative JPEG 2000 images were generated from the master TIFF files, and re-purposed
+        for viewing on the web site.
       </p>
       <p>
-        The Bassi-Veratti Collection is being built on top of the Stanford
-        Digital Repository to provide a web based platform for discovery and
-        study of the archive. The Collection is developed using open
-        source technologies, including 
-        <a href="http://www.rubyonrails.org">Ruby on Rails</a> and 
-        <a href="http://projectblacklight.org/">Blacklight</a>.
+        The images (TIFFs and JPEG 2000s) and associated metadata were assembled and accessioned into the
+        <a href="http://library.stanford.edu/projects/stanford-digital-repository">Stanford Digital
+        Repository</a> (SDR).
+        The SDR ensures each digital object is preserved, made available via a persistent URL (web address),
+        enforces content rights and restrictions and provides a common storage mechanism for other
+        applications to build upon. Further, the SDR provides long-term preservation, access and management
+        of content deposited by SUL partners. Through a combination of technologies and infrastructure as
+        well as programmatic processes and policies, SDR offers:
       </p>
+      <ul>
+        <li>Preservation – secure preservation environment designed to ensure the long-term availability,
+        integrity and accessibility of content.</li>
+        <li>Access – support for discovery, delivery and persistent citation of objects.</li>
+        <li>Management – ability to administer and manage aspects of the content such as defining access
+        control.</li>
+      </ul>
+      <p>
+        The collection web site was designed and developed using open source technologies that SUL
+        development staff employ for all SUL discovery and access solutions. The Bassi-Veratti digital
+        collection is built on top of the Stanford Digital Repository to provide a web based platform for
+        discovery of archival documents and their associated descriptive information. The digital collection
+        was developed in <a href="http://www.rubyonrails.org">Ruby on Rails</a> using <a
+        href="http://projectblacklight.org/">Blacklight</a>. Blacklight provides the discovery interface and
+        uses an Apache Solr index, constructed by mining the Bassi EAD XML for relevant data elements.
+      </p>
+      <p>
+        Providing users with a fast and versatile means of smoothly viewing, zooming, and panning large,
+        high-resolution images of manuscript pages was a critical challenge for the project. The image
+        presentation component of the site takes advantage of JPEG2000 image file compression and an image
+        server application that dynamically decodes JPEG2000 files for viewing and manipulation in the web
+        browser without the need for plug-in or other third-party software.
+      </p>
+      <p>
+        The Bassi-Veratti Collection web site design is based on a user-centered approach taken by SUL to
+        develop online collection websites. This methodology involves early and iterative feedback from the
+        primary audience of SUL’s online collections – academic researchers. It results in a web application
+        that helps them achieve their research goals and increases the efficiency of the software development
+        process. This comprehensive process includes:
+      </p>
+      <ul>
+        <li>Interviews with key researchers – faculty, staff and students</li>
+        <li>Persona development, enabling creation of in-depth character sketches, which not only describe
+        research goals and behaviors, but also some personal characteristics</li>
+        <li>Design, including the organization of content and functions on the web site, and any
+        site-specific requirements</li>
+        <li>Wireframes, or sketches of the web site pages, and overall visual design</li>
+      </ul>
     laura_bassi_text_html: |
       <img src="/assets/BVP.jpg" width="200"/>
       <p>
@@ -132,7 +190,7 @@ en:
         <dt>Jin Chen</dt><dd>Image Quality Assurance Production</dd>
         <dt>Christopher DeRosa</dt><dd>Curatorial Assistant</dd>
         <dt>Glynn Edwards</dt><dd>EAD Consultant</dd>
-        <dt>Gary Geisler</dt><dd>Web Application Developer</dd>
+        <dt>Gary Geisler</dt><dd>User Experience Designer/Web Application Developer</dd>
         <dt>Jessie Keck</dt><dd>Web Application Developer</dd>
         <dt>Peter Mangiafico</dt><dd>Web Application Developer</dd>
         <dt>Matt Pearson</dt><dd>Image Quality Assurance Specialist</dd>
