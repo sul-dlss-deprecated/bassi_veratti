@@ -14,3 +14,4 @@ namespace :deploy do
 end
 
 after "deploy:finalize_update", "db:symlink_sqlite"
+after "db:symlink_sqlite", "db:loadfixtures"
