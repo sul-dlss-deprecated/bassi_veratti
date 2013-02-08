@@ -84,6 +84,7 @@
    and site title and nav elements */
 @media (min-width: 768px) and (max-width: 979px) {
   #header-navbar-static-top {
+    h1 {font-size: 3.1em;}
     .logo img {
       float: right;
       max-width: 60px;

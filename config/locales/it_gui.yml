@@ -1,6 +1,6 @@
 it:
   blacklight:
-    application_name: 'Inventario Laura Bassi'
+    application_name: 'Fondo speciale Bassi Veratti'
   bassi:
     facet:
       document_types: 'Categoria di documento'
@@ -11,7 +11,7 @@ it:
       date_range: 'Data'
       all_fields: 'All fields'
     nav:
-      bassi_collection: 'Inventario Laura Bassi'
+      bassi_collection: 'Fondo speciale Bassi Veratti'
       about: 'Progetto'
       home: 'Home'
       report_problem: 'Segnala un errore'
