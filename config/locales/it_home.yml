@@ -2,7 +2,7 @@ it:
   bassi:
     home:
       location: 'Luogo'
-      document_type: Document Type      
+      document_type: 'Categoria di documento'      
       overview_by: Overview By      
       collection_highlights: 'Elementi notevoli'
       more_highlights: 'Altri elementi notevoli'
