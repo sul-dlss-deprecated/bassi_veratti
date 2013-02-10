@@ -1,16 +1,20 @@
 .collection-highlights {
   ul.image-grid {
     list-style-type: none;
+    margin-left: 0;
     h3.collection-title {
       line-height: 1.1em;
       margin-bottom: 3px;
       margin-top: 6px;
       padding: 0;
+      text-align: center;
       > a {color: #000;}
     }
     span {
       color: #555;
+      display: block;
       font-size: 12px;
+      text-align: center;
     }
   }
   ul.image-grid li.image-item {
@@ -19,6 +23,11 @@
     margin-bottom: 20px;
     margin-right: 40px;
     max-width: 160px;
-    min-height: 290px;
+    min-height: 210px;
+    img {
+      border: 2px solid darken($header_bg_color, 8%);
+      border-radius: 4px;
+      padding: 5px;
+    }
   }
 }
