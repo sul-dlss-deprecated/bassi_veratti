@@ -33,7 +33,7 @@ en:
       close: 'Close'
     about:
       project_title: 'About the Bassi Veratti Collection'
-      contact_title: 'Contact us'
+      contact_title: 'Report a problem'
       contact_message_sent: 'Thanks - your message has been sent.'
       contact_error: 'You need to enter some message text.'
       laura_bassi_title: 'Laura Bassi and the Bassi-Veratti Collection'
