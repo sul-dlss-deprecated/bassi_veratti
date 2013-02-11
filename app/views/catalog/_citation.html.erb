@@ -1,5 +1,13 @@
 <% @documents.each do |document| %>
   <div class="modal-body">
-    <h4 class="citation"><%= citation_title(document) %></h4>
+    <p>
+      Biblioteca Comunale dell'Archiginnasio, Bologna, Fondo speciale Bassi Veratti,
+      <%= t('bassi.show.box.word') %> <%= document.box %>,
+      <%= t('bassi.show.folder.word') %> <%= document.folder %>,
+      <% unless document.purl.blank? %>
+        <%= link_to document.purl %>,
+      <% end %>
+      <%= citation_title(document) %>.
+    </p>
   </div>
 <% end %>
