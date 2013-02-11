@@ -4,6 +4,7 @@ class AboutController < ApplicationController
   # If your action has logic that needs to be run before the view, create a method, call "show" at the end of it, create a view partical o match,
   # and add a custom route in the routes.rb file    
   def contact
+    @from=params[:from]
     if request.post?
       @subject=params[:subject]
       @name=params[:name]
@@ -11,7 +12,11 @@ class AboutController < ApplicationController
       @message=params[:message]
       unless @message.blank?
         BassiVerattiMailer.contact_message(:subject=>@subject,:name=>@name,:email=>@email,:message=>@message).deliver 
-        flash.now[:notice]=t("bassi.about.contact_message_sent")
+        flash[:notice]=t("bassi.about.contact_message_sent")
+        unless @from.blank?
+          redirect_to(@from)
+          return
+        end
       else
         flash.now[:error]=t("bassi.about.contact_error")
       end
