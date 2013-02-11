@@ -33,7 +33,7 @@ it:
       close: 'Close'
     about:
       project_title: 'Compendio del progetto'
-      contact_title: 'Contact Us'
+      contact_title: 'Segnala un errore'
       contact_message_sent: 'Thanks - your message has been sent.'
       contact_error: 'You need to enter some message text.'
       laura_bassi_title: 'Laura Bassi e il fondo Bassi-Veratti'
