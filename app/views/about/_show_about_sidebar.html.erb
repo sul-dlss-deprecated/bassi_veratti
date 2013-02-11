@@ -12,9 +12,10 @@
 
 		<li class="nav-header second"><%=t('bassi.nav.contact')%></li>
 		<li>
-		  <%= link_to 'Sarah Sussman <i class="icon-envelope"></i>'.html_safe, 'https://library.stanford.edu/people/ssussman' %>
+		  <%= link_to 'Sarah Sussman <i class="icon-user"></i>'.html_safe, 'https://library.stanford.edu/people/ssussman', :alt => 'Visit curator\'s web page for contact information', :title => 'Visit curator\'s web page for contact information' %> 
 		</li>
-		<li>Curator, French and Italian Collections</li>
+		<li class="curator-title"><%= t('bassi.contact.curator')%></li>
+		<li class="curator-title">Stanford University Libraries</li>
 	  </ul>
 	</div>
 </div>

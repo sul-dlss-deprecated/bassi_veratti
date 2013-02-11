@@ -10,6 +10,7 @@ en:
       subject: 'Subject'
       message: 'Message'
       describe_problem: 'Please describe your question or problem.'
+      curator: 'Curator, French and Italian Collections'
     about_text_html: |
       <p>
         The online Bassi-Veratti Collection brings historical primary source materials to scholars and
