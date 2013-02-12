@@ -124,7 +124,7 @@ en:
         format: 'Format: %{value}'
         language: 'Language: %{value}'
         subject:
-          one: 'Item record: %{title}'
+          one: 'Bassi Veratti Item'
           other: 'Item records'
         url: 'URL: %{url}'
         message: 'Message: %{message}'

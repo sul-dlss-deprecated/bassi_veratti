@@ -150,7 +150,7 @@ it:
         format: 'Formato: %{value}'
         language: 'Lingua: %{value}'
         subject:
-          one: 'Record del dato: %{title}'
+          one: 'Fondo speciale Bassi Veratti'
           other: 'I Record del dato'
         url: 'URL: %{url}'
         message: 'Messaggio: %{message}'
