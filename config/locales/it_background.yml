@@ -1,13 +1,13 @@
 it:
   bassi:
     background:
-      respository: 'Repository'
+      repository: 'Fondo'
       repository_text: "Biblioteca dell'Archginnasio"
-      summary_title: 'Title'
+      summary_title: 'Titolo'
       summary_title_text: 'Fondo speciale Bassi Veratti'
-      Date: 'Date'
+      date: 'Data'
       date_text: '1591 (in copia) - 1836'
-      extent: 'Extent'
+      extent: 'Consistenza'
       extent_text: '12.0 boxes (~6,000 digital objects)'
       language: 'Language'      
       language_text: 'Italiano'

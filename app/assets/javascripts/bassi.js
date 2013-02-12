@@ -21,4 +21,10 @@ $(document).ready(function(){
 	//   non JS versions
 	$(".showOnLoad").show();
 
+  // Responsive width when using the bootstrap affix plugin (which makes width absolute)
+  $(function(){
+    var sideBarNavWidth=$('#sidebar-nav').width() - parseInt($('.nav-list').css('paddingLeft')) - parseInt($('.nav-list').css('paddingRight'));
+    $('.nav-list li').css('width', sideBarNavWidth);
+  });
+
 });

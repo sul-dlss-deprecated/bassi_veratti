@@ -43,6 +43,11 @@
   #content .logos {
     margin-top: 30px;
   }
+  .curator-title {font-style: italic;}
+  .icon-user {
+    margin-left: 5px;
+    vertical-align: top;
+  }
 
   // Make textarea wide as reasonable given viewport size
   @media (min-width: 980px) {

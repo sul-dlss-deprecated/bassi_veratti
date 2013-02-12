@@ -10,6 +10,7 @@ it:
       subject: 'Subject'
       message: 'Message'
       describe_problem: 'Please describe your question or problem.'
+      curator: 'Curatore delle raccolte francesi e italiani'
     about_text_html: |
       <p>
         La realizzazione consente a studiosi e studenti di tutto il mondo di accedere a fonti storiche

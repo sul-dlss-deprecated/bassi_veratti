@@ -179,7 +179,9 @@ class SolrDocument
                               Blacklight.solr.select(
                                 :params => {
                                   :fq => "#{blacklight_config.box_identifying_field}:\"#{self.box}\" AND
-                                          #{blacklight_config.folder_identifying_field}:\"#{self.folder}\" AND NOT id:\"#{self.id}\" AND NOT id:\"box#{self.box}-folder#{self.folder}\""                                }
+                                          #{blacklight_config.folder_identifying_field}:\"#{self.folder}\" AND NOT id:\"#{self.id}\" AND NOT id:\"box#{self.box}-folder#{self.folder}\"",
+                                  :rows => "100"
+                                }
                               )
                             )
   end
