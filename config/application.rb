@@ -77,6 +77,6 @@ BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/conf
 BassiVeratti::Application.config.contact_us_topics = {'error'=>'bassi.contact.problem'} # sets the list of topics shown in the contact us page
 BassiVeratti::Application.config.contact_us_recipients = {'error'=>'digcoll@jirasul.stanford.edu'} # sets the email address for each contact us topic configed above
 BassiVeratti::Application.config.contact_us_cc_recipients = {'error'=>'bassi-problems@jirasul.stanford.edu'} # sets the CC email address for each contact us topic configed above
-BassiVeratti::Application.config.duplicate_copies = {"ref793" => {:note => "The content of this object is a duplicate of Item 7 in Box 9, Folder 3",  :duplicates => "ref791"},
-                                                     "ref801" => {:note => "The content of this object is a duplicate of Item 11 in Box 9, Folder 3", :duplicates => "ref799"},
-                                                     "ref803" => {:note => "The content of this object is a duplicate of Item 11 in Box 9, Folder 3", :duplicates => "ref799"} }
+BassiVeratti::Application.config.duplicate_copies = {"ref793" => {:note => 'bassi.show.duplicate_note_793', :duplicates => "ref791"},
+                                                     "ref801" => {:note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799"},
+                                                     "ref803" => {:note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799"} }

@@ -82,6 +82,8 @@ it:
       cite:
         title: 'Citazione'
       description_only: 'Descrizione solo'
+      duplicate_note_793: 'Il contenuto di questo oggetto è una copia di Pezzo 7 in Fascicolo 3 di Cartone 9'
+      duplicate_note_80x: 'Il contenuto di questo oggetto è una copia di Pezzo 11 in Fascicolo 3 di Cartone 9'
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'

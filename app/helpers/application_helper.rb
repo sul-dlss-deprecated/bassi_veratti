@@ -6,11 +6,11 @@ module ApplicationHelper
     options.each {|k,v| result.merge!({k=>I18n.t(v)})}
     return result
   end
-    
+
   def highlight_text(doc, field)
     doc.highlight_field(field) ? doc.highlight_field(field).first : doc[field]
   end
-  
+
   def on_scrollspy_page?
     on_background_page || on_inventory_pages
   end
@@ -23,11 +23,21 @@ module ApplicationHelper
     end
     return notes.join('<br /><br />')
   end
-  
+
+  def duplicate_note(itemref)
+    return nil unless BassiVeratti::Application.config.duplicate_copies.keys.include?(itemref)
+    I18n.t(BassiVeratti::Application.config.duplicate_copies[itemref][:note])
+  end
+
+  def duplicate_reference(itemref)
+    return nil unless duplicate_note(itemref)
+    BassiVeratti::Application.config.duplicate_copies[itemref][:duplicates]
+  end
+
   def show_list(mvf)
     mvf.join(', ')
   end
-  
+
   def show_formatted_list(mvf,opts={})
     content_tag(:ul, :class => "item-mvf-list") do
       mvf.collect do |val|
@@ -46,11 +56,11 @@ module ApplicationHelper
       return true
     end
   end
-  
+
   def link_to_collection_highlight(highlight)
     link_to("#{highlight.send("name_#{I18n.locale}")}", catalog_index_path(params_for_collection_highlight(highlight)))
   end
-  
+
   def params_for_collection_highlight(highlight)
     {:f => {blacklight_config.collection_highlight_field.to_sym => ["highlight_#{highlight.id}"]}}
   end

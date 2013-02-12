@@ -71,8 +71,8 @@
         <% unless list_is_empty?(@document.notes) %>
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
         <% end %>
-        <% if @document.duplicate_note %>
-          <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(@document.duplicate_note, catalog_path(@document.duplicate_reference)) %></dd>
+        <% if duplicate_note(@document.id) %>
+          <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(duplicate_note(@document.id), catalog_path(duplicate_reference(@document.id))) %></dd>
         <%- end -%>
         <%# unless @document.purl.blank? %>
           <!-- <dt><%#=t('bassi.show.citation')%>:</dt><dd><%=link_to @document.purl,@document.purl%></dd> -->

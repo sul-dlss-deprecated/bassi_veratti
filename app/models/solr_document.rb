@@ -1,14 +1,14 @@
 # -*- encoding : utf-8 -*-
-class SolrDocument 
+class SolrDocument
 
   include Blacklight::Solr::Document
-  
+
   self.unique_key = 'id'
 
   def title
     self[:title_tsi]
   end
-  
+
   def date
     multivalue_field('unit_date_ssim')
   end
@@ -18,11 +18,11 @@ class SolrDocument
   end
 
   def description
-    multivalue_field('extent_ssim')    
+    multivalue_field('extent_ssim')
   end
 
   def people
-    multivalue_field('personal_name_ssim')    
+    multivalue_field('personal_name_ssim')
   end
 
   def families
@@ -44,28 +44,18 @@ class SolrDocument
     raw_coords.each do |raw_coord|
        split_coord=raw_coord.split('|')
        coords << {:name=>split_coord[0],:lat=>split_coord[1],:lon=>split_coord[2]}
-    end  
-    return coords  
+    end
+    return coords
   end
-    
+
   def notes
     multivalue_field('description_tsim')
   end
-  
-  def duplicate_note
-    return nil unless BassiVeratti::Application.config.duplicate_copies.keys.include?(self[SolrDocument.unique_key])
-    BassiVeratti::Application.config.duplicate_copies[self[SolrDocument.unique_key]][:note]
-  end
-  
-  def duplicate_reference
-    return nil unless duplicate_note
-    BassiVeratti::Application.config.duplicate_copies[self[SolrDocument.unique_key]][:duplicates]
-  end
-  
+
   def purl
     self[:purl_ssi]
   end
-  
+
   def level
     multivalue_field(blacklight_config.folder_identifier_field).first
   end
@@ -73,17 +63,17 @@ class SolrDocument
   def series
     multivalue_field('series_ssim').first
   end
-          
+
   def box
     multivalue_field(blacklight_config.box_identifying_field).first
   end
 
   def folder
-    multivalue_field(blacklight_config.folder_identifying_field).first    
+    multivalue_field(blacklight_config.folder_identifying_field).first
   end
-  
-	def multivalue_field(name)
-	  self[name.to_sym].nil? ? ['']: self[name.to_sym]
+
+  def multivalue_field(name)
+    self[name.to_sym].nil? ? ['']: self[name.to_sym]
   end
 
   def images(size=:default)
@@ -99,29 +89,29 @@ class SolrDocument
     stacks_url = BassiVeratti::Application.config.stacks_url
     images(size).first
   end
-  
+
    def self.image_dimensions
      options = {:default => "_thumb",
                 :square   => "_square",
                 :thumb => "_thumb" }
    end
-  
+
   def series?
-    self.has_key?(blacklight_config.series_identifying_field) and 
+    self.has_key?(blacklight_config.series_identifying_field) and
       self[blacklight_config.series_identifying_field].include?(blacklight_config.series_identifying_value)
   end
-  
+
   def folder?
-    self.has_key?(blacklight_config.folder_identifier_field) and 
+    self.has_key?(blacklight_config.folder_identifier_field) and
       self[blacklight_config.folder_identifier_field].include?(blacklight_config.folder_identifier_value)
   end
-  
+
   def folders
     return nil unless series?
     @folders ||= CollectionMembers.new(
                               Blacklight.solr.select(
                                 :params => {
-                                  :fq => "#{blacklight_config.folder_identifier_field}:\"#{blacklight_config.folder_identifier_value}\" AND 
+                                  :fq => "#{blacklight_config.folder_identifier_field}:\"#{blacklight_config.folder_identifier_value}\" AND
                                           #{blacklight_config.folder_in_series_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
                                   :rows => blacklight_config.collection_member_grid_items.to_s
                                 }
@@ -149,7 +139,7 @@ class SolrDocument
                                     :rows => blacklight_config.collection_member_grid_items.to_s
                                   }
                                 )
-                              )    
+                              )
     else
       @children ||= CollectionMembers.new(
                                 Blacklight.solr.select(
@@ -160,9 +150,9 @@ class SolrDocument
                                 )
                               )
     end
-    
+
   end
-  
+
   def box_siblings
     @box_siblings ||= CollectionMembers.new(
                               Blacklight.solr.select(
@@ -199,26 +189,26 @@ class SolrDocument
 
 
   def collection?
-    self.has_key?(blacklight_config.collection_identifying_field) and 
+    self.has_key?(blacklight_config.collection_identifying_field) and
       self[blacklight_config.collection_identifying_field].include?(blacklight_config.collection_identifying_value)
   end
-  
+
   def collection_member?
-    self.has_key?(blacklight_config.collection_member_identifying_field) and 
+    self.has_key?(blacklight_config.collection_member_identifying_field) and
       !self[blacklight_config.collection_member_identifying_field].blank?
   end
-  
+
   # return this current document's series title (unless it is already a series)
   def series_title
     return self.title if self.series?
-    @doc=SolrDocument.new(Blacklight.solr.select(:params => {:fq => "#{SolrDocument.unique_key}:#{self.series}"})["response"]["docs"].first)  
+    @doc=SolrDocument.new(Blacklight.solr.select(:params => {:fq => "#{SolrDocument.unique_key}:#{self.series}"})["response"]["docs"].first)
     return @doc.title
   end
-  
+
   def series_number
     series_title[0]
   end
-  
+
   # Return a SolrDocument object of the parent collection of a collection member
   def collection
     return nil unless collection_member?
@@ -230,7 +220,7 @@ class SolrDocument
                       )["response"]["docs"].first
                     )
   end
-  
+
   # Return a CollectionMembers object of all the members of a collection
   def collection_members
     return nil unless collection?
@@ -243,20 +233,20 @@ class SolrDocument
                               )
                             )
   end
-  
+
   # Return a CollectionMembers object of all of the siblins a collection member (including self)
   def collection_siblings
     return nil unless collection_member?
     @collection_siblings ||= CollectionMembers.new(
                                Blacklight.solr.select(
                                  :params => {
-                                   :fq => "#{blacklight_config.collection_member_identifying_field}:\"#{self[blacklight_config.collection_member_identifying_field].first}\"", 
+                                   :fq => "#{blacklight_config.collection_member_identifying_field}:\"#{self[blacklight_config.collection_member_identifying_field].first}\"",
                                    :rows => blacklight_config.collection_member_grid_items.to_s
                                  }
                                )
                              )
   end
-  
+
   # Return an Array of collection SolrDocuments
   def all_collections
     @all_collections ||= Blacklight.solr.select(
@@ -268,17 +258,17 @@ class SolrDocument
       SolrDocument.new(document)
     end
   end
-  
+
   # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marc_display
   extension_parameters[:marc_format_type] = :marcxml
   use_extension( Blacklight::Solr::Document::Marc) do |document|
     document.key?( :marc_display  )
   end
-  
+
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Email )
-  
+
   # SMS uses the semantic field mappings below to generate the body of an SMS email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Sms )
 
@@ -287,17 +277,17 @@ class SolrDocument
   # single valued. See Blacklight::Solr::Document::ExtendableClassMethods#field_semantics
   # and Blacklight::Solr::Document#to_semantic_values
   # Recommendation: Use field names from Dublin Core
-  use_extension( Blacklight::Solr::Document::DublinCore)    
-  field_semantics.merge!(    
+  use_extension( Blacklight::Solr::Document::DublinCore)
+  field_semantics.merge!(
                          :title => "title_tsi",
                          :author => "author_display",
                          :language => "language_facet",
                          :format => "format_ssim"
                          )
 
-                         
+
   private
-  
+
   def blacklight_config
     CatalogController.blacklight_config
   end

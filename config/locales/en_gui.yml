@@ -88,6 +88,8 @@ en:
         title: 'Cite this item'
       item_actions: 'Item actions'
       description_only: 'Description only'
+      duplicate_note_793: 'The content of this object is a duplicate of Item 7 in Box 9, Folder 3'
+      duplicate_note_80x: 'The content of this object is a duplicate of Item 11 in Box 9, Folder 3'
     collection_members_grid:
       members_link: 'View all collection items'
       collection_link: 'View this collection'
