@@ -87,6 +87,7 @@ en:
       cite:
         title: 'Cite this item'
       item_actions: 'Item actions'
+      description_only: 'Description only'
     collection_members_grid:
       members_link: 'View all collection items'
       collection_link: 'View this collection'

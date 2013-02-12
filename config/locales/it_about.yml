@@ -1,15 +1,16 @@
 it:
   bassi:
     contact:
-      select_topic: 'Select a topic...'
-      problem: 'Problem with the website.'
-      other_questions: 'Other questions.'
-      name: 'Your name'
-      email: 'Your email'
-      email_address: 'Email address'
-      subject: 'Subject'
-      message: 'Message'
-      describe_problem: 'Please describe your question or problem.'
+      select_topic: 'Sceglie un tema...'
+      problem: 'Problem con il sito web.'
+      other_questions: 'Altre domande.'
+      name: 'Suo nome'
+      name_placeholder: 'Nome'
+      email: 'Suo email'
+      email_address: 'Indirizzo del email'
+      subject: 'Oggetto'
+      message: 'Messaggio'
+      describe_problem: 'Si prega di descrivere la domanda o il problema.'
       curator: 'Curatore delle raccolte francesi e italiani'
     about_text_html: |
       <p>
@@ -20,7 +21,7 @@ it:
         contenuti dell’inventario sono legati alle corrispettive immagini digitali, gli studiosi possono
         facilmente navigare dalle descrizioni ai facsimili digitali.
       </p>
-      <h3>Sintesa technica</h3>
+      <h3>Scheda tecnica</h3>
       <p>
         Da un documento Word, l’inventario è stato trasposto manualmente in EAD (Encoded Archival
         Description), lo standard internazionale XML Schema sostenuto dalla Library of Congress in

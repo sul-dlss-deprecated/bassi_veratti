@@ -1,10 +1,10 @@
-<%= form_tag(:controller=>'about',:action=>'contact', :method=>'post', :class => 'form-horizontal') do %>
+<%= form_tag({:controller=>'about', :action=>'contact'}, :method=>'post', :class => 'form-horizontal') do %>
 	<%= hidden_field_tag 'from',@from%>
 
 	<div class="control-group">
 	  <label class="control-label" for="name"><%=t('bassi.contact.name')%></label>
 	  <div class="controls">
-	    <%=text_field_tag 'name', nil, :placeholder => "Name" %>
+	    <%=text_field_tag 'name', nil, :placeholder => t('bassi.contact.name_placeholder') %>
 	  </div>
 	</div>
 
@@ -35,7 +35,7 @@
 
 	<div class="control-group">
 	  <div class="controls">
-	    <%=submit_tag 'Send', :class => 'btn' %>
+	    <%=submit_tag "#{t('blacklight.email.form.submit')}", :class => 'btn' %>
 	  </div>
 	</div>
 <% end %>
