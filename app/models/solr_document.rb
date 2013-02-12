@@ -84,12 +84,6 @@ class SolrDocument
     end
   end
 
-  def first_image(size=:default)
-    return "http://dummyimage.com/100x100/f8f6f1/6d5b48&text=Description only" unless self.has_key?(blacklight_config.image_identifier_field)
-    stacks_url = BassiVeratti::Application.config.stacks_url
-    images(size).first
-  end
-
    def self.image_dimensions
      options = {:default => "_thumb",
                 :square   => "_square",
