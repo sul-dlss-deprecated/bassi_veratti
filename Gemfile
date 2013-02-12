@@ -51,6 +51,8 @@ gem "bootstrap-sass"
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
+gem 'json', '~> 1.7.7'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
