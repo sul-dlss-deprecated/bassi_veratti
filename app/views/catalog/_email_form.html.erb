@@ -2,7 +2,7 @@
 <%= form_tag url_for(:controller => "catalog", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
 
   <div class="modal-body">
-    <%= render :partial=>'/flash_msg' %>
+    <%= render :partial=>'/flash_msg' if request.xhr? %>
     <div class="control-group">
       <label class="control-label" for="to">
         <%= t('blacklight.email.form.to') %>

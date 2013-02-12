@@ -102,7 +102,7 @@
 </div>
 <% end %>
 
-<% unless list_is_empty?(@document.coordinates) %>
+<% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil?%>
   <script>
   $(document).ready(function(){
     $('#location-map').modal({keyboard: true, backdrop: 'static', show: false});

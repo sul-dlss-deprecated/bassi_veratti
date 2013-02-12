@@ -3,6 +3,8 @@ BassiVeratti::Application.configure do
   config.exception_error_page = true # show a friendly 500 error page if true
   config.exception_recipients = '' # list of email addresses, comma separated, that will be notified when an exception occurs - leave blank for no emails
 
+  config.action_mailer.default_url_options = { :host => 'bv.stanford.edu' }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
