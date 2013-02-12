@@ -26,7 +26,9 @@
            <div class="item active">
              <%= link_to image_tag(@document.images.first, :alt => "#{t('bassi.collection_members.items_name')} 1 of #{@document.images.size}"),@document.purl %>
 		        <% unless @document.purl.blank? %>
-		          <%=link_to @document.purl,@document.purl%>
+		          <div>Permanent URL<%= " (click to view all item images)" if @document.images.size > 1 %>:
+		            <span><%= link_to @document.purl, @document.purl, :class => 'purl-link' %></span>
+		          </div>
 						<% end %>
            </div>
         </noscript>
