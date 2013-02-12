@@ -32,7 +32,7 @@ it:
       terms_disagree: 'Return without agreeing'
       close: 'Close'
     about:
-      project_title: 'Compendio del progetto'
+      project_title: 'A proposito del Fondo speciale Bassi-Veratti'
       contact_title: 'Segnala un errore'
       contact_message_sent: 'Thanks - your message has been sent.'
       contact_error: 'You need to enter some message text.'
@@ -80,7 +80,8 @@ it:
       all_items_in_folder: 'Altri pezzi in questo fascicolo'
       item_actions: 'Item funzioni'
       cite:
-        title: 'Cite this item'
+        title: 'Citazione'
+      description_only: 'Descrizione solo'
     collection:
       collection_detail: 'Collection Detail'
       member_detail: 'Item Detail'

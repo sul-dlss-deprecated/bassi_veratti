@@ -141,7 +141,7 @@ it:
     email:
       form:
         title: 'Invia come Email'
-        to: 'Email address:'
+        to: 'Indirizzo del email:'
         message: 'Messaggio:'
         submit: 'Inviare'
       text:
