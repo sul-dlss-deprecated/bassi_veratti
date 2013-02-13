@@ -11,8 +11,7 @@ class AboutController < ApplicationController
       @email=params[:email]
       @message=params[:message]
       unless @message.blank?
-        @message= "Page where problem was reported: " + @from + "\n\n" + @message
-        BassiVerattiMailer.contact_message(:subject=>@subject,:name=>@name,:email=>@email,:message=>@message).deliver 
+        BassiVerattiMailer.contact_message(:params=>params,:request=>request).deliver 
         flash[:notice]=t("bassi.about.contact_message_sent")
         unless @from.blank?
           redirect_to(@from)
