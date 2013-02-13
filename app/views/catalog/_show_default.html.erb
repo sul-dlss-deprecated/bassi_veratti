@@ -67,9 +67,11 @@
           <dt><%=t('bassi.show.locations')%>:</dt>
             <dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%>
               <% unless list_is_empty?(@document.coordinates) %>
-                <a href="#location-map" data-toggle="modal" id="show-map-link" class="hidden">
-                  <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>
-                </a>
+                <span class="map-link">
+                  <a href="#location-map" data-toggle="modal" id="show-map-link" class="hidden">
+                    <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>
+                  </a>
+                </span>
               <% end %>
             </dd>
         <% end %>

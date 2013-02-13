@@ -129,6 +129,10 @@
       margin-top: 2px;
     }
   }
+  .map-link {
+    display: block;
+    margin-top: 5px;
+  }
   .modal-header {
     @include modal-header;
     padding: 0 0 9px;
