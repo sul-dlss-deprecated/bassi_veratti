@@ -209,36 +209,28 @@ it:
       </p>
     project_team_italy_text_html: |
       <ul>
-        <li>Pierangelo Bellettini</li>
-        <li>Rosaria Campioni</li>
+        <li>Rosaria Campioni, Soprintendente per i beni librari e documentari della Regione Emilia-Romagna</li>
+        <li>Pierangelo Bellettini, direttore Istituzione Biblioteche del Comune di Bologna</li>
       </ul>
-      <h4>Project</h4>
+      <h4>Progetto</h4>
       <ul>
-        <li>Margherita Spinazzola, Coordinator of European and International Projects, Istituto per i
-        beni artistici, culturali e naturali Regione Emilia-Romagna</li>
-        <li>Ruggero Ruggeri, Head of IT services, Istituzione Biblioteche del Comune di Bologna
-        </li>
-        <li>Anna Manfron, Head of Biblioteca dell'Archiginnasio and of special libraries of
-        Istituzione Biblioteche del Comune di Bologna</li>
-        <li>Patrizia Busi, Archivist of the manuscripts and rare books section of Biblioteca dell'Archiginnasio</li>
-        <li>Letizia Zarri, administrative services</li>
+        <li>Margherita Spinazzola, responsabile Coordinamento e progettazione per la valorizzazione dei beni culturali in ambito nazionale ed europeo, Istituto per i beni culturali della Regione Emilia Romagna</li>
+        <li>Patrizia Busi, archivista della Sezione dei manoscritti e dei rari della Biblioteca dell'Archiginnasio</li>
+        <li>Anna Manfron, responsabile Biblioteca dell'Archiginnasio e Biblioteche specializzate dell'Istituzione Biblioteche del Comune di Bologna</li>
+        <li>Ruggero Ruggeri, responsabile Servizi informatici dell'Istituzione Biblioteche del Comune di Bologna</li>
+        <li>Letizia Zarri, servizi amministrativi della Biblioteca dell'Archiginnasio</li>
       </ul>
-      <h4>Communication</h4>
+      <h4>Comunicazione</h4>
         <ul>
-          <li>Valeria Cicala, Press Officer, Istituto per i beni artistici, culturali e
-          naturali Regione Emilia-Romagna</li>
-          <li>Carlo Tovoli, Press and Communication, Istituto per i beni artistici, culturali
-          e naturali Regione Emilia-Romagna</li>
-          <li>Andrea Scardova, Photographer, Istituto per i beni artistici, culturali e
-          naturali Regione Emilia-Romagna</li>
-          <li>Monica Chili, Graphic designer, Regione Emilia-Romagna</li>
-          <li>Christian Lertola, IT and web conference services, Regione Emilia-Romagna</li>
-          <li>Valeria Roncuzzi, Communication Officer of Istituzione Biblioteche del Comune di
-          Bologna</li>
-          <li>Manuela Marchesan, Communication and graphic designer of Istituzione
-          Biblioteche del Comune di Bologna</li>
-          <li>Anna Maria Cava, Communication of Istituzione Biblioteche del Comune di Bologna</li>
-          <li>Sandra Saccone, Communication of Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Valeria Cicala, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+          <li>Carlo Tovoli, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+          <li>Monica Chili, Grafico, Regione Emilia-Romagna</li>
+          <li>Christian Lertola, IT e servizi di video conferenza, Regione Emilia-Romagna</li>
+          <li>Andrea Scardova, Fotografo, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+          <li>Anna Maria Cava, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Manuela Marchesan, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Valeria Roncuzzi, responsabile comunicazione e promozione dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Sandra Saccone, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
         </ul>
         <div class="row logos">
           <div class="span5 collaborator-logo first"><img src="/assets/LOG_IBC_SOPR_RER_2007_rgb.jpg" width="320"/></div>
@@ -247,7 +239,7 @@ it:
     acknowledgements_text_html: |
       <p>
         I collaboratori del progetto Bassi Veratti vorrebbero ringraziare Guerrino De Luca, la Fondazione
-        Marini e la Fondazione Gladys Krieble Delmas per il loro supporto finanziario generoso."
+        Marini e la Fondazione Gladys Krieble Delmas per il loro supporto finanziario generoso.
       </p>
       <p>
         Grazie speciali alla communita' di OpenSource <a href="http://projectblacklight.org/">Blacklight</a> per l'uso della loro interfaccia per la
