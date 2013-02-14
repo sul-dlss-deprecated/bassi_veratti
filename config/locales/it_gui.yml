@@ -30,7 +30,7 @@ it:
       terms_of_use_acknowledgement: 'Facendo clic e continuando di usare il sito web, si conferma di aver letto e accettato i termini di utilizzo.'
       terms_continue: 'Accetta'
       terms_disagree: 'Torna senza accettare'
-      close: 'Close'
+      close: 'Chiude'
     about:
       project_title: 'A proposito del Fondo speciale Bassi-Veratti'
       contact_title: 'Segnala un errore'
