@@ -87,7 +87,7 @@ it:
       duplicate_note_80x: 'Il contenuto di questo oggetto è una copia di Pezzo 11 in Fascicolo 3 di Cartone 9'
     collection:
       collection_detail: 'Collection Detail'
-      member_detail: 'Item Detail'
+      member_detail: 'Dettaglio di Pezzo'
     collection_members:
       items_name: 'immagine'
     collection_members_grid:
