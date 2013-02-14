@@ -246,10 +246,10 @@ it:
         </div>
     acknowledgements_text_html: |
       <p>
-        The project partners would like to thank the generous financial support of
-        Guerrino De Luca, the Marini Foundation and the Gladys Krieble Delmas Foundation.
+        I collaboratori del progetto Bassi Veratti vorrebbero ringraziare Guerrino De Luca, la Fondazione
+        Marini e la Fondazione Gladys Krieble Delmas per il loro supporto finanziario generoso."
       </p>
       <p>
-        Special thanks to the Blacklight open source community for the use of their
-        discovery interface: projectblacklight.org
+        Grazie speciali alla communita' di OpenSource <a href="http://projectblacklight.org/">Blacklight</a> per l'uso della loro interfaccia per la
+        ricerca.
       </p>
