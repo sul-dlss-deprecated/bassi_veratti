@@ -20,6 +20,7 @@ $(document).ready(function(){
 	//  useful when you have non javascript friendly DOM elements you need to hide for no JS browsers so you can include a <noscript> tag with
 	//   non JS versions
 	$(".showOnLoad").show();
+	$('.showOnLoad').removeClass('hidden');
 
   // Responsive width when using the bootstrap affix plugin (which makes width absolute)
   $(function(){

@@ -67,8 +67,8 @@
           <dt><%=t('bassi.show.locations')%>:</dt>
             <dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%>
               <% unless list_is_empty?(@document.coordinates) %>
-                <span class="map-link">
-                  <a href="#location-map" data-toggle="modal" id="show-map-link" class="hidden">
+                <span class="map-link hidden showOnLoad">
+                  <a href="#location-map" data-toggle="modal" id="show-map-link">
                     <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>
                   </a>
                 </span>
@@ -111,7 +111,6 @@
   <script>
   $(document).ready(function(){
     $('#location-map').modal({keyboard: true, backdrop: 'static', show: false});
-    $('#show-map-link').removeClass('hidden');
     var options = {
       zoom: 6,
       center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
