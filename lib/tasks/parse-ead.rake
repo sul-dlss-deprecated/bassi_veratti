@@ -51,27 +51,42 @@ def solrize_ead(ead)
   ead.reader.archdesc.dsc.c01s.each do |c01|
     c01.c02s.each do |c02|
       containers = containers_for_collection(c02)
-      unless folders.include? container_key(containers)
+      if folders.include? container_key(containers)
+        documents << document_from_contents(ead, c02, c01, c01, containers)
+      else
         documents << folder_from_contents(c02, containers, c01)
-        folders << container_key(containers) unless folders.include? container_key(containers)
+        # handle the case where the folder level object IS the content
+        if c02.dao.try(:href)
+          documents << document_from_contents(ead, c02, c01, c01, containers)
+        end
+        folders << container_key(containers) unless folders.include? container_key(containers)        
       end
       c02.c03s.each do |c03|
         containers = containers_for_collection(c03)
-        unless folders.include? container_key(containers)
+        if folders.include? container_key(containers)
+          documents << document_from_contents(ead, c03, c02, c01, containers)
+        else
           documents << folder_from_contents(c02, containers, c01)
-          folders << container_key(containers) unless folders.include? container_key(containers)
+          # handle the case where the folder level object IS the content
+          if c03.dao.try(:href)
+            documents << document_from_contents(ead, c03, c02, c01, containers)
+          end
+          folders << container_key(containers) unless folders.include? container_key(containers)          
         end
         c03.c04s.each do |c04|
           containers = containers_for_collection(c04)
-          unless folders.include? container_key(containers)
+          if folders.include? container_key(containers)
+            documents << document_from_contents(ead, c04, c03, c01, containers)
+          else
             documents << folder_from_contents(c02, containers, c01)
-            folders << container_key(containers) unless folders.include? container_key(containers)
+            # handle the case where the folder level object IS the content
+            if c04.dao.try(:href)
+              documents << document_from_contents(ead, c04, c03, c01, containers)
+            end
+            folders << container_key(containers) unless folders.include? container_key(containers)            
           end
-          documents << document_from_contents(ead, c04, c03, c01, containers)
         end
-        documents << document_from_contents(ead, c03, c02, c01, containers)
       end
-      documents << document_from_contents(ead, c02, c01, c01, containers)
     end
     dates = dates_from_unitdate(c01.did)
     documents << {:id => c01.identifier,

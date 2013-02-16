@@ -10,6 +10,8 @@ describe "Facets",  :type => :request, :integration => true do
       click_link "Italiano"
       page.should have_content "Nome personale"
       page.should_not have_content "Personal name"
+      
+      click_link "English"
     end
     
     it "should change the document type facet when changing language" do
@@ -24,6 +26,8 @@ describe "Facets",  :type => :request, :integration => true do
       page.should have_content "Carteggio"
       page.should_not have_content "Document type"
       page.should_not have_content "Correspondence"
+      
+      click_link "English"
     end
   end
 end
