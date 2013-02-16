@@ -4,7 +4,8 @@
       $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
                                        'druid': '<%= document[:druid_ssi] %>',
                                        'size': 'thumb',
-                                       'width': 365,
+                                       'layout': 'thumbs-nav-bottom',
+                                       'width': 425,
                                        'height': 600});
     });
   </script>

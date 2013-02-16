@@ -60,8 +60,8 @@
     clear: left;
     margin-top: 0;
     .document-details {
-      margin-bottom: 50px;
-      margin-top: 10px;
+      margin-bottom: 30px;
+      margin-top: 5px;
       dt {color: $active_nav_link_color;}
     }
   }
@@ -101,6 +101,7 @@
   }
   ul.preview-folder-items {
     margin-left: 0;
+    margin-top: 15px;
     img {@include image_border_thumbnail;}
     li {
       list-style-type: none;
@@ -122,7 +123,8 @@
   }
   .item-metadata-tools {
     border-bottom: 1px solid $nav_border_color;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    margin-top: 5px;
     padding-bottom: 30px;
     .highlights-link {
       float: left;
@@ -152,21 +154,22 @@
     margin-top: 5px;
   }
   // override image_viewer plugin styles
-  .pe-h-nav {
-    background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
-    // border: 1px solid darken($header_bg_color, 8%);
-    width: 98%;
+  .zpr-view-finder {border: none;}
+  .pe-img-viewer-thumbs-nav-bottom .pe-h-nav {
+   background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
+   .pe-purl-url {
+     border: none;
+     bottom: -4px;
+   }
   }
-  .pe-purl-url {
-    border: none;
-    bottom: -4px;
+  .pe-full-screen-nav {
+    img {margin-bottom: 0;}
   }
   // placeholder image for cases where item has no associated image
   img.placeholder-image {
     border: 1px solid darken($header_bg_color, 15%);
   }
 }
-
 
 /* Responsive styles */
 @media (max-width: 979px) {
