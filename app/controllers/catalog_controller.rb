@@ -153,7 +153,8 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'document_types_ssim', :label => 'bassi.facet.document_types'
+    config.add_facet_field 'en_document_types_ssim', :label => 'bassi.facet.document_types'
+    config.add_facet_field 'it_document_types_ssim', :label => 'bassi.facet.document_types'
     config.add_facet_field 'personal_name_ssim', :label => 'bassi.facet.personal_name', :limit => 10
     config.add_facet_field 'geographic_name_ssim', :label => 'bassi.facet.location', :limit => 10
     config.add_facet_field 'corporate_name_ssim', :label => 'bassi.facet.corporate_name', :limit => 10

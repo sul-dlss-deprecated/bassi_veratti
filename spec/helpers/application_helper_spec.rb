@@ -21,6 +21,7 @@ describe ApplicationHelper do
       highlight = mock('highlight')
       highlight.stub(:id).and_return("1")
       highlight.stub(:name_en).and_return("Highlighted Collection")
+      highlight.stub(:name_it).and_return("Highlighted Collection")
       link = link_to_collection_highlight(highlight)
       link.should =~ /^<a href=".*highlight_field.*highlight_1">Highlighted Collection<\/a>$/
     end

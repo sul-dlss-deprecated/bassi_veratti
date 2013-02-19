@@ -217,13 +217,20 @@ def document_from_contents(ead, content, direct_parent, series, containers)
     coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
   end
   
+  
+  
   purl=content.dao.try(:href)
   druid=druid_from_purl(purl)
   imageids=image_ids_from_purl(purl)
 
   {:id => content.identifier,
    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
-   :document_types_ssim => DocumentTypes.document_types[content.identifier],
+   :en_document_types_ssim => DocumentTypes.document_types[content.identifier] ? 
+     DocumentTypes.document_types[content.identifier][:en] :
+       nil,
+   :it_document_types_ssim => DocumentTypes.document_types[content.identifier] ? 
+     DocumentTypes.document_types[content.identifier][:it] :
+       nil,
    :level_ssim => content.level,
    :direct_parent_ssim => direct_parent.identifier,
    :direct_parent_level_ssim => direct_parent.level,
