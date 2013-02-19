@@ -46,9 +46,6 @@ set :branch do
 end
 
 namespace :app do
-  task :add_date_to_version do
-    run "cd #{deploy_to}/current && echo 'Date deployed:' `date` >> VERSION"
-  end
   task :expire_caches do
     run "cd #{deploy_to}/current && rake bassi:expire_caches RAILS_ENV=#{rails_env}"
   end
@@ -91,4 +88,3 @@ end
 
 after "deploy", "db:migrate"
 after "deploy", "app:expire_caches"
-after "deploy", "app:add_date_to_version"
