@@ -8,9 +8,9 @@ module ApplicationHelper
   end
 
   def show_image(image)
-    image ? image : "http://dummyimage.com/100x100/f8f6f1/6d5b48&text=#{I18n.t('bassi.show.description_only')}" 
+    image ? image : "http://dummyimage.com/100x100/F2F1EC/827A57&text=#{I18n.t('bassi.show.description_only')}"
   end
-  
+
   def highlight_text(doc, field)
     doc.highlight_field(field) ? doc.highlight_field(field).first : doc[field]
   end

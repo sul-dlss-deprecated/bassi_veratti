@@ -1,40 +1,49 @@
 /* TODO: Refactor to use mix-ins, etc. */
 
-/* Variables */
 /* Theme color palette */
 
-$body_bg_color: #fff;
+// #F2F1EC - light gray
+// #BFBEBA - medium gray
+// #737270 - darker gray
+// #8F8271 - medium brown
+// #5E564B - dark brown
+// #827A57 - medium green
 
-$header_bg_color: #f8f6f1;
-$nav_border_color: #e3dbce;
+
+/* Variables */
+$body_bg_color: #fff;
+$body_bg_image: 'paper-fibers.png';
+
+$header_bg_color: #F2F1EC;
+$nav_border_color: darken($header_bg_color, 10%);
+$nav_link_color: darken(#8F8271, 5%);
+$active_nav_link_color: #5E564B;
 
 $container_bg_color: #fdfdfb;
-$heading_color: #6d5b48;
-$sidebar_header_color: #AA7D17;
-$text_color: #4e4134;
+$heading_color: #5E564B;
+$sidebar_header_color: #5E564B;
+$text_color: #5E564B;
 
-$active_link_color: #6d5b48;
-$hover_link_color: #c08e1a;
-$active_nav_link_color: #836d56;
-$inactive_nav_link_color: $text_color;
+$active_link_color: #82672E;
+$hover_link_color: lighten(#82672E, 10%);
 
-$facet_box_background_color: lighten($header_bg_color, 1%);
-$facet_link_color: #946c14;
-$facet_selected_color: #c08e1a;
+$facet_box_background_color: $header_bg_color;
+$facet_link_color: #82672E;
+$facet_selected_color: lighten(#82672E, 10%);
 
 /* constraint (you searched for:) details: */
-$constraint_bg_color: #ece7da;
-$constraint_border_color: darken($constraint_bg_color, 20%);
+$constraint_bg_color: $header_bg_color;
+$constraint_border_color: #BFBEBA;
 $constraint_border_active_color: #FFD27A !default;
 
 /* Mixins */
 @mixin red-top_border {
-  border-top: 5px solid #AA7D17;
+  border-top: 5px solid $heading_color;
   padding-top: 10px;
 }
 
 @mixin gray-top_border {
-  border-top: 5px solid darken($header_bg_color, 8%);
+  border-top: 5px solid darken($header_bg_color, 10%);
   padding-top: 10px;
 }
 
@@ -65,8 +74,9 @@ $constraint_border_active_color: #FFD27A !default;
   text-transform: none;
   a {
     background-color: $header_bg_color;
-    border: 1px solid darken($header_bg_color, 5%);
+    border: 1px solid darken($header_bg_color, 10%);
     border-radius: 6px;
+    color: $active_link_color;
     padding: 5px 12px;
     margin-right: 2px;
     line-height: 14px
@@ -93,6 +103,9 @@ html {
 body {
   font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
   background: $container_bg_color;
+  background-image: asset_url($body_bg_image, image);
+  background-repeat: repeat repeat;
+  background-size: auto;
   font-size: 0.85em;
   line-height: 18px;
   margin: 0;
@@ -103,7 +116,10 @@ body {
 #sidebar-nav > .nav-list {
   margin-bottom: 20px;
   padding-left: 5px;
-  li > a {padding: 1px 15px;}
+  li > a {
+    border-bottom: none;
+    padding: 1px 15px;
+  }
 }
 
 a:focus {
@@ -124,12 +140,13 @@ img {
 }
 
 a {
+  border-bottom: 1px dotted $active_link_color;
 	color: $active_link_color;
 	text-decoration: none;
 }
 a:hover {
 	color: $hover_link_color;
-	text-decoration: underline;
+	text-decoration: none;
 }
 #news-gothic .normal {
 	font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
@@ -170,6 +187,7 @@ h2 {
 	line-height: 1.5em;
 }
 h3 {
+  color: $heading_color;
   font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
 	font-size: 1.125em;
 	line-height: 1.5em;
@@ -196,13 +214,18 @@ span.content-type {
 }
 .nav-list > .active > a,
 .nav-list > .active > a:hover {
-  background-color: #eae5d6;
+  background-color: $header_bg_color;
   color: #222;
   > [class^="icon-"] {background-image: none; }
 }
 .nav-header {color: $sidebar_header_color;}
 
-.nav > li > a  {border-radius: 6px;}
+.nav > li > a  {
+  border-radius: 6px;
+  &:hover {
+    background-color: $header_bg_color;
+  }
+}
 .nav li + .nav-header.second {margin-top: 25px;}
 
 .hidden {display: none;}
