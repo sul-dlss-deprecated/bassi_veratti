@@ -10,9 +10,13 @@
     margin-top: 6px;
     padding: 0;
     text-align: center;
-    > a {color: #000;}
+    > a {
+      border-bottom: none;
+      color: #000;
+    }
   }
   img {
+    background-color: #f7f7f7;
     border: 2px solid darken($header_bg_color, 8%);
     border-radius: 4px;
     padding: 5px;
@@ -59,10 +63,11 @@
 }
 
 .overview-area {
+  background-color: #f7f7f7;
   border: 2px solid darken($header_bg_color, 8%);
   border-radius: 4px;
   clear: both;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px;
 }
 

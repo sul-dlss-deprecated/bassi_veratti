@@ -28,7 +28,7 @@
     height: 10px;
     margin-top: 12px;
     text-indent: -9999px;
-    background: #AA7D17;
+    background: #5E564B;
   }
   span.contact-link {
     display: block;
@@ -43,7 +43,10 @@
   #content .logos {
     margin-top: 30px;
   }
-  .curator-title {font-style: italic;}
+  .curator-title {
+    color: #5E564B;
+    font-style: italic;
+  }
   .icon-user {
     margin-left: 5px;
     vertical-align: top;

@@ -8,11 +8,12 @@ body {
 }
 
 .breadcrumb {
-  background: $container_bg_color;
+  background: transparent;
   color: #666;
   font-size: 13px;
   margin-bottom:6px;
   margin-left: 5px;
+  a {border-bottom: none;}
 }
 
 body {
