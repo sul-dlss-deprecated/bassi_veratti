@@ -1,5 +1,9 @@
 #facets {
-  h5 {background-color: $facet_box_background_color;}
+  background-color: #fff;
+  h5 {
+    background-color: lighten($facet_box_background_color, 3%);
+    border-bottom: 1px solid #d4d4d4;
+  }
   a {
     border-bottom: none;
     color: $facet_link_color;
@@ -11,8 +15,9 @@
     background-color: $header_bg_color;
     color: $facet_selected_color;
   }
-  div.facet_limit {
-    background-color: #fff;
+  ul {
+    padding-bottom: 2px;
+    padding-top: 10px;
   }
 }
 

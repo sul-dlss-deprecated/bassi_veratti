@@ -2,7 +2,7 @@
 #documents.map {}
 
 #documents {
-  border-top: 2px dotted darken($container_bg_color, 10%);
+  border-top: 1px solid darken($header_bg_color, 10%);
   margin-top: 0;
   padding-top: 15px;
   a {color: #333;}
@@ -44,6 +44,7 @@
   .documentHeader {
     .index_title {max-width: 600px;}
     margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -51,6 +52,7 @@
 #documents.default {
   .documentHeader {
     display: inline-block;
+    padding-top: 0;
     .index_title {
       float: left;
       margin: 0;
@@ -121,12 +123,15 @@ ul.inventory-ancestry {
 .prev-next {
   margin-top: 5px;
 }
-.css-dropdown li {
-  font-size: 12px;
-  padding: 2px 10px;
-  > a {
-    border-bottom: none;
-    padding: 2px;
+.css-dropdown {
+  margin-top: 0;
+  li {
+    font-size: 12px;
+    padding: 2px 10px;
+    > a {
+      border-bottom: none;
+      padding: 2px;
+    }
   }
 }
 span.constraints-label {margin-right: 0.5em;}
@@ -143,6 +148,7 @@ span.constraints-label {margin-right: 0.5em;}
   clear: right;
   margin: 0 8px 0 0;
   .appliedFilter {
+    border-radius: 10px;
     padding: 1px 50px 1px 1em;
     .btnRemove {
       /* override the BL icon used as separator */

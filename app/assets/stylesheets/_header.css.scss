@@ -9,6 +9,7 @@
   box-shadow: 0 5px 5px -7px #999;
   &.navbar {
       font-family: "Helvetica","Arial",sans-serif;
+      font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
     .logo {
       text-align: center;
       img {
@@ -37,10 +38,11 @@
           border-bottom: none;
           box-shadow: none;
           color: $nav_link_color;
-        	font-weight: 700;
-        	text-transform: uppercase;
-        	font-size: 0.965em;
-        	-webkit-font-smoothing: antialiased;
+//          font-size: 15px;
+          font-weight: bold;
+          font-size: 0.965em;
+          font-size: 15px;
+          -webkit-font-smoothing: antialiased;
           padding: 8px 25px 5px 3px;
           &:hover, &:focus {color: $active_nav_link_color;}
         }
@@ -53,9 +55,9 @@
     font-size: 3.3em;
     font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
     margin: 0;
-  	line-height: 1.5em;
+    line-height: 1.5em;
     padding-bottom: 0;
-  }  
+  }
   .navbar-inner {
     background: $header_bg_color;
     background-image: none;
@@ -74,6 +76,7 @@
 /* Phones: reduce logo size and center site title and nav elements */
 @media (max-width: 767px) {
   #header-navbar-static-top {
+    .navbar-inner {padding-bottom: 5px;}
     .logo img {
       float: left;
       max-width: 75px;
@@ -93,6 +96,7 @@
    and site title and nav elements */
 @media (min-width: 768px) and (max-width: 979px) {
   #header-navbar-static-top {
+    .navbar-inner {padding-bottom: 0;}
     h1 {font-size: 3.1em;}
     .logo img {
       float: right;

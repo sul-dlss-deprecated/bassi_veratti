@@ -19,6 +19,7 @@
     background-color: #f7f7f7;
     border: 2px solid darken($header_bg_color, 8%);
     border-radius: 4px;
+    box-shadow: 2px 2px #eee;
     padding: 5px;
     width: 90%;
   }
@@ -32,8 +33,11 @@
 .about-dl {
   p {width: 95%;}
   img {
+    border: 1px solid darken($header_bg_color, 8%);
+    border-radius: 4px;
+    box-shadow: 2px 2px #eeeeee;
     float: left;
-    margin-right: 20px;
+    margin-right: 12px;
   }
 }
 

@@ -17,7 +17,7 @@ $body_bg_image: 'paper-fibers.png';
 $header_bg_color: #F2F1EC;
 $nav_border_color: darken($header_bg_color, 10%);
 $nav_link_color: darken(#8F8271, 5%);
-$active_nav_link_color: #5E564B;
+$active_nav_link_color: darken(#5E564B, 10%);
 
 $container_bg_color: #fdfdfb;
 $heading_color: #5E564B;
@@ -271,4 +271,5 @@ span.content-type {
 @media (max-width: 767px) {
   .pagination {clear: both;}
   .search_form .btn {float: left;}
+  #sidebar {border-top: none;}
 }
