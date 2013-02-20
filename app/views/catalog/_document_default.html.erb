@@ -12,8 +12,17 @@
         <ul class="inventory-ancestry breadcrumb">
           <%= render :partial => "shared/ancestor_breadcrumb", :locals => {:document => document} %>
         </ul>
-    <%= render :partial => "document_header", :locals => {:document_counter => index, :document => document} %>
-    <%= render_document_partial document, :index, :document_counter => index %>
+        <%= render :partial => "document_header", :locals => {:document_counter => index, :document => document} %>
+        <dl class="dl-horizontal dl-invert">
+          <% unless list_is_empty?(document.date)  %>
+            <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(document.date)%></dd>
+          <% end %>
+          <% unless list_is_empty?(document.en_document_types) and list_is_empty?(document.it_document_types)  %>
+            <dt><%=t('bassi.show.document_types')%>:</dt><dd><%= document.send(:"#{I18n.locale}_document_types").join(", ") %></dd>
+          <% end %>
+        </dl>
+    
+        <%#= render_document_partial document, :index, :document_counter => index %>
       </div>
     </div>
   <%- end -%>

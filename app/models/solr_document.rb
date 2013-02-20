@@ -13,8 +13,12 @@ class SolrDocument
     multivalue_field('unit_date_ssim')
   end
 
-  def document_types
-    multivalue_field('document_types_ssim')
+  def en_document_types
+    multivalue_field('en_document_types_ssim')
+  end
+  
+  def it_document_types
+    multivalue_field('it_document_types_ssim')
   end
 
   def description
