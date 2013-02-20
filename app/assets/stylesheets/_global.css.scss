@@ -66,6 +66,7 @@ $constraint_border_active_color: #FFD27A !default;
 
 @mixin image_border_thumbnail {
   border: 1px solid #999;
+  box-shadow: 2px 2px #ddd;
 }
 
 @mixin styled_link {
