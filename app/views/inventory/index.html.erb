@@ -9,6 +9,7 @@
 	<%= render :partial => 'show_inventory_sidebar' %>
 
 	<div id="content" class="span9 inventory">
+	  <hr class="main primary">
 	  <h2><%= @page_title %></h2>
 	  <div data-collapse="true">
 	    <%- SolrDocument.new.all_series.each_with_index do |series, index| %>

@@ -1,6 +1,7 @@
 <div id="content" class="span9">
 	<div class="row">
 	  <div class="span9">
+	    <hr class="main primary">
 	    <h2><%=t('bassi.home.collection_highlights')%><span class="highlights-link"><%=link_to t('bassi.home.more_highlights'),collection_highlights_path%></span></h2>
 	  </div>
 	</div>
@@ -18,6 +19,7 @@
 
   <div class="row">
     <div class="span9 about-dl">
+      <hr class="main secondary">
       <h3 class="section-heading"><%= t('bassi.home.about_collection_html') %></h3>
       <p>
         <%= link_to image_tag('bv-sample-2.png', :width => '120'), about_project_path %>
@@ -31,6 +33,7 @@
 
   <div class="row showOnLoad" style="display:none;">
     <div class="span9 overview">
+      <hr class="main secondary">
       <h3 class="section-heading"><%=t('bassi.home.overview_by')%>
         <div class="overview tabbable tabs-below">
           <ul class="nav nav-pills">

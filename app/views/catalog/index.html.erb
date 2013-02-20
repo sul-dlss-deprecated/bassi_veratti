@@ -1,4 +1,5 @@
 <div id="sidebar" class="span3">
+  <hr class="sidebar">
   <%= render "search_form" %>
   <%= render :partial => 'constraints' if query_has_constraints? %>
   <%= render :partial=>'facets' %>
@@ -19,6 +20,7 @@
 
     <% extra_head_content << render_opensearch_response_metadata.html_safe %>
 
+    <hr class="main primary">
 		<h2 class="search-results"><%= t('blacklight.search.search_results_header') %></h2>
 
 		<div id="search-results-metadata">
