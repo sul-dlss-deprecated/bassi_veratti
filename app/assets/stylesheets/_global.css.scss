@@ -15,6 +15,8 @@ $body_bg_color: #fff;
 $body_bg_image: 'paper-fibers.png';
 
 $header_bg_color: #F2F1EC;
+$header_bg_image: 'ricepaper2.png';
+
 $nav_border_color: darken($header_bg_color, 10%);
 $nav_link_color: darken(#8F8271, 5%);
 $active_nav_link_color: darken(#5E564B, 10%);
@@ -78,7 +80,7 @@ $constraint_border_active_color: #FFD27A !default;
     border: 1px solid darken($header_bg_color, 10%);
     border-radius: 6px;
     color: $active_link_color;
-    padding: 5px 12px;
+    padding: 3px 12px;
     margin-right: 2px;
     line-height: 14px
   }
