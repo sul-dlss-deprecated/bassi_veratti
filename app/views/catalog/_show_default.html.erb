@@ -114,8 +114,6 @@
   <script>
   $(document).ready(function(){
     $('#location-map').modal({keyboard: true, backdrop: true, show: false});
-    $('#location-map').on('hidden', function () {$("#image_workspace").show();}) // we need to hide/show the embedded purl viewer when showing the modal map; otherwise we have z-index issues in Firefox
-    $('#location-map').on('shown', function () {$("#image_workspace").hide();})
     var options = {
       zoom: 6,
       center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
