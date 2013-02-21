@@ -158,6 +158,7 @@
     margin-top: 5px;
   }
   // override image_viewer plugin styles
+  .pe-container a {color: $active_link_color;}
   .zpr-view-finder {
     background-color: transparent;
     border: none;
@@ -180,9 +181,12 @@
 
 /* Responsive styles */
 @media (max-width: 979px) {
+  .blacklight-catalog-show .member-image {float: none;}
   .blacklight-catalog-show .metadata {
+    float: none;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 90%;
   }
 }
 
