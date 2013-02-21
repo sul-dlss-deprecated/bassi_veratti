@@ -68,7 +68,6 @@
   }
   h2 {
     @include page-header;
-    margin-bottom: 3px;
   }
   .member-image img {margin-bottom: 20px;}
   .show-document-title {
@@ -128,16 +127,17 @@
   .item-metadata-tools {
     border-bottom: 1px solid $nav_border_color;
     margin-bottom: 15px;
-    margin-top: 15px;
-    padding-bottom: 30px;
+    margin-top: 3px;
+    padding-bottom: 33px;
     .highlights-link {
       float: left;
-      margin-top: 2px;
+      margin-top: 7px;
     }
   }
   .map-link {
     display: block;
     margin-top: 5px;
+    a {outline: none;}
   }
   .modal-header {
     @include modal-header;
