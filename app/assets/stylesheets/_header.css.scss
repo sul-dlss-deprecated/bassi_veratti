@@ -32,9 +32,11 @@
       padding-bottom: 3px;
       width: 100%;
       > li {
-        &.active > a {color: $active_nav_link_color;}
+        &.active > a {
+          color: $active_nav_link_color;
+        }
         > a {
-          background-color: $header_bg_color;
+          //background-color: $header_bg_color;
           border-bottom: none;
           box-shadow: none;
           color: $nav_link_color;
@@ -60,7 +62,7 @@
   }
   .navbar-inner {
     background: $header_bg_color;
-    background-image: none;
+    background-image: asset_url($header_bg_image, image);
     border: none;
     box-shadow: none;
     padding-bottom: 15px;
@@ -70,6 +72,11 @@
       font-size: 13px;
       text-align: right;
     }
+  }
+  &.navbar .nav > .active > a,
+  &.navbar .nav > .active > a:hover,
+  &.navbar .nav > .active > a:focus {
+    background-color: transparent;
   }
 }
 

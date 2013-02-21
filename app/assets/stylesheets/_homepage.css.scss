@@ -44,7 +44,7 @@
 .overview.tabbable {
   display: inline-block;
   margin-left: 30px;
-  margin-top: -4px;
+  margin-top: -1px;
   float: right;
   font-size: 13px;
   .nav-pills {
@@ -52,8 +52,8 @@
     li > a {
       background-color: $header_bg_color;
       border: 1px solid darken($header_bg_color, 5%);
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 4px;
+      padding-bottom: 4px;
     }
     li > a:hover {
       background-color: darken($header_bg_color, 5%);
