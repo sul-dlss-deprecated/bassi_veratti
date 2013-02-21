@@ -17,6 +17,26 @@ body {
   a {border-bottom: none;}
 }
 
+hr.main.primary {
+  border: 0;
+  height: 6px;
+  margin: 0 auto;
+  background: asset_url('bv-line-light-thick.png', image) repeat-x;
+}
+hr.main.secondary {
+  border: 0;
+  height: 3px;
+  margin: 0 auto;
+  background: asset_url('bv-line-light-thick.png', image) repeat-x;
+}
+hr.sidebar {
+  border: 0;
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  background: asset_url('bv-line-dark-thick.png', image) repeat-x;
+}
+
 body {
   @media (max-width: 767px) {
       padding-left: 0px;

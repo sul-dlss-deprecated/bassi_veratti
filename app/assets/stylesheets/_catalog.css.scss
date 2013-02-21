@@ -1,8 +1,8 @@
 .blacklight-catalog-index {
   h3 {
-    padding-top: 10px;
+    margin-top: 12px;
     &.section-heading {
-      border-top: 3px solid darken($header_bg_color, 5%);
+      // border-top: 3px solid darken($header_bg_color, 5%);
       font-size: 1.25em;
     }
   }
@@ -66,7 +66,10 @@
       dt {color: $active_nav_link_color;}
     }
   }
-  h2 {@include page-header;}
+  h2 {
+    @include page-header;
+    margin-bottom: 3px;
+  }
   .member-image img {margin-bottom: 20px;}
   .show-document-title {
     margin-top: 0;
@@ -125,7 +128,7 @@
   .item-metadata-tools {
     border-bottom: 1px solid $nav_border_color;
     margin-bottom: 15px;
-    margin-top: 5px;
+    margin-top: 15px;
     padding-bottom: 30px;
     .highlights-link {
       float: left;
@@ -155,7 +158,10 @@
     margin-top: 5px;
   }
   // override image_viewer plugin styles
-  .zpr-view-finder {border: none;}
+  .zpr-view-finder {
+    background-color: transparent;
+    border: none;
+  }
   .pe-img-viewer-thumbs-nav-bottom .pe-h-nav {
    background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
    .pe-purl-url {
