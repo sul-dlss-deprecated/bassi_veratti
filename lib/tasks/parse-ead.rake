@@ -227,13 +227,13 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   cached_lookup={}
   coordinates=[]
   unittitle_parts.geogname.each do |location_name|
-    results=Geocoder.search(location_name,:cache =>cached_lookup)
-    sleep 0.1 # don't overload the geolookup API
-    coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
+    unless BassiVeratti::Application.config.no_geocode.include?(location_name)
+      results=Geocoder.search(location_name,:cache =>cached_lookup)
+      sleep 0.1 # don't overload the geolookup API
+      coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
+    end
   end
-  
-  
-  
+    
   purl=content.dao.try(:href)
   druid=druid_from_purl(purl)
   imageids=image_ids_from_purl(purl)

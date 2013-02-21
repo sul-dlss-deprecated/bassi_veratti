@@ -67,7 +67,7 @@
         <% unless list_is_empty?(@document.location) %>
           <dt><%=t('bassi.show.locations')%>:</dt>
             <dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%>
-              <% unless list_is_empty?(@document.coordinates) %>
+              <% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil? %>
                 <span class="map-link hidden showOnLoad">
                   <a href="#location-map" data-toggle="modal" id="show-map-link">
                     <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>

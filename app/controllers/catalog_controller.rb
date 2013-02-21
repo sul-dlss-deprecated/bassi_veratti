@@ -37,7 +37,7 @@ class CatalogController < ApplicationController
         location_facets=Blacklight.solr.get 'select',:params=>{:q=>'*:*',:rows=>0,:facet=>true,:'facet.field'=>'geographic_name_ssim'}
         location_names=location_facets['facet_counts']['facet_fields']['geographic_name_ssim']
         location_names.each_with_index do |location_name,index|
-          if index % 2 == 0
+          if index % 2 == 0 && !BassiVeratti::Application.config.no_geocode.include?(location_name)
             #puts "*** looking up #{location_name} with #{location_names[index+1]} numbers"
             results=Geocoder.search(location_name)
             sleep 0.3  # don't overload the geolookup API

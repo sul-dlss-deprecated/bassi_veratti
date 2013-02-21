@@ -71,6 +71,7 @@ module BassiVeratti
   end
 end
 
+BassiVeratti::Application.config.no_geocode=["Po","Saragozza","Ascoli"] # these strings will not be geocoded, since they return the wrong results
 BassiVeratti::Application.config.version = VERSION # read from VERSION file at base of website
 BassiVeratti::Application.config.google_api_key = "AIzaSyCZxogTGsi5KK8_hRf6Z7tWRkxocoMx_Bk"
 BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/config/stacks.yml")[Rails.env]["url"]
