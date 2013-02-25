@@ -1,6 +1,6 @@
 <%if @document.images.size > 0 %>
   <script type="text/javascript">
-    $(document).ready(function(){
+		$(window).bind("load", function() {     
       $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
                                        'druid': '<%= document[:druid_ssi] %>',
                                        'layout': 'thumbs-nav-bottom',
