@@ -5,10 +5,10 @@ describe "Facets",  :type => :request, :integration => true do
     it "should change the facet label language" do
       visit root_path(:nomap=>true)
       page.should have_content "Personal name"
-      page.should_not have_content "Nome personale"
+      page.should_not have_content "Persone"
       
       click_link "Italiano"
-      page.should have_content "Nome personale"
+      page.should have_content "Persone"
       page.should_not have_content "Personal name"
       
       click_link "English"
@@ -18,11 +18,11 @@ describe "Facets",  :type => :request, :integration => true do
       visit root_path(:nomap=>true)
       page.should have_content "Document type"
       page.should have_content "Correspondence"
-      page.should_not have_content "Categoria di documento"
+      page.should_not have_content "Tipologia documentaria"
       page.should_not have_content "Carteggio"
       
       click_link "Italiano"
-      page.should have_content "Categoria di documento"
+      page.should have_content "Tipologia documentaria"
       page.should have_content "Carteggio"
       page.should_not have_content "Document type"
       page.should_not have_content "Correspondence"

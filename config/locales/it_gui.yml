@@ -1,30 +1,30 @@
 it:
   blacklight:
-    application_name: 'Fondo speciale Bassi Veratti'
+    application_name: 'Conservatore speciale Bassi Veratti'
   bassi:
     facet:
-      document_types: 'Categoria di documento'
-      personal_name: 'Nome personale'
+      document_types: 'Tipologia documentaria'
+      personal_name: 'Persone'
       location: 'Luogo'
       corporate_name: 'Nome di ente'
       family_name: 'Cognome'
       date_range: 'Data'
       all_fields: 'All fields'
     nav:
-      bassi_collection: 'Fondo speciale Bassi Veratti'
+      bassi_collection: 'Conservatore speciale Bassi Veratti'
       about: 'Progetto'
       home: 'Home'
       report_problem: 'Segnala un errore'
       project_history: 'Storia del progetto'
-      project_overview: 'Compendio del progetto'
+      project_overview: 'Caratteristiche del progetto'
       project_team_stanford: 'Gruppo del progetto: Stanford'
       project_team_italy: 'Gruppo del progetto: Bologna'
-      acknowledgments: 'Riconoscimenti'
+      acknowledgments: 'Ringraziamenti'
       contact: 'Contatta'
       contact_us: 'Contattaci'
-      use_policy: 'Criteri d’uso'
-      collections: 'Elementi notevoli'
-      background: 'Contesto storico'
+      use_policy: "Condizioni d'uso"
+      collections: 'Highlights'
+      background: 'Introduzione'
       content_inventory: 'Inventario'
       terms_of_use_message: "Copyright © Biblioteca dell'Archiginnasio. La Biblioteca dell'Archiginnasio del Comune di Bologna possiede tutti i diritti su questa immagine. L'immagine non può essere copiata o estratta in altro modo eccetto che stampando la pagina ed esclusivamente per finalità di studio privato. Per ogni altro utilizzo deve essere richiesta un'autorizzazione specifica alla Biblioteca dell'Archiginnasio scrivendo a: archiginnasio@comune.bologna.it."
       terms_of_use_acknowledgement: 'Facendo clic e continuando di usare il sito web, si conferma di aver letto e accettato i termini di utilizzo.'
@@ -32,14 +32,14 @@ it:
       terms_disagree: 'Torna senza accettare'
       close: 'Chiude'
     about:
-      project_title: 'A proposito del Fondo speciale Bassi-Veratti'
+      project_title: 'A proposito del Conservatore speciale Bassi-Veratti'
       contact_title: 'Segnala un errore'
       contact_message_sent: "Grazie - il messaggio e' stato inviato."
       contact_error: 'Si deve inserire il testo qui.'
       laura_bassi_title: 'Laura Bassi e il fondo Bassi-Veratti'
-      terms_of_use_title: 'Criteri d’uso'
+      terms_of_use_title: "Condizioni d'uso"
       terms_dialog_title: 'Termini di utilizzo'
-      acknowledgements_title: 'Riconoscimenti'
+      acknowledgements_title: 'Ringraziamenti'
       stanford_team_title: 'Gruppo del progetto: Stanford'
       italy_team_title: 'Gruppo del progetto: Bologna'
       history_title: 'Storia del progetto'
@@ -62,7 +62,7 @@ it:
       less: 'less'
       date: 'Data'
       map: 'Map'
-      document_types: 'Categoria di documento'
+      document_types: 'Tipologia documentaria'
       show_map: 'Show on Map'
       description: 'Descrizione fisica'
       people: 'Persone'

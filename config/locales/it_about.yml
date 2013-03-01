@@ -11,7 +11,7 @@ it:
       subject: 'Oggetto'
       message: 'Messaggio'
       describe_problem: 'Si prega di descrivere la domanda o il problema.'
-      curator: 'Curatore delle raccolte francesi e italiani'
+      curator: 'Curatore delle raccolte francesi e italiane'
     about_text_html: |
       <p>
         La realizzazione consente a studiosi e studenti di tutto il mondo di accedere a fonti storiche

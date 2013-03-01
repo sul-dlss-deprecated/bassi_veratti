@@ -1,17 +1,17 @@
 it:
   bassi:
     background:
-      repository: 'Fondo'
+      repository: 'Conservatore'
       repository_text: "Biblioteca dell'Archginnasio"
       summary_title: 'Titolo'
-      summary_title_text: 'Fondo speciale Bassi Veratti'
-      date: 'Data'
+      summary_title_text: 'Conservatore speciale Bassi Veratti'
+      date: 'Date'
       date_text: '1591 (in copia) - 1836'
       extent: 'Consistenza'
       extent_text: '12.0 cartoni (~6000 oggetti digitalizzati)'
       language: 'Lingua'
       language_text: 'Italiano'
-      title: 'Contesto storico'
+      title: 'Introduzione'
       extent_description_title: 'Elenco di consistenza'      
       extent_description_text_html: |
         <p>Delle singole serie che costituiscono il fondo si riportano l'indicazione degli estremi cronologici e la numerazione dei cartoni entro i quali le serie sono collocate.</p>
