@@ -1,6 +1,6 @@
 <%if @document.images.size > 0 %>
   <script type="text/javascript">
-		$(window).bind("load", function() {     
+    $(window).bind("load", function() {
       $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
                                        'druid': '<%= document[:druid_ssi] %>',
                                        'layout': 'thumbs-nav-bottom',
@@ -27,11 +27,11 @@
         <noscript>
            <div class="item active">
              <%= link_to image_tag(@document.images.first, :alt => "#{t('bassi.collection_members.items_name')} 1 of #{@document.images.size}"),@document.purl %>
-		        <% unless @document.purl.blank? %>
-		          <div>Permanent URL<%= " (click to view all item images)" if @document.images.size > 1 %>:
-		            <span><%= link_to @document.purl, @document.purl, :class => 'purl-link' %></span>
-		          </div>
-						<% end %>
+            <% unless @document.purl.blank? %>
+              <div>Permanent URL<%= " (click to view all item images)" if @document.images.size > 1 %>:
+                <span><%= link_to @document.purl, @document.purl, :class => 'purl-link' %></span>
+              </div>
+            <% end %>
            </div>
         </noscript>
       <% else %>
@@ -46,7 +46,7 @@
         </span>
         <%= render :partial => 'show_actions' %>
       </div>
-            
+
       <%= render_document_heading(:h4).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
@@ -118,9 +118,19 @@
       center: new google.maps.LatLng(<%="#{document.coordinates.first[:lat]},#{@document.coordinates.first[:lon]}"%>),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+
+    // Styles to desaturate and hide roads on map
+    <%= render 'map_styles' %>
+
     var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+    map.setOptions({styles: styles});
+
     <%- @document.coordinates.each do |coordinate| %>
-      new google.maps.Marker({position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),map: map,title:"<%=coordinate[:name]%>"});
+      new google.maps.Marker({
+        position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),
+        icon: "<%= asset_path('marker-bassi.png') %>",
+        map: map,
+        title:"<%=coordinate[:name]%>"});
     <% end %>
 
   });
