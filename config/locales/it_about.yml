@@ -15,11 +15,17 @@ it:
     about_text_html: |
       <p>
         La realizzazione consente a studiosi e studenti di tutto il mondo di accedere a fonti storiche
-        primarie; consiste di una interfaccia in linea che premette l’accesso alle versioni digitalizzate di
+        primarie; consiste di una interfaccia in linea che permette l’accesso alle versioni digitalizzate di
         tutti i materiali del fondo Bassi-Veratti dell’Archiginnasio di Bologna, attraverso un dettagliato
         inventario, taggato per potere essere interrogato per parole chiave e termini di indice. Siccome i
         contenuti dell’inventario sono legati alle corrispettive immagini digitali, gli studiosi possono
         facilmente navigare dalle descrizioni ai facsimili digitali.
+      </p>
+      <p>
+        È importante sottolineare il fatto che questo fondo virtuale contiene esclusivamente i materiali
+        appartenenti al Fondo speciale Bassi Veratti dell'Archiginnasio. Altri materiali su Laura Bassi e il
+        suo mondo si possono trovare altrove, in altre biblioteche e archivi di Bologna, come anche
+        nell'importante carteggio della "Collezione degli autografi" dell'Archiginnasio stesso.
       </p>
       <h3>Scheda tecnica</h3>
       <p>
@@ -36,7 +42,7 @@ it:
         indici dell’ambiente di ricerca online.
       </p>
       <p>
-        La digitalizzazione di 672 pezzi, per un totale di 6000 immagini, del fono Bassi-Veratti è stata
+        La digitalizzazione di 672 pezzi, per un totale di 6000 immagini, del fondo Bassi-Veratti è stata
         eseguita dall’azienda italiana AdACTA srl, con la guida ed il controllo degli esperti di
         digitalizzazione di SUL. AdACTA ha usato un I2s Suprascan Digibook 10.0 conformato alle specifiche di
         image filing di Stanford University Libraries per produrre il master di file TIFF. Le immagini sono
