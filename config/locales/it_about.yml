@@ -209,28 +209,30 @@ it:
       </p>
     project_team_italy_text_html: |
       <ul>
-        <li>Rosaria Campioni, Soprintendente per i beni librari e documentari della Regione Emilia-Romagna</li>
         <li>Pierangelo Bellettini, direttore Istituzione Biblioteche del Comune di Bologna</li>
+        <li>Rosaria Campioni, Soprintendente per i beni librari e documentari della Regione Emilia-Romagna</li>
       </ul>
       <h4>Progetto</h4>
-      <ul>
-        <li>Margherita Spinazzola, responsabile Coordinamento e progettazione per la valorizzazione dei beni culturali in ambito nazionale ed europeo, Istituto per i beni culturali della Regione Emilia Romagna</li>
-        <li>Patrizia Busi, archivista della Sezione dei manoscritti e dei rari della Biblioteca dell'Archiginnasio</li>
-        <li>Anna Manfron, responsabile Biblioteca dell'Archiginnasio e Biblioteche specializzate dell'Istituzione Biblioteche del Comune di Bologna</li>
-        <li>Ruggero Ruggeri, responsabile Servizi informatici dell'Istituzione Biblioteche del Comune di Bologna</li>
-        <li>Letizia Zarri, servizi amministrativi della Biblioteca dell'Archiginnasio</li>
-      </ul>
+        <ul>
+          <li>Patrizia Busi, archivista della Sezione dei manoscritti e dei rari della Biblioteca dell'Archiginnasio</li>
+          <li>Anna Manfron, responsabile Biblioteca dell'Archiginnasio e Biblioteche specializzate dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Ruggero Ruggeri, responsabile Servizi informatici dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Letizia Zarri, servizi amministrativi della Biblioteca dell'Archiginnasio</li>
+          <li>Margherita Spinazzola, responsabile Coordinamento e progettazione per la valorizzazione dei beni
+          culturali in ambito nazionale ed europeo, Istituto per i beni culturali della Regione Emilia
+          Romagna</li>
+        </ul>
       <h4>Comunicazione</h4>
         <ul>
-          <li>Valeria Cicala, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
-          <li>Carlo Tovoli, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
-          <li>Monica Chili, Grafico, Regione Emilia-Romagna</li>
-          <li>Christian Lertola, IT e servizi di video conferenza, Regione Emilia-Romagna</li>
-          <li>Andrea Scardova, Fotografo, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
           <li>Anna Maria Cava, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
           <li>Manuela Marchesan, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
           <li>Valeria Roncuzzi, responsabile comunicazione e promozione dell'Istituzione Biblioteche del Comune di Bologna</li>
           <li>Sandra Saccone, addetta alla comunicazione dell'Istituzione Biblioteche del Comune di Bologna</li>
+          <li>Monica Chili, Grafico, Regione Emilia-Romagna</li>
+          <li>Valeria Cicala, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+          <li>Christian Lertola, IT e servizi di video conferenza, Regione Emilia-Romagna</li>
+          <li>Andrea Scardova, Fotografo, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
+          <li>Carlo Tovoli, Addetto Ufficio Stampa, Istituto per i beni artistici, culturali e naturali Regione Emilia-Romagna</li>
         </ul>
         <div class="row logos">
           <div class="span5 collaborator-logo first"><img src="/assets/LOG_IBC_SOPR_RER_2007_rgb.jpg" width="320"/></div>
