@@ -13,16 +13,16 @@ module DocumentTypes
   def self.document_type_translations
     {"accounting"        => {:en => "Accounting",        :it => "Contabilità"},
      "correspondence"    => {:en => "Correspondence",    :it => "Carteggio"},
-     "dowry"             => {:en => "Dowry",             :it => "Dote"},
-     "family"            => {:en => "Family",            :it => "Parentele"},
-     "legal"             => {:en => "Legal",             :it => "Materie legali"},
+     "dowry"             => {:en => "Dowry",             :it => "Doti"},
+     "family"            => {:en => "Family",            :it => "Famiglia"},
+     "legal"             => {:en => "Legal",             :it => "Materiale Legale"},
      "memoirs"           => {:en => "Memoirs",           :it => "Memorie"},
-     "miscellaneous"     => {:en => "Miscellaneous",     :it => "Miscellanea"},
+     "miscellaneous"     => {:en => "Miscellaneous",     :it => "Oggetti"},
      "petitions"         => {:en => "Petitions",         :it => "Suppliche"},
-     "poems"             => {:en => "Poems",             :it => "Poesia"},
-     "printed_materials" => {:en => "Printed materials", :it => "Materiale stampato"},
-     "professional"      => {:en => "Professional",      :it => "Affari professionali"},
-     "real_estate"       => {:en => "Real Estate",       :it => "Bene immobili"},
+     "poems"             => {:en => "Poems",             :it => "Poesie"},
+     "printed_materials" => {:en => "Printed materials", :it => "Materiale a stampa"},
+     "professional"      => {:en => "Professional",      :it => "Affari"},
+     "real_estate"       => {:en => "Real Estate",       :it => "Beni immobili"},
      "wills"             => {:en => "Wills",             :it => "Testamenti"}
      }
   end
