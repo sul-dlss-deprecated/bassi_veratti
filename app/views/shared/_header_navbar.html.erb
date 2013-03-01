@@ -41,7 +41,7 @@
               <%= link_to "Italiano", :locale=>'it'%>
             <% end %>
           </div>
-          <h1><%= t('blacklight.application_name') %></h1>
+          <h1 class="<%= I18n.locale %>"><%= t('blacklight.application_name') %></h1>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="<%="active" if on_home_page%>">

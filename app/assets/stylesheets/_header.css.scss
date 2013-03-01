@@ -54,11 +54,12 @@
   }
   h1 {
     border-bottom: none;
-    font-size: 3.3em;
+    font-size: 3em;
     font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
     margin: 0;
     line-height: 1.5em;
     padding-bottom: 0;
+    &.it {font-size: 2.5em;}
   }
   .navbar-inner {
     background: $header_bg_color;
@@ -81,7 +82,22 @@
 }
 
 /* Phones: reduce logo size and center site title and nav elements */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+  #header-navbar-static-top {
+    .logo img {
+      display: none !important;
+    }
+    &.navbar {
+      h1 {
+        font-size: 1.75em;
+        float: none;
+        text-align: center;
+      }
+      .language-toggle {text-align: center;}
+    }
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
   #header-navbar-static-top {
     .navbar-inner {padding-bottom: 5px;}
     .logo img {
@@ -93,6 +109,7 @@
       h1 {
         font-size: 2.5em;
         float: none;
+        &.it {font-size: 1.75em;}
       }
       .language-toggle {text-align: center;}
       .nav > li:last-child > a {padding-right: 25px}
@@ -104,7 +121,10 @@
 @media (min-width: 768px) and (max-width: 979px) {
   #header-navbar-static-top {
     .navbar-inner {padding-bottom: 0;}
-    h1 {font-size: 3.1em;}
+    h1 {
+      font-size: 3em;
+      &.it {font-size: 2.5em;}
+    }
     .logo img {
       float: right;
       max-width: 80px;
