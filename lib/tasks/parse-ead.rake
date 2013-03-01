@@ -228,7 +228,8 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   coordinates=[]
   unittitle_parts.geogname.each do |location_name|
     unless BassiVeratti::Application.config.no_geocode.include?(location_name)
-      results=Geocoder.search(location_name,:cache =>cached_lookup)
+      lookup_name=BassiVeratti::Application.config.geocode_swap[location_name] || location_name
+      results=Geocoder.search(lookup_name,:cache =>cached_lookup)
       sleep 0.1 # don't overload the geolookup API
       coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
     end

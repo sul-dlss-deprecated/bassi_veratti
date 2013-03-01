@@ -1,4 +1,6 @@
 # -*- encoding : utf-8 -*-
+# encoding: utf-8
+
 require 'blacklight/catalog'
 
 class CatalogController < ApplicationController  
@@ -39,7 +41,8 @@ class CatalogController < ApplicationController
         location_names.each_with_index do |location_name,index|
           if index % 2 == 0 && !BassiVeratti::Application.config.no_geocode.include?(location_name)
             #puts "*** looking up #{location_name} with #{location_names[index+1]} numbers"
-            results=Geocoder.search(location_name)
+            lookup_name=BassiVeratti::Application.config.geocode_swap[location_name] || location_name
+            results=Geocoder.search(lookup_name)
             sleep 0.3  # don't overload the geolookup API
             if results.size > 0 
               @document_locations.merge!(location_name=>{:lat=>results.first.latitude,:lon=>results.first.longitude,:count=>location_names[index+1]}) 

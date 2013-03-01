@@ -1,3 +1,6 @@
+# -*- encoding : utf-8 -*-
+# encoding: utf-8
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -71,7 +74,14 @@ module BassiVeratti
   end
 end
 
-BassiVeratti::Application.config.no_geocode=["Po","Saragozza","Ascoli"] # these strings will not be geocoded, since they return the wrong results
+BassiVeratti::Application.config.geocode_swap={
+  "Canneto"=>"Adelfia, Bari, Italy",
+  "Montecòsaro"=>"Montecòsaro, Macerata"
+}
+
+ # strings that match these keys will be searched using the values of the key, to give a better geolookup
+
+BassiVeratti::Application.config.no_geocode=["Macerata","Po","Saragozza","Ascoli", "Casaglia","via Valdonica","porta Stiera","Pugliola Corta"] # these strings will not be geocoded, since they return the wrong results
 BassiVeratti::Application.config.version = VERSION # read from VERSION file at base of website
 BassiVeratti::Application.config.google_api_key = "AIzaSyCZxogTGsi5KK8_hRf6Z7tWRkxocoMx_Bk"
 BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/config/stacks.yml")[Rails.env]["url"]
