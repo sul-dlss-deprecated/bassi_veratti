@@ -13,7 +13,7 @@
 	  <h2><%= @page_title %></h2>
 	  <div data-collapse="true">
 	    <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
-	      <h3 id="series<%= index+1 %>"><%= series[blacklight_config.show.heading] %></h3>
+	      <h3 id="series<%= index+1 %>" class="<%= I18n.locale %>"><%= series[blacklight_config.show.heading] %></h3>
 	      <p class="truncate"><%= raw show_series_language_description(series.notes,I18n.locale) %></p>
 	      <ul class="series">
 	        <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
