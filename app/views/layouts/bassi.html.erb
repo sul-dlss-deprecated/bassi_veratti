@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <%= render :partial => 'shared/footer' %>
+        <%#= render :partial => 'shared/footer' %>
 
         </div> <!-- #su-content end -->
       </div> <!-- #su-wrap end -->
@@ -100,6 +100,16 @@
             </div> <!-- .bottom-text end -->
             <div class="clear"></div>
             <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span> </span></p>
+            <div class="partner-icons">
+              <%= link_to image_tag('ibc-logo-circle.png'), "http://ibc.regione.emilia-romagna.it",
+                  :class => "ibc-logo",
+                  :alt => "Logo of Istituto per i beni artistici culturali e naturali",
+                  :title => "Istituto per i beni artistici culturali e naturali" %>
+              <%= link_to image_tag('archi-logo-circle.png'), "http://www.archiginnasio.it",
+                  :class => "archi-logo",
+                  :alt => "Logo of Biblioteca dell'Archiginnasio",
+                  :title => "Biblioteca dell'Archiginnasio" %>
+            </div>
           </div> <!-- .row end -->
         </div> <!-- .container end -->
       </div> <!-- global-footer end -->
