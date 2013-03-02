@@ -7,6 +7,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
   
+  CatalogController.solr_search_params_logic += [:exclude_document_level_folders]
+  
   def self.collection_highlights
     opts = {}
     CollectionHighlight.find(:all,:order=>:sort_order).each do |highlight|
@@ -307,5 +309,14 @@ class CatalogController < ApplicationController
     u
   end
   
+  def exclude_document_level_folders(solr_params, user_params)
+    exclude_string = "NOT folder_is_content_bi:true"
+    if solr_params[:fq]
+      solr_params[:fq] << exclude_string 
+    else
+      solr_params[:fq] = [exclude_string]
+    end
+  end
+
   
 end 

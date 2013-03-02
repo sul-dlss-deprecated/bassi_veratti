@@ -22,4 +22,9 @@ describe("Search and catalog controller pages",:type=>:request,:integration=>tru
     page.should have_xpath("//img[@src=\"https://stacks-test.stanford.edu/image/pv196nk4650/pv196nk4650_001_square.jpg\"]") # an "other items" image
   end
   
+  it "should exclude folder documents where the item is described at the same level (and therefore a duplicate)" do
+    visit catalog_index_path(:q => "Medaglia")
+    page.should have_content("1 - 2 of 2") # if we had the folder objects we would get dups and have 4 results.
+  end
+  
 end

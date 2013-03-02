@@ -54,10 +54,12 @@ def solrize_ead(ead)
       if folders.include? container_key(containers)
         documents << document_from_contents(ead, c02, c01, c01, containers)
       else
-        documents << folder_from_contents(c02, containers, c01)
         # handle the case where the folder level object IS the content
         if c02.dao.try(:href)
+          documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
           documents << document_from_contents(ead, c02, c01, c01, containers)
+        else
+          documents << folder_from_contents(c02, containers, c01)
         end
         folders << container_key(containers) unless folders.include? container_key(containers)        
       end
@@ -66,10 +68,12 @@ def solrize_ead(ead)
         if folders.include? container_key(containers)
           documents << document_from_contents(ead, c03, c02, c01, containers)
         else
-          documents << folder_from_contents(c02, containers, c01)
           # handle the case where the folder level object IS the content
           if c03.dao.try(:href)
+            documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
             documents << document_from_contents(ead, c03, c02, c01, containers)
+          else
+            documents << folder_from_contents(c02, containers, c01)
           end
           folders << container_key(containers) unless folders.include? container_key(containers)          
         end
@@ -78,10 +82,12 @@ def solrize_ead(ead)
           if folders.include? container_key(containers)
             documents << document_from_contents(ead, c04, c03, c01, containers)
           else
-            documents << folder_from_contents(c02, containers, c01)
             # handle the case where the folder level object IS the content
             if c04.dao.try(:href)
+              documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
               documents << document_from_contents(ead, c04, c03, c01, containers)
+            else
+              documents << folder_from_contents(c02, containers, c01)
             end
             folders << container_key(containers) unless folders.include? container_key(containers)            
           end
@@ -204,7 +210,7 @@ def druid_from_purl(purl)
   purl ? "#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
 end
 
-def folder_from_contents(content, containers, series)
+def folder_from_contents(content, containers, series, options={})
   dates = dates_from_unitdate(content.did)
   {:id => container_key(containers),
    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
@@ -216,7 +222,8 @@ def folder_from_contents(content, containers, series)
    :begin_year_itsim => dates.try(:start_year),
    :end_year_itsim => dates.try(:end_year),
    :description_tsim => description(content),
-   :series_ssim => series.identifier
+   :series_ssim => series.identifier,
+   :folder_is_content_bi => options[:folder_is_content]
   }
 end
 
