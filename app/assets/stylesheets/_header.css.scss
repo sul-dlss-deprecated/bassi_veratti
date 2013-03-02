@@ -59,7 +59,7 @@
     margin: 0;
     line-height: 1.5em;
     padding-bottom: 0;
-    &.it {font-size: 2.5em;}
+    //&.it {font-size: 2.5em;}
   }
   .navbar-inner {
     background: $header_bg_color;
@@ -109,7 +109,7 @@
       h1 {
         font-size: 2.5em;
         float: none;
-        &.it {font-size: 1.75em;}
+        &.it {font-size: 2.2em;}
       }
       .language-toggle {text-align: center;}
       .nav > li:last-child > a {padding-right: 25px}
@@ -123,7 +123,7 @@
     .navbar-inner {padding-bottom: 0;}
     h1 {
       font-size: 3em;
-      &.it {font-size: 2.5em;}
+      //&.it {font-size: 2.5em;}
     }
     .logo img {
       float: right;
