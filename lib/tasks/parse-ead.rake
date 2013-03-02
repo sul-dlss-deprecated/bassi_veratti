@@ -50,46 +50,52 @@ def solrize_ead(ead)
   folders = []
   ead.reader.archdesc.dsc.c01s.each do |c01|
     c01.c02s.each do |c02|
-      containers = containers_for_collection(c02)
-      if folders.include? container_key(containers)
-        documents << document_from_contents(ead, c02, c01, c01, containers)
-      else
-        # handle the case where the folder level object IS the content
-        if c02.dao.try(:href)
-          documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
+      unless exclude_document?(c02)
+        containers = containers_for_collection(c02)
+        if folders.include? container_key(containers)
           documents << document_from_contents(ead, c02, c01, c01, containers)
         else
-          documents << folder_from_contents(c02, containers, c01)
-        end
-        folders << container_key(containers) unless folders.include? container_key(containers)        
-      end
-      c02.c03s.each do |c03|
-        containers = containers_for_collection(c03)
-        if folders.include? container_key(containers)
-          documents << document_from_contents(ead, c03, c02, c01, containers)
-        else
           # handle the case where the folder level object IS the content
-          if c03.dao.try(:href)
+          if c02.dao.try(:href)
             documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
-            documents << document_from_contents(ead, c03, c02, c01, containers)
+            documents << document_from_contents(ead, c02, c01, c01, containers)
           else
             documents << folder_from_contents(c02, containers, c01)
           end
-          folders << container_key(containers) unless folders.include? container_key(containers)          
+          folders << container_key(containers) unless folders.include? container_key(containers)
         end
-        c03.c04s.each do |c04|
-          containers = containers_for_collection(c04)
+      end
+      c02.c03s.each do |c03|
+        unless exclude_document?(c03)
+          containers = containers_for_collection(c03)
           if folders.include? container_key(containers)
-            documents << document_from_contents(ead, c04, c03, c01, containers)
+            documents << document_from_contents(ead, c03, c02, c01, containers)
           else
             # handle the case where the folder level object IS the content
-            if c04.dao.try(:href)
+            if c03.dao.try(:href)
               documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
-              documents << document_from_contents(ead, c04, c03, c01, containers)
+              documents << document_from_contents(ead, c03, c02, c01, containers)
             else
               documents << folder_from_contents(c02, containers, c01)
             end
-            folders << container_key(containers) unless folders.include? container_key(containers)            
+            folders << container_key(containers) unless folders.include? container_key(containers)
+          end
+        end
+        c03.c04s.each do |c04|
+          unless exclude_document?(c04)
+            containers = containers_for_collection(c04)
+            if folders.include? container_key(containers)
+              documents << document_from_contents(ead, c04, c03, c01, containers)
+            else
+              # handle the case where the folder level object IS the content
+              if c04.dao.try(:href)
+                documents << folder_from_contents(c02, containers, c01, :folder_is_content => true)
+                documents << document_from_contents(ead, c04, c03, c01, containers)
+              else
+                documents << folder_from_contents(c02, containers, c01)
+              end
+              folders << container_key(containers) unless folders.include? container_key(containers)
+            end
           end
         end
       end
@@ -208,6 +214,10 @@ end
 
 def druid_from_purl(purl)
   purl ? "#{/[A-Za-z]{2}[0-9]{3}[A-Za-z]{2}[0-9]{4}/.match(purl)}" : nil
+end
+
+def exclude_document?(content)
+  ["ref961", "ref975", "ref1525", "ref1571"].include?(content.identifier)
 end
 
 def folder_from_contents(content, containers, series, options={})
