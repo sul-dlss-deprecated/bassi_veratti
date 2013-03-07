@@ -204,10 +204,10 @@ it:
         title: 'Navigazione dei risultati'
       pagination_info:
         no_items_found: '%{entry_name} non trovato(a)'
-        single_item_found: 'Mostro <b>1</b> %{entry_name}'
+        single_item_found: 'Mostro <b>1</b> risultato'
         pages:
           one: 'Mostro <b>tutti %{total_num}</b> risultati'
-          other: 'Mostro %{entry_name} <b>%{start_num} - %{end_num}</b> di <b>%{total_num}</b>'
+          other: 'Mostro risultati <b>%{start_num} - %{end_num}</b> di <b>%{total_num}</b>'
       entry_pagination_info:
         one: "Mostro l'unico risultato della ricerca"
         other: 'Mostro il risultato <b>%{current} di %{total}</b> della ricerca'
