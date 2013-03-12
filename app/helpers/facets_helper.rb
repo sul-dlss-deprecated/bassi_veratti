@@ -11,14 +11,12 @@ module FacetsHelper
   
   def facet_field_names
     keys = blacklight_config.facet_fields.keys
-    keys.delete_if{|k| k.include?(document_types_facet_pattern) }
-    keys.unshift("#{I18n.locale}_#{document_types_facet_pattern}") 
-  end
-
-  private
-
-  def document_types_facet_pattern
-    "document_types_ssim"
+    facet_patterns=%w{document_types_ssim highlight_ssim}
+    facet_patterns.each do |facet_pattern|
+      keys.delete_if{|k| k.include?(facet_pattern) }
+      keys.unshift("#{I18n.locale}_#{facet_pattern}") 
+    end
+    keys
   end
   
 end

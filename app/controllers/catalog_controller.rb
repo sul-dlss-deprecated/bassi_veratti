@@ -9,10 +9,10 @@ class CatalogController < ApplicationController
   
   CatalogController.solr_search_params_logic += [:exclude_document_level_folders]
   
-  def self.collection_highlights
+  def self.collection_highlights(locale)
     opts = {}
     CollectionHighlight.find(:all,:order=>:sort_order).each do |highlight|
-      opts[:"highlight_#{highlight.id}"] = {:label => highlight.send("name_#{I18n.locale}"), :fq => "id:(#{highlight.query.gsub('or', 'OR')})"}
+      opts[:"highlight_#{highlight.id}"] = {:label => highlight.send("name_#{locale}"), :fq => "id:(#{highlight.query.gsub('or', 'OR')})"}
     end if ActiveRecord::Base.connection.table_exists? 'collection_highlights'
     opts
   end
@@ -166,7 +166,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'family_name_ssim', :label => 'bassi.facet.family_name'
     config.add_facet_field 'date_range_itim', :label => 'bassi.facet.date_range', :range => true
 
-    config.add_facet_field 'highlight_ssim', :label => 'bassi.nav.collections', :show => false,  :query => collection_highlights
+    config.add_facet_field 'en_highlight_ssim', :label => 'bassi.nav.collections', :show => false,  :query => collection_highlights('en')
+    config.add_facet_field 'it_highlight_ssim', :label => 'bassi.nav.collections', :show => false,  :query => collection_highlights('it')
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
     #    :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
