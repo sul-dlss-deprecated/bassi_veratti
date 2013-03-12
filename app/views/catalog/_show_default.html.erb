@@ -84,13 +84,12 @@
         <% if duplicate_note(@document.id) %>
           <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(duplicate_note(@document.id), catalog_path(duplicate_reference(@document.id))) %></dd>
         <%- end -%>
-
       </dl>
 
+      <p class="use-notice"><%=t('bassi.terms_of_use_text_html') %></p>
+
     </div>
-
   </div>
-
 
 <% if @document.folder_siblings.documents.size > 0%>
 <div class="row">
@@ -152,4 +151,3 @@
     </div>
   </div>
 <% end %>
-<p><%=t('bassi.terms_of_use_text_html') %></p>
