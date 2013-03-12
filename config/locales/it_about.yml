@@ -195,7 +195,7 @@ it:
         <dt>Jin Chen</dt><dd>Image Quality Assurance Production</dd>
         <dt>Christopher DeRosa</dt><dd>Curatorial Assistant</dd>
         <dt>Glynn Edwards</dt><dd>EAD Consultant</dd>
-        <dt>Gary Geisler</dt><dd>User Experience Designer/Web Application Developer</dd>
+        <dt>Gary Geisler</dt><dd>Web Application Developer</dd>
         <dt>Jessie Keck</dt><dd>Web Application Developer</dd>
         <dt>Peter Mangiafico</dt><dd>Web Application Developer</dd>
         <dt>Matt Pearson</dt><dd>Image Quality Assurance Specialist</dd>
@@ -210,7 +210,7 @@ it:
         <li>Stanford University Libraries, Digital Libraries Systems and Services staff:
         Ben Albritton, Tony Calavano, Doris Cheung, Tom Cramer, Christopher Jesudurai,
         Charles Kerns, Lynn McRae, Tony Navarrete, Michael Olson, Stuart Snydman.</li>
-        <li>Stanford Libraries staff Andrew Herkovic and Robert Schwarzwalder.</li>
+        <li>Stanford Libraries staff Andrew Herkovic, Jacque Hettel, Robert Schwarzwalder, Glen Worthey.</li>
       </ul>
       </p>
     project_team_italy_text_html: |
