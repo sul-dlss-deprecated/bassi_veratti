@@ -34,26 +34,11 @@
   <div class="row showOnLoad" style="display:none;">
     <div class="span9 overview">
       <hr class="main secondary">
-      <h3 class="section-heading"><%=t('bassi.home.overview_by')%>
-        <div class="overview tabbable tabs-below">
-          <ul class="nav nav-pills">
-            <li><%= link_to t('bassi.home.location'), '#tab1', "data-toggle" => "pill" %></li>
-            <li><%= link_to t('bassi.home.document_type'), '#tab2', "data-toggle" => "pill" %></li>
-          </ul>
-        </h3>
+      <h3 class="section-heading"><%=t('bassi.home.overview_by')%></h3>
 
           <div class="overview-area tab-content">
-
-            <div class="tab-pane fade" id="tab1">
-              <%= render :partial => 'overview_map' unless @params[:nomap]%>
-            </div>
-
-            <div class="tab-pane fade" id="tab2">
-	             VIEW BY DOCUMENT TYPE VIZ HERE
-            </div>
-
-          </div><!-- end overview-area -->
-        </div><!-- end tabbable -->
+            <%= render :partial => 'overview_map' unless @params[:nomap]%>
+        </div><!-- end overview-area -->
     </div>
   </div>
 
