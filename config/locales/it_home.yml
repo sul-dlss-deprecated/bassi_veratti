@@ -6,8 +6,7 @@ it:
       overview_by: 'Panoramica'
       collection_highlights: 'Highlights'
       more_highlights: 'Altri highlights'
-      about_text_html: |
-        <p>
+      about_text: |
         Il fondo Bassi-Veratti online è il frutto di una collaborazione pluriennale fra Stanford
         University Libraries, Biblioteca Comunale dell’Archiginnasio di Bologna e Istituto per i
         beni artistici culturali e naturali della Regione Emilia-Romagna, per realizzare una
@@ -15,5 +14,4 @@ it:
         Il fondo, facente parte delle ricche collezioni dell’Archiginnasio, contiene non solo
         materiale relativo a Laura Bassi, ma anche riferibile al marito, lo scienziato Giuseppe
         Veratti, ai loro figli e alla di lui famiglia.
-        </p>
       about_collection_html: 'A proposito delle raccolte'
