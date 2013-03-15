@@ -6,16 +6,14 @@ en:
       overview_by: Collection overview
       collection_highlights: Collection highlights
       more_highlights: More highlights
-      about_text_html: |
-        <p>
-          The online Bassi-Veratti Collection is a multi-year collaboration
-          of the Stanford University Libraries, the Biblioteca Comunale
-          dell'Archiginnasio, Bologna, Italy, and the Istituto per i Beni
-          Artistici, Culturali e Naturali della Regione Emilia-Romagna, to
-          produce a digital version of the archive of the influential woman
-          scientist, Laura Bassi. Part of the rich collections of the
-          Archiginnasio, the collection contains not only materials about
-          Laura Bassi, but also those of her husband, scientist Giuseppe
-          Veratti, their children, and his family.
-        </p>
+      about_text: |
+        The online Bassi-Veratti Collection is a multi-year collaboration
+        of the Stanford University Libraries, the Biblioteca Comunale
+        dell'Archiginnasio, Bologna, Italy, and the Istituto per i Beni
+        Artistici, Culturali e Naturali della Regione Emilia-Romagna, to
+        produce a digital version of the archive of the influential woman
+        scientist, Laura Bassi. Part of the rich collections of the
+        Archiginnasio, the collection contains not only materials about
+        Laura Bassi, but also those of her husband, scientist Giuseppe
+        Veratti, their children, and his family.
       about_collection_html: About the collection

@@ -22,10 +22,8 @@
       <hr class="main secondary">
       <h3 class="section-heading"><%= t('bassi.home.about_collection_html') %></h3>
       <p>
-        <%= link_to image_tag('bv-sample-2.png', :width => '120'), about_project_path %>
-        <%= t('bassi.home.about_text_html') %>
-      </p>
-      <p>
+        <%= link_to image_tag('about-dl.jpg', :width => '130'), about_project_path %>
+        <%= t('bassi.home.about_text') %>
         <%= link_to t('blacklight.search.facets.more'), about_project_path %>
       </p>
     </div>
@@ -35,10 +33,9 @@
     <div class="span9 overview">
       <hr class="main secondary">
       <h3 class="section-heading"><%=t('bassi.home.overview_by')%></h3>
-
-          <div class="overview-area tab-content">
-            <%= render :partial => 'overview_map' unless @params[:nomap]%>
-        </div><!-- end overview-area -->
+        <div class="overview-area tab-content">
+          <%= render :partial => 'overview_map' unless @params[:nomap]%>
+        </div>
     </div>
   </div>
 
