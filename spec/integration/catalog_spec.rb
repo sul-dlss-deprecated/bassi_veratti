@@ -18,8 +18,8 @@ describe("Search and catalog controller pages",:type=>:request,:integration=>tru
     page.should have_content("1.0 leaf/leaves")
     page.should have_content("http://purl.stanford.edu/ys098my3414")
     page.should have_content("Other items in this folder (29)")
-    page.should have_xpath("//img[@src=\"https://stacks-test.stanford.edu/image/ys098my3414/ys098my3414_001_thumb.jpg\"]") # main image
-    page.should have_xpath("//img[@src=\"https://stacks-test.stanford.edu/image/pv196nk4650/pv196nk4650_001_square.jpg\"]") # an "other items" image
+    page.should have_xpath("//img[contains(@src, \"image/ys098my3414/ys098my3414_001_thumb.jpg\")]") # main image
+    page.should have_xpath("//img[contains(@src, \"image/pv196nk4650/pv196nk4650_001_square.jpg\")]") # an "other items" image
   end
   
   it "should exclude folder documents where the item is described at the same level (and therefore a duplicate)" do
