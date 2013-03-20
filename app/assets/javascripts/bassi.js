@@ -1,10 +1,4 @@
 $(document).ready(function(){
-
-	// load any images on the content inventory page
-	itemImages=$('.item-image-link');
-	for (var i = 0 ; i < itemImages.length; i++) {
-		itemImages[i].innerHTML='<a href="' + itemImages[i].attributes['data-image-link'].value + '"><img alt=\'' + itemImages[i].attributes['data-image-title'].value + '\' title=\'' +  itemImages[i].attributes['data-image-title'].value + '\' src="' + itemImages[i].attributes['data-image-url'].value + '"></a>'
-	}
 	
 	// Modal behavior for collection member show page.
 	$("[data-modal-selector]").on('click', function(){

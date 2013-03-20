@@ -10,6 +10,11 @@ $(document).ready(function(){
 				$("a, i", $(this)).click(function(){
 					icon.toggleClass("icon-minus-sign");
 					nested_list.slideToggle();
+					expandedType=nested_list.children().attr('class');
+					if (expandedType == 'folder-items') {
+						imageItems=nested_list.find('.item-image-link');
+						loadInventoryImages(imageItems);
+ 					}
 					// Refresh the scrollspy since we've changed the DOM
 					$('.scrollspy-content').scrollspy("refresh");
 				});
@@ -35,3 +40,18 @@ $(document).ready(function(){
 		$('.scrollspy-content').scrollspy("refresh");
   }
 });
+
+function loadAllInventoryImages() {
+	// load all images on the inventory page
+	itemImages=$('.item-image-link');
+	loadInventoryImages(itemImages);
+}
+
+function loadInventoryImages(itemImages) {
+
+	// only load specified images on the inventory page
+	for (var i = 0 ; i < itemImages.length; i++) {
+		itemImages[i].innerHTML='<a href="' + itemImages[i].attributes['data-image-link'].value + '"><img alt=\'' + itemImages[i].attributes['data-image-title'].value + '\' title=\'' +  itemImages[i].attributes['data-image-title'].value + '\' src="' + itemImages[i].attributes['data-image-url'].value + '"></a>'
+	}
+		
+}
