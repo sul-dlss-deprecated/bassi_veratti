@@ -29,7 +29,10 @@ $(document).ready(function(){
   if($(".blacklight-inventory").length > 0 && window.location.hash != '') {
 	  var focus = $("[data-reference-id='" + window.location.hash +"']");
 	  // Show the next list item and all its hidden list item parents
-	  focus.next("li").show();
+		nested_list=focus.next("li");
+	  nested_list.show();
+		imageItems=nested_list.find('.item-image-link');
+		loadInventoryImages(imageItems);
 	  focus.children("i").toggleClass("icon-minus-sign");
 	  focus.parents("li:hidden").each(function(){
 		  $(this).show();
