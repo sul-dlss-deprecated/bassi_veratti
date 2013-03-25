@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	if($("[data-collapse='true']").length > 0) {
 		$("ul", $("[data-collapse='true']")).each(function(){
 			var toggle_text = $(this).children("li[data-behavior='toggle-handler']");
@@ -11,7 +12,7 @@ $(document).ready(function(){
 					icon.toggleClass("icon-minus-sign");
 					nested_list.slideToggle();
 					expandedType=nested_list.children().attr('class');
-					if (expandedType == 'folder-items') {
+					if (expandedType == 'folder-items' && icon.is('.icon-minus-sign')) {
 						imageItems=nested_list.find('.item-image-link');
 						loadInventoryImages(imageItems);
  					}
@@ -42,14 +43,14 @@ $(document).ready(function(){
 });
 
 function loadAllInventoryImages() {
-	// load all images on the inventory page
+	// load all images on the inventory page; not currently used
 	itemImages=$('.item-image-link');
 	loadInventoryImages(itemImages);
 }
 
 function loadInventoryImages(itemImages) {
 
-	// only load specified images on the inventory page
+	// only load specified images on the inventory page by passing in a dom item
 	for (var i = 0 ; i < itemImages.length; i++) {
 		itemImages[i].innerHTML='<a href="' + itemImages[i].attributes['data-image-link'].value + '"><img alt=\'' + itemImages[i].attributes['data-image-title'].value + '\' title=\'' +  itemImages[i].attributes['data-image-title'].value + '\' src="' + itemImages[i].attributes['data-image-url'].value + '"></a>'
 	}
