@@ -22,7 +22,7 @@
   <div class="row document-details">
     <div class="span6 member-image">
       <%if @document.images.size > 0 %>
-        <div id="image_workspace"></div>
+        <div class="showOnLoad hidden" id="image_workspace"><%=t('bassi.show.wait')%></div>
 
         <noscript>
            <div class="item active">

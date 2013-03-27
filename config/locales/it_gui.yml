@@ -45,6 +45,7 @@ it:
       history_title: 'Storia del progetto'
       version_title: 'Application Version'      
     show:
+      wait: 'un momento per favore...'
       box:
         word: 'Cartone'
         one: '1 Cartone'

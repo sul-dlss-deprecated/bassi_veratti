@@ -50,6 +50,7 @@ en:
     collection_members:
       items_name: 'image'
     show:
+      wait: 'one moment please...'
       box: 
         word: 'Box'
         one: '1 Box'
