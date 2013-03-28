@@ -52,6 +52,18 @@
     vertical-align: top;
   }
 
+  .video {
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: center;
+    span {
+      color: $heading_color;
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  }
+
   // Make textarea wide as reasonable given viewport size
   @media (min-width: 980px) {
     textarea#message {width: 500px;}
