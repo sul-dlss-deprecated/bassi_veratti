@@ -28,6 +28,11 @@ en:
         found in other libraries and archives in Bologna and elsewhere, including important correspondence in
         the Archiginnasio's "Collezione degli autografi".
       </p>
+      <p class="video">
+        <iframe width="480" height="360" src="http://www.youtube.com/embed/kxpxb03YTtw?rel=0" frameborder="0" allowfullscreen>
+        </iframe>
+        <span>Bassi-Veratti Website Introduction Video</span>
+      </p>
       <h3>Technical summary</h3>
       <p>
         The inventory, or finding aid, was transposed by hand from a Microsoft Word document to Encoded
@@ -186,11 +191,6 @@ en:
         conceptualizing and creating the bilingual interface. The IBC has provided constant
         support for the initiative, thanks to considerable experience gained through international
         projects.
-      </p>
-      <p class="video">
-        <iframe width="480" height="360" src="http://www.youtube.com/embed/kxpxb03YTtw?rel=0" frameborder="0" allowfullscreen>
-        </iframe>
-        <span>Bassi-Veratti Website Introduction Video</span>
       </p>
     project_team_stanford_text_html: |
       <dl class="project-team dl-horizontal">
