@@ -69,4 +69,8 @@ module ApplicationHelper
     {:f => {"#{I18n.locale}_#{blacklight_config.collection_highlight_field}".to_sym => ["highlight_#{highlight.id}"]}}
   end
 
+  def render_locale_class
+    "lang-#{I18n.locale}"
+  end
+
 end
