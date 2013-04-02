@@ -51,6 +51,8 @@ en:
       items_name: 'image'
     show:
       wait: 'one moment please...'
+      open_in_full_screen: 'Open in full screen'
+      close: 'Close'
       box: 
         word: 'Box'
         one: '1 Box'

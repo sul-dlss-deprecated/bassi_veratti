@@ -46,6 +46,8 @@ it:
       version_title: 'Application Version'      
     show:
       wait: 'un momento per favore...'
+      open_in_full_screen: 'Open in full screen'
+      close: 'Chiude'
       box:
         word: 'Cartone'
         one: '1 Cartone'
