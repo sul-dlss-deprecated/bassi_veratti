@@ -91,3 +91,4 @@ end
 
 after "deploy", "db:migrate"
 after "deploy", "app:expire_caches"
+after "deploy:update", "deploy:cleanup" 
