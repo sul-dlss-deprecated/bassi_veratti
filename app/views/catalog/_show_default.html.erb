@@ -2,11 +2,19 @@
   <script type="text/javascript">
     $(window).bind("load", function() {
       $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
-                                       'druid': '<%= document[:druid_ssi] %>',
-                                       'layout': 'thumbs-nav-bottom',
-                                       'size': 'zoom+1',
-                                       'width': 425,
-                                       'height': 600});
+                                        'druid': '<%= document[:druid_ssi] %>',
+                                        'layout': 'thumbs-nav-bottom',
+                                        'size': 'zoom+1',
+                                        'width': 425,
+                                        'height': 600,
+                                        'zoomOnClick': true,
+                                        'tooltipTexts': {
+                                        '<%= I18n.locale %>': {
+                                          'OpenInFullScreen': '<%= t('bassi.show.open_in_full_screen') %>',
+                                          'Close': '<%= t('bassi.show.close') %>'
+                                          }
+                                        }
+      });
     });
   </script>
 <% end %>
