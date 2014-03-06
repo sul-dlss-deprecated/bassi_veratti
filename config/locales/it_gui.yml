@@ -14,14 +14,14 @@ it:
       bassi_collection: 'Fondo Speciale Bassi Veratti'
       about: 'Progetto'
       home: 'Home'
-      report_problem: 'Segnala un errore'
+      feedback: 'Feedback'
       project_history: 'Storia del progetto'
       project_overview: 'Caratteristiche del progetto'
       project_team_stanford: 'Gruppo del progetto: Stanford'
       project_team_italy: 'Gruppo del progetto: Bologna'
       acknowledgments: 'Ringraziamenti'
       contact: 'Contatta'
-      contact_us: 'Contattaci'
+      contact_us: 'Feedback'
       use_policy: "Condizioni d'uso"
       collections: 'Highlights'
       background: 'Introduzione'
@@ -33,7 +33,7 @@ it:
       close: 'Chiude'
     about:
       project_title: 'A proposito del Conservatore speciale Bassi-Veratti'
-      contact_title: 'Segnala un errore'
+      contact_title: 'Feedback'
       contact_message_sent: "Grazie - il messaggio e' stato inviato."
       contact_error: 'Si deve inserire il testo qui.'
       laura_bassi_title: 'Laura Bassi e il fondo Bassi-Veratti'
