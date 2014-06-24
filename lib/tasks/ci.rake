@@ -1,39 +1,36 @@
 require 'jettywrapper' unless Rails.env.production? or Rails.env.staging?
 require 'rest_client'
 
+ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip"
+
 desc "Run continuous integration suite"
-task :ci do
-  unless Rails.env.test?  
-    system("rake ci RAILS_ENV=test")
-  else
-    Jettywrapper.wrap(Jettywrapper.load_config) do
-      Rake::Task["bassi:refresh_fixtures"].invoke
+task :ci => ['jetty:clean', 'db:migrate', 'bassi:config'] do
+  if Rails.env.test?
+    jetty_params = Jettywrapper.load_config
+    jetty_params[:startup_wait]= 60
+    Jettywrapper.wrap(jetty_params) do
+      Rake::Task["bassi:refresh_fixtures"].invoke unless ENV['SKIP_FIXTURES']
+
+      # run the tests
       Rake::Task["rspec"].invoke
     end
+  else
+    system("rake ci RAILS_ENV=test")
   end
 end
 
 desc "Stop dev jetty, run `rake ci`, start dev jetty."
-task :local_ci do  
-  system("rake jetty:stop")
-  system("rake bassi:jetty_nuke RAILS_ENV=test")
-  system("rake db:migrate RAILS_ENV=test")  
-  system("rake bassi:index_fixtures RAILS_ENV=test")
-  system("rspec")
-  system("rake jetty:stop RAILS_ENV=test")  
-  system("rake jetty:start")
-end
-
+task :local_ci => ['jetty:stop', 'ci', 'jetty:start']
 
 namespace :bassi do
 
   desc "Expire caches"
   task :expire_caches => :environment do
-      begin
-        Rails.cache.clear
-      rescue
-        puts "Warning: no caching folder found"
-      end
+    begin
+      Rails.cache.clear
+    rescue
+      puts "Warning: no caching folder found"
+    end
   end  
 
   desc "Copy Bassi configuration files"
@@ -45,36 +42,16 @@ namespace :bassi do
     cp("#{Rails.root}/solr_conf/conf/solrconfig.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")    
   end
   
-  desc "restore jetty to initial state"
-  task :jetty_nuke do
-    puts "Nuking jetty"
-    # Restore jetty submodule to initial state.
-    Rake::Task['jetty:stop'].invoke
-    Dir.chdir('jetty') {
-      system('git reset --hard HEAD') or exit
-      system('git clean -dfx')        or exit
-    }
-    Rake::Task['bassi:config'].invoke
-    Rake::Task['jetty:start'].invoke
-  end
-  
   desc "Delete and index all fixtures in solr"
-  task :refresh_fixtures do
-    Rake::Task["bassi:delete_records_in_solr"].invoke
-    Rake::Task["bassi:index_fixtures"].invoke
-  end
+  task :refresh_fixtures => ['bassi:delete_records_in_solr', 'bassi:index_fixtures']
   
   desc "Index all fixutres into solr"
-  task :index_fixtures do
-    Rake::Task["bassi:parse-ead"].invoke
-    Rake::Task["bassi:expire_caches"].invoke
-  end
+  task :index_fixtures => ['bassi:parse-ead', 'bassi:expire_caches']
   
   desc "Delete all records in solr"
   task :delete_records_in_solr do
-   unless Rails.env.production?
-      puts "Deleting all solr documents from #{Blacklight.solr.options[:url]}"
-      RestClient.post "#{Blacklight.solr.options[:url]}/update?commit=true", "<delete><query>*:*</query></delete>" , :content_type => "text/xml"
+    unless Rails.env.production?
+      Blacklight.solr.delete_by_query '*:*', commit: true
     else
       puts "Did not delete since we're running under the #{Rails.env} environment and not under test. You know, for safety."
     end
