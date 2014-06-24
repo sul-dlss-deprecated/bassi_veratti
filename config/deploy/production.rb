@@ -1,9 +1,4 @@
+server 'bv-prod.stanford.edu', user: 'lyberadmin', roles: %w{web db app}
+
+Capistrano::OneTimeKey.generate_one_time_key!
 set :rails_env, "production"
-set :deployment_host, "bv-prod.stanford.edu"
-set :bundle_without, [:deployment,:development,:test,:staging]
-
-role :web, deployment_host
-role :app, deployment_host
-role :db,  deployment_host, :primary => true
-
-after "deploy:create_symlink", "db:loadseeds"
