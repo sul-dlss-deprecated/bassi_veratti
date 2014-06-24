@@ -4,7 +4,7 @@ require 'rest_client'
 ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip"
 
 desc "Run continuous integration suite"
-task :ci => ['jetty:clean', 'db:migrate', 'bassi:config'] do
+task :ci => ['jetty:clean', 'bassi:config', 'db:migrate'] do
   if Rails.env.test?
     jetty_params = Jettywrapper.load_config
     jetty_params[:startup_wait]= 60
