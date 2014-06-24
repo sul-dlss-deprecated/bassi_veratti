@@ -9,7 +9,7 @@ gem 'google-analytics-rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "blacklight", '~> 4.0.0'
+gem "blacklight", '~> 4.0'
 gem "blacklight_range_limit"
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
 

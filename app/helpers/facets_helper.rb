@@ -9,18 +9,13 @@ module FacetsHelper
   #   end
   # end
 
-  def facet_field_labels
-    Hash[*blacklight_config.facet_fields.map { |key, facet| [key, html_escape("#{t(facet.label)}")] }.flatten]
-  end
-  
-  def facet_field_names
-    keys = blacklight_config.facet_fields.keys
+  def should_render_facet? display_facet
     facet_patterns=%w{document_types_ssim highlight_ssim}
-    facet_patterns.each do |facet_pattern|
-      keys.delete_if{|k| k.include?(facet_pattern) }
-      keys.unshift("#{I18n.locale}_#{facet_pattern}") 
-    end
-    keys
+    super && !(
+      facet_patterns.any? { |facet_pattern| display_facet.name.include? facet_pattern } &&
+      !display_facet.name.include?(I18n.locale.to_s + "_")
+    )
   end
+
   
 end
