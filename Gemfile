@@ -36,7 +36,7 @@ group :development do
 	gem 'launchy'
 end
 
-group :development, :staging, :test do
+group :development, :test do
   gem 'jettywrapper'
   gem 'sqlite3'
 end
