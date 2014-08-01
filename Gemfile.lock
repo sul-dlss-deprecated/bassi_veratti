@@ -105,7 +105,7 @@ GEM
     geocoder (1.1.6)
     google-analytics-rails (0.0.4)
     hike (1.2.3)
-    holepicker (0.3.1)
+    holepicker (0.3.3)
       json (>= 1.7.7)
       rainbow (>= 1.1.4)
     i18n (0.6.11)
