@@ -1,4 +1,8 @@
+begin
 require 'jettywrapper' unless Rails.env.production? or Rails.env.staging?
+rescue LoadError
+end
+
 require 'rest_client'
 
 ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip"
