@@ -127,7 +127,7 @@ GEM
       addressable
       websocket
     logger (1.2.8)
-    lyberteam-capistrano-devel (3.0.0.pre1)
+    lyberteam-capistrano-devel (3.0.0)
       capistrano (~> 3.0)
       capistrano-holepicker
       capistrano-one_time_key
