@@ -69,6 +69,9 @@ GEM
       holepicker
     capistrano-one_time_key (0.0.1)
       capistrano (~> 3.0)
+    capistrano-rails (1.1.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
     capistrano-releaseboard (0.0.1)
       faraday
     capybara (2.0.2)
@@ -284,7 +287,7 @@ DEPENDENCIES
   bootstrap-sass
   bundler (>= 1.2.0)
   capistrano (~> 3.0)
-  capistrano-bundler
+  capistrano-rails
   capybara
   coffee-rails (~> 3.2.1)
   eadsax!
