@@ -12,6 +12,7 @@ gem 'google-analytics-rails'
 gem "blacklight", '~> 4.0'
 gem "blacklight_range_limit"
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
+gem 'kaminari', '<= 0.14.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
