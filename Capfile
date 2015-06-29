@@ -22,6 +22,7 @@ require 'capistrano/deploy'
 # require 'capistrano/rails/migrations'
 
 require 'capistrano/bundler'
+require 'capistrano/passenger'
 require 'capistrano/rails'
 require 'dlss/capistrano'
 
