@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bundler', '>= 1.2.0'
 
-gem 'rails', '~> 3.2.11'
+gem 'rails', '~> 3.2.22'
 
 gem 'google-analytics-rails'
 
@@ -40,10 +40,11 @@ end
 group :development, :test do
   gem 'jettywrapper'
   gem 'sqlite3'
+  gem 'test-unit'
 end
 
 group :staging, :production do
-  gem 'mysql', "2.8.1"
+  gem 'mysql', "~> 2.9.0"
 end
 
 group :deployment do
@@ -64,7 +65,7 @@ gem "bootstrap-sass"
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-gem 'json', '~> 1.7.7'
+gem 'json', '~> 1.8.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
