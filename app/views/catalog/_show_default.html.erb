@@ -1,24 +1,3 @@
-<%if @document.images.size > 0 %>
-  <script type="text/javascript">
-    $(window).bind("load", function() {
-      $("#image_workspace").embedPurl({'server': '<%=BassiVeratti::Application.config.purl_plugin_server%>',
-                                        'druid': '<%= document[:druid_ssi] %>',
-                                        'layout': 'thumbs-nav-bottom',
-                                        'size': 'zoom+1',
-                                        'width': 425,
-                                        'height': 600,
-                                        'zoomOnClick': true,
-                                        'tooltipTexts': {
-                                        '<%= I18n.locale %>': {
-                                          'OpenInFullScreen': '<%= t('bassi.show.open_in_full_screen') %>',
-                                          'Close': '<%= t('bassi.show.close') %>'
-                                          }
-                                        }
-      });
-    });
-  </script>
-<% end %>
-
 <div class="document">
   <div class="row">
     <div class="span12">
@@ -30,7 +9,7 @@
   <div class="row document-details">
     <div class="span6 member-image">
       <%if @document.images.size > 0 %>
-        <div class="showOnLoad hidden" id="image_workspace"><%=t('bassi.show.wait')%></div>
+        <iframe id="image_workspace" style="width: 100%; height: 450px;" src="//embed.stanford.edu/iframe?url=http://purl.stanford.edu/<%= document[:druid_ssi] %>&amp;hide_title=true&amp;hide_metadata=true&amp;maxwidth=600&amp;maxheight=425"></iframe>
 
         <noscript>
            <div class="item active">
