@@ -1,14 +1,14 @@
 # config valid only for Capistrano 3.1
 lock '3.4.0'
 
-set :application, 'bassi_veratti'
+set :application, 'bassi-lib'
 set :repo_url, 'https://github.com/sul-dlss/bassi_veratti.git'
 
 # Default branch is :master
 ask :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/lyberadmin/bassi-lib'
+set :deploy_to, '/opt/app/bv/bassi-lib'
 
 # Default value for :scm is :git
 # set :scm, :git

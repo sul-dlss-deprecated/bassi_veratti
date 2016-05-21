@@ -40,17 +40,17 @@ end
 group :development, :test do
   gem 'jettywrapper'
   gem 'sqlite3'
-  gem 'test-unit'
+  gem 'test-unit', :require => false
 end
 
 group :staging, :production do
-  gem 'mysql', "~> 2.9.0"
+  gem 'mysql2', "~> 0.3.10"
 end
 
 group :deployment do
   gem 'capistrano', '~> 3.0'
   gem 'capistrano-rails'
-  gem 'capistrano-passenger'
+  gem 'capistrano-passenger', '~> 0.2.0'
   gem 'lyberteam-capistrano-devel'
 end
 
