@@ -52,7 +52,9 @@ $constraint_border_active_color: #FFD27A !default;
 @mixin page-header {
 //  @include gray-top_border;
   color: $heading_color;
-  font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
+  font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
+  font-style: normal;
+  font-weight: 600;
   margin-top: 0;
   padding-top: 12px;
   text-transform: uppercase;
@@ -104,7 +106,7 @@ html {
 }
 
 body {
-  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
+  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", "Book Antiqua", Georgia, serif;
   background: $container_bg_color;
   background-image: asset_url($body_bg_image, image);
   background-repeat: repeat repeat;
@@ -151,29 +153,11 @@ a:hover {
 	color: $hover_link_color;
 	text-decoration: none;
 }
-#news-gothic .normal {
-	font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
-	font-weight: 400;
-}
-#news-gothic .bold {
-	font-family: "news-gothic-std","Helvetica","Arial",sans-serif;
-	font-weight: 700;
-}
-#chaparral-pro .normal {
-	font-family: "chaparral-pro","Georgia","Times New Roman",serif;
-	font-weight: 400;
-}
-#chaparral-pro .bold {
-	font-family: "chaparral-pro","Georgia","Times New Roman",serif;
-	font-weight: 700;
-}
-#helvetica {
-	font-family: "Helvetica","Arial",sans-serif;
-}
+
 h1 {
 	display: block;
 	float: left;
-	font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
+	font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
 	font-weight: 700;
 	font-size: 1.5em;
 	line-height: 1.1em;
@@ -191,12 +175,11 @@ h2 {
 }
 h3 {
   color: $heading_color;
-  font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
+  font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
 	font-size: 1.125em;
 	line-height: 1.5em;
 }
 p {
-  font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
   color: #333333;
 //  font-size: 0.8em;
   font-size: 13px;
