@@ -28,7 +28,7 @@
     height: 10px;
     margin-top: 12px;
     text-indent: -9999px;
-    background: #5E564B;
+    background: #8F8271;
   }
   span.contact-link {
     display: block;
@@ -36,6 +36,14 @@
   }
   ul {
     width: 90%;
+  }
+  .about-content {
+    ul {
+      font-size: 1.125em;
+      li {
+        margin-bottom: 10px;
+      }
+    }
   }
   ul.project-team > li {margin-bottom: 10px;}
   p.project-team {margin-bottom: 10px;}

@@ -45,7 +45,7 @@
           font-size: 15px;
           -webkit-font-smoothing: antialiased;
           padding: 8px 25px 5px 3px;
-          &:hover, &:focus {color: $active_nav_link_color;}
+          &:hover, &:focus, &active {color: $active_nav_link_color;}
         }
       }
       > li:last-child > a {padding-right: 0}
@@ -68,7 +68,7 @@
     padding-bottom: 15px;
     padding-top: 15px;
     .language-toggle {
-      color: #999;
+      color: #737270;
       font-size: 13px;
       text-align: right;
     }

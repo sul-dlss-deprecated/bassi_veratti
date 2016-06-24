@@ -18,8 +18,8 @@ $header_bg_color: #F2F1EC;
 $header_bg_image: 'ricepaper2.png';
 
 $nav_border_color: darken($header_bg_color, 10%);
-$nav_link_color: darken(#8F8271, 5%);
-$active_nav_link_color: darken(#5E564B, 10%);
+$nav_link_color: darken(#8F8271, 15%);
+$active_nav_link_color: darken(#5E564B, 20%);
 
 $container_bg_color: #fdfdfb;
 $heading_color: #5E564B;
@@ -55,6 +55,7 @@ $constraint_border_active_color: #FFD27A !default;
   font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
   font-style: normal;
   font-weight: 600;
+  letter-spacing: 0.3px;
   margin-top: 0;
   padding-top: 12px;
   text-transform: uppercase;
@@ -176,7 +177,7 @@ h2 {
 h3 {
   color: $heading_color;
   font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
-	font-size: 1.125em;
+	font-size: 1.25em;
 	line-height: 1.5em;
 }
 p {

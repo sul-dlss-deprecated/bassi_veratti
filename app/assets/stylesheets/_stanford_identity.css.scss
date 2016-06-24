@@ -4,7 +4,7 @@
   background: #585754;
   #report-problem {
     float: right;
-    font-size: 0.85em;
+    font-size: 1em;
     margin-top: 9px;
     a {color: #ddd;}
   }
@@ -19,6 +19,7 @@
     margin: 0;
     line-height: 1.5em;
     text-align: left;
+    width: initial;
   }
   .partner-icons {;
     float: right;
