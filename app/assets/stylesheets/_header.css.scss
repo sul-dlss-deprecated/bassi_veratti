@@ -8,8 +8,7 @@
   border-bottom: 1px solid $nav_border_color;
   box-shadow: 0 5px 5px -7px #999;
   &.navbar {
-      font-family: "Helvetica","Arial",sans-serif;
-      font-family: "Palatino", "Palatino Linotype", "URW Palladio L", serif;
+    font-family: "Palatino", "Palatino Linotype", "URW Palladio L", "Book Antiqua", Georgia, serif;
     .logo {
       text-align: center;
       img {
@@ -46,7 +45,7 @@
           font-size: 15px;
           -webkit-font-smoothing: antialiased;
           padding: 8px 25px 5px 3px;
-          &:hover, &:focus {color: $active_nav_link_color;}
+          &:hover, &:focus, &active {color: $active_nav_link_color;}
         }
       }
       > li:last-child > a {padding-right: 0}
@@ -55,7 +54,7 @@
   h1 {
     border-bottom: none;
     font-size: 3em;
-    font-family: "cronos-pro-subhead","news-gothic-std","Helvetica","Arial",sans-serif;
+    font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
     margin: 0;
     line-height: 1.5em;
     padding-bottom: 0;
@@ -69,7 +68,7 @@
     padding-bottom: 15px;
     padding-top: 15px;
     .language-toggle {
-      color: #999;
+      color: #737270;
       font-size: 13px;
       text-align: right;
     }

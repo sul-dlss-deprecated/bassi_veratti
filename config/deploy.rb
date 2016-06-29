@@ -1,10 +1,11 @@
-lock '3.4.0'
+# config valid only for Capistrano 3.1
+lock '3.2.1'
 
 set :application, 'bassi_veratti'
 set :repo_url, 'https://github.com/sul-dlss/bassi_veratti.git'
 
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+ask :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/home/lyberadmin/bassi-lib'
@@ -33,9 +34,18 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :bundle_audit_ignore, %w{CVE-2015-3226}
-
 namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, :restart
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:

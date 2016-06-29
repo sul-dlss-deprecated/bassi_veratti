@@ -7,12 +7,12 @@
   h3.collection-title {
     line-height: 1.1em;
     margin-bottom: 3px;
-    margin-top: 6px;
+    margin-top: 12px;
     padding: 0;
     text-align: center;
     > a {
       border-bottom: none;
-      color: #000;
+      color: #5E564B;
     }
   }
   img {
@@ -31,7 +31,10 @@
   }
 }
 .about-dl {
-  p {width: 98%;}
+  p {
+    font-size: 1em;
+    width: 98%;
+  }
   img {
     border: 1px solid #999999;
     border-radius: 2px;
