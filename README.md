@@ -50,7 +50,6 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
 ## Deployment
 
-    cd deploy
     cap production deploy # for production
     cap staging deploy # for staging
     cap development deploy # for development
