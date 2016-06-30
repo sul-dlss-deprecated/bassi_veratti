@@ -8,19 +8,15 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         git clone /afs/ir.stanford.edu/dev/dlss/git/digital_collection_sites/bassi_veratti.git
 
-1. [Optional] If you want to use rvmrc to manage gemsets, copy the .rvmrc example files:
+1. [Optional] If you want to use rvmrc to manage gemsets, copy the .rvmrc example file:
 
         cp .rvmrc.example .rvmrc
-        cp deploy/.rvmrc.example deploy/.rvmrc
         cd ..
         cd bassi_veratti
 
-1. Install dependencies via bundler for both the main and deploy directories:
+1. Install dependencies via bundler:
 
         bundle install
-        cd deploy
-        bundle install
-        cd ..
 
 1. Set up local jetty and copy config files
 
@@ -32,14 +28,14 @@ This is a Blacklight application for the Bassi Verati Collection at Stanford Uni
 
         rake db:migrate
         rake db:migrate RAILS_ENV=test
-				rake db:seed
-				rake db:seed RAILS_ENV=test
+        rake db:seed
+        rake db:seed RAILS_ENV=test
 
 1. Start solr and load the fixtures: (you should first stop any other jetty processes if you have multiple jetty-related projects):
 
         rake jetty:start
         rake bassi:index_fixtures
-				rake bassi:parse-ead
+        rake bassi:parse-ead
 
 1. Start Rails:
 
@@ -73,7 +69,7 @@ Caching is currently enabled in all environments (including development) and sto
 Fragment caches should be automatically purged on an EAD re-index or deployment via the following rake task (which
 can be run manually if needed):
 
-rake bassi:expire_caches
+    rake bassi:expire_caches
 
 ## Collection Highlights
 
