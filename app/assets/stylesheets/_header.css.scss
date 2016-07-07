@@ -35,11 +35,9 @@
           color: $active_nav_link_color;
         }
         > a {
-          //background-color: $header_bg_color;
           border-bottom: none;
           box-shadow: none;
           color: $nav_link_color;
-//          font-size: 15px;
           font-weight: bold;
           font-size: 0.965em;
           font-size: 15px;
@@ -53,12 +51,12 @@
   }
   h1 {
     border-bottom: none;
-    font-size: 3em;
+    font-size: 3.1em;
     font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
     margin: 0;
     line-height: 1.5em;
     padding-bottom: 0;
-    //&.it {font-size: 2.5em;}
+    &.it {font-size: 2.8em;}
   }
   .navbar-inner {
     background: $header_bg_color;
@@ -121,8 +119,8 @@
   #header-navbar-static-top {
     .navbar-inner {padding-bottom: 0;}
     h1 {
-      font-size: 3em;
-      //&.it {font-size: 2.5em;}
+      font-size: 2.75em;
+      &.it {font-size: 2.5em;}
     }
     .logo img {
       float: right;

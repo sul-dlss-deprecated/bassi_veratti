@@ -16,8 +16,9 @@
     color: darken(#f7f7f7, 5%);
   }
   p.copyright {
-    margin: 0;
     line-height: 1.5em;
+    margin: 0;
+    padding-left: 0;
     text-align: left;
     width: initial;
   }
@@ -58,7 +59,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
   #global-footer .container {
     .partner-icons {
-      margin-top: -45px;
+      margin-top: -15px;
       width: 90px;
       .ibc-logo img {margin-right: 10px;}
       img {width: 40px;}
