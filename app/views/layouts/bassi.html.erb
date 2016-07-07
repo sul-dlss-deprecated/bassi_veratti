@@ -28,8 +28,6 @@
 
 		<%= analytics_init if Rails.env.production? %>
 
-    <script type="text/javascript" src="//use.typekit.net/iwp4xxc.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="//maps.googleapis.com/maps/api/js?key=<%=BassiVeratti::Application.config.google_api_key%>&sensor=false"></script>
 
     <%= stylesheet_link_tag    "application" %>
