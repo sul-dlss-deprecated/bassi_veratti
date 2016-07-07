@@ -28,7 +28,7 @@
 
 		<%= analytics_init if Rails.env.production? %>
 
-    <script src="//maps.googleapis.com/maps/api/js?key=<%=BassiVeratti::Application.config.google_api_key%>&sensor=false"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=<%=BassiVeratti::Application.config.google_api_key%>"></script>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
