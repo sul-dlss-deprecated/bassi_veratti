@@ -6,4 +6,4 @@ BassiVeratti::Application.initialize!
 
 BassiVeratti::Application.config.purl_plugin_server = "prod"
 BassiVeratti::Application.config.purl_plugin_location = "//image-viewer.stanford.edu/assets/purl_embed_jquery_plugin.js"
-BassiVeratti::Application.config.purl = "http://purl.stanford.edu"
+BassiVeratti::Application.config.purl = "https://purl.stanford.edu"
