@@ -9,7 +9,7 @@
   <div class="row document-details">
     <div class="span6 member-image">
       <%if @document.images.size > 0 %>
-        <iframe id="image_workspace" style="width: 100%; height: 450px;" src="//embed.stanford.edu/iframe?url=http://purl.stanford.edu/<%= document[:druid_ssi] %>&amp;hide_title=true&amp;hide_metadata=true&amp;hide_download=true&amp;maxwidth=600&amp;maxheight=425"></iframe>
+        <iframe id="image_workspace" style="width: 100%; height: 450px;" src="//embed.stanford.edu/iframe?url=https://purl.stanford.edu/<%= document[:druid_ssi] %>&amp;hide_title=true&amp;hide_metadata=true&amp;hide_download=true&amp;maxwidth=600&amp;maxheight=425"></iframe>
 
         <noscript>
            <div class="item active">
@@ -22,7 +22,7 @@
            </div>
         </noscript>
       <% else %>
-        <%= image_tag("http://dummyimage.com/365x400/f8f6f1/6d5b48&text=#{t('bassi.show.description_only_no_image')}", :class => "placeholder-image") %>
+        <%= image_tag("https://dummyimage.com/365x400/f8f6f1/6d5b48&text=#{t('bassi.show.description_only_no_image')}", :class => "placeholder-image") %>
       <% end %>
 
     </div>
