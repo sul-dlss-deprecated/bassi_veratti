@@ -10,6 +10,8 @@ ask :branch, 'master'
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/opt/app/bv/bassi-lib'
 
+set :bundle_audit_ignore, %w(OSVDB-131677) # ignore mail vulnerability (you need to upgrade to rails4 to fix properly)
+
 # Default value for :scm is :git
 # set :scm, :git
 
