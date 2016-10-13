@@ -27,7 +27,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'jettywrapper'
+  gem 'jettywrapper', '~> 2.0.4'
   gem 'sqlite3'
   gem 'capybara'
   gem 'rspec-rails'
