@@ -1,6 +1,3 @@
-# config valid only for Capistrano 3.1
-lock '3.4.0'
-
 set :application, 'bassi-lib'
 set :repo_url, 'https://github.com/sul-dlss/bassi_veratti.git'
 
