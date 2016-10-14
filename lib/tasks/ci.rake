@@ -32,10 +32,10 @@ namespace :bassi do
   task :expire_caches => :environment do
     begin
       Rails.cache.clear
-    rescue
-      puts "Warning: no caching folder found"
+    rescue StandardError => e
+      puts "Warning: #{e.message} -- no caching folder found"
     end
-  end  
+  end
 
   desc "Copy Bassi configuration files"
   task :config do
@@ -43,15 +43,15 @@ namespace :bassi do
     cp("#{Rails.root}/config/solr.yml.example", "#{Rails.root}/config/solr.yml") unless File.exists?("#{Rails.root}/config/solr.yml")
     cp("#{Rails.root}/solr_conf/solr.xml","#{Rails.root}/jetty/")
     cp("#{Rails.root}/solr_conf/conf/schema.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")
-    cp("#{Rails.root}/solr_conf/conf/solrconfig.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")    
+    cp("#{Rails.root}/solr_conf/conf/solrconfig.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")
   end
-  
+
   desc "Delete and index all fixtures in solr"
   task :refresh_fixtures => ['bassi:delete_records_in_solr', 'bassi:index_fixtures']
-  
+
   desc "Index all fixutres into solr"
   task :index_fixtures => ['bassi:parse-ead', 'bassi:expire_caches']
-  
+
   desc "Delete all records in solr"
   task :delete_records_in_solr do
     unless Rails.env.production?
