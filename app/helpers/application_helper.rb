@@ -44,11 +44,11 @@ module ApplicationHelper
   def show_formatted_list(mvf, opts = {})
     content_tag(:ul, :class => "item-mvf-list") do
       mvf.collect do |val|
-        if opts[:facet]
-          output = link_to(val, catalog_index_path(:"f[#{opts[:facet]}][]" => val.to_s))
-        else
-          output = val
-        end
+        output = if opts[:facet]
+                   link_to(val, catalog_index_path(:"f[#{opts[:facet]}][]" => val.to_s))
+                 else
+                   val
+                 end
         content_tag(:li, output)
       end.join.html_safe
     end

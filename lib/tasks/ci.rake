@@ -1,7 +1,7 @@
 require 'jettywrapper' unless Rails.env.production? || Rails.env.staging?
 require 'rest_client'
 
-ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip"
+ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip".freeze
 
 desc "Run continuous integration suite"
 task :ci => ['jetty:clean', 'bassi:config', 'db:migrate'] do
