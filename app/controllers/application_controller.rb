@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :show_terms_dialog?, :on_home_page, :on_collection_highlights_page, :on_collections_pages, :on_background_page, :on_about_pages, :on_inventory_pages, :on_show_page
 
-  before_action :set_locale
+  before_filter :set_locale
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
