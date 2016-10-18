@@ -31,11 +31,8 @@ class ApplicationController < ActionController::Base
   end
 
   def show_terms_dialog?
-    if seen_terms_dialog? || on_pages_that_do_not_require_terms_dialog
-      return false
-    elsif !on_pages_that_do_not_require_terms_dialog
-      return true
-    end
+    return false if seen_terms_dialog? || on_pages_that_do_not_require_terms_dialog
+    return true unless on_pages_that_do_not_require_terms_dialog
   end
 
   def accept_terms

@@ -9,7 +9,6 @@ namespace :bassi do
   desc "Parse EAD File"
   task :"parse-ead" do
     ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
-
     solr = Blacklight.solr
     documents = solrize_ead ead
     unless documents.blank?
@@ -173,21 +172,18 @@ end
 
 def dates_from_unitdate(did)
   dates = OpenStruct.new
-  normalized_dates = did.unitdate.try(:normal)
-  if did.unitdate
-    dates.date = did.unitdate.try(:value)
-    if normalized_dates
-      dates.start_year = did.unitdate.normal.split("/").first
-      dates.end_year = did.unitdate.normal.split("/").last
-    end
+  return dates unless did.unitdate
+  dates.date = did.unitdate.try(:value)
+  if did.unitdate.try(:normal)
+    dates.start_year = did.unitdate.normal.split("/").first
+    dates.end_year   = did.unitdate.normal.split("/").last
   end
   dates
 end
 
 def date_range_from_unitdate(dates)
-  if dates.try(:start_year) && dates.try(:end_year)
-    return (dates.start_year..dates.end_year).to_a
-  end
+  return nil unless dates.try(:start_year) && dates.try(:end_year)
+  (dates.start_year..dates.end_year).to_a
 end
 
 def image_ids_from_purl(purl)
@@ -210,17 +206,17 @@ end
 
 def folder_from_contents(content, containers, series, options = {})
   dates = dates_from_unitdate(content.did)
-  { :id => container_key(containers),
-    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
-    :level_ssim => "Folder",
-    :box_ssim => containers["Box"],
-    :folder_ssim => containers["Folder"],
-    :extent_ssim => content.did.physdesc.try(:extent),
-    :unit_date_ssim => dates.try(:date),
-    :begin_year_itsim => dates.try(:start_year),
-    :end_year_itsim => dates.try(:end_year),
-    :description_tsim => description(content),
-    :series_ssim => series.identifier,
+  { :id                   => container_key(containers),
+    :title_tsi            => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
+    :level_ssim           => 'Folder',
+    :box_ssim             => containers['Box'],
+    :folder_ssim          => containers['Folder'],
+    :extent_ssim          => content.did.physdesc.try(:extent),
+    :unit_date_ssim       => dates.try(:date),
+    :begin_year_itsim     => dates.try(:start_year),
+    :end_year_itsim       => dates.try(:end_year),
+    :description_tsim     => description(content),
+    :series_ssim          => series.identifier,
     :folder_is_content_bi => options[:folder_is_content]
   }
 end
@@ -228,7 +224,6 @@ end
 def document_from_contents(ead, content, direct_parent, series, containers)
   unittitle_parts = ead.unittitle_parts(content.identifier)
   dates = dates_from_unitdate(content.did)
-
   cached_lookup = {}
   coordinates = []
   unittitle_parts.geogname.each do |location_name|
@@ -246,11 +241,11 @@ def document_from_contents(ead, content, direct_parent, series, containers)
   { :id => content.identifier,
     :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
     :en_document_types_ssim => DocumentTypes.document_types[content.identifier] ?
-     DocumentTypes.document_types[content.identifier][:en] :
-       nil,
+                               DocumentTypes.document_types[content.identifier][:en] :
+                               nil,
     :it_document_types_ssim => DocumentTypes.document_types[content.identifier] ?
-     DocumentTypes.document_types[content.identifier][:it] :
-       nil,
+                               DocumentTypes.document_types[content.identifier][:it] :
+                               nil,
     :level_ssim => content.level,
     :direct_parent_ssim => direct_parent.identifier,
     :direct_parent_level_ssim => direct_parent.level,

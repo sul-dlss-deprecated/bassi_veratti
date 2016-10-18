@@ -69,15 +69,6 @@ Style/ConditionalAssignment:
 Style/Documentation:
   Enabled: false
 
-# Offense count: 5
-# Configuration parameters: MinBodyLength.
-Style/GuardClause:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'lib/tasks/parse-ead.rake'
-
 # Offense count: 318
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
