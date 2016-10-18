@@ -1,32 +1,31 @@
 require 'spec_helper'
 
-describe("About Pages",:type=>:request,:integration=>true) do
-  
+describe("About Pages", :type => :request, :integration => true) do
   before(:each) do
-    @about_page_title=I18n.t("bassi.about.project_title")
-    @project_team_title=I18n.t("bassi.about.stanford_team_title")
-    @acknowledgements_title=I18n.t("bassi.about.acknowledgements_title")
-    @contact_us_title=I18n.t("bassi.about.contact_title")
-    @terms_of_use_title=I18n.t("bassi.about.terms_of_use_title")
+    @about_page_title = I18n.t("bassi.about.project_title")
+    @project_team_title = I18n.t("bassi.about.stanford_team_title")
+    @acknowledgements_title = I18n.t("bassi.about.acknowledgements_title")
+    @contact_us_title = I18n.t("bassi.about.contact_title")
+    @terms_of_use_title = I18n.t("bassi.about.terms_of_use_title")
   end
-  
+
   it "should show the about project page for various URLs" do
     visit '/about'
     page.should have_content(@about_page_title)
     visit '/about/project'
-    page.should have_content(@about_page_title)    
+    page.should have_content(@about_page_title)
     visit '/about/bogusness'
-    page.should have_content(@about_page_title)    
+    page.should have_content(@about_page_title)
   end
 
   it "should show the contact us page" do
     visit '/about/contact'
     page.should have_content(@contact_us_title)
-    fill_in 'name', :with=>'Spongebob Squarepants'
+    fill_in 'name', :with => 'Spongebob Squarepants'
     click_button 'Send'
     find('div.alert').should have_content(I18n.t("bassi.about.contact_error"))
-    fill_in 'message', :with=>'I live in a pineapple under the sea.'
-    BassiVerattiMailer.stub_chain(:contact_message,:deliver).and_return('a mailer')
+    fill_in 'message', :with => 'I live in a pineapple under the sea.'
+    BassiVerattiMailer.stub_chain(:contact_message, :deliver).and_return('a mailer')
     BassiVerattiMailer.should_receive(:contact_message)
     click_button 'Send'
     find('div.alert').should have_content(I18n.t("bassi.about.contact_message_sent"))
@@ -46,5 +45,4 @@ describe("About Pages",:type=>:request,:integration=>true) do
     visit '/about/stanford_team'
     page.should have_content(@project_team_title)
   end
-    
 end

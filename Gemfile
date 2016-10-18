@@ -21,9 +21,9 @@ group :assets do
 end
 
 group :development do
-	gem 'better_errors'
-	gem 'meta_request'
-	gem 'launchy'
+  gem 'better_errors'
+  gem 'meta_request'
+  gem 'launchy'
 end
 
 group :development, :test do
