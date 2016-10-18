@@ -23,8 +23,7 @@ module DocumentTypes
       "printed_materials" => { :en => "Printed materials", :it => "Materiale a stampa" },
       "professional"      => { :en => "Professional",      :it => "Affari" },
       "real_estate"       => { :en => "Real Estate",       :it => "Beni immobili" },
-      "wills"             => { :en => "Wills",             :it => "Testamenti" }
-    }
+      "wills"             => { :en => "Wills",             :it => "Testamenti" } }
   end
 
   def self.document_types_table

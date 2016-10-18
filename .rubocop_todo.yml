@@ -81,25 +81,6 @@ Style/MethodMissing:
   Exclude:
     - 'app/models/collection_members.rb'
 
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineHashBraceLayout:
-  Exclude:
-    - 'lib/document_types.rb'
-    - 'lib/tasks/parse-ead.rake'
-    - 'spec/models/collection_members_spec.rb'
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineMethodCallBraceLayout:
-  Exclude:
-    - 'db/seeds.rb'
-    - 'spec/routing/collections_routing_spec.rb'
-
 # Offense count: 2
 Style/MultilineTernaryOperator:
   Exclude:

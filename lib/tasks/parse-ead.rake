@@ -217,8 +217,7 @@ def folder_from_contents(content, containers, series, options = {})
     :end_year_itsim       => dates.try(:end_year),
     :description_tsim     => description(content),
     :series_ssim          => series.identifier,
-    :folder_is_content_bi => options[:folder_is_content]
-  }
+    :folder_is_content_bi => options[:folder_is_content] }
 end
 
 def document_from_contents(ead, content, direct_parent, series, containers)
@@ -266,6 +265,5 @@ def document_from_contents(ead, content, direct_parent, series, containers)
     :date_range_itim => date_range_from_unitdate(dates),
     :unit_date_ssim => dates.try(:date),
     :begin_year_itsim => dates.try(:start_year),
-    :end_year_itsim => dates.try(:end_year)
-   }
+    :end_year_itsim => dates.try(:end_year) }
 end
