@@ -16,7 +16,7 @@ class SolrDocument
   def en_document_types
     multivalue_field('en_document_types_ssim')
   end
-  
+
   def it_document_types
     multivalue_field('it_document_types_ssim')
   end
@@ -88,11 +88,11 @@ class SolrDocument
     end
   end
 
-   def self.image_dimensions
-     options = {:default => "_thumb",
-                :square   => "_square",
-                :thumb => "_thumb" }
-   end
+  def self.image_dimensions
+    { :default => '_thumb',
+      :square  => '_square',
+      :thumb   => '_thumb' }
+  end
 
   def series?
     self.has_key?(blacklight_config.series_identifying_field) and

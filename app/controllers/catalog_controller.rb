@@ -220,7 +220,7 @@ class CatalogController < ApplicationController
 
   private
   
-  def exclude_document_level_folders(solr_params, user_params)
+  def exclude_document_level_folders(solr_params, _user_params)
     exclude_string = "NOT folder_is_content_bi:true"
     if solr_params[:fq]
       solr_params[:fq] << exclude_string 

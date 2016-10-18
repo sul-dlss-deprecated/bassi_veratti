@@ -1,8 +1,4 @@
-begin
-require 'jettywrapper' unless Rails.env.production? or Rails.env.staging?
-rescue LoadError
-end
-
+require 'jettywrapper' unless Rails.env.production? || Rails.env.staging?
 require 'rest_client'
 
 ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.0.0.zip"
@@ -39,8 +35,8 @@ namespace :bassi do
 
   desc "Copy Bassi configuration files"
   task :config do
-    cp("#{Rails.root}/config/database.yml.example", "#{Rails.root}/config/database.yml") unless File.exists?("#{Rails.root}/config/database.yml")
-    cp("#{Rails.root}/config/solr.yml.example", "#{Rails.root}/config/solr.yml") unless File.exists?("#{Rails.root}/config/solr.yml")
+    cp("#{Rails.root}/config/database.yml.example", "#{Rails.root}/config/database.yml") unless File.exist?("#{Rails.root}/config/database.yml")
+    cp("#{Rails.root}/config/solr.yml.example", "#{Rails.root}/config/solr.yml") unless File.exist?("#{Rails.root}/config/solr.yml")
     cp("#{Rails.root}/solr_conf/solr.xml","#{Rails.root}/jetty/")
     cp("#{Rails.root}/solr_conf/conf/schema.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")
     cp("#{Rails.root}/solr_conf/conf/solrconfig.xml","#{Rails.root}/jetty/solr/blacklight-core/conf")

@@ -6,12 +6,12 @@ require 'geocoder'
 require 'document_types'
 
 namespace :bassi do
-  
+
   desc "Parse EAD File"
   task :"parse-ead" do
-  
+
     ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
-    
+
     solr = Blacklight.solr
     documents = solrize_ead ead
     unless documents.blank?
@@ -19,10 +19,10 @@ namespace :bassi do
       solr.commit
     end
   end
-  
+
   desc "Generate index HTML"
   task :"generate-index" do
-    
+
     f = File.open("#{Rails.root}/data/bassi-ead.xml")
     doc = Nokogiri::XML(f)
     f.close
@@ -38,11 +38,9 @@ namespace :bassi do
 
   desc "Generate tab-delimited list of item identifiers"
   task :"generate-item-list" do
-
     ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
-    documents = list_items ead
+    list_items ead
   end
-  
 end
 
 def solrize_ead(ead)
@@ -147,7 +145,7 @@ def print_types(c)
 end
 
 def clean_string(s)
-  str = (s.class == Array ? s.join(' ') : s) 
+  str = (s.class == Array ? s.join(' ') : s)
   str.gsub(/\s+/, " ").strip unless str.nil?
 end
 
@@ -197,19 +195,13 @@ def date_range_from_unitdate(dates)
 end
 
 def image_ids_from_purl(purl)
-  image_ids=[]
-  if purl
-    begin 
-      result = RestClient.get "#{purl}.xml"  # now get the content metadata from the PURL page and index the filenames
-      doc = Nokogiri::XML(result)
-      cm=doc.xpath('//contentMetadata')
-      files=cm.xpath('//file')
-      image_ids=files.collect {|file| file.attributes['id']}
-    rescue # we might get a 404 from the rest client call if the object is not yet accessioned...
-    
-    end
-  end
-  return image_ids
+  return [] unless purl
+  result = RestClient.get "#{purl}.xml" # now get the content metadata from the PURL page and index the filenames
+  doc = Nokogiri::XML(result)
+  cm = doc.xpath('//contentMetadata')
+  cm.xpath('//file').map {|file| file.attributes['id']}
+rescue RestClient::Exception => e # we might get a 404 if the object is not yet accessioned...
+  warn "Error fetching '#{purl.xml}': #{e.message}"
 end
 
 def druid_from_purl(purl)
@@ -251,17 +243,17 @@ def document_from_contents(ead, content, direct_parent, series, containers)
       coordinates << "#{location_name}|#{results.first.latitude}|#{results.first.longitude}" if results.size > 0
     end
   end
-    
+
   purl=content.dao.try(:href)
   druid=druid_from_purl(purl)
   imageids=image_ids_from_purl(purl)
 
   {:id => content.identifier,
    :title_tsi => [clean_string(content.did.unittitle), dates.try(:date)].join(" "),
-   :en_document_types_ssim => DocumentTypes.document_types[content.identifier] ? 
+   :en_document_types_ssim => DocumentTypes.document_types[content.identifier] ?
      DocumentTypes.document_types[content.identifier][:en] :
        nil,
-   :it_document_types_ssim => DocumentTypes.document_types[content.identifier] ? 
+   :it_document_types_ssim => DocumentTypes.document_types[content.identifier] ?
      DocumentTypes.document_types[content.identifier][:it] :
        nil,
    :level_ssim => content.level,
