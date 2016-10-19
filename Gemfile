@@ -32,6 +32,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'rspec', '>= 2.14'
   gem 'test-unit', :require => false
 end
 
