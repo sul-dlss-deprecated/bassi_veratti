@@ -11,14 +11,13 @@ class EadParser
     @xml.remove_namespaces!
     @reader = Eadsax::Ead.parse(@xml.to_s)
   end
-  
+
   def unittitle_parts(id)
     parts = OpenStruct.new
     unittitle = @xml.xpath("//*[@id='#{id}']/did/unittitle")
     [:corpname, :persname, :geogname, :famname].each do |name|
-      parts.send("#{name}=", unittitle.xpath("./#{name}").map{|n| n.text })
+      parts.send("#{name}=", unittitle.xpath("./#{name}").map(&:text))
     end
     parts
   end
-  
 end

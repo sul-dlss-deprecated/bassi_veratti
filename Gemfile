@@ -21,13 +21,14 @@ group :assets do
 end
 
 group :development do
-	gem 'better_errors'
-	gem 'meta_request'
-	gem 'launchy'
+  gem 'better_errors'
+  gem 'meta_request'
+  gem 'launchy'
 end
 
 group :development, :test do
   gem 'jettywrapper', '~> 2.0.4'
+  gem 'rubocop'
   gem 'sqlite3'
   gem 'capybara'
   gem 'rspec-rails'

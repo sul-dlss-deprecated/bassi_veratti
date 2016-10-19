@@ -1,4 +1,4 @@
-BassiVeratti::Application.configure do  
+BassiVeratti::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.exception_error_page = true # show a friendly 500 error page if true
   config.exception_recipients = '' # list of email addresses, comma separated, that will be notified when an exception occurs - leave blank for no emails
@@ -68,7 +68,6 @@ BassiVeratti::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  
+
   GA.tracker = "UA-7219229-18" # bassi
-  
 end

@@ -37,13 +37,13 @@ module BassiVeratti
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
-    config.allowed_locales = [:en,:it]
+    config.allowed_locales = [:en, :it]
     config.i18n.fallbacks = true
     # rails will fallback to en, no matter what is set as config.i18n.default_locale
     config.i18n.fallbacks = [:en]
-    
+
     config.cache_store = :file_store, "tmp/cache"
-    
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -65,7 +65,7 @@ module BassiVeratti
     config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = true    
+    config.assets.enabled = true
     # Default SASS Configuration, check out https://github.com/rails/sass-rails for details
     config.assets.compress = !Rails.env.development?
 
@@ -74,20 +74,20 @@ module BassiVeratti
   end
 end
 
-BassiVeratti::Application.config.geocode_swap={
-  "Canneto"=>"Adelfia, Bari, Italy",
-  "Montecòsaro"=>"Montecòsaro, Macerata"
+BassiVeratti::Application.config.geocode_swap = {
+  "Canneto" => "Adelfia, Bari, Italy",
+  "Montecòsaro" => "Montecòsaro, Macerata"
 }
 
- # strings that match these keys will be searched using the values of the key, to give a better geolookup
+# strings that match these keys will be searched using the values of the key, to give a better geolookup
 
-BassiVeratti::Application.config.no_geocode=["Macerata","Po","Saragozza","Ascoli", "Casaglia","via Valdonica","porta Stiera","Pugliola Corta"] # these strings will not be geocoded, since they return the wrong results
+BassiVeratti::Application.config.no_geocode = ["Macerata", "Po", "Saragozza", "Ascoli", "Casaglia", "via Valdonica", "porta Stiera", "Pugliola Corta"] # these strings will not be geocoded, since they return the wrong results
 BassiVeratti::Application.config.version = VERSION # read from VERSION file at base of website
 BassiVeratti::Application.config.google_api_key = "AIzaSyCZxogTGsi5KK8_hRf6Z7tWRkxocoMx_Bk"
 BassiVeratti::Application.config.stacks_url = YAML.load_file("#{Rails.root}/config/stacks.yml")[Rails.env]["url"]
-BassiVeratti::Application.config.contact_us_topics = {'error'=>'bassi.contact.problem'} # sets the list of topics shown in the contact us page
-BassiVeratti::Application.config.contact_us_recipients = {'error'=>'digcoll@jirasul.stanford.edu'} # sets the email address for each contact us topic configed above
-BassiVeratti::Application.config.contact_us_cc_recipients = {'error'=>'bassi-problems@jirasul.stanford.edu'} # sets the CC email address for each contact us topic configed above
-BassiVeratti::Application.config.duplicate_copies = {"ref793" => {:note => 'bassi.show.duplicate_note_793', :duplicates => "ref791"},
-                                                     "ref801" => {:note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799"},
-                                                     "ref803" => {:note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799"} }
+BassiVeratti::Application.config.contact_us_topics = { 'error' => 'bassi.contact.problem' } # sets the list of topics shown in the contact us page
+BassiVeratti::Application.config.contact_us_recipients = { 'error' => 'digcoll@jirasul.stanford.edu' } # sets the email address for each contact us topic configed above
+BassiVeratti::Application.config.contact_us_cc_recipients = { 'error' => 'bassi-problems@jirasul.stanford.edu' } # sets the CC email address for each contact us topic configed above
+BassiVeratti::Application.config.duplicate_copies = { "ref793" => { :note => 'bassi.show.duplicate_note_793', :duplicates => "ref791" },
+                                                      "ref801" => { :note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799" },
+                                                      "ref803" => { :note => 'bassi.show.duplicate_note_80x', :duplicates => "ref799" } }

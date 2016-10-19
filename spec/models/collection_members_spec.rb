@@ -2,10 +2,8 @@ require "spec_helper"
 
 describe CollectionMembers do
   before(:all) do
-    @response = {"response" => {"numFound" => "3",
-                               "docs" => [{:id=>"12345"}, {:id=>"54321"}]
-                               }
-                }
+    @response = { "response" => { "numFound" => "3",
+                                  "docs" => [{ :id => "12345" }, { :id => "54321" }] } }
   end
   it "should get the numFound from the solr response " do
     CollectionMembers.new(@response).total_members.should == @response["response"]["numFound"]
@@ -17,7 +15,7 @@ describe CollectionMembers do
     end
     members.documents.length.should == @response["response"]["docs"].length
   end
-  
+
   describe "enumerable emthods" do
     it "should respond to each properly" do
       members = []
@@ -27,9 +25,8 @@ describe CollectionMembers do
       members.length.should == @response["response"]["docs"].length
     end
     it "should respond to other enumerable methods" do
-      CollectionMembers.new(@response).map{|m| m }.length.should == @response["response"]["docs"].length
-      CollectionMembers.new(@response).find {|m| m[:id] !=  @response["response"]["docs"].first[:id] }.should be_a SolrDocument
+      CollectionMembers.new(@response).map { |m| m }.length.should == @response["response"]["docs"].length
+      CollectionMembers.new(@response).find { |m| m[:id] != @response["response"]["docs"].first[:id] }.should be_a SolrDocument
     end
   end
-
 end

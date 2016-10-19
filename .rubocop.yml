@@ -1,0 +1,16 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - db/migrate/**
+    - db/schema.rb
+
+Rails:
+  Enabled: true
+
+Style/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+Metrics/LineLength:
+  Max: 200

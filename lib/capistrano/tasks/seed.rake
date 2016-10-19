@@ -1,6 +1,6 @@
 namespace :db do
   task :seed do
-    on roles(:all) do |host|
+    on roles(:all) do |_host|
       within release_path do
         with rails_env: fetch(:rails_env) do
           rake 'db:seed'
