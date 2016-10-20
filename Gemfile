@@ -12,6 +12,7 @@ gem 'kaminari', '<= 0.14.1' # blacklight also sets semver, so we don't end up w/
 
 # Gems used only for assets and not required
 # in production environments by default.
+
 group :assets do
   gem 'sass-rails',   '>= 3.2.3'
   gem 'coffee-rails', '>= 3.2.1'
@@ -20,9 +21,6 @@ group :assets do
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'meta_request'
-  gem 'launchy'
   gem 'transpec'
 end
 
@@ -50,7 +48,7 @@ gem 'rest-client'
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem 'sprockets', '~> 2.12'
-gem 'sprockets-rails', '= 2.3.2'
+gem 'sprockets', '~> 2.8', '<= 2.11.0' # problematic
+gem 'sprockets-rails', '~> 2.3.2'      # problematic
 gem 'json', '~> 1.8.0'
 gem 'honeybadger', '~> 2.0'

@@ -173,7 +173,7 @@
     border: none;
   }
   .pe-img-viewer-thumbs-nav-bottom .pe-h-nav {
-   background: transparent asset_url('pe-h-nav-bg.png', image) left top repeat-x;
+   background: transparent image_url('pe-h-nav-bg.png') left top repeat-x;
    .pe-purl-url {
      border: none;
      bottom: -4px;
