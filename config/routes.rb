@@ -12,7 +12,7 @@ BassiVeratti::Application.routes.draw do
 
     # Handles all About pages.
     get 'about',         :to => 'about#show',    :as => 'about_project', :defaults => { :id => 'project' } # no page specified, go to project page
-    get 'contact',       :to => 'about#contact', :as => 'contact_us'
+    match 'contact',     :to => 'about#contact', :as => 'contact_us', via: [:get, :post]
     get 'about/contact', :to => 'about#contact' # specific contact us about page
     get 'about/:id',     :to => 'about#show'    # catch anything else and direct to show page with ID parameter of partial to show
 
