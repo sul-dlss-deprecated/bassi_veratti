@@ -17,7 +17,7 @@
     <meta http-equiv="cleartype" content="on">
     <title><%= raw ([t('blacklight.application_name'), truncate(@page_title,:length=>100)].compact.join(": ")) %></title>
     <link href="<%= opensearch_catalog_path(:format => 'xml', :only_path => false) %>" title="<%= t('blacklight.application_name')%>" type="application/opensearchdescription+xml" rel="search"/>
-    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= favicon_link_tag image_path('favicon.ico') %>
     <!-- Two stylesheets below are for Stanford Identity footer -->
     <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
@@ -40,8 +40,6 @@
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
 
