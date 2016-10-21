@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe("Inventory and background pages", :type => :request, :integration => true) do
   it "should show the content inventory page" do
     visit inventory_path

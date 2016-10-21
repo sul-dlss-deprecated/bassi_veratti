@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe("About Pages", :type => :request, :integration => true) do
   before(:each) do
     @about_page_title = I18n.t("bassi.about.project_title")

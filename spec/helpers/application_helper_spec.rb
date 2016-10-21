@@ -1,5 +1,3 @@
-require "spec_helper"
-
 def blacklight_config
   OpenStruct.new(:collection_highlight_field => "highlight_field")
 end

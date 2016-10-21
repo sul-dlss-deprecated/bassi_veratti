@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe SolrDocument do
   it "should behave like a SolrDocument" do
     doc = SolrDocument.new(:id => "12345")

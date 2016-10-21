@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe FacetsHelper do
   describe "Blacklight overrides" do
     describe "should_render_facet?" do

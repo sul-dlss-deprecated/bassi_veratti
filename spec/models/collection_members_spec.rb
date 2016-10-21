@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe CollectionMembers do
   before(:all) do
     @response = { "response" => { "numFound" => "3",

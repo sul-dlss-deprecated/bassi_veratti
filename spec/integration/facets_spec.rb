@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "Facets", :type => :request, :integration => true do
   describe "i18n" do
     it "should change the facet label language" do

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe("Home Page", :type => :request, :integration => true) do
   it "should render the home page with some text" do
     visit root_path(:nomap => true)
