@@ -18,14 +18,14 @@
 
     <% @page_title = t('bassi.search.search_label') %>
 
-    <% extra_head_content << render_opensearch_response_metadata.html_safe %>
+    <% content_for :head do %>
+      <%= render_opensearch_response_metadata.html_safe %>
+    <% end %>
 
     <hr class="main primary">
 		<h2 class="search-results"><%= t('blacklight.search.search_results_header') %></h2>
 
 		<div id="search-results-metadata">
-
-
 	    <%= render :partial => 'did_you_mean' %>
       <%#= render :partial => 'constraints' %>
 		</div>
