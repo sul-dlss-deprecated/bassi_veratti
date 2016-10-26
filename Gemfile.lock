@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/projectblacklight/blacklight_range_limit.git
+  revision: 3d54465870d9d7b0d26805f55b79a91cfa97f902
+  branch: circular_reference
+  specs:
+    blacklight_range_limit (2.2.0)
+      blacklight (~> 4.0)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
+
+GIT
   remote: https://github.com/sul-dlss/eadsax.git
   revision: 90a40aff10cf517bdb4714f62a8e0342b73bd4d1
   specs:
@@ -58,10 +68,6 @@ GEM
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
       sass-rails
-    blacklight_range_limit (2.2.0)
-      blacklight (~> 4.0)
-      jquery-rails
-      rails (>= 3.0, < 5.0)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.2.2)
@@ -292,7 +298,7 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight (~> 4.0)
-  blacklight_range_limit
+  blacklight_range_limit (~> 2.2.0)!
   bootstrap-sass
   bundler (>= 1.2.0)
   byebug
