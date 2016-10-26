@@ -22,6 +22,7 @@ end
 
 group :development do
   gem 'transpec'
+  gem 'byebug'
 end
 
 group :development, :test do

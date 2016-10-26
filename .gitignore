@@ -24,3 +24,4 @@ tmp
 jetty
 jetty/*
 nohup.out
+.byebug_history
