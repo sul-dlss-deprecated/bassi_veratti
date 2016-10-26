@@ -1,10 +1,8 @@
 begin
   require 'rspec/core/rake_task'
-
   RSpec::Core::RakeTask.new(:rspec) do |spec|
-    spec.rspec_opts = ["-c", "-f progress", "-r ./spec/spec_helper.rb"]
+    # spec.pattern = ['spec/integration/home_page_spec.rb:2']
   end
-
 rescue LoadError
   desc 'rspec rake task not available (rspec not installed)'
   task :rspec do
