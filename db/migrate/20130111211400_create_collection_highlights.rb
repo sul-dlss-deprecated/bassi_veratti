@@ -7,7 +7,7 @@ class CreateCollectionHighlights < ActiveRecord::Migration
       t.text :description_it
       t.string :image_url
       t.integer :sort_order
-      t.timestamps
+      t.timestamps null: true
     end
   end
 end
