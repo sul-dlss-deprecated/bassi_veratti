@@ -52,7 +52,7 @@ namespace :bassi do
     if Rails.env.production?
       puts "Did not delete since we're running under the #{Rails.env} environment and not under test. You know, for safety."
     else
-      Blacklight.solr.delete_by_query '*:*', commit: true
+      Blacklight.default_index.connection.delete_by_query '*:*', commit: true
     end
   end
 end

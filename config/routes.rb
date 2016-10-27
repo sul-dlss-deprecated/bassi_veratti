@@ -1,11 +1,26 @@
 BassiVeratti::Application.routes.draw do
   scope "(:locale)", :locale => /en|it/ do
-    Blacklight.add_routes(self)
-
+    # Blacklight.add_routes(self)
+    mount Blacklight::Engine => '/'
     root :to => "catalog#index", :as => 'root'
-    match 'login',   :to => 'catalog#index', :as => 'new_user_session', via: [:get, :post]
-    match 'logout',  :to => 'catalog#index', :as => 'destroy_user_session', via: [:get, :post]
-    match 'account', :to => 'catalog#index', :as => 'edit_user_registration', via: [:get, :post]
+
+    concern :exportable, Blacklight::Routes::Exportable.new
+
+    resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
+      concerns :exportable
+    end
+
+    resources :bookmarks do
+      concerns :exportable
+
+      collection do
+        delete 'clear'
+      end
+    end
+
+    match 'login',     :to => 'catalog#index', :as => 'new_user_session',       via: [:get, :post]
+    match 'logout',    :to => 'catalog#index', :as => 'destroy_user_session',   via: [:get, :post]
+    match 'account',   :to => 'catalog#index', :as => 'edit_user_registration', via: [:get, :post]
     get 'collections', :to => 'catalog#index', :as => 'collection_highlights'
 
     get 'version',     :to => 'about#show', :defaults => { :id => 'version' }, :as => 'version'
