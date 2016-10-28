@@ -21,6 +21,7 @@ tmp
 # Ignore rvm files
 .rvmrc
 
+coverage
 jetty
 jetty/*
 nohup.out
