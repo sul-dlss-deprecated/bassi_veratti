@@ -1,12 +1,12 @@
 # -*- encoding : utf-8 -*-
 # encoding: utf-8
 
-require 'blacklight/catalog'
+# require 'blacklight/catalog'
 
 class CatalogController < ApplicationController
   include Blacklight::Catalog
 
-  CatalogController.solr_search_params_logic += [:exclude_document_level_folders]
+  CatalogController.search_params_logic += [:exclude_document_level_folders]
 
   def self.collection_highlights(locale)
     opts = {}
@@ -109,13 +109,12 @@ class CatalogController < ApplicationController
     config.document_index_view_types = %w(default gallery brief map)
 
     # solr field configuration for search results/index views
-    config.index.show_link = 'title_tsi'
-    config.index.record_display_type = 'format_ssim'
+    config.index.title_field        = 'title_tsi'
+    config.index.display_type_field = 'format_ssim'
 
     # solr field configuration for document/show views
-    config.show.html_title = 'title_tsi'
-    config.show.heading = 'title_tsi'
-    config.show.display_type = 'format_ssim'
+    config.show.title_field        = 'title_tsi'
+    config.show.display_type_field = 'format_ssim'
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
