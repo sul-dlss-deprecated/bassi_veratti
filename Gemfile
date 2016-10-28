@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2'
 gem 'blacklight', '~> 6.0'
+gem 'blacklight-marc'
 gem 'blacklight_range_limit', '~> 6.0'
 
 gem 'protected_attributes' # allows attr_accessible in rails 4

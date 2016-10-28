@@ -1,8 +1,39 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument
   include Blacklight::Solr::Document
+  # self.unique_key = 'id'
 
-  self.unique_key = 'id'
+  # The following shows how to setup this blacklight document to display marc documents
+  extension_parameters[:marc_source_field] = :marc_display
+  extension_parameters[:marc_format_type]  = :marcxml
+  use_extension(Blacklight::Solr::Document::Marc) do |document|
+    document.key?(:marc_display)
+  end
+
+  # Email uses the semantic field mappings below to generate the body of an email.
+  use_extension(Blacklight::Document::Email)
+
+  # SMS uses the semantic field mappings below to generate the body of an SMS email.
+  use_extension(Blacklight::Document::Sms)
+
+  # DublinCore uses the semantic field mappings below to assemble an OAI-compliant Dublin Core document
+  # and Blacklight::Document#to_semantic_values
+  # Recommendation: Use field names from Dublin Core
+  # Semantic mappings of solr stored fields. Fields may be multi or single valued.
+  # @see Blacklight::Document::ExtendableClassMethods#field_semantics
+  use_extension(Blacklight::Document::DublinCore)
+  field_semantics.merge!(
+    :title    => 'title_tsi',
+    :author   => 'author_display',
+    :language => 'language_facet',
+    :format   => 'format_ssim'
+  )
+
+  ### METHODS
+
+  def rsolr
+    Blacklight.default_index.connection
+  end
 
   def title
     self[:title_tsi]
@@ -106,7 +137,7 @@ class SolrDocument
   def folders
     return nil unless series?
     @folders ||= CollectionMembers.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{blacklight_config.folder_identifier_field}:\"#{blacklight_config.folder_identifier_value}\" AND
                   #{blacklight_config.folder_in_series_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
@@ -119,7 +150,7 @@ class SolrDocument
   def parent
     return nil if series?
     @parent ||= SolrDocument.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{SolrDocument.unique_key}:\"#{self[blacklight_config.children_identifying_field].first}\""
         }
@@ -130,7 +161,7 @@ class SolrDocument
   def children
     if folder?
       @children ||= CollectionMembers.new(
-        Blacklight.solr.select(
+        rsolr.select(
           :params => {
             :fq => "#{blacklight_config.parent_folder_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
             :rows => blacklight_config.collection_member_grid_items.to_s
@@ -139,7 +170,7 @@ class SolrDocument
       )
     else
       @children ||= CollectionMembers.new(
-        Blacklight.solr.select(
+        rsolr.select(
           :params => {
             :fq => "#{blacklight_config.children_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
             :rows => blacklight_config.collection_member_grid_items.to_s
@@ -151,7 +182,7 @@ class SolrDocument
 
   def box_siblings
     @box_siblings ||= CollectionMembers.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{blacklight_config.box_identifying_field}:\"#{self[blacklight_config.box_identifying_field].first}\"",
           :rows => blacklight_config.collection_member_grid_items.to_s
@@ -162,7 +193,7 @@ class SolrDocument
 
   def folder_siblings
     @folder_siblings ||= CollectionMembers.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{blacklight_config.box_identifying_field}:\"#{box}\" AND
                   #{blacklight_config.folder_identifying_field}:\"#{folder}\" AND NOT id:\"#{id}\" AND NOT id:\"box#{box}-folder#{folder}\"",
@@ -173,7 +204,7 @@ class SolrDocument
   end
 
   def all_series
-    @all_series ||= Blacklight.solr.select(
+    @all_series ||= rsolr.select(
       :params => {
         :fq => "#{blacklight_config.series_identifying_field}:\"#{blacklight_config.series_identifying_value}\"",
         :rows => "20"
@@ -196,7 +227,7 @@ class SolrDocument
   # return this current document's series title (unless it is already a series)
   def series_title
     return title if series?
-    @doc = SolrDocument.new(Blacklight.solr.select(:params => { :fq => "#{SolrDocument.unique_key}:#{series}" })["response"]["docs"].first)
+    @doc = SolrDocument.new(rsolr.select(:params => { :fq => "#{SolrDocument.unique_key}:#{series}" })["response"]["docs"].first)
     @doc.title
   end
 
@@ -208,7 +239,7 @@ class SolrDocument
   def collection
     return nil unless collection_member?
     @collection ||= SolrDocument.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{SolrDocument.unique_key}:\"#{self[blacklight_config.collection_member_identifying_field].first}\""
         }
@@ -220,7 +251,7 @@ class SolrDocument
   def collection_members
     return nil unless collection?
     @collection_members ||= CollectionMembers.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{blacklight_config.collection_member_identifying_field}:\"#{self[SolrDocument.unique_key]}\"",
           :rows => blacklight_config.collection_member_grid_items.to_s
@@ -233,7 +264,7 @@ class SolrDocument
   def collection_siblings
     return nil unless collection_member?
     @collection_siblings ||= CollectionMembers.new(
-      Blacklight.solr.select(
+      rsolr.select(
         :params => {
           :fq => "#{blacklight_config.collection_member_identifying_field}:\"#{self[blacklight_config.collection_member_identifying_field].first}\"",
           :rows => blacklight_config.collection_member_grid_items.to_s
@@ -244,7 +275,7 @@ class SolrDocument
 
   # Return an Array of collection SolrDocuments
   def all_collections
-    @all_collections ||= Blacklight.solr.select(
+    @all_collections ||= rsolr.select(
       :params => {
         :fq => "#{blacklight_config.collection_identifying_field}:\"#{blacklight_config.collection_identifying_value}\"",
         :rows => "10"
@@ -253,32 +284,6 @@ class SolrDocument
       SolrDocument.new(document)
     end
   end
-
-  # The following shows how to setup this blacklight document to display marc documents
-  extension_parameters[:marc_source_field] = :marc_display
-  extension_parameters[:marc_format_type] = :marcxml
-  use_extension(Blacklight::Solr::Document::Marc) do |document|
-    document.key?(:marc_display)
-  end
-
-  # Email uses the semantic field mappings below to generate the body of an email.
-  SolrDocument.use_extension(Blacklight::Solr::Document::Email)
-
-  # SMS uses the semantic field mappings below to generate the body of an SMS email.
-  SolrDocument.use_extension(Blacklight::Solr::Document::Sms)
-
-  # DublinCore uses the semantic field mappings below to assemble an OAI-compliant Dublin Core document
-  # Semantic mappings of solr stored fields. Fields may be multi or
-  # single valued. See Blacklight::Solr::Document::ExtendableClassMethods#field_semantics
-  # and Blacklight::Solr::Document#to_semantic_values
-  # Recommendation: Use field names from Dublin Core
-  use_extension(Blacklight::Solr::Document::DublinCore)
-  field_semantics.merge!(
-    :title => "title_tsi",
-    :author => "author_display",
-    :language => "language_facet",
-    :format => "format_ssim"
-  )
 
   private
 
