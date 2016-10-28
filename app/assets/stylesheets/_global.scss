@@ -109,7 +109,7 @@ html {
 body {
   font-family: "Palatino", "Palatino Linotype", "URW Palladio L", "Book Antiqua", Georgia, serif;
   background: $container_bg_color;
-  background-image: asset_url($body_bg_image, image);
+  background-image: image_url($body_bg_image);
   background-repeat: repeat repeat;
   background-size: auto;
   font-size: 0.85em;

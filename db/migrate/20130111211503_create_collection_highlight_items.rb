@@ -3,7 +3,7 @@ class CreateCollectionHighlightItems < ActiveRecord::Migration
     create_table :collection_highlight_items do |t|
       t.string :item_id
       t.integer :collection_highlight_id
-      t.timestamps
+      t.timestamps null: true
     end
   end
 end

@@ -10,7 +10,8 @@ class CatalogController < ApplicationController
 
   def self.collection_highlights(locale)
     opts = {}
-    CollectionHighlight.find(:all, :order => :sort_order).each do |highlight|
+    # I think we actually do want the entire table loaded into memory here at once, i.e. not `find_each`
+    CollectionHighlight.order(:sort_order).each do |highlight|
       opts[:"highlight_#{highlight.id}"] = { :label => highlight.send("name_#{locale}"), :fq => "id:(#{highlight.query.gsub('or', 'OR')})" }
     end if ActiveRecord::Base.connection.table_exists? 'collection_highlights'
     opts

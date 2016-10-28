@@ -60,7 +60,7 @@
   }
   .navbar-inner {
     background: $header_bg_color;
-    background-image: asset_url($header_bg_image, image);
+    background-image: image_url($header_bg_image);
     border: none;
     box-shadow: none;
     padding-bottom: 15px;

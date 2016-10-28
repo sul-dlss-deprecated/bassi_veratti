@@ -115,7 +115,7 @@
     <%- @document.coordinates.each do |coordinate| %>
       new google.maps.Marker({
         position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),
-        icon: "<%= asset_path('marker-bassi.png') %>",
+        icon: "<%= image_path('marker-bassi.png') %>",
         map: map,
         title:"<%=coordinate[:name]%>"});
     <% end %>

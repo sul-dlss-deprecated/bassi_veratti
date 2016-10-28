@@ -1,5 +1,3 @@
-require "spec_helper"
-
 def blacklight_config
   OpenStruct.new(:collection_highlight_field => "highlight_field")
 end
@@ -7,30 +5,30 @@ end
 describe ApplicationHelper do
   describe "collection highlight linking" do
     it "params_for_collection_highlight should return the appropriate params" do
-      highlight = mock('highlight')
-      highlight.stub(:id).and_return("1")
+      highlight = double('highlight')
+      allow(highlight).to receive(:id).and_return("1")
       params = params_for_collection_highlight(highlight)
-      params.should be_a(Hash)
-      params[:f][:en_highlight_field].should be_a(Array)
-      params[:f][:en_highlight_field].length.should == 1
-      params[:f][:en_highlight_field].first.should == "highlight_1"
+      expect(params).to be_a(Hash)
+      expect(params[:f][:en_highlight_field]).to be_a(Array)
+      expect(params[:f][:en_highlight_field].length).to eq(1)
+      expect(params[:f][:en_highlight_field].first).to eq("highlight_1")
     end
 
     it "should link to the appropriate collection highlight" do
-      highlight = mock('highlight')
-      highlight.stub(:id).and_return("1")
-      highlight.stub(:name_en).and_return("Highlighted Collection")
-      highlight.stub(:name_it).and_return("Highlighted Collection")
+      highlight = double('highlight')
+      allow(highlight).to receive(:id).and_return("1")
+      allow(highlight).to receive(:name_en).and_return("Highlighted Collection")
+      allow(highlight).to receive(:name_it).and_return("Highlighted Collection")
       link = link_to_collection_highlight(highlight)
-      link.should =~ /^<a href=".*highlight_field.*highlight_1">Highlighted Collection<\/a>$/
+      expect(link).to match(/^<a href=".*highlight_field.*highlight_1">Highlighted Collection<\/a>$/)
     end
   end
 
   describe "highlight_text" do
     it "should return the normal text of no highlighting exists" do
       doc = { "test_field" => "Test Text" }
-      doc.should_receive(:highlight_field).with("test_field").and_return false
-      highlight_text(doc, "test_field").should == "Test Text"
+      expect(doc).to receive(:highlight_field).with("test_field").and_return false
+      expect(highlight_text(doc, "test_field")).to eq("Test Text")
     end
   end
 end

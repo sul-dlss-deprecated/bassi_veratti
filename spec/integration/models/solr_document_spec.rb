@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe SolrDocument, :integration => true do
   describe "collections" do
     describe "collection" do

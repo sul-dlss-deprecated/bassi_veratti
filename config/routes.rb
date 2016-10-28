@@ -2,33 +2,32 @@ BassiVeratti::Application.routes.draw do
   scope "(:locale)", :locale => /en|it/ do
     Blacklight.add_routes(self)
 
-    match '/', :to => "catalog#index", :as => 'root'
-    match 'login',   :to => 'catalog#index', :as => 'new_user_session'
-    match 'logout',  :to => 'catalog#index', :as => 'destroy_user_session'
-    match 'account', :to => 'catalog#index', :as => 'edit_user_registration'
+    root :to => "catalog#index", :as => 'root'
+    match 'login',   :to => 'catalog#index', :as => 'new_user_session', via: [:get, :post]
+    match 'logout',  :to => 'catalog#index', :as => 'destroy_user_session', via: [:get, :post]
+    match 'account', :to => 'catalog#index', :as => 'edit_user_registration', via: [:get, :post]
+    get 'collections', :to => 'catalog#index', :as => 'collection_highlights'
 
-    match 'version', :to => 'about#show', :defaults => { :id => 'version' }, :as => 'version'
-
-    match 'collections', :to => 'catalog#index', :as => 'collection_highlights'
+    get 'version',     :to => 'about#show', :defaults => { :id => 'version' }, :as => 'version'
 
     # Handles all About pages.
-    match 'about', :to => 'about#show', :as => 'about_project', :defaults => { :id => 'project' } # no page specified, go to project page
-    match 'contact', :to => 'about#contact', :as => 'contact_us'
-    match 'about/contact', :to => 'about#contact' # specific contact us about page
-    match 'about/:id', :to => 'about#show' # catch anything else and direct to show page with ID parameter of partial to show
+    get 'about',         :to => 'about#show',    :as => 'about_project', :defaults => { :id => 'project' } # no page specified, go to project page
+    match 'contact',     :to => 'about#contact', :as => 'contact_us', via: [:get, :post]
+    get 'about/contact', :to => 'about#contact' # specific contact us about page
+    get 'about/:id',     :to => 'about#show'    # catch anything else and direct to show page with ID parameter of partial to show
 
     # handle background page
-    match 'background', :to => 'about#background', :as => 'background' # catch the background route
+    match 'background',  :to => 'about#background', :as => 'background', via: [:get, :post]
 
     # handle content inventory pages
-    match 'inventory', :to => 'inventory#index', :as => 'inventory'
-    match 'inventory(/:action(/:id))(.:format)', :to => 'inventory#:action'
+    get 'inventory',     :to => 'inventory#index', :as => 'inventory'
+    match 'inventory(/:action(/:id))(.:format)', :to => 'inventory#:action', via: [:get, :post]
 
     # helper routes to we can have a friendly URL for items and collections
-    match 'item/:id', :to => 'catalog#show', :as => 'item'
-    match 'collection/:id', :to => 'catalog#show', :as => 'collection'
+    get 'item/:id',       :to => 'catalog#show', :as => 'item'
+    get 'collection/:id', :to => 'catalog#show', :as => 'collection'
 
-    match 'accept_terms', :to => 'application#accept_terms', :as => 'accept_terms', :via => :post
+    post 'accept_terms', :to => 'application#accept_terms', :as => 'accept_terms'
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
@@ -87,6 +86,4 @@ BassiVeratti::Application.routes.draw do
     # Note: This route will make all actions in every controller accessible via GET requests.
     # match ':controller(/:action(/:id))(.:format)'
   end
-
-  root :to => "catalog#index", :as => 'root'
 end
