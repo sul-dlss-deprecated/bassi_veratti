@@ -6,8 +6,6 @@
 class CatalogController < ApplicationController
   include Blacklight::Catalog
 
-  CatalogController.search_params_logic += [:exclude_document_level_folders]
-
   def self.collection_highlights(locale)
     opts = {}
     # I think we actually do want the entire table loaded into memory here at once, i.e. not `find_each`
@@ -202,17 +200,6 @@ class CatalogController < ApplicationController
         format.js { render :layout => false }
         format.html
       end
-    end
-  end
-
-  private
-
-  def exclude_document_level_folders(solr_params, _user_params)
-    exclude_string = "NOT folder_is_content_bi:true"
-    if solr_params[:fq]
-      solr_params[:fq] << exclude_string
-    else
-      solr_params[:fq] = [exclude_string]
     end
   end
 end
