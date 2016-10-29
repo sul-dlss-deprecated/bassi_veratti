@@ -2,9 +2,13 @@ BassiVeratti::Application.routes.draw do
   scope "(:locale)", :locale => /en|it/ do
     # Blacklight.add_routes(self)
     mount Blacklight::Engine => '/'
-    root :to => "catalog#index", :as => 'root'
-
+    root to: "catalog#index"
+    concern :searchable, Blacklight::Routes::Searchable.new
     concern :exportable, Blacklight::Routes::Exportable.new
+
+    resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+      concerns :searchable
+    end
 
     resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
       concerns :exportable
@@ -91,14 +95,6 @@ BassiVeratti::Application.routes.draw do
     #     resources :products
     #   end
 
-    # You can have the root of your site routed with "root"
-    # just remember to delete public/index.html.
-    # root :to => 'welcome#index'
-
     # See how all your routes lay out with "rake routes"
-
-    # This is a legacy wild controller route that's not recommended for RESTful applications.
-    # Note: This route will make all actions in every controller accessible via GET requests.
-    # match ':controller(/:action(/:id))(.:format)'
   end
 end
