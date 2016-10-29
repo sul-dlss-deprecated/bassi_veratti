@@ -7,3 +7,5 @@ require File.expand_path('../config/application', __FILE__)
 BassiVeratti::Application.load_tasks
 
 task :default => :ci
+
+require 'solr_wrapper/rake_task' unless Rails.env.production?

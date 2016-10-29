@@ -25,6 +25,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'solr_wrapper', '>= 0.3'
   gem 'jettywrapper', '~> 2.0.4'
   gem 'rubocop'
   gem 'sqlite3'
@@ -53,3 +54,4 @@ gem 'sprockets'
 gem 'sprockets-rails'
 gem 'json'
 gem 'honeybadger', '~> 2.0'
+gem 'rsolr', '~> 1.0'

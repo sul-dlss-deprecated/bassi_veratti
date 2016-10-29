@@ -24,5 +24,6 @@ tmp
 coverage
 jetty
 jetty/*
+solr/
 nohup.out
 .byebug_history
