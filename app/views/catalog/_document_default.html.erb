@@ -6,7 +6,7 @@
       <div class="span2 results-image">
         <%= link_to(image_tag(show_image(document.images(:square).first),
               :alt => document.title, :title => document.title, :border => 0),
-              catalog_path(document[:id])) %>
+              solr_document_path(document[:id])) %>
       </div>
       <div class="span7 results-metadata">
         <ul class="inventory-ancestry breadcrumb">

@@ -9,7 +9,7 @@ describe("Search and catalog controller pages", :type => :request, :integration 
   end
 
   it "should show an item detail page" do
-    visit catalog_path(:id => 'ref486')
+    visit solr_document_path(:id => 'ref486')
     expect(page).to have_content("Sonetto di Francesca Manzoni [ Pilla], s.a., s.d.")
     expect(page).to have_content("1.0 leaf/leaves")
     expect(page).to have_content("http://purl.stanford.edu/ys098my3414")
@@ -19,7 +19,7 @@ describe("Search and catalog controller pages", :type => :request, :integration 
   end
 
   it "should exclude folder documents where the item is described at the same level (and therefore a duplicate)" do
-    visit catalog_index_path(:q => "Medaglia")
+    visit search_catalog_path(:q => "Medaglia")
     expect(page).to have_content("1 - 2 of 2") # if we had the folder objects we would get dups and have 4 results.
   end
 end

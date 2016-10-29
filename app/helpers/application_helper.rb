@@ -45,7 +45,7 @@ module ApplicationHelper
     content_tag(:ul, :class => "item-mvf-list") do
       mvf.collect do |val|
         output = if opts[:facet]
-                   link_to(val, catalog_index_path(:"f[#{opts[:facet]}][]" => val.to_s))
+                   link_to(val, search_catalog_path(:"f[#{opts[:facet]}][]" => val.to_s))
                  else
                    val
                  end
@@ -59,7 +59,7 @@ module ApplicationHelper
   end
 
   def link_to_collection_highlight(highlight)
-    link_to(highlight.send("name_#{I18n.locale}").to_s, catalog_index_path(params_for_collection_highlight(highlight)))
+    link_to(highlight.send("name_#{I18n.locale}").to_s, search_catalog_path(params_for_collection_highlight(highlight)))
   end
 
   def params_for_collection_highlight(highlight)

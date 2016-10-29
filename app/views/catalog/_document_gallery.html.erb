@@ -7,7 +7,7 @@
       <li class="image-item">
         <%= link_to(image_tag(show_image(document.images(:thumb).first),
               :alt => document.title, :title => document.title, :border => 0),
-              catalog_path(document[:id])) %>
+              solr_document_path(document[:id])) %>
 
         <ul class="inventory-ancestry breadcrumb">
           <% if ['item','file','box'].include?(document.level) && !document.box.blank?%>
@@ -23,7 +23,7 @@
           <h5 class="index_title">
             <%#= link_to_document document, :label=> document_show_link_field %>
             <%= link_to(truncate(document.title, :length => 55),
-                  catalog_path(document[:id])) %>
+                  solr_document_path(document[:id])) %>
           </h5>
           <% # bookmark functions for items/docs -%>
           <%#= render_index_doc_actions document, :wrapping_class => "documentFunctions span2" %>

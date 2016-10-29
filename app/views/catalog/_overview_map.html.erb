@@ -15,7 +15,7 @@
 
       var markers = [];
       <%- @document_locations.each_with_index do |(location,coordinate),i|
-        url=catalog_index_path(:"f[geographic_name_ssim][]"=>"#{location}")
+        url=search_catalog_path(:"f[geographic_name_ssim][]"=>"#{location}")
         %>
         markers[<%=i%>] = new google.maps.Marker({
           position: new google.maps.LatLng(<%="#{coordinate[:lat]},#{coordinate[:lon]}"%>),

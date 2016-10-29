@@ -69,7 +69,7 @@
           <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
         <% end %>
         <% if duplicate_note(@document.id) %>
-          <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(duplicate_note(@document.id), catalog_path(duplicate_reference(@document.id))) %></dd>
+          <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(duplicate_note(@document.id), solr_document_path(duplicate_reference(@document.id))) %></dd>
         <%- end -%>
       </dl>
 
@@ -88,7 +88,7 @@
     <ul class="preview-folder-items">
       <% @document.folder_siblings.documents.each do |sibling| %>
         <li>
-          <%= link_to(image_tag(show_image(sibling.images(:square).first),:alt=>sibling.title,:title=>sibling.title,:border=>0), catalog_path(sibling[:id])) %>
+          <%= link_to(image_tag(show_image(sibling.images(:square).first),:alt=>sibling.title,:title=>sibling.title,:border=>0), solr_document_path(sibling[:id])) %>
         </li>
       <% end %>
     </ul>
