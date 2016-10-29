@@ -1,4 +1,6 @@
 describe SolrDocument do
+  let(:solr) { double("solr") }
+
   it "should behave like a SolrDocument" do
     doc = SolrDocument.new(:id => "12345")
     expect(doc).to be_a SolrDocument
@@ -14,10 +16,9 @@ describe SolrDocument do
     describe "collection siblings" do
       it "should memoize the solr request to get the siblings of a collection member" do
         response = { "response" => { "numFound" => 3, "docs" => [{ :id => "1234" }, { :id => "4321" }] } }
-        solr = double("solr")
-        expect(solr).to receive(:select).with(:params => { :fq => "is_member_of_ssim:\"collection-1\"", :rows => "1000" }).once.and_return(response)
-        expect(Blacklight).to receive(:solr).and_return(solr)
         doc = SolrDocument.new(:id => "abc123", :is_member_of_ssim => ["collection-1"])
+        expect(solr).to receive(:select).with(:params => { :fq => "is_member_of_ssim:\"collection-1\"", :rows => "1000" }).once.and_return(response)
+        expect(doc).to receive(:rsolr).and_return(solr)
         5.times do
           doc.collection_siblings
         end
@@ -30,46 +31,43 @@ describe SolrDocument do
       end
       it "should memoize the solr request to get collection memers" do
         response = { "response" => { "numFound" => 3, "docs" => [{ :id => "1234" }, { :id => "4321" }] } }
-        solr = double("solr")
-        expect(solr).to receive(:select).with(:params => { :fq => "is_member_of_ssim:\"collection-1\"", :rows => "1000" }).once.and_return(response)
-        expect(Blacklight).to receive(:solr).and_return(solr)
         doc = SolrDocument.new(:id => "collection-1", :format_ssim => "Collection")
+        expect(solr).to receive(:select).with(:params => { :fq => "is_member_of_ssim:\"collection-1\"", :rows => "1000" }).once.and_return(response)
+        expect(doc).to receive(:rsolr).and_return(solr)
         5.times do
           doc.collection_members
         end
       end
       it "should memoize the solr request to get a collection member's parent collection" do
         response = { "response" => { "numFound" => 1, "docs" => [{ :id => "1234" }] } }
-        solr = double("solr")
-        expect(solr).to receive(:select).with(:params => { :fq => "id:\"abc123\"" }).once.and_return(response)
-        expect(Blacklight).to receive(:solr).and_return(solr)
         doc = SolrDocument.new(:id => "item-1", :is_member_of_ssim => ["abc123"])
+        expect(solr).to receive(:select).with(:params => { :fq => "id:\"abc123\"" }).once.and_return(response)
+        expect(doc).to receive(:rsolr).and_return(solr)
         5.times do
           doc.collection
         end
       end
-
       it "should return nil if the SolrDocument is not a collection" do
-        expect(SolrDocument.new(:id => "1235").collection_members).to be nil
+        expect(SolrDocument.new(:id => "1235").collection_members).to be_nil
       end
     end
+
     describe "all_collections" do
       it "should memoize the solr request to get all collections" do
         response = { "response" => { "numFound" => 2, "docs" => [{ :id => "1234" }, { :id => "4321" }] } }
-        solr = double("solr")
-        expect(solr).to receive(:select).with(:params => { :fq => "format_ssim:\"Collection\"", :rows => "10" }).once.and_return(response)
-        expect(Blacklight).to receive(:solr).and_return(solr)
         doc = SolrDocument.new
+        expect(solr).to receive(:select).with(:params => { :fq => "format_ssim:\"Collection\"", :rows => "10" }).once.and_return(response)
+        expect(doc).to receive(:rsolr).and_return(solr)
         5.times do
           doc.all_collections
         end
       end
       it "should return an array of solr documents" do
         response = { "response" => { "numFound" => 2, "docs" => [{ :id => "1234" }, { :id => "4321" }] } }
-        solr = double("solr")
+        one_doc = SolrDocument.new
+        expect(one_doc).to receive(:rsolr).and_return(solr)
         expect(solr).to receive(:select).with(:params => { :fq => "format_ssim:\"Collection\"", :rows => "10" }).and_return(response)
-        expect(Blacklight).to receive(:solr).and_return(solr)
-        docs = SolrDocument.new.all_collections
+        docs = one_doc.all_collections
         expect(docs).to be_a Array
         docs.each do |doc|
           expect(doc).to be_a SolrDocument
