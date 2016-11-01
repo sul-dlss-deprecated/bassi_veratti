@@ -141,8 +141,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'family_name_ssim', :label => :'bassi.facet.family_name'
     config.add_facet_field 'date_range_itim', :label => :'bassi.facet.date_range', :range => true
 
-    config.add_facet_field 'en_highlight_ssim', :label => :'bassi.nav.collections', :show => false,  :query => collection_highlights('en')
-    config.add_facet_field 'it_highlight_ssim', :label => :'bassi.nav.collections', :show => false,  :query => collection_highlights('it')
+    config.add_facet_field 'en_highlight_ssim', :label => :'bassi.nav.collections', :show => false, :query => collection_highlights('en')
+    config.add_facet_field 'it_highlight_ssim', :label => :'bassi.nav.collections', :show => false, :query => collection_highlights('it')
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

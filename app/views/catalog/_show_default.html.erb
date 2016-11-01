@@ -10,7 +10,6 @@
     <div class="span6 member-image">
       <%if @document.images.size > 0 %>
         <iframe id="image_workspace" style="width: 100%; height: 450px;" src="//embed.stanford.edu/iframe?url=https://purl.stanford.edu/<%= document[:druid_ssi] %>&amp;hide_title=true&amp;hide_metadata=true&amp;hide_download=true&amp;maxwidth=600&amp;maxheight=425"></iframe>
-
         <noscript>
            <div class="item active">
              <%= link_to image_tag(@document.images.first, :alt => "#{t('bassi.collection_members.items_name')} 1 of #{@document.images.size}"),@document.purl %>
@@ -24,7 +23,6 @@
       <% else %>
         <%= image_tag("https://dummyimage.com/365x400/f8f6f1/6d5b48&text=#{t('bassi.show.description_only_no_image')}", :class => "placeholder-image") %>
       <% end %>
-
     </div>
 
     <div class="span6 metadata">
@@ -36,53 +34,53 @@
       </div>
 
       <%= render_document_heading(@document).html_safe %>
-      <dl class="dl-horizontal  dl-invert">
-        <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
+      <dl class="dl-horizontal dl-invert">
+        <dt><%= t('bassi.show.date') %>:</dt><dd><%= show_list(@document.date) %>&nbsp;</dd>
         <% unless list_is_empty?(@document.en_document_types) && list_is_empty?(@document.it_document_types) %>
-          <dt style='white-space: normal;'><%=t('bassi.show.document_types')%>:</dt><dd class="doc-type" ><%=show_formatted_list(@document.send(:"#{I18n.locale}_document_types"),:facet=>"#{I18n.locale}_document_types_ssim")%></dd>
+          <dt style='white-space: normal;'><%= t('bassi.show.document_types') %>:</dt><dd class="doc-type" ><%= show_formatted_list(@document.send(:"#{I18n.locale}_document_types"),:facet=>"#{I18n.locale}_document_types_ssim") %></dd>
         <% end %>
         <% unless list_is_empty?(@document.description) %>
-          <dt style='white-space: normal;'><%=t('bassi.show.description')%>:</dt><dd><%=show_formatted_list(@document.description)%></dd>
+          <dt style='white-space: normal;'><%= t('bassi.show.description') %>:</dt><dd><%= show_formatted_list(@document.description) %></dd>
         <% end %>
         <% unless list_is_empty?(@document.people) %>
-          <dt><%=t('bassi.show.people')%>:</dt><dd><%=show_formatted_list(@document.people,:facet=>'personal_name_ssim')%></dd>
+          <dt><%= t('bassi.show.people') %>:</dt><dd><%= show_formatted_list(@document.people, :facet => 'personal_name_ssim') %></dd>
         <% end %>
         <% unless list_is_empty?(@document.families) %>
-          <dt><%=t('bassi.show.families')%>:</dt><dd><%=show_formatted_list(@document.families,:facet=>'family_name_ssim')%></dd>
+          <dt><%= t('bassi.show.families') %>:</dt><dd><%= show_formatted_list(@document.families, :facet => 'family_name_ssim') %></dd>
         <% end %>
         <% unless list_is_empty?(@document.corporations) %>
-          <dt><%=t('bassi.show.corporations')%>:</dt><dd><%=show_formatted_list(@document.corporations,:facet=>'corporate_name_ssim')%></dd>
+          <dt><%= t('bassi.show.corporations') %>:</dt><dd><%= show_formatted_list(@document.corporations, :facet => 'corporate_name_ssim') %></dd>
         <% end %>
         <% unless list_is_empty?(@document.location) %>
-          <dt><%=t('bassi.show.locations')%>:</dt>
-            <dd><%=show_formatted_list(@document.location,:facet=>'geographic_name_ssim')%>
+          <dt><%= t('bassi.show.locations') %>:</dt>
+            <dd><%= show_formatted_list(@document.location, :facet => 'geographic_name_ssim') %>
               <% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil? %>
                 <span class="map-link hidden showOnLoad">
                   <a href="#location-map" data-toggle="modal" id="show-map-link">
-                    <i class="icon-globe"></i> <%=t('bassi.show.show_map')%>
+                    <i class="icon-globe"></i> <%= t('bassi.show.show_map') %>
                   </a>
                 </span>
               <% end %>
             </dd>
         <% end %>
         <% unless list_is_empty?(@document.notes) %>
-          <dt><%=t('bassi.show.notes')%>:</dt><dd><%=show_formatted_list(@document.notes)%></dd>
+          <dt><%= t('bassi.show.notes')%>:</dt><dd><%= show_formatted_list(@document.notes) %></dd>
         <% end %>
         <% if duplicate_note(@document.id) %>
           <dt><%= t('bassi.show.notes') %>:</dt><dd><%= link_to(duplicate_note(@document.id), solr_document_path(duplicate_reference(@document.id))) %></dd>
         <%- end -%>
       </dl>
 
-      <p class="use-notice"><%=t('bassi.terms_of_use_text_html') %></p>
+      <p class="use-notice"><%= t('bassi.terms_of_use_text_html') %></p>
 
     </div>
   </div>
 
-<% if @document.folder_siblings.documents.size > 0%>
+<% if @document.folder_siblings.documents.size > 0 %>
 <div class="row">
   <div class="span12">
     <h3>
-      <%=t('bassi.show.all_items_in_folder')%> (<%=@document.folder_siblings.documents.size%>)
+      <%= t('bassi.show.all_items_in_folder')%> (<%= @document.folder_siblings.documents.size %>)
       <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>
     </h3>
     <ul class="preview-folder-items">
@@ -96,7 +94,7 @@
 </div>
 <% end %>
 
-<% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil?%>
+<% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil? %>
   <script>
   $(document).ready(function(){
     $('#location-map').modal({keyboard: true, backdrop: true, show: false});
@@ -109,7 +107,7 @@
     // Styles to desaturate and hide roads on map
     <%= render 'map_styles' %>
 
-    var map = new google.maps.Map( document.getElementById( 'result_map' ), options );
+    var map = new google.maps.Map( document.getElementById('result_map'), options );
     map.setOptions({styles: styles});
 
     <%- @document.coordinates.each do |coordinate| %>
@@ -119,22 +117,18 @@
         map: map,
         title:"<%=coordinate[:name]%>"});
     <% end %>
-
   });
-
   </script>
 
   <div class="modal fade" id="location-map">
     <div class="modal-header">
-      <h3><%=t('bassi.show.map')%></h3>
+      <h3><%= t('bassi.show.map')%></h3>
     </div>
     <div class="modal-body">
-
         <div id="result_map"></div>
-
     </div>
     <div class="modal-footer">
-      <button class="tod-agree btn" data-dismiss="modal"><%=t('bassi.nav.close')%></button>
+      <button class="tod-agree btn" data-dismiss="modal"><%= t('bassi.nav.close')%></button>
     </div>
   </div>
 <% end %>
