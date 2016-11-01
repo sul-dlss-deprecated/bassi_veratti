@@ -12,7 +12,7 @@
         <%- # extracted from show_tools partial %>
         <% if @document.respond_to?( :to_email_text ) %>
           <li class="email">
-          <%= link_to t('blacklight.tools.email'), email_catalog_path(:id => @document), {:id => 'emailLink', :name => 'email', :class => 'lightboxLink'} %>
+          <%= link_to t('blacklight.tools.email'), email_solr_document_path(:id => @document), {:id => 'emailLink', :name => 'email', :class => 'lightboxLink'} %>
           </li>
         <%- end -%>
       </ul>

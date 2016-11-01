@@ -35,10 +35,10 @@
         <%= render :partial => 'show_actions' %>
       </div>
 
-      <%= render_document_heading(:h4).html_safe %>
+      <%= render_document_heading(@document).html_safe %>
       <dl class="dl-horizontal  dl-invert">
         <dt><%=t('bassi.show.date')%>:</dt><dd><%=show_list(@document.date)%>&nbsp;</dd>
-        <% unless list_is_empty?(@document.en_document_types) and list_is_empty?(@document.it_document_types)  %>
+        <% unless list_is_empty?(@document.en_document_types) && list_is_empty?(@document.it_document_types) %>
           <dt style='white-space: normal;'><%=t('bassi.show.document_types')%>:</dt><dd class="doc-type" ><%=show_formatted_list(@document.send(:"#{I18n.locale}_document_types"),:facet=>"#{I18n.locale}_document_types_ssim")%></dd>
         <% end %>
         <% unless list_is_empty?(@document.description) %>
