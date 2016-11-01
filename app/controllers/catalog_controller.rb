@@ -24,7 +24,7 @@ class CatalogController < ApplicationController
       # this is all fragment cached, so its only done once
       unless fragment_exist?(:controller => 'catalog', :action => 'index', :action_suffix => 'map') || @params[:nomap]
         @document_locations = {}
-        location_facets = blacklight_solr.get 'select', :params => { :q => '*:*', :rows => 0, :facet => true, :'facet.field' => 'geographic_name_ssim' }
+        location_facets = Blacklight.default_index.connection.get 'select', :params => { :q => '*:*', :rows => 0, :facet => true, :'facet.field' => 'geographic_name_ssim' }
         location_names = location_facets['facet_counts']['facet_fields']['geographic_name_ssim']
         location_names.each_with_index do |location_name, index|
           next unless index.even? && !BassiVeratti::Application.config.no_geocode.include?(location_name)
