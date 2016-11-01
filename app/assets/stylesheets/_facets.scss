@@ -30,7 +30,7 @@
 #facets-bassi {
   clear: both;
   margin-top: 30px;
-  .btn-navbar {
+  .navbar-btn {
     // Navbar button for toggling navbar items in responsive layouts
     // These definitions need to come after '.navbar .btn'
     display: none;
@@ -64,7 +64,7 @@
 }
 
 @media (max-width: 767px) {
-  #facets-bassi .btn-navbar {
+  #facets-bassi .navbar-btn {
     display: block;
     margin: 5px;
   }
