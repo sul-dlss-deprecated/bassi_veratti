@@ -8,7 +8,7 @@ gem 'blacklight_range_limit', '~> 6.0'
 gem 'protected_attributes' # allows attr_accessible in rails 4
 gem 'google-analytics-rails'
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
-gem 'kaminari'#, '<= 0.14.1' # blacklight also sets semver, so we don't end up w/ 0.0.0
+gem 'kaminari'
 
 # Gems used only for assets:
 # previously not required in production environments by default, now possibly required?
@@ -26,7 +26,6 @@ end
 
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
-  gem 'jettywrapper', '~> 2.0.4'
   gem 'rubocop'
   gem 'sqlite3'
   gem 'capybara'
@@ -51,7 +50,7 @@ gem 'geocoder'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
-gem 'sprockets-rails'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'json'
 gem 'honeybadger', '~> 2.0'
 gem 'rsolr', '~> 1.0'
