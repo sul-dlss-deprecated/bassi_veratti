@@ -1,4 +1,4 @@
-/*  
+/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -16,32 +16,25 @@
  *
 */
 
-@import "bootstrap";
-
-@import 'blacklight/blacklight_defaults';
-@import "blacklight/modal";
+@import 'bootstrap';
+@import 'blacklight/blacklight_base';
+// includes bl/*: blacklight_defaults, layout, header, constraints, controls, search_results, pagination, group, bookmark, balanced_list, facets, search_history, modal, twitter_typeahead
 
 @import "global";
 @import "layout";
 @import "header";
 @import "homepage";
 @import "about";
-@import "blacklight/facets";
 @import "facets";
-@import "blacklight/catalog";
+// @import "blacklight/catalog";
 @import "catalog";
-@import "blacklight/bookmark";
-@import "blacklight/dropdown";
-
+// @import "blacklight/dropdown";
 @import "collection_members_grid";
 @import "carousel";
 @import "modals";
-
 @import "search_results";
 @import "highlights";
-
 @import "stanford_identity";
-
 @import "content_inventory";
 
 .hide-text {
