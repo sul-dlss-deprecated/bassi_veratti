@@ -1,5 +1,4 @@
 require 'solr_wrapper' unless Rails.env.production?
-require 'rest_client'
 
 desc "Run continuous integration suite"
 task :ci => ['solr:clean', 'bassi:config', 'db:migrate'] do
@@ -24,11 +23,10 @@ namespace :bassi do
 
   desc 'Copy Bassi configuration files'
   task :config do
-    cp("#{Rails.root}/config/database.yml.example", "#{Rails.root}/config/database.yml") unless File.exist?("#{Rails.root}/config/database.yml")
-    cp("#{Rails.root}/config/solr.yml.example", "#{Rails.root}/config/solr.yml") unless File.exist?("#{Rails.root}/config/solr.yml")
-    # cp("#{Rails.root}/solr_conf/solr.xml", "#{Rails.root}/solr/conf/")
-    # cp("#{Rails.root}/solr_conf/conf/schema.xml", "#{Rails.root}/solr/conf/", :verbose => true)
-    # cp("#{Rails.root}/solr_conf/conf/solrconfig.xml", "#{Rails.root}/solr/conf/", :verbose => true)
+    %w(database solr).each do |stem|
+      destination = "#{Rails.root}/config/database.yml"
+      cp("#{destination}.example", destination, :verbose => true) unless File.exist?(destination)
+    end
   end
 
   desc 'Delete and index all fixtures in solr'
