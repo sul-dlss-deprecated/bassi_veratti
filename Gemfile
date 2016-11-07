@@ -22,6 +22,7 @@ end
 
 group :development do
   gem 'byebug'
+  gem 'launchy'
 end
 
 group :development, :test do

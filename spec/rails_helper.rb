@@ -8,6 +8,7 @@ require 'rspec/rails'
 
 require 'capybara/rspec'
 require 'byebug' unless ENV['CI']
+require 'launchy' unless ENV['CI']
 require 'coveralls'
 Coveralls.wear!
 
