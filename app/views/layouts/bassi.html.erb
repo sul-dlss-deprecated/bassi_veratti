@@ -33,7 +33,6 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= raw(render_head_content) %>
     <% if content_for?(:head) %>
       <%= yield(:head) %>
     <% end %>
@@ -64,8 +63,7 @@
         <div id="main-container" class="container">
           <!-- Top bar -->
           <div id="search-found" class="row hidden-phone">
-            <%= topbar_items.join('').html_safe %>
-            <%= render :partial=>'shared/breadcrumbs' unless @no_nav%>
+            <%= render :partial => 'shared/breadcrumbs' unless @no_nav %>
           </div>
           <!-- /Top bar -->
           <div class="row">
