@@ -4,6 +4,7 @@ describe("Search and catalog controller pages", :type => :request, :integration 
 
   it "should show the collection highlights" do
     visit collection_highlights_path
+    skip 'Never implemented'
     expect(page).to have_content(@collection1)
     expect(page).to have_content(@collection2)
   end
