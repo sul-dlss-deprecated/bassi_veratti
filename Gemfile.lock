@@ -177,6 +177,7 @@ GEM
     netrc (0.10.3)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    okcomputer (1.13.0)
     parser (2.3.1.2)
       ast (~> 2.2)
     power_assert (0.2.3)
@@ -332,6 +333,7 @@ DEPENDENCIES
   json (~> 1.8.0)
   kaminari (<= 0.14.1)
   mysql2 (~> 0.3.10)
+  okcomputer
   protected_attributes
   rails (~> 4)
   rest-client
@@ -348,4 +350,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
 
 BUNDLED WITH
-   1.13.5
+   1.13.6
