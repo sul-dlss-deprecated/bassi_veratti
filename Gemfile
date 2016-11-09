@@ -9,6 +9,7 @@ gem 'protected_attributes' # allows attr_accessible in rails 4
 gem 'google-analytics-rails'
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
 gem 'kaminari'
+gem 'okcomputer'
 
 # Gems used only for assets:
 # previously not required in production environments by default, now possibly required?
