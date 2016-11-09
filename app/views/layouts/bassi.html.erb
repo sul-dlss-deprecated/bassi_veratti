@@ -43,12 +43,12 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
+  <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? && params[:f].to_s.empty? && params[:id].nil? %>
 
   <body onload="<%= raw onload_text %>"
         class="<%= render_body_class %> <%= render_locale_class %><%= " scrollspy-content" if on_scrollspy_page? %>">
 
-    <%= render(:partial => 'shared/terms_dialog') if show_terms_dialog?%>
+    <%= render(:partial => 'shared/terms_dialog') if show_terms_dialog? %>
     <noscript>
       <% if show_terms_dialog? %><meta http-equiv="refresh" content="0; URL=/about/terms_dialog?return_to=<%=request.path%>"><% end %>
     </noscript>
