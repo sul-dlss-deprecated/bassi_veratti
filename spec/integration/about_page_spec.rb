@@ -1,10 +1,10 @@
 describe("About Pages", :type => :request, :integration => true) do
   before(:each) do
-    @about_page_title = I18n.t("bassi.about.project_title")
-    @project_team_title = I18n.t("bassi.about.stanford_team_title")
-    @acknowledgements_title = I18n.t("bassi.about.acknowledgements_title")
-    @contact_us_title = I18n.t("bassi.about.contact_title")
-    @terms_of_use_title = I18n.t("bassi.about.terms_of_use_title")
+    @about_page_title       = I18n.t('bassi.about.project_title')
+    @project_team_title     = I18n.t('bassi.about.stanford_team_title')
+    @acknowledgements_title = I18n.t('bassi.about.acknowledgements_title')
+    @contact_us_title       = I18n.t('bassi.about.contact_title')
+    @terms_of_use_title     = I18n.t('bassi.about.terms_of_use_title')
   end
 
   it "should show the about project page for various URLs" do

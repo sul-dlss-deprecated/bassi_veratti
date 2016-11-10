@@ -11,6 +11,7 @@ class CatalogController < ApplicationController
     opts
   end
 
+  # @todo extract fragment fetcher/Geocoder logic to helper method
   def index
     @params = params
     if on_home_page
