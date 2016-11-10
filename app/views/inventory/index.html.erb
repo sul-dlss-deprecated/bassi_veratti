@@ -1,62 +1,72 @@
 <script language="JavaScript">
-	$(document).ready(function(){
-			$(".truncate").truncate({max_length: 450,  less: '&laquo; <%=t('bassi.show.less')%>', more: '<%=t('bassi.show.more')%> &raquo;'});
-	});
+  $(document).ready(function(){
+    $(".truncate").truncate({max_length: 450,  less: '&laquo; <%=t('bassi.show.less')%>', more: '<%=t('bassi.show.more')%> &raquo;'});
+  });
 </script>
 
-<% cache(:action => "index", :action_suffix => "inventory_#{I18n.locale}")  do %>
-
-	<%= render :partial => 'show_inventory_sidebar' %>
-
-	<div id="content" class="span9 inventory">
-	  <hr class="main primary">
-	  <h2><%= @page_title %></h2>
-	  <div data-collapse="true">
-	    <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
-	      <h3 id="series<%= index+1 %>" class="<%= I18n.locale %>"><%= series[blacklight_config.show.heading] %></h3>
-	      <p class="truncate"><%= raw show_series_language_description(series.notes,I18n.locale) %></p>
-	      <ul class="series">
-	        <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
-	          <i style="display:none;" class="icon-plus-sign"></i> 
-	          <%= link_to("#{t('bassi.show.box',:count=>series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.keys.length)},  #{t('bassi.show.folder',:count=>series.folders.total_members)},  #{t('bassi.show.item',:count=>series.folders.map{|f|  f.children.total_members.to_i }.inject(:+))}", "##{series[:id]}") %>
-	        </li>
-	        <li>
-	          <ul class="box-list">
-	            <%- series.folders.group_by{|f| f[blacklight_config.box_identifying_field].first }.each do |box, folders| -%>
-	              <li data-behavior='toggle-handler' data-reference-id="#<%= "box#{box}" %>">
-	                <i style="display:none;" class="icon-plus-sign"></i> <%= link_to("#{t('bassi.show.box.word')} #{box}", "#box#{box}") %>
-	              </li>
-	              <li>
-	                <ul class="folder-list">
-	                  <%- folders.each do |folder| -%>
-	                    <li data-behavior='toggle-handler' data-reference-id="#<%= folder[:id] %>">
-	                      <i style="display:none;" class="icon-plus-sign"></i> 
-	                      <%= link_to("#{t('bassi.show.folder.word')} #{folder[blacklight_config.folder_identifying_field].first}: #{folder[blacklight_config.show.heading]}", "##{folder[:id]}") %>
-	                    </li>
-	                    <li>
-	                      <ul class="folder-items">
-	                        <li class="item-count"><%=t('bassi.show.item',:count=>folder.children.total_members)%>:</li>
-															<ul class="item-list">															
-	                            <%- folder.children.each do |document| -%>
-																<li class="item-image-link" data-image-link="<%=solr_document_path(document[:id])%>" data-image-url="<%=show_image(document.images(:square).first)%>" data-image-title="<%=document.title%>">
-																<noscript>
-	                              	<%= link_to(image_tag(show_image(document.images(:square).first),:alt=>document.title,:title=>document.title,:border=>0), solr_document_path(document[:id])) %>
-																</noscript>
-															</li>
-	                            <%- end -%>
-															</ul>
-	                        </li>
-	                      </ul>
-	                    </li>
-	                  <%- end -%>
-	                </ul>
-	              </li>
-	            <%- end -%>
-	          </ul>
-	        </li>
-	      </ul>
-	    <%- end -%>
-	  </div>
-	</div>
+<% cache(action: 'index', action_suffix: "inventory_#{I18n.locale}") do %>
+  <%= render partial: 'show_inventory_sidebar' %>
+  <div id="content" class="span9 inventory">
+    <hr class="main primary">
+    <h2><%= @page_title %></h2>
+    <div data-collapse="true">
+      <%- SolrDocument.new.all_series.each_with_index do |series, index| %>
+        <%- folders_by_box = series.folders.group_by{ |f| f[blacklight_config.box_identifying_field].first } -%>
+        <h3 id="series<%= index+1 %>" class="<%= I18n.locale %>"><%= series[blacklight_config.show.title_field] %></h3>
+        <p class="truncate"><%= raw show_series_language_description(series.notes, I18n.locale) %></p>
+        <ul class="series">
+          <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
+            <i style="display:none;" class="icon-plus-sign"></i>
+            <%=
+              link_to(
+                t('bassi.show.box',    count: folders_by_box.keys.length)   + ',  ' +
+                t('bassi.show.folder', count: series.folders.total_members) + ',  ' +
+                t('bassi.show.item',   count: series.folders.map{ |f| f.children.total_members.to_i }.inject(:+)),
+                '#' + series[:id]
+              )
+            %>
+          </li>
+          <li>
+            <ul class="box-list">
+              <%- folders_by_box.each do |box, folders| -%>
+                <li data-behavior='toggle-handler' data-reference-id="#<%= "box#{box}" %>">
+                  <i style="display:none;" class="icon-plus-sign"></i> <%= link_to(t('bassi.show.box.word') + " #{box}", "#box#{box}") %>
+                </li>
+                <li>
+                  <ul class="folder-list">
+                    <%- folders.each do |folder| -%>
+                      <li data-behavior='toggle-handler' data-reference-id="#<%= folder[:id] %>">
+                        <i style="display:none;" class="icon-plus-sign"></i>
+                        <%= link_to("#{t('bassi.show.folder.word')} #{folder[blacklight_config.folder_identifying_field].first}: #{folder[blacklight_config.show.title_field]}", "##{folder[:id]}") %>
+                      </li>
+                      <li>
+                        <ul class="folder-items">
+                          <li class="item-count"><%=t('bassi.show.item', count: folder.children.total_members)%>:</li>
+                            <ul class="item-list">
+                            <%- folder.children.each do |document| -%>
+                              <li class="item-image-link" data-image-link="<%=solr_document_path(document[:id])%>" data-image-url="<%=show_image(document.images(:square).first)%>" data-image-title="<%=document.title%>">
+                                <noscript>
+                                <%= link_to(image_tag(show_image( document.images(:square).first),
+                                                                  alt: document.title,
+                                                                  title: document.title,
+                                                                  border: 0
+                                                                ), solr_document_path(document[:id])) %>
+                                </noscript>
+                              </li>
+                            <%- end -%>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    <%- end -%>
+                  </ul>
+                </li>
+              <%- end -%>
+            </ul>
+          </li>
+        </ul>
+      <%- end -%>
+    </div>
+  </div>
 
 <% end %>
