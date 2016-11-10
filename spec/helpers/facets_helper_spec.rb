@@ -18,7 +18,7 @@ describe FacetsHelper do
         expect(helper.should_render_facet?(double(name: 'en_document_types_ssim', items: [1, 2, 3]))).to be_truthy
       end
       it 'should remove all the appropriate facet field names and replace them with the field including the locale' do
-        I18n.locale = 'it'
+        allow(I18n).to receive(:locale).and_return 'it'
         expect(helper.should_render_facet?(double(name: 'it_document_types_ssim', items: [1, 2, 3]))).to be_truthy
         expect(helper.should_render_facet?(double(name: 'en_document_types_ssim', items: [1, 2, 3]))).to be_falsey
       end
