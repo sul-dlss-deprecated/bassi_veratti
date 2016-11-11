@@ -7,8 +7,6 @@ ask :branch, 'master'
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/opt/app/bv/bassi-lib'
 
-set :bundle_audit_ignore, %w(OSVDB-131677) # ignore mail vulnerability (you need to upgrade to rails4 to fix properly)
-
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -34,14 +32,6 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # set :keep_releases, 5
 
 namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
-
   after :publishing, :restart
 
   after :restart, :clear_cache do
