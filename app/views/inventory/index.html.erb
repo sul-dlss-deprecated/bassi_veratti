@@ -6,7 +6,7 @@
 
 <% cache(action: 'index', action_suffix: "inventory_#{I18n.locale}") do %>
   <%= render partial: 'show_inventory_sidebar' %>
-  <div id="content" class="span9 inventory">
+  <div id="content" class="col-md-9 inventory">
     <hr class="main primary">
     <h2><%= @page_title %></h2>
     <div data-collapse="true">

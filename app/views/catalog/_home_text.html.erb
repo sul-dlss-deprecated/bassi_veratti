@@ -1,6 +1,6 @@
-<div id="content" class="span9">
+<div id="content" class="col-md-9">
 	<div class="row">
-	  <div class="span9">
+	  <div class="col-md-9">
 	    <hr class="main primary">
 	    <h2><%=t('bassi.home.collection_highlights')%><span class="highlights-link"><%=link_to t('bassi.home.more_highlights'),collection_highlights_path%></span></h2>
 	  </div>
@@ -8,7 +8,7 @@
 
   <div class="row featured-collections">
 		<% @highlights.each do |highlight| %>
-      <div class="span3 featured-collection">
+      <div class="col-md-3 featured-collection">
         <%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),search_catalog_path(params_for_collection_highlight(highlight)))  %>
         <h3 class="collection-title"><%= link_to_collection_highlight(highlight) %></h3>
         <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
@@ -18,7 +18,7 @@
 
 
   <div class="row">
-    <div class="span9 about-dl">
+    <div class="col-md-9 about-dl">
       <hr class="main secondary">
       <h3 class="section-heading"><%= t('bassi.home.about_collection_html') %></h3>
       <p>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="row showOnLoad" style="display:none;">
-    <div class="span9 overview">
+    <div class="col-md-9 overview">
       <hr class="main secondary">
       <h3 class="section-heading"><%=t('bassi.home.overview_by')%></h3>
         <div class="overview-area tab-content">

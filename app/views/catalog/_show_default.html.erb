@@ -1,13 +1,13 @@
 <div class="document">
   <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
       <hr class="main primary">
       <h2><%= t('bassi.collection.member_detail') %></h2>
     </div>
   </div>
 
   <div class="row document-details">
-    <div class="span6 member-image">
+    <div class="col-md-6 member-image">
       <%if @document.images.size > 0 %>
         <iframe id="image_workspace" style="width: 100%; height: 450px;" src="//embed.stanford.edu/iframe?url=https://purl.stanford.edu/<%= document[:druid_ssi] %>&amp;hide_title=true&amp;hide_metadata=true&amp;hide_download=true&amp;maxwidth=600&amp;maxheight=425"></iframe>
         <noscript>
@@ -25,7 +25,7 @@
       <% end %>
     </div>
 
-    <div class="span6 metadata">
+    <div class="col-md-6 metadata">
       <div class="item-metadata-tools">
         <span class="highlights-link">
           <%= link_to t('bassi.show.view_in_inventory', :item => 'item'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %>
@@ -78,7 +78,7 @@
 
 <% if @document.folder_siblings.documents.size > 0 %>
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
     <h3>
       <%= t('bassi.show.all_items_in_folder')%> (<%= @document.folder_siblings.documents.size %>)
       <span class="highlights-link"><%= link_to t('bassi.show.view_in_inventory', :item => 'folder'), inventory_path(:anchor => "box#{@document.box}-folder#{@document.folder}") %></span>

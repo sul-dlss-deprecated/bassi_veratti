@@ -1,6 +1,6 @@
 <div class="row results-controls">
 
-  <div class="span4 prev-next">
+  <div class="col-md-4 prev-next">
     <% if @response.total_pages > 1 %>
     <%= paginate_rsolr_response @response, :theme => :blacklight_compact %>
     <% else %>
@@ -8,7 +8,7 @@
     <% end %>
   </div>
 
-  <div class="span3 view-toggle">
+  <div class="col-md-3 view-toggle">
     <div class='gallery_toggle tabbable tabs-below'>
       <ul class="nav nav-pills">
         <li><%= link_to('<i class="icon-th-list"></i>'.html_safe, search_catalog_path(params.merge(:view => 'default')), :alt => 'Default results view', :title => 'Default results view', :class=>"#{'active' if params[:view] == 'default' or params[:view].nil? }") %></li>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="span2 page-pulldown">
+  <div class="col-md-2 page-pulldown">
     <%= render 'sort_and_per_page' %>
   </div>
 
