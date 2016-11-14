@@ -2,7 +2,7 @@
   $('#terms-dialog').modal({keyboard: false, backdrop: 'static'},'show')});
 	// click agree on modal terms window sends ajax event
 	$(document).ready(function(){
-  
+
 		$(".tod-agree").each(function(){
     	$(this).click(function(){
       	$.post($(this).attr("data-url") + "?format=js");
@@ -20,7 +20,7 @@
     <p><%=t('bassi.nav.terms_of_use_acknowledgement')%></p>
   </div>
   <div class="modal-footer">
-    <button class="tod-agree btn btn-primary" data-url="<%=accept_terms_path%>" data-dismiss="modal"><%=t('bassi.nav.terms_continue')%></button>
-    <a href="<%=root_url%>" class="btn"><%=t('bassi.nav.terms_disagree')%></a>
+    <button class="tod-agree btn btn-default btn-primary" data-url="<%=accept_terms_path%>" data-dismiss="modal"><%=t('bassi.nav.terms_continue')%></button>
+    <a href="<%=root_url%>" class="btn btn-default"><%=t('bassi.nav.terms_disagree')%></a>
   </div>
 </div>
