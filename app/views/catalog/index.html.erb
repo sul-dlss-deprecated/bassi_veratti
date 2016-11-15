@@ -8,7 +8,7 @@
 <div id="content" class="col-md-9">
   <% unless has_search_parameters? %>
     <%# if there are no input/search related params, display the "home" or collection highlight partial -%>
-		<%= render(on_collection_highlights_page ? 'highlights' : 'home') %>
+    <%= render(on_collection_highlights_page ? 'highlights' : 'home') %>
   <% else %>
     <% @page_title = t('bassi.search.search_label') %>
     <% content_for :head do %>
@@ -16,10 +16,10 @@
     <% end %>
 
     <hr class="main primary">
-		<h2 class="search-results"><%= t('blacklight.search.search_results_header') %></h2>
-		<div id="search-results-metadata">
-	    <%= render :partial => 'did_you_mean' %>
-		</div>
+    <h2 class="search-results"><%= t('blacklight.search.search_results_header') %></h2>
+    <div id="search-results-metadata">
+      <%= render :partial => 'did_you_mean' %>
+    </div>
 
     <%= render_document_index %>
     <%= render 'results_pagination' %>

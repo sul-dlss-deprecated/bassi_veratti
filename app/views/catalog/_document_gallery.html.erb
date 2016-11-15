@@ -14,7 +14,7 @@
             <li><%= link_to "#{t('bassi.show.box.word')} #{document.box}",inventory_path(:anchor => "box#{document.box}") %></li>
           <% end %>
           <% if ['item','file'].include?(document.level) && !document.folder.blank? %>
-            <li>&#187; <%= link_to "#{t('bassi.show.folder.word')} #{document.folder}",inventory_path(:anchor => "box#{document.box}-folder#{document.folder}") %></li>		
+            <li>&#187; <%= link_to "#{t('bassi.show.folder.word')} #{document.folder}",inventory_path(:anchor => "box#{document.box}-folder#{document.folder}") %></li>    
           <% end %>
         </ul>
 

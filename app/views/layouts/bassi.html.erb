@@ -26,7 +26,7 @@
     <script src="https://use.typekit.net/qbf1cnw.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-		<%= analytics_init if Rails.env.production? %>
+    <%= analytics_init if Rails.env.production? %>
 
     <script src="//maps.googleapis.com/maps/api/js?key=<%=BassiVeratti::Application.config.google_api_key%>"></script>
 

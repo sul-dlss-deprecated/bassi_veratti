@@ -1,41 +1,41 @@
 <%= form_tag({:controller=>'about', :action=>'contact'}, :method=>'post', :class => 'form-horizontal') do %>
-	<%= hidden_field_tag 'from',@from%>
+  <%= hidden_field_tag 'from',@from%>
 
-	<div class="form-group">
-	  <label class="control-label" for="name"><%=t('bassi.contact.name')%></label>
-	  <div class="controls">
-	    <%=text_field_tag 'name', @name, :placeholder => t('bassi.contact.name_placeholder') %>
-	  </div>
-	</div>
+  <div class="form-group">
+    <label class="control-label" for="name"><%=t('bassi.contact.name')%></label>
+    <div class="controls">
+      <%=text_field_tag 'name', @name, :placeholder => t('bassi.contact.name_placeholder') %>
+    </div>
+  </div>
 
-	<div class="form-group">
-	  <label class="control-label" for="email"><%=t('bassi.contact.email')%></label>
-	  <div class="controls">
-	    <%=text_field_tag 'email', @email, :placeholder => t('bassi.contact.email_address') %>
-	  </div>
-	</div>
+  <div class="form-group">
+    <label class="control-label" for="email"><%=t('bassi.contact.email')%></label>
+    <div class="controls">
+      <%=text_field_tag 'email', @email, :placeholder => t('bassi.contact.email_address') %>
+    </div>
+  </div>
 
-	<% if BassiVeratti::Application.config.contact_us_topics.size > 1 %>
-		<div class="form-group">
-		  <label class="control-label" for="subject"><%=t('bassi.contact.subject')%></label>
-		  <div class="controls">
-		    <%= select_tag 'subject',options_from_collection_for_select(translate_options(BassiVeratti::Application.config.contact_us_topics), :first, :last, @subject) %>
-		  </div>
-		</div>
-	<% else %>
-			<%= hidden_field_tag 'subject',BassiVeratti::Application.config.contact_us_topics.keys.first%>
-	<% end %>
+  <% if BassiVeratti::Application.config.contact_us_topics.size > 1 %>
+    <div class="form-group">
+      <label class="control-label" for="subject"><%=t('bassi.contact.subject')%></label>
+      <div class="controls">
+        <%= select_tag 'subject',options_from_collection_for_select(translate_options(BassiVeratti::Application.config.contact_us_topics), :first, :last, @subject) %>
+      </div>
+    </div>
+  <% else %>
+      <%= hidden_field_tag 'subject',BassiVeratti::Application.config.contact_us_topics.keys.first%>
+  <% end %>
 
-	<div class="form-group">
-	  <label class="control-label" for="message"><%=t('bassi.contact.message')%></label>
-	  <div class="controls">
-	    <%=text_area_tag 'message', @message, :placeholder => t('bassi.contact.describe_problem'), :rows => 10 %>
-	  </div>
-	</div>
+  <div class="form-group">
+    <label class="control-label" for="message"><%=t('bassi.contact.message')%></label>
+    <div class="controls">
+      <%=text_area_tag 'message', @message, :placeholder => t('bassi.contact.describe_problem'), :rows => 10 %>
+    </div>
+  </div>
 
-	<div class="form-group">
-	  <div class="controls">
-	    <%= submit_tag "#{t('blacklight.email.form.submit')}", :class => 'btn btn-default' %>
-	  </div>
-	</div>
+  <div class="form-group">
+    <div class="controls">
+      <%= submit_tag "#{t('blacklight.email.form.submit')}", :class => 'btn btn-default' %>
+    </div>
+  </div>
 <% end %>

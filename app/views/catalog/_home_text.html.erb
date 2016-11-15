@@ -1,19 +1,19 @@
 <div id="content" class="col-md-9">
-	<div class="row">
-	  <div class="col-md-9">
-	    <hr class="main primary">
-	    <h2><%=t('bassi.home.collection_highlights')%><span class="highlights-link"><%=link_to t('bassi.home.more_highlights'),collection_highlights_path%></span></h2>
-	  </div>
-	</div>
+  <div class="row">
+    <div class="col-md-9">
+      <hr class="main primary">
+      <h2><%=t('bassi.home.collection_highlights')%><span class="highlights-link"><%=link_to t('bassi.home.more_highlights'),collection_highlights_path%></span></h2>
+    </div>
+  </div>
 
   <div class="row featured-collections">
-		<% @highlights.each do |highlight| %>
+    <% @highlights.each do |highlight| %>
       <div class="col-md-3 featured-collection">
         <%= link_to(image_tag(highlight.image_url, :class => 'highlight-poster-image'),search_catalog_path(params_for_collection_highlight(highlight)))  %>
         <h3 class="collection-title"><%= link_to_collection_highlight(highlight) %></h3>
         <span>(<%=t('bassi.show.item',:count=>highlight.collection_highlight_items.size)%>)</span>
       </div>
-		<% end %>
+    <% end %>
   </div>
 
 

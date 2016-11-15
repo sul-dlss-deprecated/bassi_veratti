@@ -2,19 +2,19 @@
 
 <div id="content" class="col-md-9 about-content">
   <hr class="main primary">
-	<div class="row">
-	  <div class="col-md-9">
-	    <h2><%= @page_title %></h2>
-	  </div>
-	</div>
-	
-	<div class="row">
-	  <div class="col-md-9">
-			<%= render :partial => @page_name %>
-			<% unless controller.action_name == 'contact' || @page_name == 'terms_dialog' %>
-			  <p><span class="slug">End</span></p>
-			<% end %>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-9">
+      <h2><%= @page_title %></h2>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-9">
+      <%= render :partial => @page_name %>
+      <% unless controller.action_name == 'contact' || @page_name == 'terms_dialog' %>
+        <p><span class="slug">End</span></p>
+      <% end %>
+    </div>
+  </div>
 
 </div>
