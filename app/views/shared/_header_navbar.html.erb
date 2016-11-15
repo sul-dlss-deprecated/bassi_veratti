@@ -3,13 +3,13 @@
   <div class="container">
     <%= link_to(image_tag("SUL-Logo-white-text-h25.png", :alt => "Stanford University Libraries"), "https://library.stanford.edu/")%>
     <span id="report-problem">
-	    <%= link_to(
+      <%= link_to(
             t('bassi.nav.feedback'),
-            contact_us_path(:from=>request.path),
-						:id=>'contact_us_link'
+            contact_us_path(:from => request.path),
+            :id => 'contact_us_link'
           )
       %>
-		</span>
+    </span>
   </div> <!-- .container end -->
 </div> <!-- #brandbar end -->
 <!-- Brandbar snippet end -->
@@ -17,16 +17,10 @@
 <div id="header-navbar-static-top" class="navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
-	      <a class="btn btn-default navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class=".glyphicon .glyphicon-bar"></span>
-        <span class=".glyphicon .glyphicon-bar"></span>
-        <span class=".glyphicon .glyphicon-bar"></span>
-      </a>
       <div class="row">
         <div class="col-md-3">
           <%= link_to(image_tag("laura-bassi-portrait.jpg", :alt => t('blacklight.application_name')), root_path, :class => "logo") %>
         </div>
-
         <div class="col-md-8 site-header-content">
           <div class="language-toggle">
             <% if I18n.locale == :en %>
@@ -43,7 +37,7 @@
           </div>
           <h1 class="<%= I18n.locale %>"><%= t('blacklight.application_name') %></h1>
           <div class="navbar-collapse">
-            <ul class="nav">
+            <ul class="nav navbar-nav">
               <li class="<%="active" if on_home_page%>">
                 <%= link_to t('bassi.nav.home'), root_path %>
               </li>
