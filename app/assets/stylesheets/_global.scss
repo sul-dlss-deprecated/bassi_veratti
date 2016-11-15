@@ -94,16 +94,16 @@ $constraint_border_active_color: #FFD27A !default;
 }
 
 @mixin modal-header {
-	background-color: #8A887D;
-	text-align: center;
+  background-color: #8A887D;
+  text-align: center;
 }
 
 /* --- */
 
 html {
   font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -129,56 +129,56 @@ body {
 }
 
 a:focus {
-	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 a:hover,a:active {
-	outline: 0;
+  outline: 0;
 }
 
 img {
-	max-width: 100%;
-	height:auto !important;
-	vertical-align: middle;
-	border: 0;
-	-ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height:auto !important;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 
 a {
   border-bottom: 1px dotted $active_link_color;
-	color: $active_link_color;
-	text-decoration: none;
+  color: $active_link_color;
+  text-decoration: none;
 }
 a:hover {
-	color: $hover_link_color;
-	text-decoration: none;
+  color: $hover_link_color;
+  text-decoration: none;
 }
 
 h1 {
-	display: block;
-	float: left;
-	font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
-	font-weight: 700;
-	font-size: 1.5em;
-	line-height: 1.1em;
-	color: $text_color;
-	margin-top: 30px;
-	-webkit-font-smoothing: antialiased;
-	margin-bottom: 30px;
-	border-bottom: 2px solid #dddddd;
-	padding-bottom: 10px;
+  display: block;
+  float: left;
+  font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  color: $text_color;
+  margin-top: 30px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #dddddd;
+  padding-bottom: 10px;
 }
 h2 {
   @include page-header;
-	font-size: 1.5em;
-	line-height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
 h3 {
   color: $heading_color;
   font-family: "cronos-pro-subhead","Helvetica","Arial",sans-serif;
-	font-size: 1.25em;
-	line-height: 1.5em;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 p {
   color: #333333;
@@ -188,13 +188,13 @@ p {
   margin:12px 0;
 }
 span.content-type {
-	font-size: 0.8em;
-	font-weight: bold;
-	display: block;
-	color: #990000;
-	text-transform: uppercase;
-	-webkit-font-smoothing: antialiased;
-	&.collection {color: #01835F;}
+  font-size: 0.8em;
+  font-weight: bold;
+  display: block;
+  color: #990000;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  &.collection {color: #01835F;}
 }
 .slideshow {
   margin-bottom: 20px;

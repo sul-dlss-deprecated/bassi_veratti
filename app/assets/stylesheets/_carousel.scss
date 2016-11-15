@@ -3,26 +3,26 @@
  * by the the dsiplay: block on the carousel.  
 **/
 .carousel {
-	display: inline-block;
-	.carousel-caption {
-	  background: rgba(0, 0, 0, 0.6);
-	  padding: 0 0 10px 15px;
-	  p {
-	    color: #ddd;
-	    font-size: 14px;
-	  }
-	}
+  display: inline-block;
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 0 10px 15px;
+    p {
+      color: #ddd;
+      font-size: 14px;
+    }
+  }
 }
 .carousel-controls {
-	position: relative;
-	margin-top: 20px;
-	height: 45px;
-	.number-of-items {
-		@extend .muted;
-		position: absolute;
-		left: 27%;
-		top: 20%;
-	}
+  position: relative;
+  margin-top: 20px;
+  height: 45px;
+  .number-of-items {
+    @extend .muted;
+    position: absolute;
+    left: 27%;
+    top: 20%;
+  }
   /* Deliberate overrides to change look of default buttons */
   .carousel-control {
     background: none;

@@ -92,14 +92,14 @@ ul.inventory-ancestry {
 .gallery_toggle {
   font-size: 12px;
   float: right;
-	.active {
-		color: black;
-		cursor: default;
-		&:hover{
-			text-decoration: none;
-		}
-	}
-	.nav-pills {
+  .active {
+    color: black;
+    cursor: default;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .nav-pills {
     margin-bottom: 0;
     li > a {
       background-color: $header_bg_color;
@@ -169,16 +169,16 @@ span.constraints-label {margin-right: 0.5em;}
 
 /* Search Form */
 #sidebar .search_form {
-	margin-bottom: 55px;
-	input.hide {
-		position:absolute;
-		left: -1000px;
-	}
+  margin-bottom: 55px;
+  input.hide {
+    position:absolute;
+    left: -1000px;
+  }
   input[type='text'] {
-	  width: 93%;
-		@media(max-width: 767px){
-		  width: 98%;
-		}
+    width: 93%;
+    @media(max-width: 767px){
+      width: 98%;
+    }
   }
 }
 

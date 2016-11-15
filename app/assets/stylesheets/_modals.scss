@@ -3,12 +3,12 @@
 }
 
 .zoom-modal {
-	width: 700px;
-	height: 600px;
-	.modal-body {
-		max-height: 520px;
-		height: 600px;
-	}
+  width: 700px;
+  height: 600px;
+  .modal-body {
+    max-height: 520px;
+    height: 600px;
+  }
 }
 
 .modal-footer {
@@ -18,34 +18,34 @@
 #location-map.modal {
   width: 630px;
   p {margin-left: 20px;}
-	.modal-header {
-	  @include modal-header;
-	  padding: 0 0 9px;
-	  h3 {
-	    border-top: 1px solid #999;
+  .modal-header {
+    @include modal-header;
+    padding: 0 0 9px;
+    h3 {
+      border-top: 1px solid #999;
       color: #fff;
-	    font-size: 22px;
-	  }
-	}
-	.modal-footer {
-		@include modal-footer;
-	}
+      font-size: 22px;
+    }
+  }
+  .modal-footer {
+    @include modal-footer;
+  }
 }
 
 #terms-dialog.modal {
   p {margin-left: 20px;}
-	.modal-header {
-	  @include modal-header;
-	  padding: 0 0 9px;
-	  h3 {
-	    border-top: 1px solid #999;
+  .modal-header {
+    @include modal-header;
+    padding: 0 0 9px;
+    h3 {
+      border-top: 1px solid #999;
       color: #fff;
-	    font-size: 1.5em;
+      font-size: 1.5em;
       padding-top: 6px;
       margin-top: 0;
-	  }
-	}
-	.modal-footer {
+    }
+  }
+  .modal-footer {
     @include modal-footer;
-	}
+  }
 }
