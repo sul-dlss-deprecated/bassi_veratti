@@ -76,8 +76,8 @@
   }
   .zoom-image-link {
     display: block;
-    &.visible-phone {margin-bottom: 15px;}
-    &.hidden-phone {margin-top: 20px; margin-bottom: none;}
+    &.visible-xs {margin-bottom: 15px;}
+    &.hidden-xs {margin-top: 20px; margin-bottom: none;}
   }
   .dl-horizontal {
     dt, dd {margin-bottom: 6px;}
