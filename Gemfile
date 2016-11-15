@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2'
-gem 'blacklight', '~> 6.0'
+gem 'blacklight', '~> 6.7', '>= 6.7.2'
 gem 'blacklight-marc'
 gem 'blacklight_range_limit', '~> 6.0'
 
