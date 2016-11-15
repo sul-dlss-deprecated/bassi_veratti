@@ -1,7 +1,7 @@
 require 'solr_wrapper' unless Rails.env.production?
 
 desc "Run continuous integration suite"
-task :ci => ['solr:clean', 'bassi:config', 'db:migrate'] do
+task :ci => [:environment, 'solr:clean', 'bassi:config', 'db:migrate'] do
   abort 'Refusing to run :ci in production' if Rails.env.production?
   SolrWrapper.wrap do |solr|
     solr.with_collection(dir: File.join(Rails.root, 'solr_conf/conf')) do
@@ -30,13 +30,13 @@ namespace :bassi do
   end
 
   desc 'Delete and index all fixtures in solr'
-  task :refresh_fixtures => ['bassi:delete_records_in_solr', 'bassi:index_fixtures']
+  task :refresh_fixtures => [:environment, 'bassi:delete_records_in_solr', 'bassi:index_fixtures']
 
   desc 'Index all fixutres into solr'
-  task :index_fixtures => ['bassi:parse-ead', 'bassi:expire_caches']
+  task :index_fixtures => [:environment, 'bassi:parse-ead', 'bassi:expire_caches']
 
   desc 'Delete all records in solr'
-  task :delete_records_in_solr do
+  task :delete_records_in_solr => :environment do
     if Rails.env.production?
       puts "Did not delete since we're running under the #{Rails.env} environment and not under test. You know, for safety."
     else

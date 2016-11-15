@@ -7,7 +7,7 @@ require 'document_types'
 
 namespace :bassi do
   desc "Parse EAD File"
-  task :"parse-ead" do
+  task :'parse-ead' => :environment do
     ead = EadParser.new("#{Rails.root}/data/bassi-ead.xml")
     solr = Blacklight.default_index.connection
     documents = solrize_ead ead
