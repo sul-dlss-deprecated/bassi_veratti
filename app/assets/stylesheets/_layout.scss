@@ -18,6 +18,8 @@ body {
   a {border-bottom: none;}
 }
 
+.breadcrumb > li + li:before {content: "»";} // override default breadcrumb separator
+
 hr.main.primary {
   border: 0;
   height: 6px;
@@ -56,9 +58,4 @@ body {
       padding-left: 20px;
       padding-right: 20px;
     }
-}
-.breadcrumb {
-  @media (min-width: 1200px) {
-    margin-left: 15px;
-  }
 }
