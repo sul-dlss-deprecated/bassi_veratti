@@ -84,14 +84,14 @@ GEM
     capistrano-bundle_audit (0.2.1)
       bundler-audit (~> 0.5)
       capistrano (~> 3.0)
-    capistrano-bundler (1.1.2)
-      capistrano (~> 3.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-one_time_key (0.0.1)
       capistrano (~> 3.0)
     capistrano-passenger (0.2.0)
       capistrano (~> 3.0)
-    capistrano-rails (1.1.1)
+    capistrano-rails (1.2.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-releaseboard (0.0.1)
@@ -328,7 +328,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capistrano-passenger (~> 0.2)
-  capistrano-rails
+  capistrano-rails (~> 1.2)
   capybara
   coffee-rails (>= 3.2.1)
   coveralls
