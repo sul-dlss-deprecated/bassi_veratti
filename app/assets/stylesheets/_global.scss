@@ -9,7 +9,6 @@
 // #5E564B - dark brown
 // #827A57 - medium green
 
-
 /* Variables */
 $body_bg_color: #fff;
 $body_bg_image: 'paper-fibers.png';
@@ -217,7 +216,7 @@ span.content-type {
 
 .hidden {display: none;}
 
-.search_form .btn {float: right;}
+.search_form .btn {float: right; margin-top: 10px;}
 
 // Override Blacklight theme pagination styling
 .pagination {

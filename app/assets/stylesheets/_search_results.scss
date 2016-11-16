@@ -175,10 +175,7 @@ span.constraints-label {margin-right: 0.5em;}
     left: -1000px;
   }
   input[type='text'] {
-    width: 93%;
-    @media(max-width: 767px){
-      width: 98%;
-    }
+    width: 98%;
   }
 }
 
