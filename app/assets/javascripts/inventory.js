@@ -10,9 +10,9 @@ $(document).ready(function(){
         $("a, i", $(this)).click(function(){
           icon.toggleClass("glyphicon-minus-sign");
           nested_list.slideToggle();
-          expandedType=nested_list.children().attr('class');
+          expandedType = nested_list.children().attr('class');
           if (expandedType == 'folder-items' && icon.is('.glyphicon-minus-sign')) {
-            imageItems=nested_list.find('.item-image-link');
+            imageItems = nested_list.find('.item-image-link');
             loadInventoryImages(imageItems);
           }
           // Refresh the scrollspy since we've changed the DOM

@@ -57,7 +57,7 @@
               <% if !list_is_empty?(@document.coordinates) && !@document.coordinates.first[:lat].nil? && !@document.coordinates.first[:lon].nil? %>
                 <span class="map-link hidden showOnLoad">
                   <a href="#location-map" data-toggle="modal" id="show-map-link">
-                    <i class=".glyphicon .glyphicon-globe"></i> <%= t('bassi.show.show_map') %>
+                    <i class="glyphicon glyphicon-globe"></i> <%= t('bassi.show.show_map') %>
                   </a>
                 </span>
               <% end %>

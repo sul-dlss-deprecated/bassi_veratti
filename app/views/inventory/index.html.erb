@@ -16,7 +16,7 @@
         <p class="truncate"><%= raw show_series_language_description(series.notes, I18n.locale) %></p>
         <ul class="series">
           <li data-behavior='toggle-handler' data-reference-id="#<%= series[:id] %>">
-            <i style="display:none;" class=".glyphicon .glyphicon-plus-sign"></i>
+            <i style="display:none;" class="glyphicon glyphicon-plus-sign"></i>
             <%=
               link_to(
                 t('bassi.show.box',    count: folders_by_box.keys.length)   + ',  ' +
@@ -30,13 +30,13 @@
             <ul class="box-list">
               <%- folders_by_box.each do |box, folders| -%>
                 <li data-behavior='toggle-handler' data-reference-id="#<%= "box#{box}" %>">
-                  <i style="display:none;" class=".glyphicon .glyphicon-plus-sign"></i> <%= link_to(t('bassi.show.box.word') + " #{box}", "#box#{box}") %>
+                  <i style="display:none;" class="glyphicon glyphicon-plus-sign"></i> <%= link_to(t('bassi.show.box.word') + " #{box}", "#box#{box}") %>
                 </li>
                 <li>
                   <ul class="folder-list">
                     <%- folders.each do |folder| -%>
                       <li data-behavior='toggle-handler' data-reference-id="#<%= folder[:id] %>">
-                        <i style="display:none;" class=".glyphicon .glyphicon-plus-sign"></i>
+                        <i style="display:none;" class="glyphicon glyphicon-plus-sign"></i>
                         <%= link_to("#{t('bassi.show.folder.word')} #{folder[blacklight_config.folder_identifying_field].first}: #{folder[blacklight_config.show.title_field]}", "##{folder[:id]}") %>
                       </li>
                       <li>
