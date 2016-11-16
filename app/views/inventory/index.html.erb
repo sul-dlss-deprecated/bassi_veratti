@@ -42,7 +42,7 @@
                       <li>
                         <ul class="folder-items">
                           <li class="item-count"><%=t('bassi.show.item', count: folder.children.total_members)%>:</li>
-                            <ul class="item-list">
+                          <ul class="item-list">
                             <%- folder.children.each do |document| -%>
                               <li class="item-image-link" data-image-link="<%=solr_document_path(document[:id])%>" data-image-url="<%=show_image(document.images(:square).first)%>" data-image-title="<%=document.title%>">
                                 <noscript>
