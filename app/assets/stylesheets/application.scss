@@ -16,10 +16,7 @@
  *
 */
 
-@import 'bootstrap';
-@import 'blacklight/blacklight_base';
-// includes bl/*: blacklight_defaults, layout, header, constraints, controls, search_results, pagination, group, bookmark, balanced_list, facets, search_history, modal, twitter_typeahead
-
+@import "blacklight";
 @import "global";
 @import "layout";
 @import "header";
