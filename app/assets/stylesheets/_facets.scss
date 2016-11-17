@@ -30,27 +30,19 @@
 #facets-bassi {
   clear: both;
   margin-top: 30px;
-  .navbar-btn {
-    // Navbar button for toggling navbar items in responsive layouts
-    // These definitions need to come after '.navbar .btn'
+  .burgerbox {
     display: none;
-    float: right;
+  }
+  .glyphicon-menu-hamburger { // button for toggling facets in responsive layouts
     padding: 7px 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    // @include buttonBackground(darken($navbarBackgroundHighlight, 5%), darken($navbarBackground, 5%)); TODO: FIXME
+    // @include button-variant(darken($navbarBackgroundHighlight, 5%), darken($navbarBackground, 5%)); // FIXME: no such variables
     @include box-shadow(#{inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)});
-    & .glyphicon-bar {
-      display: block;
-      width: 18px;
-      height: 2px;
-      background-color: #f5f5f5;
-      border-radius: 1px;
-      @include box-shadow(0 1px 0 rgba(0,0,0,.25));
-    }
-    & .glyphicon-bar + .glyphicon-bar {
-      margin-top: 3px;
-    }
+  }
+}
+
+#facets {
+  .glyphicon {
+    float: right;
   }
   .limit_content .current {
     margin-left: 14px;
@@ -64,8 +56,9 @@
 }
 
 @media (max-width: 767px) {
-  #facets-bassi .navbar-btn {
+  #facets-bassi .burgerbox {
     display: block;
+    float: right;
     margin: 5px;
   }
 }
