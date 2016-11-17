@@ -11,7 +11,7 @@
 
     <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
     <meta http-equiv="cleartype" content="on">
-    <title><%= raw ([t('blacklight.application_name'), truncate(@page_title,:length=>100)].compact.join(": ")) %></title>
+    <title><%= t('blacklight.application_name') %>: <%= truncate(@page_title, length: 100, escape: false) %></title>
     <link href="<%= opensearch_catalog_url(:format => 'xml') %>" title="<%= t('blacklight.application_name')%>" type="application/opensearchdescription+xml" rel="search"/>
     <%= favicon_link_tag image_path('favicon.ico') %>
     <!-- Two stylesheets below are for Stanford Identity footer -->
@@ -33,11 +33,6 @@
       <%= yield(:head) %>
     <% end %>
     <script type="text/javascript" src="<%=BassiVeratti::Application.config.purl_plugin_location%>"></script>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? && params[:f].to_s.empty? && params[:id].nil? %>
 

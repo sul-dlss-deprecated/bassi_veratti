@@ -35,6 +35,6 @@
   <% end %>
 
   <% if (on_collections_pages || on_show_page) && !on_collection_highlights_page %>
-    <li><%= raw truncate(@page_title) %></li>
+    <li><%= truncate(@page_title, escape: false) %></li>
   <% end %>
 </ul>
