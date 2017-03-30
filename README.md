@@ -34,6 +34,7 @@ rake jetty:clean bassi:config jetty:start
 ```
 
 ### Load the fixtures
+Note: loading fixtures may take some time
 ```bash
 rake bassi:index_fixtures
 ```

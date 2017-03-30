@@ -51,7 +51,7 @@ gem 'rest-client'
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem 'sprockets', '~> 2.8', '<= 2.11.0' # problematic
-gem 'sprockets-rails', '~> 2.3.2'      # problematic
+gem 'sprockets', '~> 2.8'
+gem 'sprockets-rails'
 gem 'json', '~> 1.8.0'
 gem 'honeybadger', '~> 2.0'
