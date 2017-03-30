@@ -10,8 +10,8 @@ def add_items(items, coll)
   items.each { |item| coll.collection_highlight_items << CollectionHighlightItem.create(item_id: item.to_s) }
 end
 
-CollectionHighlight.find(:all).each(&:destroy)
-CollectionHighlightItem.find(:all).each(&:destroy)
+CollectionHighlight.all.each(&:destroy)
+CollectionHighlightItem.all.each(&:destroy)
 
 c1 = CollectionHighlight.create(
   sort_order: 3,
