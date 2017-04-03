@@ -48,9 +48,9 @@ Then browse to <http://localhost:3000>.
 
 ## Deployment
 ```bash
-cap production deploy  # for production
-cap staging deploy     # for staging
-cap development deploy # for development
+cap prod deploy  # for production
+cap stage deploy     # for staging
+cap dev deploy # for development
 ```
 
 You must specify a branch or tag to deploy.  You can deploy the latest by specifying `master`.
