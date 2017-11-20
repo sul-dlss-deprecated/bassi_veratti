@@ -27,13 +27,6 @@ rake db:migrate db:seed
 rake db:migrate db:seed RAILS_ENV=test
 ```
 
-### Set up, configure and start local jetty
-Stop any other jetty instances that might conflict, then:
-```bash
-rake bassi:config
-solr_wrapper
-```
-
 ### Load the fixtures
 Note: loading fixtures may take some time
 ```bash
