@@ -30,7 +30,8 @@ rake db:migrate db:seed RAILS_ENV=test
 ### Set up, configure and start local jetty
 Stop any other jetty instances that might conflict, then:
 ```bash
-rake jetty:clean bassi:config jetty:start
+rake bassi:config
+solr_wrapper
 ```
 
 ### Load the fixtures
@@ -60,12 +61,11 @@ You must specify a branch or tag to deploy.  You can deploy the latest by specif
 You can run the test suite locally by running:
 
 ```bash
-rake local_ci
+rake ci
 ```
 
-This will stop development jetty, force you into the test environment, start jetty, start solr,
-delete all the records in the test solr core, index all fixtures in `spec/fixtures`, run `db:migrate` in test,
-then run the tests, and then restart development jetty.
+This will force you into the test environment, start solr, index all fixtures in `spec/fixtures`, run `db:migrate`,
+then run the tests.
 
 ## Caching
 
@@ -83,11 +83,3 @@ rake bassi:expire_caches
 The collection highlights shown on the home page are stored in MySQL.  The database entries are created in `db/seeds.rb`.
 For each collection highlight, you need a name in English and Italian, a local placeholder image to show (placed in the `assets/image` folder), and a description (not shown).
 You also need a list of IDs that belong in the collection.
-
-## Utils
-
-To reset jetty and solr back to an initial state:
-
-```bash
-rake jetty:clean
-```
