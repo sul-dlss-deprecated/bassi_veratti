@@ -1,6 +1,6 @@
 # Bassi Veratti Collection
 
-[![Build Status](https://travis-ci.org/sul-dlss/bassi_veratti.svg?branch=master)](https://travis-ci.org/sul-dlss/bassi_veratti) [![Dependency Status](https://gemnasium.com/sul-dlss/bassi_veratti.svg)](https://gemnasium.com/sul-dlss/bassi_veratti) [![Coverage Status](https://coveralls.io/repos/github/sul-dlss/bassi_veratti/badge.svg?branch=master)](https://coveralls.io/github/sul-dlss/bassi_veratti?branch=master)
+[![Build Status](https://travis-ci.org/sul-dlss/bassi_veratti.svg?branch=master)](https://travis-ci.org/sul-dlss/bassi_veratti) 
 
 This is a Blacklight application for the Bassi Veratti Collection at Stanford University.
 
