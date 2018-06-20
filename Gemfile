@@ -6,7 +6,7 @@ gem 'protected_attributes' # allows attr_accessible in rails 4
 gem 'google-analytics-rails'
 
 gem "blacklight", '~> 4.0'
-gem 'blacklight_range_limit', '~> 2.2.0', :git => "https://github.com/projectblacklight/blacklight_range_limit.git", :branch => 'circular_reference'
+gem 'blacklight_range_limit', '~> 2.3.0'
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
 gem 'kaminari', '<= 0.14.1' # blacklight also sets semver, so we don't end up w/ 0.0.0
 gem 'okcomputer'

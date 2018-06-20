@@ -1,17 +1,4 @@
 GIT
-  remote: https://github.com/projectblacklight/blacklight_range_limit.git
-  revision: fc7dfa0dbacbcb71ddab3abae7af5ee384664e5c
-  branch: circular_reference
-  specs:
-    blacklight_range_limit (2.2.0)
-      addressable (<= 2.4.0)
-      blacklight (~> 4.0)
-      jquery-rails
-      mime-types (< 3.0)
-      nokogiri (< 1.7.0)
-      rails (>= 3.0, < 5.0)
-
-GIT
   remote: https://github.com/sul-dlss/eadsax.git
   revision: 90a40aff10cf517bdb4714f62a8e0342b73bd4d1
   specs:
@@ -72,6 +59,10 @@ GEM
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
       sass-rails
+    blacklight_range_limit (2.3.0)
+      blacklight (~> 4.0)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.2.3)
@@ -165,7 +156,7 @@ GEM
       unf
     mime-types (2.99.3)
     mini_mime (1.0.0)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
     multipart-post (2.0.0)
     mysql2 (0.3.21)
@@ -173,8 +164,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (5.0.2)
     netrc (0.11.0)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.3)
+      mini_portile2 (~> 2.3.0)
     okcomputer (1.17.2)
     parallel (1.12.1)
     parser (2.5.1.0)
@@ -324,7 +315,7 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight (~> 4.0)
-  blacklight_range_limit (~> 2.2.0)!
+  blacklight_range_limit (~> 2.3.0)
   bootstrap-sass
   bundler (>= 1.2.0)
   byebug
