@@ -87,6 +87,16 @@
     </lst>
   </requestHandler>
 
+  <!-- single document requests; use id=666 instead of q=id:666 -->
+  <requestHandler name="document" class="solr.SearchHandler" >
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="fl">*</str>
+      <int name="rows">1</int>
+      <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
+    </lst>
+  </requestHandler>
+
 
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
