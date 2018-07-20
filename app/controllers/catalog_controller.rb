@@ -100,10 +100,10 @@ class CatalogController < ApplicationController
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     config.default_document_solr_params = {
-      :qt   => 'standard',
-      :fl   => '*',
-      :rows => 1,
-      :q    => '{!raw f=id v=$id}'
+      :qt   => 'document'
+      # :fl   => '*',
+      # :rows => 1,
+      # :q    => '{!raw f=id v=$id}'
     }
 
     config.document_index_view_types = %w(default gallery brief map)
