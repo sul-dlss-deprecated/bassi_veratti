@@ -27,7 +27,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'solr_wrapper', '~> 1.0'
+  gem 'solr_wrapper', '~> 2.0'
   gem 'rubocop'
   gem 'sqlite3'
   gem 'capybara'
