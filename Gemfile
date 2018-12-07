@@ -10,6 +10,7 @@ gem 'blacklight_range_limit', '~> 2.3.0'
 gem 'eadsax', :git => "https://github.com/sul-dlss/eadsax.git"
 gem 'kaminari', '<= 0.14.1' # blacklight also sets semver, so we don't end up w/ 0.0.0
 gem 'okcomputer'
+gem 'newrelic_rpm'
 
 # Gems used only for assets:
 # previously not required in production environments by default, now possibly required?
