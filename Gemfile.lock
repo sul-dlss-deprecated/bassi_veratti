@@ -166,6 +166,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (5.0.2)
     netrc (0.11.0)
+    newrelic_rpm (5.5.0.348)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     okcomputer (1.17.2)
@@ -336,6 +337,7 @@ DEPENDENCIES
   json (~> 1.8.0)
   kaminari (<= 0.14.1)
   mysql2 (~> 0.3.10)
+  newrelic_rpm
   okcomputer
   protected_attributes
   rails (~> 4)
