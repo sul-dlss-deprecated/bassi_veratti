@@ -35,7 +35,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec', '~> 3.0'
   gem 'test-unit', :require => false
-  gem 'coveralls', :require => false
+  gem 'simplecov', :require => false
 end
 
 group :staging, :production do

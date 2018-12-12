@@ -1,6 +1,6 @@
 # Bassi Veratti Collection
 
-[![Build Status](https://travis-ci.org/sul-dlss/bassi_veratti.svg?branch=master)](https://travis-ci.org/sul-dlss/bassi_veratti)  [![Coverage Status](https://coveralls.io/repos/github/sul-dlss/bassi_veratti/badge.svg?branch=master)](https://coveralls.io/github/sul-dlss/bassi_veratti?branch=master)
+[![Build Status](https://travis-ci.org/sul-dlss/bassi_veratti.svg?branch=master)](https://travis-ci.org/sul-dlss/bassi_veratti) [![Code Climate Test Coverage](https://codeclimate.com/github/sul-dlss/bassi_veratti/badges/coverage.svg)](https://codeclimate.com/github/sul-dlss/bassi_veratti/coverage)
 
 This is a Blacklight application for the Bassi Veratti Collection at Stanford University.
 
