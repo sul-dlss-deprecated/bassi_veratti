@@ -22,13 +22,16 @@ set :bundle_audit_ignore, %w(OSVDB-131677) # ignore mail vulnerability (you need
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w(config/database.yml config/solr.yml config/honeybadger.yml config/newrelic.yml)
+set :linked_files, %w(config/database.yml config/solr.yml config/honeybadger.yml)
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system)
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# We want Honeybadger to report deployments to our Capistrano stage names (e.g., dev, stage, prod)
+set :honeybadger_env, fetch(:stage)
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
