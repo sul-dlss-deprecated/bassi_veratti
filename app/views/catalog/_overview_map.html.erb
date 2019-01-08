@@ -1,4 +1,4 @@
-<% cache(:action => "index", :action_suffix => "map")  do %>
+<% cache({controller: 'catalog', action: 'index', action_suffix: 'map'}, skip_digest: true)  do %>
   <script language="JavaScript">
     $(document).ready(function(){
       var options = {
