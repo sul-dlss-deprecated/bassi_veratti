@@ -29,7 +29,7 @@ end
 group :development, :test do
   gem 'solr_wrapper', '~> 2.0'
   gem 'rubocop'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
   gem 'capybara'
   gem 'rspec-rails'
   gem 'rspec', '~> 3.0'
