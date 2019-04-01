@@ -30,7 +30,7 @@ group :development, :test do
   gem 'solr_wrapper', '~> 2.0'
   gem 'rubocop'
   gem 'sqlite3', '~> 1.3.13'
-  gem 'capybara'
+  gem 'capybara', '~> 3.15.0' # pinned for ruby 2.3 compatibility
   gem 'rspec-rails'
   gem 'rspec', '~> 3.0'
   gem 'test-unit', :require => false
