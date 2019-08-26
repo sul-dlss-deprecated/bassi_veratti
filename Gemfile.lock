@@ -336,7 +336,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   rubocop-performance
-  sass-rails (>= 3.2.3)
+  sass-rails (>= 3.2.3, < 6)
   simplecov
   solr_wrapper (~> 2.0)
   sprockets
