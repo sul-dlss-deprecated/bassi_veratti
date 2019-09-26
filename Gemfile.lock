@@ -246,7 +246,7 @@ GEM
     rubocop-performance (1.4.1)
       rubocop (>= 0.71.0)
     ruby-progressbar (1.10.1)
-    rubyzip (1.2.4)
+    rubyzip (2.0.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -292,7 +292,7 @@ GEM
       ref
     thor (0.20.3)
     thread_safe (0.3.6)
-    tilt (2.0.9)
+    tilt (2.0.10)
     transpec (3.4.0)
       activesupport (>= 3.0, < 6.0)
       astrolabe (~> 1.2)
@@ -303,7 +303,7 @@ GEM
     trollop (2.9.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.20)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
