@@ -56,3 +56,4 @@ gem 'sprockets'
 gem 'sprockets-rails'
 gem 'json', '~> 1.8.0'
 gem 'honeybadger', '~> 2.0'
+gem 'rubyzip', '< 2', require: false
