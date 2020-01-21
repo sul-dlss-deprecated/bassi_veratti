@@ -23,7 +23,7 @@ end
 
 group :development do
   gem 'transpec'
-  gem 'byebug'
+  gem 'byebug', '< 11.1.0' # 11.1 requires > ruby 2.4
 end
 
 group :development, :test do
