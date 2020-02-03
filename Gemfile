@@ -35,7 +35,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec', '~> 3.0'
   gem 'test-unit', :require => false
-  gem 'simplecov', :require => false
+  gem 'simplecov', '0.17.1', :require => false # pinned for ruby 2.3 compat
 end
 
 group :staging, :production do

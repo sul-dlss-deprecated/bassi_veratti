@@ -121,7 +121,7 @@ GEM
     execjs (2.7.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.12.1)
+    ffi (1.12.2)
     geocoder (1.6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -344,7 +344,7 @@ DEPENDENCIES
   rubocop-performance
   rubyzip (< 2)
   sass-rails (>= 3.2.3)
-  simplecov
+  simplecov (= 0.17.1)
   solr_wrapper (~> 2.0)
   sprockets (~> 3)
   sprockets-rails
