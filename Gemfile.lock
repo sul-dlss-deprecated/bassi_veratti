@@ -70,7 +70,7 @@ GEM
       bundler (>= 1.2.0, < 3)
       thor (~> 0.18)
     byebug (11.0.1)
-    capistrano (3.11.2)
+    capistrano (3.12.0)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -104,7 +104,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     crass (1.0.6)
     deprecation (0.99.0)
       activesupport
@@ -162,7 +162,7 @@ GEM
       net-ssh (>= 2.6.5, < 6.0.0)
     net-ssh (5.2.0)
     netrc (0.11.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     okcomputer (1.18.1)
     parallel (1.19.1)
