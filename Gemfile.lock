@@ -166,7 +166,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     okcomputer (1.18.1)
     parallel (1.19.1)
-    parser (2.7.0.3)
+    parser (2.7.0.4)
       ast (~> 2.4.0)
     power_assert (1.1.6)
     protected_attributes (1.1.4)
