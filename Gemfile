@@ -22,13 +22,12 @@ group :assets do
 end
 
 group :development do
-  gem 'transpec'
   gem 'byebug', '< 11.1.0' # 11.1 requires > ruby 2.4
 end
 
 group :development, :test do
   gem 'solr_wrapper', '~> 2.0'
-  gem 'rubocop'
+  gem 'rubocop', '< 0.80' # pinned for ruby 2.3 compatibility
   gem 'rubocop-performance'
   gem 'sqlite3', '~> 1.3.13'
   gem 'capybara', '~> 3.15.0' # pinned for ruby 2.3 compatibility
