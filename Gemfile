@@ -22,7 +22,6 @@ group :assets do
 end
 
 group :development do
-  gem 'transpec'
   gem 'byebug', '< 11.1.0' # 11.1 requires > ruby 2.4
 end
 
