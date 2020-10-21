@@ -83,14 +83,14 @@ class SolrDocument
     return [] unless key?(blacklight_config.image_identifier_field)
     stacks_url = BassiVeratti::Application.config.stacks_url
     self[blacklight_config.image_identifier_field].map do |image_id|
-      "#{stacks_url}/#{self['druid_ssi']}/#{image_id.chomp('.jp2')}#{SolrDocument.image_dimensions[size]}.jpg"
+      "#{stacks_url}/#{self['druid_ssi']}%2F#{image_id.chomp('.jp2')}#{SolrDocument.iiif_image_dimensions[size]}"
     end
   end
 
-  def self.image_dimensions
-    { :default => '_thumb',
-      :square  => '_square',
-      :thumb   => '_thumb' }
+  def self.iiif_image_dimensions
+    { :default => '/full/!400,400/0/default.jpg',
+      :square  => '/square/100,100/0/default.jpg',
+      :thumb   => '/full/!400,400/0/default.jpg' }
   end
 
   def series?

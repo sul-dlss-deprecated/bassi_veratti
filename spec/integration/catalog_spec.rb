@@ -14,8 +14,8 @@ describe("Search and catalog controller pages", :type => :request, :integration 
     expect(page).to have_content("1.0 leaf/leaves")
     expect(page).to have_content("http://purl.stanford.edu/ys098my3414")
     expect(page).to have_content("Other items in this folder (29)")
-    expect(page).to have_xpath("//img[contains(@src, \"image/ys098my3414/ys098my3414_001_thumb.jpg\")]") # main image
-    expect(page).to have_xpath("//img[contains(@src, \"image/pv196nk4650/pv196nk4650_001_square.jpg\")]") # an "other items" image
+    expect(page).to have_xpath("//img[contains(@src, \"image/ys098my3414%2Fys098my3414_001/full/!400,400/0/default.jpg\")]") # main image
+    expect(page).to have_xpath("//img[contains(@src, \"image/pv196nk4650%2Fpv196nk4650_001/square/100,100/0/default.jpg\")]") # an "other items" image
   end
 
   it "should exclude folder documents where the item is described at the same level (and therefore a duplicate)" do
