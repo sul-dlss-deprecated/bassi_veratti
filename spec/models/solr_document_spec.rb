@@ -95,12 +95,12 @@ describe SolrDocument do
     end
     it "should have the proper default image dimension when no size is specified" do
       @images.each do |image|
-        expect(image).to match(/#{SolrDocument.image_dimensions[:default]}/)
+        expect(image).to match(/#{SolrDocument.iiif_image_dimensions[:default]}/)
       end
     end
     it "should return the requested dimentsion when one is specified" do
       SolrDocument.new(:image_id_ssm => ["abc123", "cba321"]).images(:large).each do |image|
-        expect(image).to match(/#{SolrDocument.image_dimensions[:large]}/)
+        expect(image).to match(/#{SolrDocument.iiif_image_dimensions[:large]}/)
       end
     end
     it "should return [] when the document does not have an image identifier field" do
@@ -108,8 +108,8 @@ describe SolrDocument do
     end
     describe "image dimensions" do
       it "should be a hash of configurations" do
-        expect(SolrDocument.image_dimensions).to be_a Hash
-        expect(SolrDocument.image_dimensions).to have_key :default
+        expect(SolrDocument.iiif_image_dimensions).to be_a Hash
+        expect(SolrDocument.iiif_image_dimensions).to have_key :default
       end
     end
   end
