@@ -28,4 +28,4 @@ class TablesHaveDataCheck < OkComputer::Check
 end
 OkComputer::Registry.register "feature-tables-have-data", TablesHaveDataCheck.new
 OkComputer::Registry.register "feature-cache", OkComputer::CacheCheck.new
-OkComputer::Registry.register "external-solr", OkComputer::HttpCheck.new('https://sul-solr.stanford.edu/solr/_healthcheck/admin/ping')
+OkComputer::Registry.register "external-solr", OkComputer::HttpCheck.new('https://sul-solr.stanford.edu/api/node/health')
